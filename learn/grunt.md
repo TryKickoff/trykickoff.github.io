@@ -376,22 +376,35 @@ The `config.js` variables relate to the directories and paths of the project Jav
 `config.js.fileList` is the list of files that are included in the JavaScript build.  These are concatenated together when Grunt is run, in the order specified in this list.  To find our more about what is included in the default JavaScript for Kickoff, see [Kickoff’s JavaScript documentation](js.html). **This is the Kickoff default, you can switch to use Browserify if you choose that option in the Yeoman generator.**
 
 ---
+<a name="config-img"></a>
+#### config.img
+
+```js
+	// Image-related Grunt vars
+	img : {
+		srcDir       : '<%=config.srcDir%>/img',      // <%=config.img.srcDir%>
+		grunticonDir : '<%=config.srcDir%>/grunticon' // <%=config.img.grunticonDir%>
+	}
+```
+
+---
 <a name="config-testing"></a>
 #### config.testing
 
 ```js
+// Testing-related Grunt vars
+// Add any other test vars in here
 testing: {
-	/**
-	 * These are the settings used by our visual regression testing task, Photobox
-	 */
+
+	// Used by Photobox at the moment
+	// http://tmwagency.github.io/kickoff/learn/grunt.html#task-photobox
 	visual : {
 		sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
 
+		// Change these urls to test your app
 		// <%=config.testing.visual.urls%>
 		urls : [
-			'http://localhost:3000',
-			'http://localhost:3000/_docs/',
-			'http://localhost:3000/_docs/styleguide.html'
+			'http://localhost:3000'
 		]
 	}
 }
