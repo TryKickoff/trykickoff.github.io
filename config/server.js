@@ -8,8 +8,9 @@ module.exports.tasks = {
 	connect: {
 		site: {
 			options: {
+				base : '_site',
 				open: {
-					target: 'http://0.0.0.0:8000/kickoff'
+					target: 'http://localhost:8000/'
 				},
 				livereload: true
 			}
@@ -17,15 +18,7 @@ module.exports.tasks = {
 		styleguide: {
 			options: {
 				open: {
-					target: 'http://0.0.0.0:8000/_docs/styleguide.html'
-				},
-				livereload: true
-			}
-		},
-		start: {
-			options: {
-				open: {
-					target: 'http://0.0.0.0:8000/_docs/index.html'
+					target: 'http://localhost:8000/_docs/styleguide.html'
 				},
 				livereload: true
 			}

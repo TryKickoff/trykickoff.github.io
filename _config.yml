@@ -5,11 +5,10 @@ highlighter: pygments
 
 relative_permalinks: false
 include: ['.htaccess']
-exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace']
+exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace','bower_components']
 timezone: Europe/London
 
 paginate: 8
 paginate_path: /page:num
 
-destination: ./kickoff
 encoding: "utf-8"

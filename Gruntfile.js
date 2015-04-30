@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 			},
 
 			jekyll : {
-				buildDirectory: 'kickoff' // <%=config.jekyll.buildDirectory%>
+				buildDirectory: '_site' // <%=config.jekyll.buildDirectory%>
 			}
 		}
 	};
