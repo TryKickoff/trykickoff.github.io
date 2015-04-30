@@ -3,17 +3,17 @@
   "title": "Kickoff Docs",
   "description": "Documentation for TMW's front-end framework",
   "version": "0.5.2",
-  "homepage": "https://github.com/tmwagency/kickoff",
+  "homepage": "https://github.com/trykickoff/kickoff",
   "author": {
     "name": "Zander Martineau",
     "url": "http://martineau.tv"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tmwagency/kickoff.git"
+    "url": "git://github.com/trykickoff/kickoff.git"
   },
   "bugs": {
-    "url": "https://github.com/tmwagency/kickoff/issues"
+    "url": "https://github.com/trykickoff/kickoff/issues"
   },
   "license": "MIT",
   "engines": {

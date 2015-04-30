@@ -17,10 +17,18 @@ next:
 ---
 There are a few easy ways to get started with Kickoff.  Take a look below and find the way that best suits your particular needs.
 
+### Use the Yeoman Generator
+
+Using our Yeoman Generator is the best way to get Kickoff each time you want to start a new project.
+
+To find out more about it – or what a Yeoman generator even is – and how it can help you tailor Kickoff to your projects even faster, [visit the generator docs page](yeoman.html).
+
+---
+
 ### Download the zip
 
 Just want the files?  No problem – just grab the Zip of Kickoff:<br>
-<a href="https://github.com/tmwagency/kickoff/archive/master.zip" class="btn btn--primary btn--small">Start Zip Download</a>
+<a href="https://github.com/trykickoff/kickoff/archive/master.zip" class="btn btn--primary btn--small">Start Zip Download</a>
 
 ---
 
@@ -29,14 +37,10 @@ Just want the files?  No problem – just grab the Zip of Kickoff:<br>
 If you use Git, you can clone a version of Kickoff by entering the following into your terminal:
 
 ```sh
-git clone https://github.com/tmwagency/kickoff.git your-project-folder
+git clone https://github.com/trykickoff/kickoff.git your-project-folder
 ```
 
 ---
 
-### Use the Yeoman Generator
 
-Using our Yeoman Generator is the best way to get Kickoff each time you want to start a new project.
-
-To find out more about it – or what a Yeoman generator even is – and how it can help you tailor Kickoff to your projects even faster, [visit the generator docs page](yeoman.html).
 

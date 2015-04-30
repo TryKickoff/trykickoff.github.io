@@ -454,9 +454,11 @@ For more information on Autoprefixer and how it works, see it’s [Github repo a
 To minify our CSS, we use CSSO via the [grunt-csso](https://github.com/t32k/grunt-csso) plugin.
 
 ---
-### Icon tasks ([icons.js](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/icons.js))
+### Image tasks ([images.js](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/images.js))
 
-The icon tasks included in Kickoff have to be initiated separately from the default build tasks.  They are there to help with creating icons that work across devices that can be hard to manage otherwise.
+The image tasks included in Kickoff compress images and generate icons using Grunticon.
+
+Any images that are placed in `assets/src/img/` are automatically minified (when running a watch process like `grunt serve`) and then copied to `assets/dist/img/`.
 
 <a name="task-grunticon"></a>
 #### Grunticon
@@ -465,7 +467,7 @@ The icon tasks included in Kickoff have to be initiated separately from the defa
 
 If you want to use Grunticon, take a look at [their documenation and examples](https://github.com/filamentgroup/grunticon).
 
-Kickoff includes a basic setup of Grunticon that makes it easy to get started.  Simply add your SVG and PNG files to the `img/src` folder and then run `grunt icons` from the project root directory.  This will run the task giving you the icons and code to include in the front–end of your project.
+Kickoff includes a basic setup of Grunticon that makes it easy to get started.  Simply add your SVG and PNG files to the `assets/dist/img/src` folder and then run `grunt icons` from the project root directory.  This will run the task giving you the icons and code to include in the front–end of your project.
 
 <a name="task-svgmin"></a>
 #### SVGMin
