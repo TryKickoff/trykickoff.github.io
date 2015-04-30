@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<article class="entry">
+	<h2 class="entry--title">{{ page.title }}</h2>
+
+	{{ content }}
+
+</article>
+
+<!-- Pagination links -->
+<div class="pagination">
+	{% if page.previous %}
+		<a href="{{page.previous.url}}">Previous post</a>
+	{% endif %}
+	{% if page.next %}
+		<a href="{{page.next.url}}">Next post</a>
+	{% endif %}
+</div>

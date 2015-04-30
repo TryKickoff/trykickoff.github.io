@@ -1,0 +1,22 @@
+{% include html_start.html %}
+
+	<body{% if page.body-class %} class="{{ page.body-class }}"{% endif %}{% if page.prettyprint == true %} onload="prettyPrint()"{% endif %}>
+
+		<!--  === MASTHEAD ===  -->
+		{% include masthead.html %}
+
+		<section class="wideBoy primary text-centre">
+			<div class="l-container">
+				<h1 class="entry--title">{{ page.title }}</h1>
+				{% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
+			</div>
+		</section>
+
+		<!--  === MAIN CONTENT ===  -->
+		<section role="main">
+			<article class="l-container entry">
+				{{ content }}
+			</article>
+		</section>
+
+{% include html_end.html %}

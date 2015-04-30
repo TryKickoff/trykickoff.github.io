@@ -1,0 +1,93 @@
+/**
+ * Colour palette (yeah we're British!)
+ */
+
+// Generic colours
+$blue                         : #3498db;
+$blueDark                     : #181830;
+$green                        : #2ecc71;
+$red                          : #e74c3c;
+$yellow                       : #f1c40f;
+$orange                       : #FE7C08;
+$pink                         : #c3325f;
+$purple                       : #351330;
+$gray                         : #95a5a6;
+
+// Colour Scheme
+$color-primary                : $blueDark;
+$color-secondary              : $orange;
+$color-highlight              : #ff9600;
+
+// Common colours
+$color-text                   : $color-primary;
+$color-bg                     : #fff;
+$color-border                 : #ddd;
+$color-headings               : $color-primary;
+
+// Text Selection
+$color-selection              : #fff;
+$color-selection-bg           : $color-primary;
+
+
+// Links
+$color-link-default           : $blue;
+$color-link-visited           : $blue;
+$color-link-hover             : darken($blue, 20%);
+$color-link-active            : darken($blue, 20%);
+
+
+// Buttons
+$btn-default-bg               : $gray;
+$btn-default-bg-highlight     : darken($btn-default-bg, 10%);
+
+$btn-primary-bg               : $color-secondary;
+$btn-primary-bg-highlight     : darken($btn-primary-bg, 5%);
+
+
+// Tabs
+$inactive-tab                 : #95a5a6;
+$active-tab                   : $orange;
+
+
+// Code
+$color-code                   : #222;
+$color-code-bg                : #f7f7f7;
+$color-pre                    : $color-code;
+$color-pre-bg                 : $color-code-bg;
+
+
+
+// Messages & form states and alerts
+$color-message                : #f4ecbb;
+$color-important              : #d00;
+$color-notice                 : #66b;
+$color-warning                : darken($yellow, 5%);
+$color-error                  : darken($red, 5%);
+$color-success                : $green;
+$color-info                   : #3a87ad;
+
+
+
+/**
+ * Forms
+ */
+$input-bg                     : #fff;
+$input-border                 : #ccc;
+$input-disabled-bg            : lighten(#000, 70%);
+$form-actions-bg              : #f5f5f5;
+$label-color                  : $color-text;
+$input-color                  : $color-text;
+
+// Input placeholder text color
+$placeholder-text             : lighten(#000, 70%);
+
+// Tables
+$table-bg                     : $color-bg !default; // Default background color used for all tables.
+$table-bg-accent              : #f9f9f9 !default; // Background color used for `.table-striped`.
+$table-bg-hover               : #f5f5f5 !default; // Background color used for `.table-hover`.
+$table-bg-active              : $table-bg-hover !default;
+$table-border                 : #ddd; // table and cell border
+$table-border-color           : #ddd !default; // Border color for table and cell borders.
+
+// <hr> border colour
+$hr-border                    : $blue;

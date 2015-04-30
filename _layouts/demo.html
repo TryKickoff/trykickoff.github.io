@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<section class="wideBoy primary wideBoy--dark text-centre">
+	<div class="l-container">
+		<h1 class="entry--title">{{ page.title }}</h1>
+		{% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
+	</div>
+</section>
+
+<div class="l-container">
+	<div class="g-row entry">
+		<div class="g-span3 g-col">
+			<ul class="sidebar-nav unstyled">
+				{% include demonav.html %}
+			</ul>
+		</div>
+		<div class="g-span9 g-col">
+			<article>
+				{{ content }}
+			</article>
+
+			{% if page.next %}
+				<h3 class="nextTitle">Where next?</h3>
+				<ul class="blockLinks l-blockGrid l-blockGrid--2up">
+					{% for item in page.next %}
+					<li>
+						{% if item.link %}
+							<a href="{{ item.link }}" class="blockLink">
+						{% else %}
+							<div class="blockLink">
+						{% endif %}
+
+							<h3>{{ item.title }}</h3>
+							{{ item.body | markdownify }}
+
+						{% if item.link %}
+							</a>
+						{% else %}
+							</div>
+						{% endif %}
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+
+		</div>
+	</div>
+</div>
+{% include docshelp.html %}

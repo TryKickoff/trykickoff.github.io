@@ -1,0 +1,54 @@
+<li><a href="/kickoff/demos/"{% if page.navactive == 'demoindex' %} class="is-active"{% endif %} data-trak='{"category":"Demo nav","action":"Introduction"}'>Introduction</a></li>
+<li><a href="/kickoff/demos/typography.html"{% if page.navactive == 'demotype' %} class="is-active"{% endif %} data-trak='{"category":"Demo nav","action":"Typography"}'>Typography</a>
+		{% if page.navactive == 'demotype' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#hp">Headings and paragraphs</a></li>
+			<li><a href="#tuc">Text utility classes</a></li>
+			<li><a href="#tls">Text-level semantics</a></li>
+			<li><a href="#bq">Blockquote</a></li>
+			<li><a href="#ol">Ordered lists</a></li>
+			<li><a href="#ul">Unordered lists</a></li>
+			<li><a href="#uul">Unstyled lists</a></li>
+			<li><a href="#dl">Definition lists</a></li>
+			<li><a href="#hdl">Horizontal definition list</a></li>
+		</ul>
+		{% endif %}
+	</li>
+<li><a href="/kickoff/demos/components.html"{% if page.navactive == 'democomponents' %} class="is-active"{% endif %} data-trak='{"category":"Demo nav","action":"Components"}'>Components</a>
+		{% if page.navactive == 'democomponents' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#buttons">Buttons</a></li>
+			<li><a href="#mediaobject">Media object</a></li>
+			<li><a href="#fluidvideo">Fluid Video</a></li>
+			<li><a href="#blockgrids">Block grids</a></li>
+			<li><a href="#lists">Lists</a></li>
+			<li><a href="#tables">Tables</a></li>
+			<li><a href="#rwdtables">Responsive Tables</a></li>
+			<li><a href="#tabs">Tabs</a></li>
+		</ul>
+		{% endif %}
+	</li>
+<li><a href="/kickoff/demos/forms.html"{% if page.navactive == 'demoforms' %} class="is-active"{% endif %} data-trak='{"category":"Demo nav","action":"Forms"}'>Forms</a>
+		{% if page.navactive == 'demoforms' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#labelsabove">Labels above</a></li>
+			<li><a href="#labelsinline">Labels inline</a></li>
+			<li><a href="#multicolumnform">Multi column forms</a></li>
+			<li><a href="#singlefield">Single form field</a></li>
+			<li><a href="#formfieldstates">Form field states</a></li>
+			<li><a href="#customfields">Custom field elements</a></li>
+			<li><a href="#allformelements">All form elements</a></li>
+		</ul>
+		{% endif %}
+	</li>
+<li><a href="/kickoff/demos/grids.html"{% if page.navactive == 'demogrid' %} class="is-active"{% endif %} data-trak='{"category":"Demo nav","action":"Grids"}'>Grids</a>
+		{% if page.navactive == 'demogrid' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#standard">Standard</a></li>
+			<li><a href="#offset">Offset columns</a></li>
+			<li><a href="#sourceordering">Source Ordering</a></li>
+			<li><a href="#centred">Centred</a></li>
+			<li><a href="../learn/grid.html">Grid documentation</a></li>
+		</ul>
+		{% endif %}
+	</li>

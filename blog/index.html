@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+
+	<article>
+		<h1><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+		{{ post.content }}
+	</article>
+
+{% endfor %}

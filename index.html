@@ -1,0 +1,116 @@
+---
+layout: home
+navgroup: home
+body-class: page-home
+
+meta:
+  title: Kickoff
+
+---
+<section class="wideBoy wideBoy--dark bigBoy primary text-centre">
+	<div class="l-container">
+		<h1 class="logoStyle entry--title">Kick<span>off</span></h1>
+		<p>A lightweight front-end framework for creating scalable, responsive&nbsp;sites.<br><a href="learn/" data-trak='{"category":"Home page","action":"Know more?"}'>Want to know more?</a></p>
+
+		<a href="learn/get.html" class="btn btn--primary btn--large" data-trak='{"category":"Home page","action":"Download Kickoff CTA","label":"CTA"}'>Download Kickoff</a>
+		<p class="version wideBoy-info">
+			Current version: <span class="currentVersion"></span>
+			<br>
+			<span class="latestCommit">
+				<span></span> <a href="">[commit]</a>
+			</span>
+		</p>
+	</div>
+</section>
+
+<section class="wideBoy wideBoy--bright get-started">
+	<div class="l-container">
+		<h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2>
+
+		<code class="code-lrg" data-before="git:">
+			git clone https://github.com/tmwagency/kickoff.git your-project-folder
+		</code>
+
+		<div class="g-row">
+			<div class="g-span6 g-col">
+				<iframe src="http://ghbtns.com/github-btn.html?user=tmwagency&repo=kickoff&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="135" height="30"></iframe>
+				<iframe src="http://ghbtns.com/github-btn.html?user=tmwagency&repo=kickoff&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="30"></iframe>
+			</div>
+			<div class="g-span6 g-col">
+				<p class="l-mb0 text-right">
+					Find other ways to get Kickoff <a href="learn/get.html">in our documentation.</a>
+					<br>
+					Follow <a href="http://twitter.com/tmwkickoff" data-trak='{"category":"Home page","action":"Follow on Twitter","label":"Social"}'>@tmwkickoff</a> for updates.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="showcase wideBoy--dark wideBoy">
+	<div class="l-container">
+		<h2 class="wideBoy-title"><b>Kickoff</b> has been used on these fine&nbsp;websites…</h2>
+
+		<ul class="showcaseList l-blockGrid l-blockGrid--4up  l-blockGrid--2up--narrow">
+			{% for item in site.data.showcase %}
+				<li>
+					{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
+						<figure>
+							<img src="img/showcase/{{ item.img }}" alt="{{ item.name }}">
+							<figcaption>{{ item.name }}</figcaption>
+						</figure>
+					{% if item.url != null %}</a>{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+
+	</div>
+</section>
+<div class="used wideBoy wideBoy--dark">
+	<div class="l-container">
+		<div class="g-row">
+			<div class="g-span8 g-col">
+					<h3 class="wideBoy-title l-mb0">Have you used Kickoff on a&nbsp;project?</h3>
+					<p>Let us know so we can add it here.</p>
+			</div>
+			<div class="g-span4 g-col">
+				<a href="mailto:tech@tmw.co.uk" class="btn btn--secondary" data-trak='{"category":"Home page","action":"Email us","label":"CTA"}'>Email us your story</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="statix wideBoy--bright wideBoy text-centre">
+	<div class="l-container">
+		<h2>Like Kickoff? Super charge it using</h2>
+		<h1>
+			<a href="https://github.com/tmwagency/statix" class="statixLogo">
+				<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 209 60" enable-background="new 0 0 209 60" xml:space="preserve">
+					<g>
+						<path fill="#181830" d="M165.7,19.5h13.8l28.6,39.2h-13.8L165.7,19.5z"/>
+						<path fill="#181830" d="M16.6,60C11.2,60,4.1,58.7,0,56.5l2.5-9.4c4.6,2.4,9.8,3.7,14.3,3.7c3.5,0,5.3-1.2,5.3-3.2
+							c0-2.2-2.2-3-6.7-4.1C6.4,41.9,0.6,38.5,0.6,30.8c0-7.3,6.4-12.6,17.3-12.6c5.2,0,12.1,1.5,15.9,3.4l-2.6,9.3
+							c-4.5-2.2-9.8-3.5-13.5-3.5c-3.1,0-4.8,1-4.8,3c0,2.1,2.4,3,6.8,3.9c9.3,2,14.8,5.1,14.8,12.9C34.4,54.2,28.2,60,16.6,60z"/>
+						<path fill="#181830" d="M57.2,60c-9.7,0-14.9-4-14.4-14.3l0.6-14.9l-5.9-1l0.3-8.3l5.9-1.9l0.2-8.9h12.6L56.3,20h9.8l-0.3,10.2
+							H55.4l-0.4,14.1c-0.2,3.6,1.9,5.1,5.1,5.1c1.6,0,3.4-0.4,5.1-1l1.5,10.1C63.7,59.5,61.2,60,57.2,60z"/>
+						<path fill="#181830" d="M94.4,54c-2.8,3.3-5.9,6-11.3,6c-6.8,0-12-4.8-12-10.9c0-7.4,5.6-13.4,23.2-13.9v-0.8c0-4.1-2.1-6-6.9-6
+							c-4.1,0-8.8,1.7-13.3,4l-2.7-9.5c4.1-2.2,10.6-4.6,18.1-4.6c13.6,0,18.1,6.2,17.9,17.1L107.2,47c0,2.7,0.5,3,3.2,3.2l-1.3,9.3
+							c-8.5,1.1-12.7-1.2-14.5-5.5H94.4z M94.3,41.3c-8,0.9-11,2.4-11,5.9c0,2.5,2,4.2,4.9,4.2c2.6,0,4.7-1.1,6.1-2.6V41.3z"/>
+						<path fill="#181830" d="M132.1,60c-9.7,0-14.9-4-14.4-14.3l0.6-14.9l-5.9-1l0.3-8.3l5.9-1.9l0.2-8.9h12.6l-0.1,9.4h9.8l-0.3,10.2
+							h-10.5l-0.4,14.1c-0.2,3.6,1.9,5.1,5.1,5.1c1.6,0,3.4-0.4,5.1-1l1.5,10.1C138.6,59.5,136.1,60,132.1,60z"/>
+						<path fill="#181830" d="M154.7,13.9c-4.7,0-7.7-2.4-7.7-6.9c0-4.6,3-7,7.7-7c4.8,0,7.7,2.4,7.7,7C162.3,11.5,159.5,13.9,154.7,13.9
+							z"/>
+						<polygon fill="#181830" points="148.2,58.7 148.2,20.2 161.2,18.6 161.2,58.7 	"/>
+						<g>
+							<path fill="#181830" d="M204.1,21.5L195,34l-4.4-6l4.7-6.5H204.1 M178.8,44.2l4.4,6l-4.7,6.5h-8.8L178.8,44.2 M208.1,19.5h-13.8
+								l-6.2,8.5l6.9,9.4L208.1,19.5L208.1,19.5z M178.8,40.8l-13.1,17.9h13.8l6.2-8.5L178.8,40.8L178.8,40.8z"/>
+						</g>
+					</g>
+				</svg>
+			</a>
+		</h1>
+		<p>Makes the process of creating static HTML templates quick and easy</p>
+		<a href="https://github.com/tmwagency/statix" class="btn btn--primary btn--large" data-trak='{"category":"Home page","action":"Statix info","label":"CTA"}'>Find out more</a>
+	</div>
+</section>

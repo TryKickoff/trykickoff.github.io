@@ -1,0 +1,26 @@
+- name: Go Energy Shopping
+  img: goenergyshopping.jpg
+  url: https://github.com/tmwagency/kickoff
+
+- name: Lynx Peace
+  img: lynxpeace.jpg
+  url: http://www.lynxpeace.com/
+
+- name: BBC Goodfood
+  img: bbcgoodfood.jpg
+  url: http://www.bbcgoodfood.com/
+
+- name: The Bar
+  img: thebaruk.jpg
+  url: http://uk.thebar.com
+
+- name: Strepsils Star Moments
+  img: strepsilsxfactor.jpg
+
+- name: tech.tmw
+  img: techtmw.jpg
+  url: http://tech.tmw.co.uk
+
+- name: Brother Printers
+  img: brotherprinters.jpg
+  url: http://campaigns.brother.co.uk/

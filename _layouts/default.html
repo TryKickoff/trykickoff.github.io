@@ -1,0 +1,15 @@
+{% include html_start.html %}
+
+	<body{% if page.body-class %} class="{{ page.body-class }}"{% endif %}{% if page.prettyprint == true %} onload="prettyPrint()"{% endif %}>
+
+		<!--  === MASTHEAD ===  -->
+		{% include masthead.html %}
+
+		<!--  === MAIN CONTENT ===  -->
+		<section role="main">
+			{{ content }}
+		</section>
+
+		{% include footer.html %}
+
+{% include html_end.html %}

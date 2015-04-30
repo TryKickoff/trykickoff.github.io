@@ -1,0 +1,35 @@
+{
+  "name": "trak.js",
+  "version": "0.3.0",
+  "homepage": "https://github.com/tmwagency/trak.js",
+  "authors": [
+    "Zander Martineau @MrMartineau"
+  ],
+  "description": "Universal event tracking API",
+  "main": "dist/trak.js",
+  "keywords": [
+    "analytics",
+    "google",
+    "tracking",
+    "event",
+    "tracking"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src/*"
+  ],
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.0",
+    "commit": "2b3e3b33fb3b6735a11542874684e876dc478864"
+  },
+  "_source": "git://github.com/tmwagency/trak.js.git",
+  "_target": "*",
+  "_originalSource": "trak"
+}

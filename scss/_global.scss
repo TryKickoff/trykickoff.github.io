@@ -1,0 +1,624 @@
+/**
+ * Global app/site styles
+ */
+html {
+	overflow-y: scroll;
+}
+body {
+	background-color: $color-bg;
+}
+
+
+a {
+	transition: all 150ms ease-in-out;
+}
+
+
+/**
+ * Default layout container
+ */
+.l-container {
+	padding-left: #{$layout-margin}px;
+	padding-right: #{$layout-margin}px;
+	width: 95%;
+	max-width: #{$layout-max-width}px;
+	margin: 0 auto;
+	transform: translateZ(0);
+
+	.lt-ie9 & {
+		min-width: #{$layout-min-width}px;
+	}
+
+	// :first-child {
+	// 	margin-top: 0;
+	// }
+
+// 	p a:link, ul a:link {
+// 		font-weight: $font-weight-bold;
+// 	}
+// 	& .next {
+// 		p a:link, ul a:link {
+// 			font-weight: normal;
+// 		}
+// 	}
+// }
+
+}
+
+/* ==========================================================================
+   Masthead
+   ========================================================================== */
+.masthead {
+	position: relative;
+	z-index: 100;
+	background-color: $color-primary;
+	color: #fff;
+	min-height: 50px;
+	line-height: 45px;
+	border-bottom: 3px solid #fff;
+
+	// .l-container {
+	// 	padding: 5px;
+	// }
+
+	@include respond-min($bp-single-col) {
+		// position: fixed;
+		// top: 0;
+		// left: 0;
+		// right: 0;
+
+		.l-container {
+			padding: 0;
+			line-height: 50px;
+		}
+	}
+
+}
+
+.logo {
+	font-weight: normal;
+	margin: 0;
+	@include font-size(30);
+	text-align: center;
+	line-height: 1.5;
+
+	@include respond-min($bp-single-col) {
+		float: left;
+		margin: 0;
+		@include font-size(30);
+		text-align: left;
+	}
+}
+
+.logoStyle {
+	font-style: italic;
+
+	&, a:link, a:visited {
+		color: #fff;
+	}
+	font-weight: normal !important;
+	letter-spacing: -0.01em;
+
+	span {
+		color: $color-secondary;
+	}
+}
+.nav {
+	font-family: $font-family-alt;
+	font-style: italic;
+	text-align: center;
+
+	@include respond-min($bp-single-col) {
+		float: right;
+	}
+
+	a {
+		display: inline-block;
+		padding: 0 .5em;
+		@include font-size(18);
+		line-height: 50px;
+		height: 50px;
+
+		// border: 2px solid transparent;
+
+		&:hover {
+			border-color: lighten($color-primary, 30%);
+		}
+
+		&.is-active {
+			background-color: #fff;
+			color: $color-primary;
+		}
+	}
+}
+
+.main-nav {
+	@extend .unstyled;
+	@include clearfix;
+
+	> li {
+		display: inline-block;
+	}
+}
+
+
+.github-link {
+	background-color: darken($color-primary, 20%);
+}
+
+// Footer
+.footer {
+	padding-top: 20px;
+	padding: 40px 0;
+	background-color: $color-primary;
+
+	&,
+	a:link,
+	a:visited {
+		color: #fff;
+	}
+
+	a:link,
+	a:visited {
+		border-bottom: 2px solid rgba(#fff, 0.7);
+		white-space: pre;
+	}
+
+	a:hover {
+		opacity: .5;
+	}
+
+	p {
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.footer-nav {
+	margin-bottom: 1em;
+
+	li {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+.social-links a {
+	display: block;
+	margin-bottom: 5px;
+}
+
+
+/* ==========================================================================
+   Home page
+   ========================================================================== */
+.wideBoy {
+	padding: 50px 0;
+
+	@include respond-min($bp-mid) {
+		h1 {
+			@include font-size(51);
+		}
+		h2 {
+			@include font-size(28);
+		}
+	}
+}
+.wideBoy-title {
+	font-family: $font-family-base;
+	font-weight: normal;
+}
+.wideBoy--bright {
+	& {
+		color: $color-primary;
+	}
+}
+.wideBoy--dark {
+	& {
+		color: #fff;
+	}
+}
+
+.bigBoy {
+	h1 {
+		margin-bottom: 0;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+	h2 {
+		margin-top: 0;
+	}
+	p {
+		font-size: 150%;
+	}
+
+	@include respond-min($bp-mid) {
+		h1 {
+			@include font-size(80);
+			margin-bottom: 0.5em;
+			// line-height: 2;
+		}
+		h2 {
+			@include font-size(28);
+		}
+	}
+}
+
+.wideBoy-info {
+	font-size: 90% !important;
+	margin-top: $baseline;
+	margin-bottom: 0;
+}
+
+.primary {
+	background-color: $color-primary;
+	color: #fff;
+
+	.btn {
+		margin-top: 1em;
+	}
+}
+
+
+.linkList {
+	margin: 30px 0;
+}
+
+.contribute {
+	background-color: $gray;
+	overflow: hidden;
+}
+
+/*
+   Showcase
+   ========================================================================== */
+.showcase {
+	background-color: $blue;
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.showcaseList {
+	text-align: center;
+
+		&, & a, &:visited {
+			color: $color-link-default;
+		}
+
+	@include respond-min($bp-mid) {
+		li {
+			margin-bottom: 0px;
+		}
+	}
+
+	figure {
+		background-color: #fff;
+		max-width: 475px;
+		margin: 0 auto;
+		display: block;
+		position: relative;
+	}
+
+	li {
+		// margin-bottom: 20px;
+		padding: 5px;
+	}
+
+	figcaption {
+		// line-height: 2;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: rgba($color-primary, .8);
+		padding: 0.5em;
+		text-align: left;
+		color: #fff;
+		// opacity: 0;
+		@include font-size($type-small);
+		font-style: italic;
+		font-family: $font-family-alt;
+	}
+
+	img {
+		display: block;
+	}
+
+	a {
+		display: block;
+		&:hover {
+			color: $color-link-hover;
+		}
+	}
+}
+
+.used {
+	// margin-top: $baseline;
+	background-color: darken($blue, 5%);
+	padding: 1.5em;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.statixLogo {
+	max-width: 400px;
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+}
+/* ==========================================================================
+   Next block
+   ========================================================================== */
+.nextTitle {
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+	border-top: 10px solid #181830;
+	margin-bottom: 0;
+	line-height: 55px;
+	height: 70px;
+	margin-top: $baseline * 2;
+}
+.blockLinks {
+	background-color: $blueDark;
+	margin-bottom: $baseline;
+}
+.blockLink {
+	padding: 1em;
+	display: block;
+	color: #fff;
+
+	h3 {
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	code {
+		background-color: $blue;
+	}
+}
+
+
+/* ==========================================================================
+   Demos
+   ========================================================================== */
+.media--link {
+	display: block;
+
+	.asset-font {
+		width: 200px;
+		@include font-size(100);
+	}
+}
+
+.demo {
+	border: 1px solid #ddd;
+	position: relative;
+
+	& + & {
+		margin-top: 50px;
+	}
+}
+
+.demo-src {
+	position: absolute;
+	top: 0;
+	right: 0;
+	@include font-size($type-smaller);
+	text-align: right;
+	padding: 1px 5px;
+	display: inline-block;
+
+	&,
+	&:link,
+	&:visited {
+		color: #a0a0a0;
+		background-color: #f0f0f0;
+	}
+
+	&:hover {
+		background-color: #ddd;
+	}
+}
+
+.demo-visual {
+	padding: $baseline;
+	line-height: 1.5;
+
+	h3 {
+		margin-bottom: 5px;
+	}
+
+	code {
+		white-space: pre;
+	}
+}
+
+.demo-code {
+	pre {
+		margin-bottom: 0;
+		// border-radius: 0;
+		max-height: 400px;
+		overflow: auto;
+	}
+}
+
+/**
+ * Grid demos
+ */
+.show-grid-button {
+	margin: 0 auto $baseline;
+	display: block;
+}
+
+.grid-block-link {
+	display: block;
+	min-height: 130px;
+	text-align: center;
+
+	&:hover {
+		background-color: $color-primary;
+		color: #fff;
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+
+	.asset-font {
+		@include font-size(150);
+		line-height: 60px;
+		height: 70px;
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// Choreographic Grid Demo
+.show-grid .grid-test .g-col {
+	background-color: rgba($color-primary,0.1);
+	padding: 6px;
+}
+.show-grid .grid-test.g-row {
+	margin-bottom: 20px;
+}
+.show-grid .grid-test .g-split .g-col {
+	background-color: rgba($blue, 0.3);
+}
+.show-grid .grid-test .g-shunt {
+	background-color: rgba($red, 0.2);
+}
+.show-grid .grid-test [class*="g-pull"] {
+	background-color: rgba($green, 0.3);
+}
+.show-grid .grid-test [class*="g-push"] {
+	background-color: rgba($yellow, 0.3);
+}
+.show-grid .grid-test [class*="g-offset"] {
+	background-color: rgba($color-primary, 0.4);
+}
+
+.grid-test .g-col.g-col--centered {
+	text-align: center;
+}
+.class-tag {
+	display: none;
+}
+// .show-grid .class-tag {
+// 	position: absolute;
+// 	top: -6px; right: 0;
+// 	display: block;
+
+// 	code {
+// 		@include font-size(11);
+// 	}
+// }
+
+.entry {
+	padding-top: 50px;
+}
+.entry--title {
+	margin-bottom: 0;
+	font-weight: normal;
+	font-style: italic;
+}
+
+/**
+ * Docs/demo sidebar navigation
+ */
+.sidebar-nav {
+	margin-bottom: 1em;
+
+	a {
+		// font-family: $font-family-alt;
+		// font-style: italic;
+		padding: .2em .5em .3em;
+		border-left: 3px solid;
+		display: block;
+	}
+	.is-active {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		color: #fff;
+	}
+}
+.sidebar-subnav {
+	margin-left: 1em;
+}
+
+// Docs disclaimer
+.docs-footer {
+	background-color: #FEFFDA;
+	padding: 15px;
+	text-align: center;
+}
+
+/**
+ * Checklist page
+ */
+.well {
+	min-height: 90px;
+	padding: 30px;
+	background-color: #f0f0f0;
+	// margin: 0px -30px 0px;
+	color: #333;
+
+	code, pre {
+		background-color: #fff;
+		@include font-size(14);
+		white-space: pre;
+	}
+}
+.well--inner {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.checklistInfo {
+	margin-bottom: 15px;
+	margin-left: 30px;
+	font-size: $font-size-base-px - 3;
+
+	li {
+		margin-bottom: 0.2em;
+	}
+}
+
+.sectionSplitter {
+	border-top-width: 5px;
+	border-bottom: none;
+	margin: $baseline * 2;
+}
+
+.btn--secondary {
+	background-color: $color-primary;
+
+	&,
+	&:link,
+	&:visited {
+		color: #fff;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: darken($color-primary, 15%);
+	}
+}
+
+@include respond-max($bp-single-col) {
+	.github-logo {
+		display: none;
+	}
+}
+

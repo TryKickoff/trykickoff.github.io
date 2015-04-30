@@ -1,0 +1,74 @@
+<ul class="sidebar-nav unstyled">
+	<li><a href="/kickoff/learn/index.html"{% if page.navactive == 'docsindex' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Meet Kickoff"}'>Meet Kickoff</a></li>
+	<li><a href="/kickoff/learn/get.html"{% if page.navactive == 'docsget' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Get Kickoff"}'>Get Kickoff</a></li>
+	<li><a href="/kickoff/learn/use.html"{% if page.navactive == 'docsuse' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Use Kickoff"}'>Use Kickoff</a>
+		{% if page.navactive == 'docsuse' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#checklist">Checklist</a></li>
+		</ul>
+		{% endif %}
+	</li>
+</ul>
+
+<ul class="sidebar-nav unstyled">
+	<li><a href="/kickoff/learn/grunt.html"{% if page.navactive == 'docsgrunt' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Grunt"}'>Grunt</a>
+		{% if page.navactive == 'docsgrunt' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#setup">Setup</a></li>
+			<li><a href="#tasks">Kickoff Tasks</a></li>
+			<li><a href="#config">Config</a></li>
+			<li><a href="#taskindex">Task index</a></li>
+		</ul>
+		{% endif %}
+	</li>
+	<li><a href="/kickoff/learn/css.html"{% if page.navactive == 'docscss' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"CSS"}'>CSS</a>
+		{% if page.navactive == 'docscss' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#how">Philosophy</a></li>
+			<li><a href="#sass">Sass</a></li>
+			<li><a href="#structure">Structure</a></li>
+			<li><a href="#variables">Variables</a></li>
+			<li><a href="#responsive">Responsive</a></li>
+			<li><a href="#namingscheme">CSS Naming scheme</a></li>
+		</ul>
+		{% endif %}
+	</li>
+	<li><a href="/kickoff/learn/js.html"{% if page.navactive == 'docsjs' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Javascript"}'>Javascript</a>
+		{% if page.navactive == 'docsjs' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#structure">Structure</a></li>
+			<li><a href="#browserify">Browserify</a></li>
+			<li><a href="#bower">Bower</a></li>
+			<li><a href="#shims">Shims</a></li>
+			<li><a href="#libs">Libraries</a></li>
+		</ul>
+		{% endif %}
+	</li>
+	<li><a href="/kickoff/learn/html.html"{% if page.navactive == 'docshtml' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"HTML"}'>HTML</a>
+		{% if page.navactive == 'docshtml' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#svg">SVG icons</a></li>
+			<li><a href="#skip">Skip content link</a></li>
+			<li><a href="#socialmeta">Social meta tags</a></li>
+			<li><a href="#iconmeta">Icon meta tags</a></li>
+			<li><a href="#jquery">jQuery</a></li>
+		</ul>
+		{% endif %}
+	</li>
+	<li><a href="/kickoff/learn/grid.html"{% if page.navactive == 'docsgrid' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Grid"}'>The Grid</a>
+		{% if page.navactive == 'docsgrid' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#gridbasic">Basic grid</a></li>
+			<li><a href="#gridnesting">Nesting columns</a></li>
+			<li><a href="#gridoffset">Offset columns</a></li>
+			<li><a href="#gridsourceorder">Source Ordered columns</a></li>
+			<li><a href="#gridcentred">Centred columns</a></li>
+		</ul>
+		{% endif %}
+	</li>
+</ul>
+
+<ul class="sidebar-nav unstyled">
+	<li><a href="/kickoff/learn/yeoman.html"{% if page.navactive == 'docsyo' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Yeoman"}'>Yeoman generator</a></li>
+	<li><a href="/kickoff/learn/sublime.html"{% if page.navactive == 'docssublime' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Sublime Text snippets"}'>Sublime Text snippets</a></li>
+</ul>
