@@ -212,14 +212,14 @@ This obviously isn’t compulsory to use in your own Kickoff projects, but is do
 
 /* ========= */
 
-/* Element state: .is- */
+/* Element state: .is- or .has- */
 .is-active {
 	...
 }
 
 /* ========= */
 
-/* Sass variables are dash-case */
+/* Sass variables use dash-case */
 a {
 	color: $color-primary;
 }
