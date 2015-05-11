@@ -12,20 +12,31 @@ meta:
 		<h1 class="logoStyle entry--title">Kick<span>off</span></h1>
 		<p>A lightweight front-end framework for creating scalable, responsive&nbsp;sites.<br><a href="learn/" data-trak='{"category":"Home page","action":"Know more?"}'>Want to know more?</a></p>
 
-		<a href="learn/get.html" class="btn btn--primary btn--large" data-trak='{"category":"Home page","action":"Download Kickoff CTA","label":"CTA"}'>Download Kickoff</a>
-		<p class="version wideBoy-info">
-			Current version: <span class="currentVersion"></span>
-			<br>
-			<span class="latestCommit">
-				<span></span> <a href="">[commit]</a>
-			</span>
-		</p>
+		<a href="learn/get.html" class="btn btn--primary btn--large" data-trak='{"category":"Home page","action":"Download Kickoff CTA","label":"CTA"}'>Download Kickoff v<span class="currentVersion"></span></a>
 	</div>
 </section>
 
 <section class="wideBoy wideBoy--bright get-started">
 	<div class="l-container">
-		<h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2>
+		<h2 class="wideBoy-title clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our Yeoman Generator is the best way to get Kickoff each time you want to start a new project:</h2>
+		<!-- <h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2> -->
+
+
+
+		<div class="g-row">
+			<div class="g-col g-span6">
+				<code class="code-lrg" data-before="install:">
+					npm install -g generator-kickoff
+				</code>
+			</div>
+			<div class="g-col g-span6">
+				<code class="code-lrg" data-before="use:">
+					yo kickoff
+				</code>
+			</div>
+		</div>
+
+		<p class="l-mb0">or clone the git repo:</p>
 
 		<code class="code-lrg" data-before="git:">
 			git clone https://github.com/trykickoff/kickoff.git your-project-folder
