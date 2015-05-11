@@ -7,25 +7,12 @@ module.exports.tasks = {
 	*/
 	watch: {
 		scss: {
-			files: ['scss/**/*.scss', '!scss/styleguide.scss'],
+			files: ['scss/**/*.scss'],
 			tasks: [
-				'sass:kickoff',
-				'autoprefixer:kickoff'
+				'sass',
+				'autoprefixer'
 			],
 			options: {
-				interrupt : true,
-				spawn: false
-			}
-		},
-
-		styleguide_scss: {
-			files: ['scss/styleguide.scss'],
-			tasks: [
-				'sass:styleguide',
-				'autoprefixer:styleguide'
-			],
-			options: {
-				interrupt : true,
 				spawn: false
 			}
 		},
@@ -34,7 +21,6 @@ module.exports.tasks = {
 			files: ['<%=config.js.fileList%>', 'Gruntfile.js'],
 			tasks: ['uglify'],
 			options: {
-				interrupt : true,
 				spawn: false
 			}
 		},
@@ -79,13 +65,12 @@ module.exports.tasks = {
 				'**/*.js',
 				'**/*.yml',
 				'_plugins/*.rb',
-				'!kickoff/**/*.*',
+				'!_site/**/*.*',
 				'!node_modules/**/*.*'
 			],
 			tasks: 'jekyll',
 			options: {
-				livereload: true,
-				interrupt : true
+				livereload: true
 			}
 		}
 	}
