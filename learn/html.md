@@ -15,6 +15,27 @@ next:
    body: Minimal and flexible, we show you how Kickoff structures it’s JS.
    link: js.html
 ---
+Here is some pointers regarding Kickoff's HTML usage.
+
+## Conditional CSS files
+By default, Kickoff compiles two scss files: one for IE9+ & and another for old IE (<8); these browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see the CSS docs](css.html) for more info.
+
+#### Add your stylesheets to HTML using the code below
+```html
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="/assets/dist/css/kickoff-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+	<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
+<!--<![endif]-->
+```
+
+If you're not supporting IE8, then you only need one stylesheet..
+
+```html
+<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
+```
+
 <a name="svg"></a>
 
 ## SVG icons
@@ -28,11 +49,12 @@ We have included a Grunt task to minify SVGs before running the grunticon task o
 In order for your user's to benefit from this, you will need to add a small inline script to the head of each page.
 
 ```html
-<script>window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var a=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];a.rel="stylesheet",a.href=e[o&&n?0:o?1:2],a.media="only x",r.parentNode.insertBefore(a,r),setTimeout(function(){a.media="all"})},a=new t.Image;a.onerror=function(){o(!1)},a.onload=function(){o(1===a.width&&1===a.height)},a.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};grunticon(["/img/icons/icons.data.svg.css", "/img/icons/icons.data.png.css", "/img/icons/icons.fallback.css"]);</script>
+<script>(function(e){function t(t,n,r,o){"use strict";function a(){for(var e,t=0;m.length>t;t++)m[t].href&&m[t].href.indexOf(i.href)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),c=n||e.document.getElementsByTagName("script")[0],m=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",o&&(i.onload=o),c.parentNode.insertBefore(i,c),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,c=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),m=new i;m.onerror=function(){n.method="png",n.href=r[2],t(r[2])},m.onload=function(){var e=1===m.width&&1===m.height,a=r[e&&c?0:e?1:2];n.method=e&&c?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},m.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);
+			grunticon(["/assets/dist/img/icons/icons.data.svg.css", "/assets/dist/img/icons/icons.data.png.css", "/assets/dist/img/icons/icons.fallback.css"]);</script>
 <noscript><link href="/img/icons/icons.fallback.css" rel="stylesheet"></noscript>
 ```
 
-This script detects what SVG support the user's browser has and serves the appropriate CSS file. **NOTE:** If do not have the same folder structure as us, you will need to change the above script, the value of this Grunt variable `<%=config.img.dir%>` defined in our [Gruntfile line ~44](https://github.com/tmwagency/kickoff/blob/master/Gruntfile.js#L44). You will also need to move the `src-min` & `src` folders into your new image directory.
+This script detects what SVG support the user's browser has and serves the appropriate CSS file. **NOTE:** If do not have the same folder structure as us, you will need to change the above script, the value of this Grunt variable `<%=config.img.dir%>` defined in our [Gruntfile line ~44](https://github.com/trykickoff/kickoff/blob/master/Gruntfile.js#L44). You will also need to move the `src-min` & `src` folders into your new image directory.
 
 <hr class="sectionSplitter">
 <a name="skip"></a>
@@ -40,7 +62,7 @@ This script detects what SVG support the user's browser has and serves the appro
 ## Skip to content link
 We recommend that you include a 'skip to content' link so that user's can quickly move past your masthead area if they wish. Include the below HTML as the very first item after your `<body>` tag. You should be able to see that the anchor's href within the `.skipToContent` div points to `#mainContent`, this means that you will need add that id to another div that wraps your main content.
 
-The styling for this is simple, so please modify it; see [/scss/partials/components/_skip-navigation.scss](https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_skip-navigation.scss) to edit styles.
+The styling for this is simple, so please modify it; see [/scss/partials/components/_skip-navigation.scss](https://github.com/trykickoff/kickoff/blob/master/scss/partials/components/_skip-navigation.scss) to edit styles.
 
 ```html
 <div class="skipToContent">

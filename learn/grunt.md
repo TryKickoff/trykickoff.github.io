@@ -46,7 +46,7 @@ Download Kickoff using any of the options on the [Get Kickoff page](get.html).
 
 
 #### Once you have got Kickoff, install all the Node dependencies
-Grunt will not work without having installed it's dependencies. Kickoff's [package.json](https://github.com/tmwagency/kickoff/blob/master/package.json) uses a few essential Grunt plugins to operate.
+Grunt will not work without having installed it's dependencies. Kickoff's [package.json](https://github.com/trykickoff/kickoff/blob/master/package.json) uses a few essential Grunt plugins to operate.
 
 To install them, use your terminal to `cd` into the root of the Kickoff directory, and then run `npm install`.  This will install all of the required dependencies to a new folder called `node_modules` inside your project.
 
@@ -79,7 +79,7 @@ This task will open your defaut browser and enable Livereload so that CSS change
 Tasks carried out when `grunt serve` is run:
 
 * [Shimly](#task-shimly) - allows you to specifiy any JavaScript shims you would like to include in your project
-* [Chotto](#chotto) - checks to see if all javascript files (that the build needs) are there
+* [Chotto](#task-chotto) - checks to see if all javascript files (that the build needs) are there
 * [Uglify](#task-uglify) - concatinates & compresses your javascript
 * [Sass](#task-sass) - compiles Kickoff’s Sass files into native CSS
 * [Autoprefixer](#task-autoprefixer) – adds vendor prefixes to the CSS
@@ -146,8 +146,8 @@ generating a set of icons for you to use in the front-end of your project.
 Tasks carried out when `grunt icons` is run:
 
 * [clean:icons](#task-clean) – removes any icons already created by Grunticon in our project
-* [SVGMin](#task-svgmin) – optimises SVG files
-* [Grunticon](#task-grunticon) – creates icon set for use in front end
+* [imagemin:grunticon](#task-imagemin) – optimises SVG files
+* [grunticon](#task-grunticon) – creates icon set for use in front end
 
 ---
 
@@ -163,6 +163,7 @@ We plan to expand on the checks carried out using this task in future versions o
 Tasks carried out when `grunt checks` is run:
 
 * [JSHint](#task-jshint) – validates your projects JavaScript
+* [scsslint](#task-scsslint) – validates your projects Scss
 
 
 <a name="grunt-photobox"></a>
@@ -189,7 +190,7 @@ Here we take a look at their structure and what each part controls.
 <a name="config-structure"></a>
 ### Config structure
 
-Kickoff’s config variables can be [found in the `_grunt-configs/config.js` file in ](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/config.js) and looks like the following code snippet:
+Kickoff’s config variables can be [found in the `_grunt-configs/config.js` file in ](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/config.js) and looks like the following code snippet:
 
 ```js
 /**
@@ -262,7 +263,7 @@ config : {
 	testing: {
 
 		// Used by Photobox at the moment
-		// http://tmwagency.github.io/kickoff/learn/grunt.html#task-photobox
+		// http://trykickoff.github.io/kickoff/learn/grunt.html#task-photobox
 		visual : {
 			sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
 
@@ -278,7 +279,6 @@ config : {
 
 ---
 
-<a name="taskindex"></a>
 ### Breaking this down
 
 <a name="config-src"></a>
@@ -290,7 +290,7 @@ The first line you encounter in the Grunt config is the `config.src` variable.
 src: "_grunt-configs/*.js"
 ```
 
-This is used to specify the path at which the rest of your Grunt config files live.  Kickoff defines the location for these files as in the [_grunt-configs](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/_grunt-configs) folder, but if you’d like to rename or move this folder for any reason, make sure that you update this value when doing so.
+This is used to specify the path at which the rest of your Grunt config files live.  Kickoff defines the location for these files as in the [_grunt-configs](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/_grunt-configs) folder, but if you’d like to rename or move this folder for any reason, make sure that you update this value when doing so.
 
 ---
 <a name="config-assets"></a>
@@ -397,7 +397,7 @@ The `config.js` variables relate to the directories and paths of the project Jav
 testing: {
 
 	// Used by Photobox at the moment
-	// http://tmwagency.github.io/kickoff/learn/grunt.html#task-photobox
+	// http://trykickoff.github.io/kickoff/learn/grunt.html#task-photobox
 	visual : {
 		sizes: [ '600', '1000', '1200' ], // <%=config.testing.visual.sizes%>
 
@@ -420,24 +420,22 @@ The `config.testing.visual` variables are used by the [Photobox](#task-photobox)
 `config.testing.visual.urls` defines the urls that Photobox scans. These urls can be local or remote - please edit as you see fit.
 
 <hr class="sectionSplitter">
-<a name="task-index"></a>
+<a name="taskindex"></a>
 ## Task Index
 
 This is an exhaustive list of all the Grunt tasks that Kickoff uses and what they do.
 
-They are ordered in the same way that Kickoff’s tasks are grouped in the [_grunt-configs](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/_grunt-configs) directory.
+They are ordered in the same way that Kickoff’s tasks are grouped in the [_grunt-configs](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/_grunt-configs) directory.
 
 ---
-### CSS Tasks ([css.js](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/css.js))
+### CSS Tasks ([css.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/css.js))
 
 <a name="task-sass"></a>
 #### Sass
 
-Uses [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) to compile Kickoff’s Sass files into native CSS.
+Uses [grunt-sass](https://github.com/sindresorhus/grunt-sass/) to compile Kickoff’s Sass files into native CSS.
 
-We compile Kickoff’s Sass into 2 CSS files.  The first is a straight compilation of the Sass into native CSS.  The second takes a width parameter, as defined in [`scss/kickoff-old-ie.scss`](https://github.com/tmwagency/kickoff/blob/master/scss/kickoff-old-ie.scss), and compiles a CSS file without media queries.  This second file is created so that we can write our Sass code mobile-first, while still being able to serve old versions of Internet Explorer an appropriately sized layout, since they don’t support media queries.  For more information on this approach, see [Jake Archibald’s excellent article on the subject](http://jakearchibald.github.io/sass-ie/).
-
-The Sass task also has a configuration to compile CSS for the projects styleguide, when running `grunt styleguide`.
+We compile Kickoff’s Sass into 2 CSS files.  The first is a straight compilation of the Sass into native CSS.  The second takes a width parameter, as defined in [`scss/kickoff-old-ie.scss`](https://github.com/trykickoff/kickoff/blob/master/scss/kickoff-old-ie.scss), and compiles a CSS file without media queries.  This second file is created so that we can write our Sass code mobile-first, while still being able to serve old versions of Internet Explorer an appropriately sized layout, since they don’t support media queries.  For more information on this approach, see [Jake Archibald’s excellent article on the subject](http://jakearchibald.github.io/sass-ie/).
 
 <a name="task-autoprefixer"></a>
 #### Autoprefixer
@@ -451,14 +449,19 @@ For more information on Autoprefixer and how it works, see it’s [Github repo a
 <a name="task-csso"></a>
 #### CSSO
 
-To minify our CSS, we use CSSO via the [grunt-csso](https://github.com/t32k/grunt-csso) plugin.
+To minify our CSS, we use CSSO via the [grunt-csso](https://github.com/t32k/grunt-csso) plugin. This is used in the [`grunt deploy`](#grunt-deploy) task
 
 ---
-### Image tasks ([images.js](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/images.js))
+### Image tasks ([images.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/images.js))
 
 The image tasks included in Kickoff compress images and generate icons using Grunticon.
 
 Any images that are placed in `assets/src/img/` are automatically minified (when running a watch process like `grunt serve`) and then copied to `assets/dist/img/`.
+
+<a name="task-imagemin"></a>
+#### Imagemin
+
+[Imagemin](https://github.com/gruntjs/grunt-contrib-imagemin/) is used to compress all images placed in the `assets/src/img/` & `assets/src/grunticon` directories. Images in `assets/src/img/` are compressed to `assets/dist/img/` & icons in `assets/src/grunticon/` are compressed but they need Grunticon to manipulate them before being added to `assets/dist/img/icons/`.
 
 <a name="task-grunticon"></a>
 #### Grunticon
@@ -467,15 +470,10 @@ Any images that are placed in `assets/src/img/` are automatically minified (when
 
 If you want to use Grunticon, take a look at [their documenation and examples](https://github.com/filamentgroup/grunticon).
 
-Kickoff includes a basic setup of Grunticon that makes it easy to get started.  Simply add your SVG and PNG files to the `assets/dist/img/src` folder and then run `grunt icons` from the project root directory.  This will run the task giving you the icons and code to include in the front–end of your project.
-
-<a name="task-svgmin"></a>
-#### SVGMin
-
-This is used as a precursor to Grunticon to ensure SVG files are optimised.  For more information on `grunt-svgmin`, [check out the documentation](https://github.com/sindresorhus/grunt-svgmin).
+Kickoff includes a basic setup of Grunticon that makes it easy to get started. Simply add your SVG & PNG icons to the `assets/src/grunticon` folder and then run `grunt icons` from the project root directory. This will run the task giving you the icons and code to include in the front–end of your project. The Grunticon src directory is also being watched by `grunt watch` so if that is running then the icons will be generated for you.
 
 ---
-### JavaScript Tasks ([javascript.js](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/javascript.js))
+### JavaScript Tasks ([javascript.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/javascript.js))
 
 <a name="task-uglify"></a>
 #### Uglify
@@ -503,7 +501,7 @@ This task isn’t specified in the default Kickoff build tasks, but can be initi
 JSHint can take a number of options when validating your JavaScript, all of which can be managed inside a `.jshintrc` file, found in Kickoff’s root directory.
 
 ---
-### Server tasks ([server.js](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/server.js))
+### Server tasks ([server.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/server.js))
 
 Kickoff’s server tasks help create a local development environment for your project.
 
@@ -515,7 +513,7 @@ See this video for a demo:
 <div class="fluidVideo"><iframe width="640" height="480" src="//www.youtube-nocookie.com/embed/heNWfzc7ufQ" frameborder="0" allowfullscreen></iframe></div>
 
 ---
-### Utility Tasks ([utilities.js](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/utilities.js))
+### Utility Tasks ([utilities.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/utilities.js))
 
 <a name="task-clean"></a>
 #### Clean
@@ -535,7 +533,7 @@ Usage is simple. Run the `grunt photobox` task in your terminal. If your urls ar
 
 ---
 <a name="task-watch"></a>
-### Watch Task ([watch.js](https://github.com/tmwagency/kickoff/blob/master/_grunt-configs/watch.js))
+### Watch Task ([watch.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/watch.js))
 
 The `grunt watch` task is incredibly powerful; it watches for changes in files you are working on and acts on any changes you make to them.
 

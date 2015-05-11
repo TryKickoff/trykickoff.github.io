@@ -71,16 +71,16 @@ It’s important to become familiar with **all of these files** so you can make 
 #### [kickoff.scss](https://github.com/tmwagency/kickoff/blob/master/scss/kickoff.scss) & [kickoff-old-ie.scss](https://github.com/tmwagency/kickoff/blob/master/scss/kickoff-old-ie.scss)
 All roads lead to here. Both these files are used and compile with Grunt. Inspecting the source of these files reveals only one `@import`, for `_dependencies.scss`. Both files require the exact same dependencies so it made sense to extract all of those into another partial.
 
-* `kickoff.scss` is compiled to `css/kickoff.css` and is used on Internet Explorer 9+, Chrome, Safari, Firefox and Opera.
-* `kickoff-old-ie.scss` is compiled to `css/kickoff-old-ie.css` and is used on Internet Explorer 8 and below only. These browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see below](#responsive) for more details on this.
+* `kickoff.scss` is compiled to `/assets/dist/css/kickoff.css` and is used on Internet Explorer 9+, Chrome, Safari, Firefox and Opera.
+* `kickoff-old-ie.scss` is compiled to `/assets/dist/css/kickoff-old-ie.css` and is used on Internet Explorer 8 and below only. These browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see below](#responsive) for more details on this.
 
 #### Add your stylesheets to HTML using the code below
 ```html
 <!--[if lte IE 8]>
-	<link rel="stylesheet" href="css/kickoff-old-ie.css">
+	<link rel="stylesheet" href="/assets/dist/css/kickoff-old-ie.css">
 <![endif]-->
 <!--[if gt IE 8]><!-->
-	<link rel="stylesheet" href="css/kickoff.css">
+	<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
 <!--<![endif]-->
 ```
 

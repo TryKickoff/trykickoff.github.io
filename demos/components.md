@@ -21,33 +21,17 @@ next:
 ## Buttons
 Button styles can be applied to anything with the `.btn` class applied. However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
 
-#### Button sizes
-Fancy larger or smaller buttons? Add `.btn--large`, or `.btn--small` for additional sizes. The colours used by this button are defined in our [colour palette](https://github.com/tmwagency/kickoff/blob/master/scss/_color-palette.scss#L38-L39) file.
-
 <div class="demo">
 	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_buttons.scss" class="demo-src">_buttons.scss</a>
 
 	<div class="demo-visual">
-		<h4>Normal size</h4>
 		<a href="#" class="btn">Button</a>
-
-		<h4>Large size</h4>
-		<a href="#" class="btn btn--large">Button</a>
-
-		<h4>Small size</h4>
-		<a href="#" class="btn btn--small">Button</a>
 	</div>
 
 	<div class="demo-code">
 {% highlight html%}
-<!-- Normal buttons with default colour -->
+<!-- Normal button with default colour -->
 <a href="#" class="btn">Button</a>
-
-<!-- Larger buttons use the .btn--large modifier class -->
-<a href="#" class="btn btn--large">Button</a>
-
-<!-- Small buttons use the .btn--small modifier class -->
-<a href="#" class="btn btn--small">Button</a>
 {% endhighlight %}
 	</div>
 </div>
@@ -93,59 +77,6 @@ To make buttons span to 100% width, add the `.btn--block` modifier class. You ca
 {% endhighlight %}
 	</div>
 </div>
-
----
-
-### Natural buttons
-We have `.btn--natural` modifier class that inherits sizing from its parent. This is extremely useful when you have a button inside a paragraph or a heading.
-
-<div class="demo">
-	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_buttons.scss" class="demo-src">_buttons.scss</a>
-
-	<div class="demo-visual">
-		<p>
-			With <code>.btn--natural</code> modifier class: <a href="#" class="btn btn--natural btn--primary">button</a>
-		</p>
-		<p>
-			Without <code>.btn--natural</code> modifier class: <a href="#" class="btn btn--primary">button</a>
-		</p>
-	</div>
-	<div class="demo-code">
-{% highlight html%}
-<a href="#" class="btn btn--natural btn--primary">With .btn--natural button</a>
-{% endhighlight %}
-	</div>
-</div>
-
----
-
-### Pill Buttons
-Add the `.btn--pill` modifier class to any `.btn`.
-
-<div class="demo">
-	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_buttons.scss" class="demo-src">_buttons.scss</a>
-
-	<div class="demo-visual">
-		<p>
-			<a href="#" class="btn btn--pill btn--primary">Primary pill</a>
-			<a href="#" class="btn btn--pill">Default pill</a>
-		</p>
-
-		<!-- Add the .btn--natural modifier class to fix the padding -->
-		<p>This is <a href="#" class="btn btn--primary btn--natural btn--pill"> a button </a> in a paragraph!</p>
-	</div>
-	<div class="demo-code">
-{% highlight html%}
-<!-- Pill buttons use the .btn--pill modifier class -->
-<a href="#" class="btn btn--pill btn--primary">Pill</a>
-<a href="#" class="btn btn--pill">This is a Pill</a>
-
-<p>This is <a href="#" class="btn btn--primary btn--natural btn--pill"> a button </a> in a paragraph!</p>
-{% endhighlight %}
-	</div>
-</div>
-
----
 
 <a name="mediaobject"></a>
 
