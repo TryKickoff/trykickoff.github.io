@@ -1,5 +1,5 @@
 /*	Author:
-		TMW - (Author Name Here)
+		TMW - Zander Martineau
 */
 
 // ======================================
@@ -7,7 +7,6 @@
 // ======================================
 var TMW = window.TMW || {};
 
-// Create a closure to maintain scope of the '$' and remain compatible with other frameworks
 (function($) {
 
 	$(function() {
@@ -64,7 +63,8 @@ TMW.Kickoff = {
 		this.getPackageJSON();
 		trak.start();
 		// trak.options.debug = true;
-		this.getLatestCommit();
+
+		// this.getLatestCommit();
 	},
 
 	// Show Repo versions
