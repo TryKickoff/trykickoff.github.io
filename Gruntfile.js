@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 
 				// <%=config.js.fileList%>
 				fileList : [
-					'bower_components/trak/dist/trak.js',
+					'node_modules/trak.js/dist/trak.js',
 					'js/libs/plugins/skeleton.tabs.js',
 					'js/script.js'
 				]
@@ -40,16 +40,6 @@ module.exports = function (grunt) {
 			}
 		}
 	};
-
-
-	/**
-	 * Config - Edit this section
-	 * ==========================
-	 * Choose javascript dist filename
-	 * Choose javascript dist location
-	 * Choose javascript files to be uglified
-	 */
-
 
 	// Load grunt configurations automatically
 	var configs = require('load-grunt-configs')(grunt, options);
