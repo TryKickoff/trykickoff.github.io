@@ -17,7 +17,7 @@ Ruby v2 is needed for Sass compilation. Install it.
 
 ### Step 1
 
-Run `git clone https://github.com/tmwagency/kickoff.git -b gh-pages kickoff-docs`
+Run `git clone https://github.com/trykickoff/kickoff.git -b gh-pages kickoff-docs`
 
 ### Step 2
 

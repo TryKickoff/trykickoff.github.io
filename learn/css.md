@@ -56,19 +56,19 @@ scss
 ┗ [...]
 ```
 
-The [views](https://github.com/tmwagency/kickoff/blob/master/scss/views/) folder should contain view-specific styles that don't fit into their own module, think `_home.scss` or `_recipe.scss` for example.
+The [views](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/views/) folder should contain view-specific styles that don't fit into their own module, think `_home.scss` or `_recipe.scss` for example.
 
-The [partials](https://github.com/tmwagency/kickoff/blob/master/scss/partials/) folder should contain style partials, like `_footer.scss` or `_masthead.scss`. It also contains a folder meant for your [components](https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/). We have included quite a few; [buttons](https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_buttons.scss), [forms](https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_forms.scss), [fluid video](https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_fluid-video.scss) or [grid](https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_grid.scss) for example, but you should add your components there too. Please [browse through](https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/) the included components to see what Kickoff offers, or see some of them in action in our [demo area](../demo/).
+The [partials](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/) folder should contain style partials, like `_footer.scss` or `_masthead.scss`. It also contains a folder meant for your [components](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/). We have included quite a few; [buttons](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_buttons.scss), [forms](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss), [fluid video](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_fluid-video.scss) or [grid](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_grid.scss) for example, but you should add your components there too. Please [browse through](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/) the included components to see what Kickoff offers, or see some of them in action in our [demo area](../demo/).
 
-The [mixins](https://github.com/tmwagency/kickoff/blob/master/scss/mixins/) folder contains a few mixins that will help you day-to-day. Amongst others, `_responsive.scss` contains our media query mixins ([read below](#responsive) for more info), `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the `@include font-size()` mixin for specifying your font sizes with a `px` value but outputting both `rem` and `px` in your compiled styles.
+The [mixins](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/mixins/) folder contains a few mixins that will help you day-to-day. Amongst others, `_responsive.scss` contains our media query mixins ([read below](#responsive) for more info), `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the `@include font-size()` mixin for specifying your font sizes with a `px` value but outputting both `rem` and `px` in your compiled styles.
 
-The [functions](https://github.com/tmwagency/kickoff/blob/master/scss/functions/) folder contains various Sass functions that are used in the framework and that you might find useful.
+The [functions](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/functions/) folder contains various Sass functions that are used in the framework and that you might find useful.
 
 ### Important files
 
 It’s important to become familiar with **all of these files** so you can make full use of the framework.
 
-#### [kickoff.scss](https://github.com/tmwagency/kickoff/blob/master/scss/kickoff.scss) & [kickoff-old-ie.scss](https://github.com/tmwagency/kickoff/blob/master/scss/kickoff-old-ie.scss)
+#### [kickoff.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff.scss) & [kickoff-old-ie.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff-old-ie.scss)
 All roads lead to here. Both these files are used and compile with Grunt. Inspecting the source of these files reveals only one `@import`, for `_dependencies.scss`. Both files require the exact same dependencies so it made sense to extract all of those into another partial.
 
 * `kickoff.scss` is compiled to `/assets/dist/css/kickoff.css` and is used on Internet Explorer 9+, Chrome, Safari, Firefox and Opera.
@@ -85,19 +85,19 @@ All roads lead to here. Both these files are used and compile with Grunt. Inspec
 ```
 
 ---
-#### [_dependencies.scss](https://github.com/tmwagency/kickoff/blob/master/scss/_dependencies.scss)
+#### [_dependencies.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_dependencies.scss)
 This file is where all of Kickoff’s Sass dependencies are defined. It imports all of the scss files that will be compiled into your project.
 
 If you need to add or remove a file, do it here. The order of the imported files is the same order that the CSS will be compiled to.
 
 ---
-#### [_global.scss](https://github.com/tmwagency/kickoff/blob/master/scss/_global.scss)
+#### [_global.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_global.scss)
 This file contains all styles that do not obviously fit within any other scss partial. For example, we include our body's background styles and the main `.l-container` styles.
 
 **Try not to fill this up with all your styles though.**  Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the `partials` or `views` folders.
 
 ---
-#### [_helper-classes.scss](https://github.com/tmwagency/kickoff/blob/master/scss/_helper-classes.scss)
+#### [_helper-classes.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_helper-classes.scss)
 This file contains a bunch of helper styles, like `.clearfix` (for clearing floats), `.ir` for using background image replacement, `.is-hidden` etc.
 
 <hr class="sectionSplitter">
@@ -106,7 +106,7 @@ This file contains a bunch of helper styles, like `.clearfix` (for clearing floa
 We take full advantage of Sass' variables and there are two key files that should be edited at the start of development on any new Kickoff project. These are `scss/_variables.scss` and `scss/_color-palette.scss`.
 
 ---
-#### [_variables.scss](https://github.com/tmwagency/kickoff/blob/master/scss/_variables.scss)
+#### [_variables.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_variables.scss)
 This is where you define your global Sass variables. Here you can define your:
 
 * **Global typographic styles** — including font choices and typographic scale.
@@ -114,7 +114,7 @@ This is where you define your global Sass variables. Here you can define your:
   Breakpoints included are: `$bp-narrow`, `$bp-mid`, `$bp-wide`, `$bp-huge` and a few *special* vars. These include `$bp-single-col` for when you need your design to break from a single column to multiple columns, `$bp-block-grid-narrow` for use with the block grids and `$bp-rwd-text` for our simple implementation of responsive typography.
 
 ---
-#### [_color-palette.scss](https://github.com/tmwagency/kickoff/blob/master/scss/_color-palette.scss)
+#### [_color-palette.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_color-palette.scss)
 Text colour, link colours, background colour, form fields and various component colours can all be set in this file.
 
 <hr class="sectionSplitter">
@@ -122,7 +122,7 @@ Text colour, link colours, background colour, form fields and various component 
 ## Responsive
 Kickoff does not enforce a mobile first approach to CSS, but it is encouraged and it takes a fairly unique approach to responsive sites.
 
-Media queries in Kickoff are typically handled with a [set of useful mixins](https://github.com/tmwagency/kickoff/blob/master/scss/mixins/_responsive.scss). These are used so that we can define separate media-query content for `< IE9` and browsers with support for media queries. These are directly related to the global `$fix-mqs` var defined in `kickoff-old-ie.scss`. `kickoff-old-ie.scss` ignores any content in media-queries with values less than the `$fix-mqs` var value.
+Media queries in Kickoff are typically handled with a [set of useful mixins](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/mixins/_responsive.scss). These are used so that we can define separate media-query content for `< IE9` and browsers with support for media queries. These are directly related to the global `$fix-mqs` var defined in `kickoff-old-ie.scss`. `kickoff-old-ie.scss` ignores any content in media-queries with values less than the `$fix-mqs` var value.
 
 * `respond-min` for `min-width` media queries
 * `respond-max` for `max-width` media queries

@@ -62,7 +62,7 @@ This script detects what SVG support the user's browser has and serves the appro
 ## Skip to content link
 We recommend that you include a 'skip to content' link so that user's can quickly move past your masthead area if they wish. Include the below HTML as the very first item after your `<body>` tag. You should be able to see that the anchor's href within the `.skipToContent` div points to `#mainContent`, this means that you will need add that id to another div that wraps your main content.
 
-The styling for this is simple, so please modify it; see [/scss/partials/components/_skip-navigation.scss](https://github.com/trykickoff/kickoff/blob/master/scss/partials/components/_skip-navigation.scss) to edit styles.
+The styling for this is simple, so please modify it; see [/scss/partials/components/_skip-navigation.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_skip-navigation.scss) to edit styles.
 
 ```html
 <div class="skipToContent">
