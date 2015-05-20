@@ -108,4 +108,4 @@ You installed Kickoff. To quickly get up and running there are a few things you 
 </div>
 
 <h3 class="interfaceType">All done!</h3>
-<p class="interfaceType">Now <a href="styleguide.html">view the styleguide</a> again and then run <code>grunt watch</code> or <code>grunt serve</code> to start creating magic!</p>
+<p class="interfaceType">Now <a href="/styleguide.html">view the styleguide</a> again and then run <code>grunt watch</code> or <code>grunt serve</code> to start creating magic!</p>

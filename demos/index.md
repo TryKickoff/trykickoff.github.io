@@ -15,7 +15,7 @@ next:
 
 This section of the Kickoff docs will take you through the base styles and components that Kickoff includes, with accompanying demos.
 
-If you are new to Kickoff, we recommend taking a look at our [Getting Started](/kickoff/learn/) section first, to familiarise yourself with what Kickoff has to offer.
+If you are new to Kickoff, we recommend taking a look at our [Getting Started](/learn/) section first, to familiarise yourself with what Kickoff has to offer.
 
 ## Guide to Kickoffs demos
 
