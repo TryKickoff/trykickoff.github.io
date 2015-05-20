@@ -11,10 +11,10 @@ meta:
 next:
  - title: Get Kickoff
    body: Find out how to get your hands on Kickoff here.
-   link: get.html
+   link: /learn/get.html
  - title: Use Kickoff
    body: Ready to get your hands dirty?<br>We’ll show you where to start.
-   link: use.html
+   link: /learn/use.html
 ---
 <a name="buttons"></a>
 
@@ -89,7 +89,7 @@ Place any image- and text-like content side-by-side, as per: [media object](http
 	<div class="demo-visual">
 		<div class="media">
 			<div class="media-img">
-				<img src="http://hhhhold.com/s">
+				<img src="/img/docs/placeholder.jpg">
 			</div>
 			<div class="media-body">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -100,7 +100,7 @@ Place any image- and text-like content side-by-side, as per: [media object](http
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 			<div class="media-img">
-				<img src="http://hhhhold.com/m">
+				<img src="/img/docs/placeholder.jpg">
 			</div>
 		</div>
 	</div>
@@ -109,7 +109,7 @@ Place any image- and text-like content side-by-side, as per: [media object](http
 <!-- Media element with left aligned image -->
 <div class="media">
 	<div class="media-img">
-		<img src="http://hhhhold.com/s">
+		<img src="/img/docs/placeholder.jpg">
 	</div>
 	<div class="media-body">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -122,7 +122,7 @@ Place any image- and text-like content side-by-side, as per: [media object](http
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	</div>
 	<div class="media-img">
-		<img src="hhhhold.com/m">
+		<img src="/img/docs/placeholder.jpg">
 	</div>
 </div>
 {% endhighlight %}
