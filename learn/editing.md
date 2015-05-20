@@ -33,4 +33,4 @@ Run `grunt serve` and a browser window will open with the site
 
 #### Please note
 
-The Kickoff site resides at [tmwagency.github.io/kickoff/](http://tmwagency.github.io/kickoff/) and Jekyll builds to `/kickoff/` wherever you run it. Make sure your localhost points to `kickoff-docs` then browse to `http://your-localhost.dev/kickoff/`
+The Kickoff site resides at [trykickoff.github.io/kickoff/](http://trykickoff.github.io/kickoff/) and Jekyll builds to `/kickoff/` wherever you run it. Make sure your localhost points to `kickoff-docs` then browse to `http://your-localhost.dev/kickoff/`
