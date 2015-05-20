@@ -1,3 +1,39 @@
+- name: Renault Sport
+  img: renaultsport.jpg
+  url: http://www.renaultsport.co.uk/
+
+- name: Pink &amp; Black Magnum
+  img: pinkandblackmagnum.jpg
+  url: http://pinkandblack.mymagnum.com/
+
+- name: Press Renault
+  img: pressrenault.jpg
+  url: http://press.renault.co.uk/
+
+- name: Club Cafe Live
+  img: clubcafelive.jpg
+  url: http://clubcafelive.com/
+
+- name: Jobs Renault
+  img: jobsrenault.jpg
+  url: http://jobs.renault.co.uk/
+
+- name: Home Cleaning Solutions
+  img: homecleaningsolutions.jpg
+  url: http://homecleaningsolutions.co.uk/
+
+- name: IKEA Family Magazine
+  img: ikeafamilymagazine.jpg
+  url: http://www.ikeafamilylivemagazine.com/
+
+- name: Golf Tee Times
+  img: teeofftimes.jpg
+  url: http://www.teeofftimes.co.uk/
+
+- name: Golf Vacations
+  img: usagolfbreaks.jpg
+  url: http://usa.golfbreaks.com/
+
 - name: Go Energy Shopping
   img: goenergyshopping.jpg
 

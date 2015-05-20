@@ -290,7 +290,7 @@ The first line you encounter in the Grunt config is the `config.src` variable.
 src: "_grunt-configs/*.js"
 ```
 
-This is used to specify the path at which the rest of your Grunt config files live.  Kickoff defines the location for these files as in the [_grunt-configs](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/_grunt-configs) folder, but if you’d like to rename or move this folder for any reason, make sure that you update this value when doing so.
+This is used to specify the path at which the rest of your Grunt config files live.  Kickoff defines the location for these files as in the [_grunt-configs](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/) folder, but if you’d like to rename or move this folder for any reason, make sure that you update this value when doing so.
 
 ---
 <a name="config-assets"></a>
@@ -425,7 +425,7 @@ The `config.testing.visual` variables are used by the [Photobox](#task-photobox)
 
 This is an exhaustive list of all the Grunt tasks that Kickoff uses and what they do.
 
-They are ordered in the same way that Kickoff’s tasks are grouped in the [_grunt-configs](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/_grunt-configs) directory.
+They are ordered in the same way that Kickoff’s tasks are grouped in the [_grunt-configs](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/) directory.
 
 ---
 ### CSS Tasks ([css.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/css.js))
