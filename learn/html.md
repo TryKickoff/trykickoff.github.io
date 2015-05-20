@@ -80,7 +80,7 @@ The wildcard items like `{page title}` are supposed to be changed by you.
 
 ```html
 <!-- Twitter - more info at https://dev.twitter.com/cards/overview -->
-<meta name="twitter:site" content="@{twitter-username}"> <!-- e.g. @TMWKickoff -->
+<meta name="twitter:site" content="@{twitter-username}"> <!-- e.g. @TryKickoff -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{page title}" />
 <meta name="twitter:description" content="{page description}" />
