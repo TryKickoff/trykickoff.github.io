@@ -56,7 +56,7 @@ yo kickoff
 1. Does this project support IE8?
 1. Include Kickoff's styleguide?
 1. Choose your javascript namespace (default is `KO`)
-1. Use Kickoff [Statix](/kickoff/statix/)?
+1. Use Kickoff [Statix](https://github.com/trykickoff/statix/)?
 1. Use Browserify?
 1. Which javascript libraries would you like to use? jQuery v1.x/2.x, trak.js, Swiftclick & Cookies are the options
 1. Use Grunticon?

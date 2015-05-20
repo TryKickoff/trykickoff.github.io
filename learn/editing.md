@@ -9,19 +9,18 @@ meta:
 ---
 
 ### Before you start
-Ruby v2 is needed for Sass compilation. Install it.
 
-* Install Jekyll, redcarpet and Sass globally - `gem install jekyll sass redcarpet rouge`
+* Install Jekyll, redcarpet and Sass globally - `gem install jekyll redcarpet`
 * Install Node from [nodejs.org](http://nodejs.org/)
 * Install Grunt CLI - `npm install -g grunt-cli`
 
 ### Step 1
 
-Run `git clone https://github.com/trykickoff/kickoff.git -b gh-pages kickoff-docs`
+Run `git clone https://github.com/TryKickoff/trykickoff.github.io.git`
 
 ### Step 2
 
-Run `cd kickoff-docs`
+Run `cd trykickoff.github.io`
 
 ### Step 3
 
@@ -33,4 +32,4 @@ Run `grunt serve` and a browser window will open with the site
 
 #### Please note
 
-The Kickoff site resides at [trykickoff.github.io/kickoff/](http://trykickoff.github.io/kickoff/) and Jekyll builds to `/kickoff/` wherever you run it. Make sure your localhost points to `kickoff-docs` then browse to `http://your-localhost.dev/kickoff/`
+The Kickoff site resides at [trykickoff.github.io/](http://trykickoff.github.io/) and Jekyll builds to `/_site/` wherever you run it. Make sure your localhost points to `trykickoff.github.io/_site` then browse to `http://your-localhost.dev/`

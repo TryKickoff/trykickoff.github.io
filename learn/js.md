@@ -87,8 +87,8 @@ npm install
 
 #### Default NPM dependencies
 
-* [Swiftclick](https://github.com/trykickoff/swiftclick) - Developed by our own Ivan Hayes, SwiftClick is a library created to eliminate the 300ms click event delay on touch devices.
-* [Trak.js](https://github.com/trykickoff/trak.js) - Developed by our own Zander Martineau, trak.js is a universal analytics event tracking API
+* [Swiftclick](https://github.com/tmwkickoff/swiftclick) - Developed by our own Ivan Hayes, SwiftClick is a library created to eliminate the 300ms click event delay on touch devices.
+* [Trak.js](https://github.com/mrmartineau/trak.js) - Developed by our own Zander Martineau, trak.js is a universal analytics event tracking API
 * [Cookies](https://github.com/ScottHamper/Cookies/) - Developed by Scott Hamper, Cookies is a great Cookie manipulation library
 * [jQuery](https://github.com/jquery/jquery/) - A fast, small, and feature-rich JavaScript library
 
