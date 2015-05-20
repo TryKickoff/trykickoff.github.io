@@ -19,10 +19,10 @@ next:
 
 <a name="standard"></a>
 <h2>Standard Grid</h2>
-Each `.g-col` element uses percentage widths, set the column size by modifying the width of the `.l-container` wrapper `<div>` in [_global.scss](https://github.com/tmwagency/kickoff/blob/master/scss/_global.scss) and the `$layout-max-width` variables found in [_variables.scss](https://github.com/tmwagency/kickoff/blob/master/scss/_variables.scss).
+Each `.g-col` element uses percentage widths, set the column size by modifying the width of the `.l-container` wrapper `<div>` in [_global.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_global.scss) and the `$layout-max-width` variables found in [_variables.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_variables.scss).
 
 <div class="demo">
-	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_grid.scss" class="demo-src">_grid.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_grid.scss" class="demo-src">_grid.scss</a>
 
 	<div class="demo-visual">
 		<button class="show-grid-button btn btn--primary btn--pill btn--small">Hide Grid</button>
@@ -109,7 +109,7 @@ Each `.g-col` element uses percentage widths, set the column size by modifying t
 Move columns to the right using `.g-offset*` classes. Each class increases the left margin of a column by a whole column. For example, `.offset2` moves a `.g-col` element over by two columns.
 
 <div class="demo">
-	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_grid.scss" class="demo-src">_grid.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_grid.scss" class="demo-src">_grid.scss</a>
 
 	<div class="demo-visual">
 		<button class="show-grid-button btn btn--primary btn--pill btn--small">Hide Grid</button>
@@ -175,7 +175,7 @@ Move columns to the right using `.g-offset*` classes. Each class increases the l
 Use `.g-push*` to push a column to the right. Use `.g-pull*` to pull column to the left.
 
 <div class="demo">
-	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_grid.scss" class="demo-src">_grid.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_grid.scss" class="demo-src">_grid.scss</a>
 
 	<div class="demo-visual">
 		<button class="show-grid-button btn btn--primary btn--pill btn--small">Hide Grid</button>
@@ -231,7 +231,7 @@ Use `.g-push*` to push a column to the right. Use `.g-pull*` to pull column to t
 Add a `.g-col--centred` or `.g-col--centered` class to each column. This also means that you can only have one column per g-row.
 
 <div class="demo">
-	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_grid.scss" class="demo-src">_grid.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_grid.scss" class="demo-src">_grid.scss</a>
 
 	<div class="demo-visual">
 		<button class="show-grid-button btn btn--primary btn--pill btn--small">Hide Grid</button>

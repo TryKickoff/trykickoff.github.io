@@ -435,7 +435,7 @@ They are ordered in the same way that Kickoff’s tasks are grouped in the [_gru
 
 Uses [grunt-sass](https://github.com/sindresorhus/grunt-sass/) to compile Kickoff’s Sass files into native CSS.
 
-We compile Kickoff’s Sass into 2 CSS files.  The first is a straight compilation of the Sass into native CSS.  The second takes a width parameter, as defined in [`scss/kickoff-old-ie.scss`](https://github.com/trykickoff/kickoff/blob/master/scss/kickoff-old-ie.scss), and compiles a CSS file without media queries.  This second file is created so that we can write our Sass code mobile-first, while still being able to serve old versions of Internet Explorer an appropriately sized layout, since they don’t support media queries.  For more information on this approach, see [Jake Archibald’s excellent article on the subject](http://jakearchibald.github.io/sass-ie/).
+We compile Kickoff’s Sass into 2 CSS files.  The first is a straight compilation of the Sass into native CSS.  The second takes a width parameter, as defined in [`scss/kickoff-old-ie.scss`](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff-old-ie.scss), and compiles a CSS file without media queries.  This second file is created so that we can write our Sass code mobile-first, while still being able to serve old versions of Internet Explorer an appropriately sized layout, since they don’t support media queries.  For more information on this approach, see [Jake Archibald’s excellent article on the subject](http://jakearchibald.github.io/sass-ie/).
 
 <a name="task-autoprefixer"></a>
 #### Autoprefixer

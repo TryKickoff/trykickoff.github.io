@@ -11,4 +11,4 @@ title: Frequently asked questions
 
 ### Where can I get help for support questions?
 
-Please ask for help on [our Github Issues page](https://github.com/tmwagency/kickoff/issues) or using Kickoff's [Twitter account](http://twitter.com/TMWKickoff).
+Please ask for help on [our Github Issues page](https://github.com/trykickoff/kickoff/issues) or using Kickoff's [Twitter account](http://twitter.com/TMWKickoff).
