@@ -879,11 +879,11 @@ input[type="button"].btn--block {
 
 /**
  * Offset columns
- * http://tmwagency.github.io/kickoff/demos/grids.html#offset
+ * http://trykickoff.github.io/kickoff/demos/grids.html#offset
  */
 /**
  * Source ordering (push & pull)
- * http://tmwagency.github.io/kickoff/demos/grids.html#source-ordering
+ * http://trykickoff.github.io/kickoff/demos/grids.html#source-ordering
  */
 /**
  * Centred columns
@@ -937,7 +937,7 @@ input[type="button"].btn--block {
 /**
  * Generic form styles
  * =================================
- * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-above
+ * Demo: http://trykickoff.github.io/kickoff/demos/forms.html#layout-example-labels-above
  * Code: https://gist.github.com/mrmartineau/6712577#file-labels-above-inputs-html
  * Usage:
   	<div class="form-controlGroup">
@@ -1244,7 +1244,7 @@ input[type="submit"] {
  * Horizontal-specific styles
  * =================================
  * add .form--horizontal to the <form> element
- * Demo: http://tmwagency.github.io/kickoff/demos/forms.html#layout-example-labels-inline
+ * Demo: http://trykickoff.github.io/kickoff/demos/forms.html#layout-example-labels-inline
  * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
  */
 .form--horizontal .form-controlGroup {

@@ -65,7 +65,7 @@ The base setup of Statix only utilises a very small amount of Assemble’s featu
 
 ## What’s under the hood
 
-Statix is essentially a simple setup of [Assemble](http://assemble.io/), a powerful static site generator, combined with [Kickoff](http://tmwagency.github.io/kickoff/), a minimal front-end base framework, all tied together with a few handy [Grunt](http://gruntjs.com/) setup tasks.
+Statix is essentially a simple setup of [Assemble](http://assemble.io/), a powerful static site generator, combined with [Kickoff](http://trykickoff.github.io/kickoff/), a minimal front-end base framework, all tied together with a few handy [Grunt](http://gruntjs.com/) setup tasks.
 
 Collectively, this gives you a framework that streamlines the creation of maintainable, flexible HTML templates with virtually no project setup required.
 
@@ -115,9 +115,9 @@ Once these dependencies are installed, see 'Getting started with Statix' for ins
 
 ## Further documentation and demos
 
-Statix is a combination of three tools; [Assemble](http://assemble.io/), [Kickoff](http://tmwagency.github.io/kickoff/) and [Grunt](http://gruntjs.com/).  The documentation for these tools should be looked at for extending the base setup of Statix.
+Statix is a combination of three tools; [Assemble](http://assemble.io/), [Kickoff](http://trykickoff.github.io/kickoff/) and [Grunt](http://gruntjs.com/).  The documentation for these tools should be looked at for extending the base setup of Statix.
 
-*  See the [Kickoff documentation](http://tmwagency.github.io/kickoff/) for all demos and information relating to Kickoff
+*  See the [Kickoff documentation](http://trykickoff.github.io/kickoff/) for all demos and information relating to Kickoff
 *  Check out the [Assemble documentation](http://assemble.io/docs/) for more information on Assemble.
 * Read the excellent [Getting started guide](http://gruntjs.com/getting-started) to make a start with Grunt.
 
