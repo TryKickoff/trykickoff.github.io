@@ -2,19 +2,15 @@
   img: renaultsport.jpg
   url: http://www.renaultsport.co.uk/
 
-- name: Pink &amp; Black Magnum
+- name: Magnum Pink &amp; Black
   img: pinkandblackmagnum.jpg
   url: http://pinkandblack.mymagnum.com/
 
-- name: Press Renault
+- name: Renault Press
   img: pressrenault.jpg
   url: http://press.renault.co.uk/
 
-- name: Club Cafe Live
-  img: clubcafelive.jpg
-  url: http://clubcafelive.com/
-
-- name: Jobs Renault
+- name: Renault Jobs
   img: jobsrenault.jpg
   url: http://jobs.renault.co.uk/
 
@@ -26,11 +22,11 @@
   img: ikeafamilymagazine.jpg
   url: http://www.ikeafamilylivemagazine.com/
 
-- name: Golf Tee Times
+- name: Tee Off Times
   img: teeofftimes.jpg
   url: http://www.teeofftimes.co.uk/
 
-- name: Golf Vacations
+- name: USA Golf Breaks
   img: usagolfbreaks.jpg
   url: http://usa.golfbreaks.com/
 
