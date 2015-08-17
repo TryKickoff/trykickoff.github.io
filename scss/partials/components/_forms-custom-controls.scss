@@ -1,13 +1,15 @@
 /**
- * Custom Checkboxes and radios - modified from WTF forms – http://wtfforms.com/
+ * Custom Checkboxes and radios
+ *
+ * IE9+ :)
  *
  * --------------------------------
  *
  * Checkbox button example HTML
  *
- *	 <label class="control control--custom control--checkbox">
- *		<input type="checkbox" name="myCheckbox" />
- *		<span class="control-indicator"></span>
+ *	<label class="control control--custom">
+ *		<input class="control--custom-input" type="checkbox" name="myCheckbox" />
+ *		<span class="control-indicator control-indicator--checkbox"></span>
  *		My Checkbox Label Text
  *	</label>
  *
@@ -15,75 +17,121 @@
  *
  * Radio button example HTML
  *
- *	<label class="control control--custom control--radio">
- *		<input type="radio" id="radio1" name="myRadioBtn" />
- *		<span class="control-indicator"></span>
+ *	<label class="control control--custom">
+ *		<input class="control--custom-input" type="radio" id="radio1" name="myRadioBtn" />
+ *		<span class="control-indicator control-indicator--radio"></span>
  *		My Radio Button Label Text
  * 	</label>
  *
  * ================================= */
-
-.control-indicator {
-	position: absolute;
-	top: .25em;
-	left: 0;
-	display: block;
-	width:  19px;
-	height: 19px;
-	line-height: 1;
-	color: #eee;
-	text-align: center;
-	background-color: #ddd;
-	background-size: 50% 50%;
-	background-position: center center;
-	background-repeat: no-repeat;
-	user-select: none;
-}
+$custom-input-border      : #A3B1B2;
+$custom-input-bg          : $custom-input-border;
+$custom-input-selected    : $color-bg;
+$checkbox-indicator-width : .1em;
 
 .control--custom {
 	position: relative;
 	display: block;
-	padding-left: 2em;
-	margin-left: 0;
-	color: #555;
 	cursor: pointer;
+	user-select: none;
+}
 
-	& input {
+// Give inline elements some space to the right
+.control--custom--inline {
+	display: inline-block;
+	padding-right: 2em;
+}
+
+// The hidden input
+.control--custom-input {
+	position: absolute;
+	opacity: 0;
+	z-index: -1; // Put the input behind the label so it doesn't overlay text
+}
+
+// The new checkbox/radio
+.control-indicator {
+	position: relative;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	transition: $default-transition;
+	border: $checkbox-indicator-width solid $custom-input-border;
+	background-color: $custom-input-bg;
+	vertical-align: middle;
+	margin-top: -.1em;
+	box-shadow: 0 0 0 2px transparent, 0 0 0 0 transparent; // Used to animate from when element is in :focus
+}
+
+// :focus styles
+.control--custom-input:focus ~ .control-indicator {
+	box-shadow: 0 0 0 2px $color-bg, 0 0 0 3px $input-borderColor--focus;
+}
+
+// Checkbox modifiers
+.control-indicator--checkbox {
+	border-radius: .2em;
+
+	&:before,
+	&:after {
+		content: '';
 		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 90%;
+		height: $checkbox-indicator-width;
+		background-color: $custom-input-selected;
+		display: block;
 		opacity: 0;
-		z-index: -1; /* Put the input behind the label so it doesn't overlay text */
+		transition: $default-transition;
 	}
 
-	/* Focus */
-	& input:focus ~ .control-indicator {
-		box-shadow: 0 0 0 .075em #fff, 0 0 0 .2em lighten($gray, 5%);
+	&:before {
+		transform: translate(-50%, -50%) rotate(45deg);
 	}
-	/* Checked state */
-	& input:checked ~ .control-indicator {
-		color: #fff;
-		background-color: lighten($gray, 5%);
-	}
-	/* Active */
-	& input:active ~ .control-indicator {
-		color: #fff;
-		background-color: lighten($gray, 20%);
+
+	&:after {
+		transform: translate(-50%, -50%) rotate(-45deg);
 	}
 }
 
-/* Checkbox modifiers */
-.control--checkbox .control-indicator {
-	border-radius: 25%;
-}
-.control--checkbox input:checked ~ .control-indicator {
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+.control-indicator--checkbox--tick {
+
+	&:before {
+		top: 0;
+		transform: translateX(-50%) rotate(45deg);
+		border: $checkbox-indicator-width solid $custom-input-selected;
+		background-color: transparent;
+		width: 40%;
+		height: 80%;
+		border-top: 0;
+		border-left: 0;
+	}
+
+	&:after {
+		display: none;
+	}
 }
 
-/* Radio modifiers */
-.control--radio .control-indicator {
+.control--custom-input:checked ~ .control-indicator--checkbox {
+	// Uncomment to make checkboxes circular when checked
+	// border-radius: 50%;
+
+	&:before,
+	&:after {
+		opacity: 1;
+	}
+}
+
+
+// Radio modifiers
+.control-indicator--radio {
 	border-radius: 50%;
 }
-.control--radio input:checked ~ .control-indicator {
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+
+.control--custom-input:checked ~ .control-indicator--radio {
+	background-color: $custom-input-selected;
+	border: .3em solid $custom-input-border;
 }
 
 
@@ -97,19 +145,17 @@
 	&:before {
 		content: 'Choose file...';
 	}
-	&:after {
-		content:'Browse';
-		cursor: pointer;
 
+	&:after {
+		content: 'Browse';
+		cursor: pointer;
 		display: inline-block;
 		position: absolute;
 		top: 0;
 		right: -1px;
 		bottom: 0;
-
-		padding: 0.44em 1em 0;
-
-		background-color: lighten($input-border, 5%);
+		padding: .44em 1em 0;
+		background-color: lighten($input-borderColor, 5%);
 	}
 
 	.form-input-file {
@@ -118,25 +164,25 @@
 	}
 }
 
+
 /**
  * Custom select element
  * http://jsbin.com/juvixufu/165/edit
  */
 .form-input--selectWrapper {
 	position: relative;
-	display:block;
-	// margin-top:0.5em;
-	padding:0;
+	display: block;
+	padding: 0;
 }
 
 /* This is the native select, we're making everything the text invisible so we can see the button styles in the wrapper */
 .form-input--selectWrapper select {
-	width:100%;
-	max-width:100%;
-	min-width:100%;
-	margin:0;
-	background:none;
-	border: none;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	margin: 0;
+	background: none;
+	border: 0;
 	outline: none;
 	/* Remove select styling */
 	appearance: none;
@@ -150,7 +196,7 @@
 
 /* This hides native dropdown button arrow in IE 10/11+ so it will have the custom appearance, IE 9 and earlier get a native select */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	 .form-input--selectWrapper select::-ms-expand {
+	.form-input--selectWrapper select::-ms-expand {
 		display: none;
 	}
 }
@@ -161,14 +207,15 @@
 	color: #bbb;
 	content: "\25BC";
 	font-size: .7em;
-	padding:0;
+	padding: 0;
 	position: absolute;
 	right: 1.2em;
 	top: 50%;
 	margin-top: -9px;
 	z-index: 2;
+
 	/* These hacks make the select behind the arrow clickable in some browsers */
-	pointer-events:none;
+	pointer-events: none;
 	background: url(#);
 }
 
@@ -176,20 +223,21 @@
 .form-input--selectWrapper,
 x:-moz-any-link,
 x:default {
-	overflow:hidden;
-	width:100%;
+	overflow: hidden;
+	width: 100%;
 }
+
 .form-input--selectWrapper select,
 x:-moz-any-link,
 x:default {
-	width:110%;
-	max-width:110%;
-	min-width:110%;
+	width: 110%;
+	max-width: 110%;
+	min-width: 110%;
 	/* A zero right padding is needed or the native arrow can show up. Downside is the text will run over the arrow */
 	padding: .6em 0 .5em .8em;
 	/* Window is a Firefox way of hiding the arrow, sometimes works */
 	-moz-appearance: window;
-	text-indent: 0.01px;
+	text-indent: .01px;
 	text-overflow: "";
 }
 
@@ -215,5 +263,5 @@ x:default {
 }
 
 option {
-	font-weight:normal;
+	font-weight: normal;
 }
