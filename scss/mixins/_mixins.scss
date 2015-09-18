@@ -1,33 +1,34 @@
-/* ==========================================================================
-   Sass Mixins
-   * Vendor Prefixer
-   * Responsive
-   * CSS3
-   * Utility Mixins
-   * hiDpi
-   * Forms
-   ========================================================================== */
+/**
+ * Sass Mixins
+ * - Vendor prefixer
+ * - Responsive
+ * - CSS3
+ * - Utility Mixins
+ * - hiDpi
+ * - Forms */
 
-/* Vendor prefixer */
-@import "mixins/prefixer";
+// Vendor prefixer
+@import "prefixer";
 
-/* Responsive mixins */
-@import "mixins/responsive";
+// Responsive mixins
+@import "responsive";
 
-/* CSS3 */
-@import "mixins/css3";
-@import "mixins/linear-gradient";
-@import "mixins/radial-gradient";
-@import "mixins/vertical-center";
+// CSS3
+@import "css3";
+@import "linear-gradient";
+@import "radial-gradient";
+@import "vertical-center";
 
 /**
  * Utility mixins
- * Clearfix, REM + fallbacks, @font-face, sizing shortcuts, other helpers
+ * Clearfix, REM + fallbacks,
+ * @font-face, sizing shortcuts,
+ * and other helpers
  */
-@import "mixins/utility";
+@import "utility";
 
-/* HiDPI */
-@import "mixins/hidpi";
+// HiDPI
+@import "hidpi";
 
-/* FORMS */
-@import "mixins/form-helpers";
+// Forms
+@import "form-helpers";
