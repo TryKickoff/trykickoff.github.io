@@ -7,7 +7,7 @@
  */
 
 /* Import Grid helpers and mixins */
-@import "../../mixins/grid-helpers";
+@import "../mixins/grid-helpers";
 
 
 /**
@@ -18,7 +18,6 @@
 		<div class="g-col g-span8"></div>
 	</div>
  */
-
 
 .g-row {
 	width: 100%;
@@ -52,6 +51,7 @@
 		@if $grid-gutter-width > 0 {
 			margin-left: gutterCalc();
 		}
+
 		&:first-child {
 			margin-left: 0;
 		}
@@ -72,7 +72,7 @@
 
 	/**
 	 * Offset columns
-	 * http://trykickoff.github.io/kickoff/demos/grids.html#offset
+	 * http://trykickoff.github.io/demos/grids.html#offset
 	 */
 	@if $using-offsetcolumns == true {
 		@for $i from 1 to $grid-column-count {
@@ -88,7 +88,7 @@
 
 	/**
 	 * Source ordering (push & pull)
-	 * http://trykickoff.github.io/kickoff/demos/grids.html#source-ordering
+	 * http://trykickoff.github.io/demos/grids.html#source-ordering
 	 */
 	@if $using-push-pull-columns == true {
 		@for $i from 2 to $grid-column-count {

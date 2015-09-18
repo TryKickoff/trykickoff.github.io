@@ -1,8 +1,11 @@
-/*
-   Icons
-   ========================================================================== */
+/**
+ * Icons
+ */
+
 [class^="icon-"], [class*=" icon-"] {
 	speak: none;
+	background-size: contain;
+	background-position: center center;
 }
 
 .icon-large {
