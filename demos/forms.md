@@ -55,7 +55,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
-		<form action="#" class="form">
+		<form class="form">
 			<fieldset class="form-fieldset">
 				<legend class="form-legend">Your form</legend>
 				<div class="form-controlGroup">
@@ -63,7 +63,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 					<div class="form-controlGroup-inputWrapper">
 						<input class="form-input" type="text" id="text" placeholder="Some text" required/>
 					</div>
-				</div>2
+				</div>
 
 				<div class="form-controlGroup">
 					<label class="form-label" for="comments">Textarea</label>
@@ -81,7 +81,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 	</div>
 	<div class="demo-code">
 {% highlight html %}
-<form action="#" class="form">
+<form class="form">
 	<fieldset class="form-fieldset">
 		<legend class="form-legend">Your form</legend>
 		<div class="form-controlGroup">
@@ -120,7 +120,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
-		<form action="#" class="form form--horizontal">
+		<form class="form form--horizontal">
 			<fieldset class="form-fieldset">
 				<legend class="form-legend">Your form</legend>
 				<div class="form-controlGroup">
@@ -146,7 +146,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 	</div>
 	<div class="demo-code">
 {% highlight html%}
-<form action="#" class="form form--horizontal">
+<form class="form form--horizontal">
 	<fieldset class="form-fieldset">
 		<legend class="form-legend">Your form</legend>
 		<div class="form-controlGroup">
@@ -330,16 +330,15 @@ You can easily update field states by adding modifier classes to `.form-controlG
 	<div class="demo-visual">
 		<label class="control control--custom">
 			<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
-			<span class="control-indicator control-indicator--checkbox control-indicator--checkbox--tick"></span>
-			My tickbox Label Text
-		</label>
-
-		<label class="control control--custom">
-			<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
 			<span class="control-indicator control-indicator--checkbox"></span>
 			My checkbox Button Label Text
 		</label>
 
+		<label class="control control--custom">
+			<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
+			<span class="control-indicator control-indicator--checkbox control-indicator--checkbox--tick"></span>
+			My tickbox Label Text
+		</label>
 	</div>
 	<div class="demo-code">
 {% highlight html %}
@@ -491,7 +490,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
-		<form action="#" class="form">
+		<form class="form">
 			<fieldset class="form-fieldset">
 				<legend class="form-legend">Your form</legend>
 				<div class="form-controlGroup">
@@ -656,7 +655,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 	</div>
 	<div class="demo-code">
 {% highlight html%}
-<form action="#" class="form">
+<form class="form">
 	<fieldset class="form-fieldset">
 		<legend class="form-legend">Your form</legend>
 		<div class="form-controlGroup">
