@@ -2,31 +2,26 @@ module.exports.tasks = {
 
 	/**
 	 * Sass compilation using grunt-sass
-	 * https://github.com/gruntjs/grunt-contrib-sass
+	 * https://github.com/sindresorhus/grunt-sass
 	 * Includes kickoff.scss and kickoff-old-ie.scss by default
-	 * Also creates source maps
 	 */
 	sass: {
 		kickoff: {
 			options: {
-				unixNewlines: true,
-				style: 'expanded',
-				lineNumbers: false,
-				debugInfo : false,
-				precision : 8,
-				loadPath: 'scss'
+				outputStyle: 'nested',
+				precision : 10,
+				sourceMap : true
 			},
 			files: {
 				'css/temp/<%=config.scss.cssFile%>.css'       : 'scss/<%=config.scss.cssFile%>.scss',
 				'css/temp/<%=config.scss.cssFile%>-old-ie.css': 'scss/<%=config.scss.cssFile%>-old-ie.scss'
 			}
 		},
+
 		styleguide: {
 			options: {
-				unixNewlines: true,
-				style: 'compact',
-				precision : 8,
-				loadPath: 'scss'
+				outputStyle: 'compressed',
+				precision : 10,
 			},
 			files: {
 				'css/styleguide.css': 'scss/styleguide.scss'
