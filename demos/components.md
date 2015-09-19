@@ -81,7 +81,7 @@ To make buttons span to 100% width, add the `.btn--block` modifier class. You ca
 <a name="mediaobject"></a>
 
 ## Media Object
-Place any image- and text-like content side-by-side, as per: [media object](http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
+Place any image and text-like content side-by-side, as per: [media object](http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
 
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_media-object.scss" class="demo-src">_media-object.scss</a>
