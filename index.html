@@ -12,13 +12,13 @@ meta:
 		<h1 class="logoStyle entry--title">Kick<span>off</span></h1>
 		<p>A lightweight front-end framework for creating scalable, responsive&nbsp;sites.<br><a href="learn/" data-trak='{"category":"Home page","action":"Know more?"}'>Want to know more?</a></p>
 
-		<a href="learn/get.html" class="btn btn--primary btn--large" data-trak='{"category":"Home page","action":"Download Kickoff CTA","label":"CTA"}'>Download Kickoff v<span class="currentVersion"></span></a>
+		<a href="learn/get.html" class="btn btn--primary btn--large" data-trak='{"category":"Home page","action":"Download Kickoff CTA","label":"CTA"}'>Download Kickoff<span class="currentVersion"></span></a>
 	</div>
 </section>
 
 <section class="wideBoy wideBoy--bright get-started">
 	<div class="l-container">
-		<h2 class="wideBoy-title clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our Yeoman Generator is the best way to get Kickoff each time you want to start a new project:</h2>
+		<h2 class="wideBoy-title clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
 		<!-- <h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2> -->
 
 
@@ -60,14 +60,15 @@ meta:
 
 <section class="showcase wideBoy--dark wideBoy">
 	<div class="l-container">
-		<h2 class="wideBoy-title"><b>Kickoff</b> has been used on these fine&nbsp;websites…</h2>
+		<h1 class="wideBoy-title l-mb0">Built with Kickoff</h1>
+		<h2 class="wideBoy-title">Hundreds of amazing sites across the web are being built with Kickoff. See below for a few of them:</h2>
 
-		<ul class="showcaseList l-blockGrid l-blockGrid--4up  l-blockGrid--2up--narrow">
+		<ul class="showcaseList l-blockGrid l-blockGrid--4up  l-blockGrid--3up--narrow">
 			{% for item in site.data.showcase %}
 				<li>
 					{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
 						<figure>
-							<img src="img/showcase/{{ item.img }}" alt="{{ item.name }}">
+							<img src="/assets/dist/img/showcase/{{ item.img }}" alt="{{ item.name }}">
 							<figcaption>{{ item.name }}</figcaption>
 						</figure>
 					{% if item.url != null %}</a>{% endif %}
@@ -93,7 +94,7 @@ meta:
 
 <section class="statix wideBoy--bright wideBoy text-centre">
 	<div class="l-container">
-		<h2>Like Kickoff? Super charge it using</h2>
+		<h2 class="wideBoy-title">Like Kickoff? Super charge it using</h2>
 		<h1>
 			<a href="https://github.com/trykickoff/statix" class="statixLogo">
 				<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
