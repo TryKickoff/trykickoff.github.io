@@ -33,27 +33,14 @@ As mentioned above, Kickoff’s JavaScript is very non prescriptive.  Here we lo
 
 This file can be used to contain or reference your site/app JavaScript code.
 
-For larger projects, we recommend using [Browserify](#browserify) to manage your projects JavaScript dependencies.
-
-By default, Kickoff defines all of it’s JavaScript in the `KO` namespace, but this can be changed to anything you like, perhaps the name of the project. We tend to use the [singleton pattern](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript).
-
 ---
 ### Folder Structure
 
 Kickoff has a very simple folder structure for it’s JavaScript; as a base Kickoff contains `helpers` and `libs` directories.
 
-#### `assets/src/js/helpers`
-
-This folder contains a number of JavaScript helper files to be used in your project.
-
-* **console.js** – a shim for console.log in browsers that don’t support it
-* **log.js** – for lazy developers.  Write `log()` to write to the console instead of `console.log()`.
-* **shims.js** – file compiled by [Shimly](grunt.html#task-shimly).  Anything added to this file will be overriden by Shimly, so either add the functionality you need to Shimly via pull request, or instead add the code into **helpers.js**.
-
-
 #### `assets/src/js/libs`
 
-This folder contains any 3rd party libraries used in your Kickoff project.
+This folder contains any 3rd party libraries used in your Kickoff project that are not installed with npm.
 
 By default, Kickoff includes [Modernizr](http://modernizr.com/), although removing it is very straightforward.
 
