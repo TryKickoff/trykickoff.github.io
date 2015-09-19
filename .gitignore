@@ -3,4 +3,7 @@ _gist_cache
 .sass-cache
 kickoff
 _site
-css/temp
+
+#assets/dist/**/*
+assets/temp/**/*
+**/*.map
