@@ -30,39 +30,91 @@ Kickoff is made with [Sass](http://sass-lang.com/) at its core.  It makes develo
 
 Sass has two syntaxes. The most commonly used syntax is known as “SCSS” (for “Sassy CSS”), and is a superset of CSS3’s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension `.scss`; we use this version for Kickoff.
 
-To start using Sass you will need to first install the Sass Ruby gem.  Simply fire up Terminal – or Command Prompt on Windows – and type in this command:
-
-```sh
-$ gem install sass
-```
-
 <hr class="sectionSplitter">
 <a name="structure"></a>
 ## Sass structure
-Kickoff structures it's Sass files in quite a specific way. The `scss` folder contains the following directories:
+Kickoff structures it's Sass files in quite a specific way. The `scss` directory contains the following directories:
 
 ```
-scss
-┣ functions
-┃ ┗ [...]
-┣ mixins
-┃ ┗ [...]
-┣ partials
-┃ ┣ [...]
-┃ ┗ components
-┃   ┗ [...]
-┣ views
-┃ ┗ [...]
-┗ [...]
+.
+├── _color-palette.scss
+├── _dependencies.scss
+├── _global.scss
+├── _helper-classes.scss
+├── _print.scss
+├── _reset.scss
+├── _typography.scss
+├── _variables.scss
+├── components
+│   ├── _block-grids.scss
+│   ├── _buttons.scss
+│   ├── _code.scss
+│   ├── _embedded-content.scss
+│   ├── _fluid-video.scss
+│   ├── _forms-custom-controls.scss
+│   ├── _forms.scss
+│   ├── _grid.scss
+│   ├── _icons.scss
+│   ├── _links.scss
+│   ├── _lists.scss
+│   ├── _media-object.scss
+│   ├── _scrollbars.scss
+│   ├── _skip-navigation.scss
+│   └── _tables.scss
+├── functions
+│   ├── _functions.scss
+│   ├── _golden-ratio.scss
+│   ├── _modular-scale.scss
+│   ├── _px-to-em.scss
+│   ├── _px-to-rem.scss
+│   ├── _strip-units.scss
+│   └── _tint-shade.scss
+├── kickoff-old-ie.scss
+├── kickoff.scss
+├── mixins
+│   ├── _css3.scss
+│   ├── _form-helpers.scss
+│   ├── _grid-helpers.scss
+│   ├── _hidpi.scss
+│   ├── _linear-gradient.scss
+│   ├── _mixins.scss
+│   ├── _position.scss
+│   ├── _prefixer.scss
+│   ├── _radial-gradient.scss
+│   ├── _responsive.scss
+│   ├── _utility.scss
+│   └── _vertical-center.scss
+├── partials
+│   ├── _footer.scss
+│   └── _masthead.scss
+├── styleguide.scss
+└── views
+    ├── _home.scss
+    └── _print.scss
 ```
 
-The [views](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/views/) folder should contain view-specific styles that don't fit into their own module, think `_home.scss` or `_recipe.scss` for example.
+### Views, partials & components
+Our distinction between views, partials and components:
 
-The [partials](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/) folder should contain style partials, like `_footer.scss` or `_masthead.scss`. It also contains a folder meant for your [components](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/). We have included quite a few; [buttons](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_buttons.scss), [forms](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss), [fluid video](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_fluid-video.scss) or [grid](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_grid.scss) for example, but you should add your components there too. Please [browse through](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/) the included components to see what Kickoff offers, or see some of them in action in our [demo area](../demos/).
+#### Components
 
-The [mixins](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/mixins/) folder contains a few mixins that will help you day-to-day. Amongst others, `_responsive.scss` contains our media query mixins ([read below](#responsive) for more info), `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the `@include font-size()` mixin for specifying your font sizes with a `px` value but outputting both `rem` and `px` in your compiled styles.
+Small, self-contained files that concern one type of thing, that crucially, are reusable. For example, lists, forms etc. We have included quite a few in the [components](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) directory: [buttons](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_buttons.scss), [forms](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss), [fluid video](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_fluid-video.scss) or [grid](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_grid.scss) for example, but you should add your components there too. Please [browse through](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) the included components to see what Kickoff offers, or see some of them in action in our [demo area](../demos/).
 
-The [functions](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/functions/) folder contains various Sass functions that are used in the framework and that you might find useful.
+#### Partials
+
+Partials are partial parts of a page, like a masthead, sidebar or footer. They can have components inside them and can also be reusable. The [partials](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/) directory should contain style partials, like `_footer.scss` or `_masthead.scss`.
+
+#### Views
+
+Used for entire views (or pages). Usually these files consist of small tweaks that only concern a particular view. The [views](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/views/) directory should contain view-specific styles that don't fit into their own module, think `_home.scss` or `_recipe-page.scss` for example.
+
+#### Mixins
+
+The [mixins](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/mixins/) directory contains a few mixins that will help you day-to-day. Amongst others, `_responsive.scss` contains our media query mixins ([read below](#responsive) for more info), `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the `@include font-size()` mixin for specifying your font sizes with a `px` value but outputting both `rem` and `px` in your compiled styles.
+
+#### Functions
+
+The [functions](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/functions/) directory contains various Sass functions that are used in the framework and that you might find useful.
 
 ### Important files
 
@@ -94,7 +146,7 @@ If you need to add or remove a file, do it here. The order of the imported files
 #### [_global.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_global.scss)
 This file contains all styles that do not obviously fit within any other scss partial. For example, we include our body's background styles and the main `.l-container` styles.
 
-**Try not to fill this up with all your styles though.**  Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the `partials` or `views` folders.
+**Try not to fill this up with all your styles though.**  Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the `components`, `partials` or `views` directories.
 
 ---
 #### [_helper-classes.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_helper-classes.scss)
@@ -206,7 +258,10 @@ This obviously isn’t compulsory to use in your own Kickoff projects, but is do
 /* ========= */
 
 /* Modifier element use a double hyphen: -- */
-.btn.btn--primary {
+.btn {
+	...
+}
+.btn--primary {
 	...
 }
 
