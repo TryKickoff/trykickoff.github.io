@@ -6,39 +6,7 @@ module.exports = function (grunt) {
 		pkg: require('./package'), // <%=pkg.name%>
 
 		// Global Grunt vars. Edit this file to change vars
-		config : require('./_grunt-configs/config.js'),
-
-		/**
-		 * Config - Edit this section
-		 * ==========================
-		 * Choose javascript dist filename
-		 * Choose javascript dist location
-		 * Choose javascript files to be uglified
-		 */
-		configd : {
-			scss : {
-				cssFile : 'kickoff' // <%=config.scss.cssFile%>
-			},
-
-			js : {
-				// <%=config.js.distDir%>
-				distDir  : 'js/dist/',
-
-				// <%=config.js.distFile%>
-				distFile : 'app.min.js',
-
-				// <%=config.js.fileList%>
-				fileList : [
-					'node_modules/trak.js/dist/trak.js',
-					'js/libs/plugins/skeleton.tabs.js',
-					'js/script.js'
-				]
-			},
-
-			jekyll : {
-				buildDirectory: '_site' // <%=config.jekyll.buildDirectory%>
-			}
-		}
+		config : require('./_grunt-configs/config.js')
 	};
 
 	// Load grunt tasks automatically
