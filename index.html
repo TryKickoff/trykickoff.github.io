@@ -27,8 +27,6 @@ meta:
 		<h2 class="wideBoy-title clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
 		<!-- <h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2> -->
 
-
-
 		<div class="g-row">
 			<div class="g-col g-span6">
 				<code class="code-lrg" data-before="install:">
@@ -48,21 +46,112 @@ meta:
 			git clone https://github.com/trykickoff/kickoff.git your-project-folder
 		</code>
 
-		<div class="g-row">
-			<div class="g-span6 g-col">
+		<p class="l-mb0 text-right">
+			Find other ways to get Kickoff <a href="learn/get.html">in our documentation.</a>
+			<br>
+			Follow <a href="http://twitter.com/trykickoff" data-trak='{"category":"Home page","action":"Follow on Twitter","label":"Social"}'>@trykickoff</a> for updates.
+		</p>
 
-			</div>
-			<div class="g-span6 g-col">
-				<p class="l-mb0 text-right">
-					Find other ways to get Kickoff <a href="learn/get.html">in our documentation.</a>
-					<br>
-					Follow <a href="http://twitter.com/trykickoff" data-trak='{"category":"Home page","action":"Follow on Twitter","label":"Social"}'>@trykickoff</a> for updates.
-				</p>
-			</div>
-		</div>
 	</div>
 </section>
 
+<section class="features wideBoy--bright wideBoy">
+	<div class="l-container">
+		<h1 class="wideBoy-title l-mb0">Feature overview</h1>
+		<h2 class="wideBoy-title">Hundreds of amazing sites across the web are being built with Kickoff. See below for a few of them:</h2>
+
+		<!-- section on CSS -->
+		<div class="g-row">
+			<div class="g-col g-span6">
+				<h3>Intuitive CSS / Sass</h3>
+				<p>Kickoff comes with a robust CSS framework; it provides many sensible defaults so that you can get your project up and running in the shortest possible time.</p>
+				<p>We make use of the excellent Sass CSS preprocessor which allows us to use many extra features beyond the capabilities of vanilla CSS.</p>
+				<p>Kickoff uses a bespoke naming scheme for classnames, inspired loosely by the BEM naming scheme. See <a href="/learn/css.html#namingscheme">this page</a> for more info on this.</p>
+				<p>Find out more in the <a href="/learn/css.html">docs</a></p>
+			</div>
+			<div class="g-col g-span6">
+				<div class="demo-code">
+{% highlight scss%}
+.form {
+	margin: 0 0 $baseline;
+}
+
+.form-fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.form-legend {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: $baseline;
+	@include font-size($type-mid);
+	line-height: $leading-base;
+	color: $label-textColor;
+	border: 0;
+	border-bottom: 1px solid #eee;
+	white-space: normal;
+
+	// Small
+	small {
+		@include font-size($type-small);
+		color: lighten(#000, 70%);
+	}
+}
+{% endhighlight %}
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<!-- section on JS -->
+		<div class="g-row">
+			<div class="g-col g-span6">
+				<h3>Unopinionated Javascript</h3>
+				<p>We use <a href="http://browserify.org">Browserify</a> by default but beyond that, Kickoff does not prescribe a way for you to right your JS. Writing JS in a modular way is the future.</p>
+				<p>The code on the right is part of our starter Javascript file ;)</p>
+				<p>Find out more in the <a href="/learn/js.html">docs</a></p>
+			</div>
+			<div class="g-col g-span6">
+{% highlight js%}
+// npm modules
+var SwiftClick = require('swiftclick');
+var trak = require('trak.js');
+var ready = require('lite-ready');
+
+// DOM ready code goes in here
+ready(function () {
+	trak.start();
+	var swiftclick = SwiftClick.attach(document.body);
+});
+{% endhighlight %}
+			</div>
+		</div>
+
+		<hr>
+
+		<!-- section on Tooling -->
+		<h3>Awesome tooling</h3>
+		<div class="g-row">
+			<div class="g-col g-span6">
+				<p>Kickoff is powered by the <a href="http://gruntjs.com/">Grunt.js</a> task runner. It is used extensively to ease common development bottlenecks and allow us developers to focus on creating the best work possible.</p>
+				<p>Special attention has been made to ensure Kickoff works well with continuous delivery, if you develop that way.</p>
+				<p>Find out more in the <a href="/learn/grunt.html">docs</a></p>
+			</div>
+			<div class="g-col g-span6">
+
+			</div>
+		</div>
+
+		<div class="text-center">
+			<a href="/learn" class="btn btn--primary">Read our docs</a> <a href="/demos" class="btn">See our demos</a>
+		</div>
+
+	</div>
+</section>
 <section class="showcase wideBoy--dark wideBoy">
 	<div class="l-container">
 		<h1 class="wideBoy-title l-mb0">Built with Kickoff</h1>

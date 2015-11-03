@@ -112,6 +112,25 @@ a {
 	@include respond-min($bp-single-col) {
 		float: right;
 	}
+}
+
+.main-nav {
+	@extend .unstyled;
+	@include clearfix;
+	overflow-x: auto;
+	-ms-overflow-style: none;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	white-space: nowrap;
+
+	&::-webkit-scrollbar,
+	&::-webkit-scrollbar-track {
+		display: none !important;
+	}
+
+	> li {
+		display: inline-block;
+	}
 
 	a {
 		display: inline-block;
@@ -119,6 +138,7 @@ a {
 		@include font-size(18);
 		line-height: 50px;
 		height: 50px;
+		color: #fff;
 
 		&:hover {
 			border-color: lighten($color-primary, 30%);
@@ -127,15 +147,6 @@ a {
 		&.is-active {
 			border-bottom: 6px solid #fff;
 		}
-	}
-}
-
-.main-nav {
-	@extend .unstyled;
-	@include clearfix;
-
-	> li {
-		display: inline-block;
 	}
 }
 
@@ -201,6 +212,10 @@ a {
 		h2 {
 			@include font-size(28);
 		}
+	}
+
+	.code--lrg {
+
 	}
 }
 .wideBoy-title {
@@ -320,6 +335,19 @@ a {
 	background-color: $gray;
 	overflow: hidden;
 }
+
+/**
+ * Features
+ */
+.features {
+	// border-top: 1px solid #000;
+	background-color: #f1f1f1;
+}
+
+figure {
+	margin: 0;
+}
+
 
 /*
    Showcase
@@ -683,6 +711,7 @@ a {
 	word-wrap: break-word;
 	color: #fff;
 	background-color: $blueDark;
+	@include font-size(13);
 
 	&:before {
 		content: attr(data-before);
@@ -758,7 +787,7 @@ a {
 
 }
 .highlight {
-    background: #fff
+	background: #fff
 }
 
 .highlight .h {
