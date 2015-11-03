@@ -21,11 +21,11 @@
   },
   "dependencies": {
     "console": "^0.5.2",
+    "daccord-validation": "latest",
     "jquery": "^2.1.4",
     "lite-ready": "^1.0.2",
-    "swiftclick": "^1.1.5",
-    "trak.js": "^0.5.2",
-    "daccord-validation": "latest"
+    "swiftclick": "^1.2.0",
+    "trak.js": "^0.5.2"
   },
   "devDependencies": {
     "grunt-jekyll": "^0.4.3",
@@ -59,13 +59,10 @@
   "scripts": {
     "prewatch": "npm i grunt-cli -g && npm i",
     "watch": "grunt serve",
-
     "prejekyll": "gem install jekyll && gem install jekyll-paginate && gem install redcarpet",
     "jekyll": "jekyll build --watch",
-
     "prestart": "npm i -g parallelshell",
     "start": "parallelshell \"npm run watch\" \"npm run jekyll\"",
-
     "dev": "parallelshell \"grunt serve\" \"npm run jekyll\""
   }
 }
