@@ -12,3 +12,5 @@ paginate: 8
 paginate_path: /page:num
 
 encoding: "utf-8"
+
+gems: ['jekyll-paginate']
