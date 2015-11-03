@@ -18,7 +18,7 @@ function getPackageJSON() {
 }
 
 function setVersion(version) {
-	$('.currentVersion').text(' v' + version);
+	$('.currentVersion').text(version);
 }
 
 function getLatestCommit() {
