@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "console": "^0.5.2",
-    "daccord-validation": "latest",
+    "daccord-validation": "^2.0.1",
     "jquery": "^2.1.4",
     "lite-ready": "^1.0.2",
     "swiftclick": "^1.2.0",
