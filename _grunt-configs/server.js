@@ -9,13 +9,13 @@ module.exports.tasks = {
 		serve: {
 			bsFiles: {
 				src: [
-					'<%=config.distDir%>/**/*.*',
-					'**/*.html'
+					'_assets/dist/**/*.*',
+					'_site/**/*.html'
 				]
 			},
 			options: {
 				watchTask: true,
-				server: './'
+				server: './_site'
 			}
 		},
 
