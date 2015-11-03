@@ -25,7 +25,7 @@
     "lite-ready": "^1.0.2",
     "swiftclick": "^1.1.5",
     "trak.js": "^0.5.2",
-    "daccord-validation": "latest"
+    "daccord-validation": "^2.0.1"
   },
   "devDependencies": {
     "grunt-jekyll": "^0.4.3",

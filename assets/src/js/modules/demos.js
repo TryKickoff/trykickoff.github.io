@@ -1,5 +1,11 @@
 var $ = require('jquery');
 
+// Expose for demos
+var Daccord = require('daccord-validation');
+
+new Daccord(document.querySelector('.form-daccord'));
+
+
 function init() {
 	grid();
 }
@@ -18,5 +24,7 @@ function grid() {
 		}
 	});
 }
+
+
 
 module.exports = init;

@@ -336,7 +336,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 
 		<label class="control control--custom">
 			<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
-			<span class="control-indicator control-indicator--checkbox control-indicator--checkbox--tick"></span>
+			<span class="control-indicator control-indicator--tickbox"></span>
 			My tickbox Label Text
 		</label>
 	</div>
@@ -345,15 +345,13 @@ You can easily update field states by adding modifier classes to `.form-controlG
 <label class="control control--custom">
 	<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
 	<span class="control-indicator control-indicator--checkbox"></span>
-	My tickbox Label Text
+	My checkbox Button Label Text
 </label>
 
-<!-- A variant where the checkbox has a tick mark instead -->
-<!-- Add the .control-indicator--checkbox--tick modifier class to the .control-indicator--checkbox item -->
 <label class="control control--custom">
 	<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
-	<span class="control-indicator control-indicator--checkbox control-indicator--checkbox--tick"></span>
-	My checkbox Button Label Text
+	<span class="control-indicator control-indicator--tickbox"></span>
+	My tickbox Label Text
 </label>
 {% endhighlight %}
 	</div>
@@ -404,35 +402,26 @@ You can easily update field states by adding modifier classes to `.form-controlG
 
 	<div class="demo-visual">
 		<div class="form-controlGroup">
-			<div class="form-controlGroup-inputWrapper">
-				<!-- Wrap a select element with .form-input--selectWrapper -->
-				<label class="form-input form-input--selectWrapper">
-					<select class="form-input" id="cs-choice">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
-				</label>
-			</div>
-		</div>
+ 			<label for="cs-choice" class="form-label">Custom select</label>
+ 			<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
+ 				<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
+ 					<option value="--">Select title</option>
+ 					<option value="Mr">Mr</option>
+ 					<option value="Mrs">Mrs</option>
+ 				</select>
+ 			</div>
+ 		</div>
 	</div>
 	<div class="demo-code">
 {% highlight html %}
 <div class="form-controlGroup">
-	<label class="form-label" for="cs-choice">Custom select element label</label>
-	<div class="form-controlGroup-inputWrapper">
-		<!-- Wrap a select element with .form-input--selectWrapper -->
-		<label class="form-input form-input--selectWrapper">
-			<select class="form-input" id="cs-choice">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-			</select>
-		</label>
+	<label for="cs-choice" class="form-label">Custom select</label>
+	<div class="form-controlGroup-inputWrapper form-controlGroup-inputWrapper--select">
+		<select id="cs-choice" name="cs-choice" class="form-input form-input--select">
+			<option value="--">Select title</option>
+			<option value="Mr">Mr</option>
+			<option value="Mrs">Mrs</option>
+		</select>
 	</div>
 </div>
 {% endhighlight %}
@@ -478,6 +467,61 @@ You can easily update field states by adding modifier classes to `.form-controlG
 {% endhighlight %}
 	</div>
 </div>
+
+<!-- END EXAMPLE -->
+
+<hr>
+
+<a name="validation"></a>
+<h2>Validation With D'accord</h2>
+<p>HTML 5 validation for Kickoff. See <a href="https://github.com/nicbell/daccord">D'accord</a> for more details.</p>
+
+<div class="demo">
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
+	
+	<div class="demo-visual">
+		<form class="form form-daccord">
+			<div class="form-controlGroup">
+				<label class="form-label" for="field1">Text, required, maxlength 10</label>
+				<input class="form-input" id="field1" name="field1" type="text" required maxlength="10">
+			</div>
+			<div class="form-controlGroup">
+				<label class="form-label" for="field2">Email, required</label>
+				<input class="form-input" id="field2" name="field2" type="email" required>
+			</div>
+			<div class="form-controlGroup">
+				<label class="form-label" for="field3">Text, required with message</label>
+				<input class="form-input" id="field3" name="field3" type="text" data-val-required="This field is required" required>
+				<div class="form-message"></div>
+			</div>
+			<button class="btn btn--primary" type="submit">Submit</button>
+		</form>
+	</div>
+	<div class="demo-code">
+{% highlight html %}
+<form class="form form-daccord">
+	<div class="form-controlGroup">
+		<label class="form-label" for="field1">Text, required, maxlength 10</label>
+		<input class="form-input" id="field1" name="field1" type="text" required maxlength="10">
+	</div>
+	<div class="form-controlGroup">
+		<label class="form-label" for="field2">Email, required</label>
+		<input class="form-input" id="field2" name="field2" type="email" required>
+	</div>
+	<div class="form-controlGroup">
+		<label class="form-label" for="field3">Text, required with message</label>
+		<input class="form-input" id="field3" name="field3" type="text" data-val-required="This field is required" required>
+		<div class="form-message"></div>
+	</div>
+	<button class="btn btn--primary" type="submit">Submit</button>
+</form>
+{% endhighlight %}
+{% highlight javascript %}
+new Daccord(document.querySelector('.form-daccord'));
+{% endhighlight %}
+	</div>
+</div>
+
 <!-- END EXAMPLE -->
 
 <hr>
