@@ -770,8 +770,35 @@ figure {
 	border-radius: 3px;
 }
 
-.highlight  {
-	background: #ffffff;
+@mixin lang($language) {
+	position: relative;
+	margin-top: 20px;
+	display: block;
+
+	&:before {
+		content: $language;
+		position: absolute;
+		bottom: 100%;
+		margin-bottom: 10px;
+		left: 0;
+		@include font-size($type-small);
+		color: $gray;
+	}
+}
+
+.language-html {
+	@include lang('<!-- HTML -->');
+}
+.language-css {
+	@include lang('/* CSS */');
+}
+.language-js,
+.language-javascript {
+	@include lang('// Javascript');
+}
+
+.highlight {
+	background: #fff;
 
 	pre {
 		line-height: 1;
