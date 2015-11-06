@@ -52,7 +52,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 <p>Having forms styled like this depends on specific markup with specific class names. Please use the example code below as a guide.</p>
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
 		<form class="form">
@@ -117,7 +117,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 Assuming you use the same markup as above, simply add a `.form--horizontal` class to the `<form>` element and you'll now have right aligned, inline form labels in an instant.
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
 		<form class="form form--horizontal">
@@ -182,7 +182,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 <p>Multi-column forms are easy to achieve by using the existing Kickoff grid. See the comments in the code below for implementation details.</p>
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
 		<!-- Add a grid row: .g-row -->
@@ -257,7 +257,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 You can easily update field states by adding modifier classes to `.form-controlGroup`. See the comments in the code below for implementation details.
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
 		<div class="g-row">
@@ -399,7 +399,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 
 <h3>Custom select element</h3>
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms-custom-controls.scss" class="demo-src">_forms-custom-controls.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms-custom-select.scss" class="demo-src">_forms-custom-select.scss</a>
 
 	<div class="demo-visual">
 		<div class="form-controlGroup">
@@ -432,41 +432,51 @@ You can easily update field states by adding modifier classes to `.form-controlG
 
 <h3>Custom file upload fields</h3>
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms-custom-controls.scss" class="demo-src">_forms-custom-controls.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms-custom-file.scss" class="demo-src">_forms-custom-file.scss</a>
 
 	<div class="demo-visual">
 
 		<!-- Custom file uploads -->
 		<div class="form-controlGroup">
-			<label class="form-label" for="file">File upload (alt)<br>
-				<small>This version hides the default file input, you will need js to change the 'Choose file..' copy </small>
-			</label>
+				<label class="form-label" for="file">File upload</label>
 
-			<div class="form-controlGroup-inputWrapper">
-				<!-- Wrap a input[type=file] element with .form-input--fileWrapper--styled -->
-				<label class="form-input form-input--fileWrapper--styled">
-					<input class="form-input-file" type="file" id="file" accept="image/*" size="14" />
-				</label>
-			</div>
+				<div class="form-controlGroup-inputWrapper">
+						<label class="form-input form-input--file">
+								<span class="form-input--file-text">Choose file..</span>
+								<span class="form-input--file-button">Browse</span>
+								<input class="form-input-file" type="file" id="file" accept="image/*" size="14" />
+						</label>
+				</div>
 		</div>
 
 	</div>
 	<div class="demo-code">
 {% highlight html %}
 <div class="form-controlGroup">
-	<label class="form-label" for="file">File upload (alt)<br>
-		<small>This version hides the default file input, you will need js to change the 'Choose file..' copy </small>
-	</label>
+		<label class="form-label" for="file">File upload</label>
 
-	<div class="form-controlGroup-inputWrapper">
-		<!-- Wrap a input[type=file] element with .form-input--fileWrapper--styled -->
-		<label class="form-input form-input--fileWrapper--styled">
-			<input class="form-input-file" type="file" id="file" accept="image/*" size="14" />
-		</label>
-	</div>
+		<div class="form-controlGroup-inputWrapper">
+				<label class="form-input form-input--file">
+						<span class="form-input--file-text">Choose file..</span>
+						<span class="form-input--file-button">Browse</span>
+						<input class="form-input-file" type="file" id="file" accept="image/*" size="14" />
+				</label>
+		</div>
 </div>
 {% endhighlight %}
+
+{% highlight javascript %}
+var fileInput = document.querySelector('.form-input-file');
+var fileInputText = document.querySelector('.form-input--file-text');
+fileInputTextContent = fileInputText.textContent;
+
+fileInput.addEventListener('change', function(e) {
+	var value = e.target.value.length > 0 ? e.target.value.replace("C:\\fakepath\\", "") : fileInputTextContent;
+	fileInputText.textContent = value;
+});
+{% endhighlight %}
 	</div>
+
 </div>
 
 <!-- END EXAMPLE -->
@@ -478,8 +488,8 @@ You can easily update field states by adding modifier classes to `.form-controlG
 <p>HTML 5 validation for Kickoff. See <a href="https://github.com/nicbell/daccord">D'accord</a> for more details.</p>
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
-	
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
+
 	<div class="demo-visual">
 		<form class="form form-daccord">
 			<div class="form-controlGroup">
@@ -517,6 +527,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 	<button class="btn btn--primary" type="submit">Submit</button>
 </form>
 {% endhighlight %}
+
 {% highlight javascript %}
 new Daccord(document.querySelector('.form-daccord'));
 {% endhighlight %}
@@ -532,7 +543,7 @@ new Daccord(document.querySelector('.form-daccord'));
 <h2>All Form Elements</h2>
 <p>All the form elements you could need.</p>
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
 		<form class="form">

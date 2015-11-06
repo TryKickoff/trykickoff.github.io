@@ -1,15 +1,10 @@
 var $ = require('jquery');
-
-// Expose for demos
 var Daccord = require('daccord-validation');
-
-if (document.querySelector('.form-daccord')) {
-	new Daccord(document.querySelector('.form-daccord'));
-}
-
 
 function init() {
 	grid();
+	validation();
+	fileInput();
 	toggleCodeSnippet();
 }
 
@@ -28,6 +23,24 @@ function grid() {
 	});
 }
 
+function validation() {
+	if (document.querySelector('.form-daccord')) {
+		new Daccord(document.querySelector('.form-daccord'));
+	}
+}
+
+function fileInput() {
+	if (document.querySelector('.form-input-file')) {
+		var fileInput = document.querySelector('.form-input-file');
+		var fileInputText = document.querySelector('.form-input--file-text');
+		fileInputTextContent = fileInputText.textContent;
+
+		fileInput.addEventListener('change', function(e) {
+			var value = e.target.value.length > 0 ? e.target.value.replace("C:\\fakepath\\", "") : fileInputTextContent;
+			fileInputText.textContent = value;
+		});
+	}
+}
 
 function toggleCodeSnippet(el) {
 	console.log('show more code stuff');
