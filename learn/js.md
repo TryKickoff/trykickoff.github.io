@@ -76,10 +76,10 @@ npm install
 
 #### Default NPM dependencies
 
+* [lite-ready](https://www.npmjs.com/package/lite-ready) - Developed by Nic Bell, this is our version of DOMready that is a little bit smarter than the rest
 * [Swiftclick](https://github.com/tmwagency/swiftclick) - Developed by Ivan Hayes, SwiftClick is a library created to eliminate the 300ms click event delay on touch devices.
 * [Trak.js](https://github.com/mrmartineau/trak.js) - Developed by Zander Martineau, trak.js is a universal analytics event tracking API
-* [jQuery](https://github.com/jquery/jquery/) - A fast, small, and feature-rich JavaScript library
-* [lite-ready](https://www.npmjs.com/package/lite-ready) - Developed by Nic Bell, this is our version of DOMready that is a little bit smarter than the rest
+* [Console](https://github.com/matthewhudson/console) - Drop-in replacement for console - a cross-environment fix for missing methods
 
 These packages aren’t hard dependencies and can be removed by removing them from the `package.json` before your install your dependencies.
 
@@ -87,12 +87,13 @@ These packages aren’t hard dependencies and can be removed by removing them fr
 
 There are thousands of packages on npm, here are a few that we find particularly useful:
 
+* [attach.js](https://www.npmjs.com/package/attach.js) - Attaches JavaScript to HTML without messy selectors `npm i attach.js`
+* [D'accord validation](https://www.npmjs.com/package/daccord-validation) - Kickoff validation plugin for forms. Uses HTML 5 form attributes to trigger validation tests `npm i daccord-validation`
+* [jQuery](https://github.com/jquery/jquery/) - A fast, small, and feature-rich JavaScript library
 * [Cookies](https://github.com/ScottHamper/Cookies/) - Developed by Scott Hamper, Cookies is a great Cookie manipulation library `npm i cookies-js`
 * [Bullet pubsub](https://www.npmjs.com/package/bullet-pubsub) - A lightweight and simple to use pub-sub library. `npm i bullet-pubsub`
-* [attach.js](https://www.npmjs.com/package/attach.js) - Attaches JavaScript to HTML without messy selectors `npm i attach.js`
 * [utube](https://www.npmjs.com/package/utube) - Youtube video player class `npm i utube`
 * [moment.js](https://www.npmjs.com/package/moment) - Parse, validate, manipulate, and display dates  `npm i moment`
-* [D'accord validation](https://www.npmjs.com/package/daccord-validation) - Kickoff validation plugin for forms. Uses HTML 5 form attributes to trigger validation tests `npm i daccord-validation`
 * [scroll](https://www.npmjs.com/package/scroll) - A function that animates an element’s scrollTop/scrollLeft values `npm i scroll`
 * [lodash](https://lodash.com/) - A JavaScript utility library delivering consistency, modularity, performance, & extras `npm i lodash`
 * [lazysizes](https://www.npmjs.com/package/lazysizes) - High performance (jankfree) lazy loader for images (including responsive images), iframes and scripts (widgets) `npm i lazysizes`
@@ -117,12 +118,6 @@ To manage JavaScript Shims, we use a Grunt plugin called [Shimly](https://github
 If you need to add any 3rd party library code, we suggest placing it in the [assets/src/js/libs/](https://github.com/trykickoff/kickoff/tree/master/assets/src/js/libs) folder.
 
 By default, Kickoff includes the following libraries:
-
-### jQuery
-
-Kickoff includes jQuery by default, and it is installed via [npm](#npm).
-
-To remove jQuery from your project, simply remove the `require('jquery')` statement in your `script.js` file.
 
 ### Modernizr
 
