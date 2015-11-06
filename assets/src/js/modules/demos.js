@@ -3,7 +3,9 @@ var $ = require('jquery');
 // Expose for demos
 var Daccord = require('daccord-validation');
 
-new Daccord(document.querySelector('.form-daccord'));
+if (document.querySelector('.form-daccord')) {
+	new Daccord(document.querySelector('.form-daccord'));
+}
 
 
 function init() {
