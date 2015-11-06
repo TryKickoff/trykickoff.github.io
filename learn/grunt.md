@@ -16,13 +16,13 @@ next:
    body: Minimal and flexible, we show you how Kickoff structures it’s JS.
    link: js.html
 ---
-[Grunt](http://gruntjs.com) and Grunt plugins are installed and managed via [npm](https://npmjs.org/), the [Node.js](http://nodejs.org/) package manager. Grunt 0.4.x requires stable Node.js versions `>= 0.12`. Odd version numbers of Node.js are considered unstable development versions.
+[Grunt](http://gruntjs.com) and Grunt plugins are installed and managed via [npm](https://npmjs.org/), the [Node.js](http://nodejs.org/) package manager. Grunt 0.4.x requires stable Node.js versions `>= 0.12`.
 
 Before setting up Grunt ensure that your npm is up-to-date by running `npm update -g npm` (this might require sudo on certain systems).
 
-[Grunt](http://gruntjs.com) is used extensively in Kickoff; It is the beating heart of the framework. We use it to compile our Sass, concatenate and then minify our JavaScript files, or to fire up a simple local server with [BrowserSync](http://browsersync.io) for some testing.
+[Grunt](http://gruntjs.com) is used extensively in Kickoff; It is the beating heart of the framework. We use it to compile our Sass, bundle our JavaScript files, or to fire up a simple local server with [BrowserSync](http://browsersync.io) for some testing.
 
-Using Grunt has other benefits besides this;  it allows any dev to pick up a project, regardless of if they've worked on it before, and get up and running in no time.  It also helps to ensure the menial tasks (sass & js compilation) that can be forgotten, are already configured when you are ready to deploy your site.
+Using Grunt has other benefits besides this; it allows any dev to pick up a project, regardless of if they've worked on it before, and get up and running in no time.  It also helps to ensure the menial tasks (sass & js compilation) that can be forgotten, are already configured when you are ready to deploy your site.
 
 <hr class="sectionSplitter">
 
@@ -93,48 +93,18 @@ Tasks carried out when `grunt serve` is run:
 
 ---
 
-<a name="grunt-dev"></a>
-#### grunt dev
+<a name="grunt-compile"></a>
+#### grunt compile
 
-A task for development environments.  Compiles your code without minifying or optimising it.
-
-```sh
-grunt dev
-```
-
-Tasks carried out when `grunt dev` is run:
-
-* [Sass](#task-sass) - compiles Kickoff’s Sass files into native CSS
-* [Autoprefixer](#task-autoprefixer) – adds vendor prefixes to the CSS
-* [Browserify](#task-browserify) - bundle Javascript
+* Run `grunt compile` to only compile your static assets.
+* Run `grunt compile --release` to minfify the Sass as well.
 
 ---
 
-<a name="grunt-deploy"></a>
-#### grunt deploy
+<a name="grunt-watcher"></a>
+#### grunt watcher
 
-A task for when you need to deploy to production environments. This does not actually deploy any code, but ensures that your code & assets are as compressed as they could be.
-
-```sh
-grunt deploy
-```
-
-This task is essentially the same as `grunt dev` but minifies the CSS output as well ready for deployment on production environments.
-
-Tasks carried out when `grunt deploy` is run:
-
-* [Shimly](#task-shimly)
-* [Sass](#task-sass) - compiles Kickoff’s Sass files into native CSS
-* [Autoprefixer](#task-autoprefixer) – adds vendor prefixes to the CSS
-* [CSSO](#task-csso) – minifies CSS
-* [Browserify](#task-browserify) - bundle Javascript
-
----
-
-<a name="grunt-watch"></a>
-#### grunt watch
-
-For documentation on the `grunt watch` task, [check out this section in Kickoff’s task index](#task-watch)
+Run `grunt watcher` to compile everything then watch. This is useful on an integrated site (rather than on a static templates) or for back-end developers.
 
 ---
 
@@ -171,8 +141,8 @@ Tasks carried out when `grunt checks` is run:
 
 A task that compiles your project styles into a styleguide.  It also opens up the styleguide in a browser after compilation.
 
-
 <hr class="sectionSplitter">
+
 <a name="config"></a>
 ## Grunt config variables
 
@@ -366,25 +336,12 @@ They are ordered in the same way that Kickoff’s tasks are grouped in the [_gru
 ### CSS Tasks ([css.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/css.js))
 
 <a name="task-sass"></a>
-#### Sass
+#### grunt-postscss
 
-Uses [grunt-sass](https://github.com/sindresorhus/grunt-sass/) to compile Kickoff’s Sass files into native CSS.
+Uses [grunt-postscss](https://github.com/nicbell/grunt-postscss/) to compile, autoprefix and minify Kickoff’s Sass files into native CSS.
 
 We compile Kickoff’s Sass into 2 CSS files.  The first is a straight compilation of the Sass into native CSS.  The second takes a width parameter, as defined in [`scss/kickoff-old-ie.scss`](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff-old-ie.scss), and compiles a CSS file without media queries.  This second file is created so that we can write our Sass code mobile-first, while still being able to serve old versions of Internet Explorer an appropriately sized layout, since they don’t support media queries.  For more information on this approach, see [Jake Archibald’s excellent article on the subject](http://jakearchibald.github.io/sass-ie/).
 
-<a name="task-autoprefixer"></a>
-#### Autoprefixer
-
-Kickoff uses [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) to add browser prefixes to the CSS, so that the base Sass files are kept as clean as possible.  This means that you can exclude writing browser specific prefixes (such as `-webkit`) and the plugin will add this in to your CSS when compiled.
-
-This task is run after the Sass task has converted Kickoff’s Sass into native CSS.
-
-For more information on Autoprefixer and how it works, see it’s [Github repo and documentation](https://github.com/ai/autoprefixer).
-
-<a name="task-csso"></a>
-#### CSSO
-
-To minify our CSS, we use CSSO via the [grunt-csso](https://github.com/t32k/grunt-csso) plugin. This is used in the [`grunt deploy`](#grunt-deploy) task
 
 ---
 ### Image tasks ([images.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/images.js))
