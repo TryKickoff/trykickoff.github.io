@@ -323,9 +323,9 @@ You can easily update field states by adding modifier classes to `.form-controlG
 <h2>Custom field elements</h2>
 <p>Improved styling for checkboxes, radios &amp; file upload</p>
 
-<h3>Custom checkbox inputs</h3>
-<div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms-custom-controls.scss" class="demo-src">_forms-custom-controls.scss</a>
+<h3>Custom checkbox inputs <a href="#demo-form-checkboxes" class="btn--showCode">Show code</a></h3>
+<div class="demo" id="demo-form-checkboxes">
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms-custom-radioscheckboxes.scss" class="demo-src">_forms-custom-radioscheckboxes.scss</a>
 
 	<div class="demo-visual">
 		<label class="control control--custom">
@@ -358,9 +358,10 @@ You can easily update field states by adding modifier classes to `.form-controlG
 </div>
 <!-- END EXAMPLE -->
 
-<h3>Custom radio inputs</h3>
-<div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_forms-custom-controls.scss" class="demo-src">_forms-custom-controls.scss</a>
+
+<h3>Custom radio inputs <a href="#demo-form-radios" class="btn--showCode">Show code</a></h3>
+<div class="demo" id="demo-form-radios">
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms-custom-radioscheckboxes.scss" class="demo-src">_forms-custom-radioscheckboxes.scss</a>
 
 	<div class="demo-visual">
 

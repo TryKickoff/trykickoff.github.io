@@ -213,10 +213,6 @@ a {
 			@include font-size(28);
 		}
 	}
-
-	.code--lrg {
-
-	}
 }
 .wideBoy-title {
 	font-family: $font-family-base;
@@ -479,22 +475,38 @@ figure {
 }
 
 .demo {
-	border: 1px solid #ddd;
 	position: relative;
 
 	& + & {
 		margin-top: 50px;
 	}
+
+	// Only show code snippet when needed
+	&.show-code {
+		border: 1px solid #ddd;
+
+		.demo-code {
+			display: block;
+		}
+
+		.demo-src {
+			display: inline-block;
+		}
+
+		.demo-visual {
+			padding: $baseline;
+		}
+	}
 }
 
 .demo-src {
+	display: none;
 	position: absolute;
 	top: 0;
 	right: 0;
 	@include font-size($type-smaller);
 	text-align: right;
 	padding: 1px 5px;
-	display: inline-block;
 
 	&,
 	&:link,
@@ -509,8 +521,9 @@ figure {
 }
 
 .demo-visual {
-	padding: $baseline;
 	line-height: 1.5;
+	transition: all 200ms ease-in-out;
+	padding: $baseline 0;
 
 	h3 {
 		margin-bottom: 5px;
@@ -522,6 +535,8 @@ figure {
 }
 
 .demo-code {
+	display: none;
+
 	pre {
 		margin-bottom: 0;
 		// border-radius: 0;
@@ -764,7 +779,7 @@ figure {
 .btn--small {
 	@include font-size($type-small);
 	line-height:1.5;
-	height:     1.5em;
+	height: 1.5em;
 	padding-right:0.75em;
 	padding-left: 0.75em;
 	border-radius: 3px;

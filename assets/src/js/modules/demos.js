@@ -10,6 +10,7 @@ if (document.querySelector('.form-daccord')) {
 
 function init() {
 	grid();
+	toggleCodeSnippet();
 }
 
 function grid() {
@@ -28,5 +29,18 @@ function grid() {
 }
 
 
+function toggleCodeSnippet(el) {
+	console.log('show more code stuff');
+	var els = document.querySelectorAll('.btn--showCode');
+
+	for (var i = 0; i < els.length; i++) {
+		els[i].addEventListener('click', function (ev) {
+			ev.preventDefault();
+			var target = this.getAttribute('href');
+			console.log(target);
+			document.querySelector(target).classList.toggle('show-code');
+		})
+	}
+}
 
 module.exports = init;
