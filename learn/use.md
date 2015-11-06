@@ -75,18 +75,18 @@ What follows is a general overview of each major part of Kickoff and how to use 
 		Define your colour scheme
 	</label>
 	<div class="checklistInfo">
-		Open <code>scss/_color-palette.scss</code> and change any vars to your own ones.
+		Open <code>assets/src/scss/_color-palette.scss</code> and change any vars to your own ones.
 	</div>
 
-	<h4>Open scss/_variables.scss</h4>
+	<h4>Open assets/src/scss/_variables.scss</h4>
 	<label class="control">
 		<input type="checkbox">
 		Define your font sizes
 	</label>
 	<div class="checklistInfo">
 		<ul>
-			<li>Line ~19 defines your base font size.</li>
-			<li>Line ~29 defines your type scale: <code>$type-scale</code>. By default we use the 'major third' scale (1.25), this then determines the sizes all the other type size vars. See lines 32—40 for <code>$type-micro</code> to <code>$type-jumbo</code>. <br>
+			<li>Line ~18 defines your base font size.</li>
+			<li>Line ~27 defines your type scale: <code>$type-scale</code>. By default we use the 'major third' scale (1.25), this then determines the sizes all the other type size vars. See lines 32—40 for <code>$type-micro</code> to <code>$type-jumbo</code>. <br>
 			<b>Use <code>$type-base</code> when you need the default font size.</b></li>
 			<li>Lines ~24—26 define the leading and line-height.</li>
 			<li><code>$baseline</code> is used for even spacing (like a baseline grid) for most typographical elements and some other items</li>
@@ -147,7 +147,7 @@ What follows is a general overview of each major part of Kickoff and how to use 
 		Define some global app-specific variables
 	</label>
 	<div class="checklistInfo">
-		On line 95 there is one example of an app-specific variable, this is for link transitions. Add any others that you may need below there.
+		On line 107 there is one example of an app-specific variable, this is for link transitions. Add any others that you may need below there.
 	</div>
 </div>
 
