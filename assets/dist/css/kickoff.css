@@ -1277,6 +1277,50 @@ option {
   font-weight: normal; }
 
 /**
+ * Custom file input
+ *
+ * <div class="form-controlGroup">
+		<label class="form-label" for="file">File upload</label>
+
+		<div class="form-controlGroup-inputWrapper">
+			<label class="form-input form-input--file">
+				<span class="form-input--file-text">Choose file..</span>
+				<span class="form-input--file-button">Browse</span>
+				<input class="form-input--file-input" type="file" id="file" accept="image/*" size="14" />
+			</label>
+		</div>
+	</div>
+ */
+/**
+ * Custom file input
+ */
+.form-input--file {
+  position: relative;
+  overflow: hidden;
+  padding-right: 120px;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.form-input-file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.form-input--file-button {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  padding: .44em 1em 0;
+  background-color: #d9d9d9; }
+  .form-input--file-button:hover {
+    background-color: #ccc; }
+
+/**
  * Icons
  */
 [class^="icon-"], [class*=" icon-"] {
@@ -2364,29 +2408,24 @@ pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 16px;
   font-size: 0.8rem;
-  color: #444;
-  border-radius: 3px;
-  -moz-tab-size: 3;
-    -o-tab-size: 3;
-       tab-size: 3; }
+  color: #444; }
 
 code {
   padding: 2px 4px;
   color: #444;
-  background-color: #ddd; }
+  background-color: #f7f7f7; }
 
 pre {
   display: block;
   padding: 14px;
   margin: 0 0 28px;
   color: #444;
-  background-color: #ddd;
-  border-radius: 4px;
+  background-color: #f7f7f7;
   white-space: pre; }
   pre code {
     padding: 0;
     color: #444;
-    background-color: #ddd;
+    background-color: #f7f7f7;
     border: 0; }
 
 .pre--scrollable {
@@ -2753,20 +2792,27 @@ figure {
     font-size: 5rem; }
 
 .demo {
-  border: 1px solid #ddd;
   position: relative; }
   .demo + .demo {
     margin-top: 50px; }
+  .demo.show-code {
+    border: 1px solid #ddd; }
+    .demo.show-code .demo-code {
+      display: block; }
+    .demo.show-code .demo-src {
+      display: inline-block; }
+    .demo.show-code .demo-visual {
+      padding: 28px; }
 
 .demo-src {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
   font-size: 13px;
   font-size: 0.65rem;
   text-align: right;
-  padding: 1px 5px;
-  display: inline-block; }
+  padding: 1px 5px; }
   .demo-src, .demo-src:link, .demo-src:visited {
     color: #a0a0a0;
     background-color: #f0f0f0; }
@@ -2774,17 +2820,22 @@ figure {
     background-color: #ddd; }
 
 .demo-visual {
-  padding: 28px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-transition: all 200ms ease-in-out;
+     -moz-transition: all 200ms ease-in-out;
+          transition: all 200ms ease-in-out;
+  padding: 28px 0; }
   .demo-visual h3 {
     margin-bottom: 5px; }
   .demo-visual code {
     white-space: pre; }
 
-.demo-code pre {
-  margin-bottom: 0;
-  max-height: 400px;
-  overflow: auto; }
+.demo-code {
+  display: none; }
+  .demo-code pre {
+    margin-bottom: 0;
+    max-height: 400px;
+    overflow: auto; }
 
 /**
  * Grid demos
@@ -2963,8 +3014,52 @@ figure {
   padding-left: 0.75em;
   border-radius: 3px; }
 
+.language-html {
+  position: relative;
+  margin-top: 20px;
+  display: block; }
+  .language-html:before {
+    content: "<!-- HTML -->";
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 10px;
+    left: 0;
+    font-size: 16px;
+    font-size: 0.8rem;
+    color: #95a5a6; }
+
+.language-css {
+  position: relative;
+  margin-top: 20px;
+  display: block; }
+  .language-css:before {
+    content: "/* CSS */";
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 10px;
+    left: 0;
+    font-size: 16px;
+    font-size: 0.8rem;
+    color: #95a5a6; }
+
+.language-js,
+.language-javascript {
+  position: relative;
+  margin-top: 20px;
+  display: block; }
+  .language-js:before,
+  .language-javascript:before {
+    content: "// Javascript";
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 10px;
+    left: 0;
+    font-size: 16px;
+    font-size: 0.8rem;
+    color: #95a5a6; }
+
 .highlight {
-  background: #ffffff; }
+  background: #fff; }
   .highlight pre {
     line-height: 1; }
     .demo-code .highlight pre {
