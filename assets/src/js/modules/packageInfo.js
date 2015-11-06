@@ -1,7 +1,9 @@
 var $ = require('jquery');
 
 function init() {
-	getPackageJSON();
+	if ($('.currentVersion').length) {
+		getPackageJSON();w
+	}
 }
 
 function getPackageJSON() {
@@ -11,7 +13,7 @@ function getPackageJSON() {
 		dataType: 'json',
 	})
 	.done(function(data) {
-		console.log("success", data);
+		// console.log("success", data);
 
 		setVersion(data.version);
 	});
