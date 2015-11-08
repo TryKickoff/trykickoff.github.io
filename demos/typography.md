@@ -127,7 +127,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 <h3 class="demoHeading">Ordered lists</h3>
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_lists.scss" class="demo-src">_typography.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_lists.scss" class="demo-src">_typography.scss</a>
 
 	<div class="demo-visual">
 		<ol>
@@ -179,7 +179,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 <h3 class="demoHeading">Unordered lists</h3>
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_lists.scss" class="demo-src">_typography.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_lists.scss" class="demo-src">_typography.scss</a>
 
 	<div class="demo-visual">
 		<ul>
@@ -232,7 +232,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 <h3 class="demoHeading">Unstyled [un]ordered lists</h3>
 <p>Add an <code>.unstyled</code> class to any <code>&lt;ul></code> or <code>&lt;ol></code> to remove the default bullets, numbering and margins.</p>
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_lists.scss" class="demo-src">_typography.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_lists.scss" class="demo-src">_typography.scss</a>
 
 	<div class="demo-visual">
 		<ul class="unstyled">

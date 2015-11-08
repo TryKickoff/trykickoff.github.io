@@ -22,7 +22,7 @@ next:
 For left-aligned labels or standard labels (above the field), we use the same exact markup.
 
 <div class="demo">
-	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/partials/components/_forms.scss" class="demo-src">_forms.scss</a>
+	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
 		<div class="form-controlGroup">
