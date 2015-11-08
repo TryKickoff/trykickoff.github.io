@@ -42,17 +42,39 @@ function fileInput() {
 	}
 }
 
-function toggleCodeSnippet(el) {
-	console.log('show more code stuff');
-	var els = document.querySelectorAll('.btn--showCode');
+function nextInDOM(el, target, callback) {
+	var nextEl = el.nextElementSibling;
+	target = target;
+	this.callback = callback;
 
-	for (var i = 0; i < els.length; i++) {
-		els[i].addEventListener('click', function (ev) {
+	if ( nextEl.classList.contains(target) ) {
+		if (typeof callback == "function") {
+			return callback(nextEl);
+		}
+
+	} else {
+		return nextInDOM(nextEl, target, callback);
+	}
+}
+
+function toggleCodeSnippet() {
+	var demoHeadings = document.querySelectorAll('.demoHeading');
+
+	for (var i = 0; i < demoHeadings.length; i++) {
+		var showCodeBtn = document.createElement('a');
+		showCodeBtn.classList.add('demoHeading-showCodeBtn');
+		showCodeBtn.setAttribute('title', 'View source code');
+		demoHeadings[i].appendChild(showCodeBtn);
+
+		demoHeadings[i].querySelector('.demoHeading-showCodeBtn').addEventListener('click', function (ev) {
 			ev.preventDefault();
-			var target = this.getAttribute('href');
-			console.log(target);
-			document.querySelector(target).classList.toggle('show-code');
-		})
+			var that = this;
+
+			nextInDOM(this.parentNode, 'demo', function (el) {
+				el.classList.toggle('show-code');
+				that.classList.toggle('is-active');
+			});
+		});
 	}
 }
 
