@@ -27,7 +27,7 @@ hr {
 	width: 95%;
 	max-width: #{$layout-max-width}px;
 	margin: 0 auto;
-	transform: translateZ(0);
+	// transform: translateZ(0);
 
 	.lt-ie9 & {
 		min-width: #{$layout-min-width}px;

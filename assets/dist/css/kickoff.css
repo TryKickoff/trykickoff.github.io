@@ -1572,7 +1572,7 @@ input[type="button"].btn--block {
  *     <li></li>
  * </ul>
  *
- * Mobile Usage:
+ * Responsive Usage:
  * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow l-blockGrid--6up--wide">
  *     <li></li>
  * </ul>
@@ -1588,7 +1588,7 @@ input[type="button"].btn--block {
   .l-blockGrid > li {
     display: block;
     height: auto; }
-  @media screen and (min-width: 25em) and (max-width: 48em) {
+  @media screen and (min-width: 25em) {
     .l-blockGrid.l-blockGrid--1up--narrow > li {
       float: left;
       width: 100%; }
@@ -2463,6 +2463,9 @@ a {
      -moz-transition: all 150ms ease-in-out;
           transition: all 150ms ease-in-out; }
 
+hr {
+  margin: 70px; }
+
 /**
  * Default layout container
  */
@@ -2471,10 +2474,7 @@ a {
   padding-right: 0px;
   width: 95%;
   max-width: 1000px;
-  margin: 0 auto;
-  -webkit-transform: translateZ(0);
-     -moz-transform: translateZ(0);
-          transform: translateZ(0); }
+  margin: 0 auto; }
   .lt-ie9 .l-container {
     min-width: 1000px; }
 
