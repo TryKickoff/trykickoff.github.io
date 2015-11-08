@@ -9,12 +9,12 @@ meta:
   description: See Kickoff's components demo
 
 next:
- - title: Get Kickoff
-   body: Find out how to get your hands on Kickoff here.
-   link: /learn/get.html
- - title: Use Kickoff
-   body: Ready to get your hands dirty?<br>We’ll show you where to start.
-   link: /learn/use.html
+ - title: Grids demo
+   body: Find out about our grid and how to use it
+   link: grids.html
+ - title: Forms
+   body: See all the included form styles
+   link: forms.html
 ---
 <a name="buttons"></a>
 
@@ -78,6 +78,8 @@ To make buttons span to 100% width, add the `.btn--block` modifier class. You ca
 	</div>
 </div>
 
+---
+
 <a name="mediaobject"></a>
 
 <h2 class="demoHeading">Media Object</h2>
@@ -89,7 +91,7 @@ Place any image and text-like content side-by-side, as per: [media object](http:
 	<div class="demo-visual">
 		<div class="media">
 			<div class="media-img">
-				<img src="/img/docs/placeholder.jpg">
+				<img src="http://placehold.it/250x150">
 			</div>
 			<div class="media-body">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -100,7 +102,7 @@ Place any image and text-like content side-by-side, as per: [media object](http:
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 			<div class="media-img">
-				<img src="/img/docs/placeholder.jpg">
+				<img src="http://placehold.it/250x150">
 			</div>
 		</div>
 	</div>
@@ -109,7 +111,7 @@ Place any image and text-like content side-by-side, as per: [media object](http:
 <!-- Media element with left aligned image -->
 <div class="media">
 	<div class="media-img">
-		<img src="/img/docs/placeholder.jpg">
+		<img src="http://placehold.it/250x150">
 	</div>
 	<div class="media-body">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -122,7 +124,7 @@ Place any image and text-like content side-by-side, as per: [media object](http:
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	</div>
 	<div class="media-img">
-		<img src="/img/docs/placeholder.jpg">
+		<img src="http://placehold.it/250x150">
 	</div>
 </div>
 {% endhighlight %}
@@ -160,10 +162,9 @@ Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` cont
 <h2 class="demoHeading">Block grids</h2>
 Block grids give you a way to evenly split contents of a list within the grid. If you wanted to create a row of five images or paragraphs that need to stay evenly spaced no matter the screen size, the block grid is for you.
 
-Add the `.l-blockGrid` class to any unordered list, the add the `.l-blockGrid--#up` class to determine how many grid columns appear in a row.
+Add the `.l-blockGrid` class to any unordered list, then add the `.l-blockGrid--#up` class to determine how many grid columns appear in a row.
 
-<h3 class="demoHeading">Narrow block grids</h3>
-There is also a narrow option for the block grid which allows you to choose a different column count on narrower viewports. Add the `.l-blockGrid--#up--narrow` modifier class to make use of this.
+* `.l-blockGrid--6up` - 6 columns above the `$bp-single-col` breakpoint
 
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_block-grids.scss" class="demo-src">_block-grids.scss</a>
@@ -177,8 +178,41 @@ There is also a narrow option for the block grid which allows you to choose a di
 			<li>Item 5</li>
 			<li>Item 6</li>
 		</ul>
-		<br>
-		<ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow">
+	</div>
+
+	<div class="demo-code">
+{% highlight html%}
+<!-- 6 columns on wide screen, then 1 column (stacked) when we are below the $bp-single-col breakpoint -->
+<ul class="l-blockGrid l-blockGrid--6up">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>
+	<li>Item 5</li>
+	<li>Item 6</li>
+</ul>
+{% endhighlight %}
+	</div>
+</div>
+
+---
+
+<h3 class="demoHeading">Responsive block grids</h3>
+Block grids now have (since v6.0.0) more responsive modifiers. You can add
+
+* `.l-blockGrid--3up` - **the default**. 3 columns above the `$bp-single-col` breakpoint
+* `.l-blockGrid--2up--narrow` - 2 columns above the `$bp-narrow` breakpoint
+* `.l-blockGrid--3up--mid` - 3 columns above the `$bp-mid` breakpoint
+* `.l-blockGrid--4up--wide` - 4 columns above the `$bp-wide` breakpoint
+* `.l-blockGrid--5up--huge` - 5 columns above the `$bp-huge` breakpoint
+
+There is also a narrow option for the block grid which allows you to choose a different column count on narrower viewports. Add the `.l-blockGrid--#up--narrow` modifier class to make use of this.
+
+<div class="demo">
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_block-grids.scss" class="demo-src">_block-grids.scss</a>
+
+	<div class="demo-visual">
+		<ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow l-blockGrid--3up--mid l-blockGrid--5up--wide l-blockGrid--6up--huge">
 			<li>Item 1</li>
 			<li>Item 2</li>
 			<li>Item 3</li>
@@ -191,16 +225,6 @@ There is also a narrow option for the block grid which allows you to choose a di
 	</div>
 	<div class="demo-code">
 {% highlight html%}
-<!-- 6 columns on wide screen, then 1 column (stacked) when we are below the $bp-single-col breakpoint -->
-<ul class="l-blockGrid l-blockGrid--6up">
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
-	<li>Item 6</li>
-</ul>
-
 <!-- 4 columns on wide screen, then 2 columns when we are below the $bp-single-col</code> breakpoint but above the $bp-block-grid-narrow breakpoint, then 1 when we are below the $bp-block-grid-narrow breakpoint -->
 <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow">
 	<li>Item 1</li>
@@ -263,7 +287,7 @@ For centred lists, add the `.l-list--centred` class to an [un]ordered list. For 
 
 <a name="tables"></a>
 
-<h2 class="demoHeading">Tables</h2>
+## Tables
 All tables should use the `.table` class name. We have included many options, so see the demos below.
 
 <h3 class="demoHeading">Default table</h3>
