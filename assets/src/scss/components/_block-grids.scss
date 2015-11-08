@@ -7,7 +7,7 @@
  *     <li></li>
  * </ul>
  *
- * Mobile Usage:
+ * Responsive Usage:
  * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow l-blockGrid--6up--wide">
  *     <li></li>
  * </ul>
@@ -25,7 +25,7 @@
 			float: left;
 			width: percentage(1 / $i);
 
-			//Clear incase of height difference of block items.
+			// Clear incase of height difference of block items.
 			&:nth-of-type(#{$i}n + 1) {
 				clear: left;
 			}
@@ -53,7 +53,7 @@
 	}
 
 	// Narrow block-grid
-	@include respond-min-max($bp-block-grid-narrow, $bp-single-col) {
+	@include respond-min($bp-narrow) {
 		@include blockGridHelper('narrow');
 	}
 
