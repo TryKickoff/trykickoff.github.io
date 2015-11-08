@@ -18,7 +18,7 @@ next:
 ---
 <a name="singlefield"></a>
 
-<h2>Single form input</h2>
+<h2 class="demoHeading">Single form input</h2>
 For left-aligned labels or standard labels (above the field), we use the same exact markup.
 
 <div class="demo">
@@ -48,7 +48,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 
 <a name="labelsabove"></a>
 
-<h2>Forms <small>with labels above inputs</small></h2>
+<h2 class="demoHeading">Forms <small>with labels above inputs</small></h2>
 <p>Having forms styled like this depends on specific markup with specific class names. Please use the example code below as a guide.</p>
 
 <div class="demo">
@@ -113,7 +113,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 
 <a name="labelsinline"></a>
 
-<h2>Forms <small>with inline labels</small></h2>
+<h2 class="demoHeading">Forms <small>with inline labels</small></h2>
 Assuming you use the same markup as above, simply add a `.form--horizontal` class to the `<form>` element and you'll now have right aligned, inline form labels in an instant.
 
 <div class="demo">
@@ -178,7 +178,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 
 <a name="multicolumnform"></a>
 
-<h2>Multi column forms <small>with labels above inputs</small></h2>
+<h2 class="demoHeading">Multi column forms <small>with labels above inputs</small></h2>
 <p>Multi-column forms are easy to achieve by using the existing Kickoff grid. See the comments in the code below for implementation details.</p>
 
 <div class="demo">
@@ -253,7 +253,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 
 <a name="formfieldstates"></a>
 
-<h2>Form field states</h2>
+<h2 class="demoHeading">Form field states</h2>
 You can easily update field states by adding modifier classes to `.form-controlGroup`. See the comments in the code below for implementation details.
 
 <div class="demo">
@@ -323,8 +323,8 @@ You can easily update field states by adding modifier classes to `.form-controlG
 <h2>Custom field elements</h2>
 <p>Improved styling for checkboxes, radios &amp; file upload</p>
 
-<h3>Custom checkbox inputs <a href="#demo-form-checkboxes" class="btn--showCode">Show code</a></h3>
-<div class="demo" id="demo-form-checkboxes">
+<h3 class="demoHeading">Custom checkbox inputs</h3>
+<div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms-custom-radioscheckboxes.scss" class="demo-src">_forms-custom-radioscheckboxes.scss</a>
 
 	<div class="demo-visual">
@@ -359,8 +359,8 @@ You can easily update field states by adding modifier classes to `.form-controlG
 <!-- END EXAMPLE -->
 
 
-<h3>Custom radio inputs <a href="#demo-form-radios" class="btn--showCode">Show code</a></h3>
-<div class="demo" id="demo-form-radios">
+<h3 class="demoHeading">Custom radio inputs</h3>
+<div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms-custom-radioscheckboxes.scss" class="demo-src">_forms-custom-radioscheckboxes.scss</a>
 
 	<div class="demo-visual">
@@ -397,7 +397,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 <!-- END EXAMPLE -->
 
 
-<h3>Custom select element</h3>
+<h3 class="demoHeading">Custom select element</h3>
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms-custom-select.scss" class="demo-src">_forms-custom-select.scss</a>
 
@@ -430,7 +430,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 </div>
 <!-- END EXAMPLE -->
 
-<h3>Custom file upload fields</h3>
+<h3 class="demoHeading">Custom file upload fields</h3>
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms-custom-file.scss" class="demo-src">_forms-custom-file.scss</a>
 
@@ -484,7 +484,7 @@ fileInput.addEventListener('change', function(e) {
 <hr>
 
 <a name="validation"></a>
-<h2>Validation With D'accord</h2>
+<h2 class="demoHeading">Validation With D'accord</h2>
 <p>HTML 5 validation for Kickoff. See <a href="https://github.com/nicbell/daccord">D'accord</a> for more details.</p>
 
 <div class="demo">
@@ -540,7 +540,7 @@ new Daccord(document.querySelector('.form-daccord'));
 
 <a name="allformelements"></a>
 
-<h2>All Form Elements</h2>
+<h2 class="demoHeading">All Form Elements</h2>
 <p>All the form elements you could need.</p>
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>

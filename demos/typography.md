@@ -17,6 +17,7 @@ next:
 ---
 
 <a name="hp"></a>
+<h2 class="demoHeading">Headings & paragraphs</h2>
 
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_typography.scss" class="demo-src">_typography.scss</a>
@@ -56,8 +57,8 @@ next:
 
 <a name="tuc"></a>
 
-### Text utility classes
-We include some helpful utility classes if you need to align your text quickly. Use <code>.text-centre</code> or  <code>.text-center</code> to centre your text. Use <code>.text-right</code> to right align. Or use <code>.text-left</code> to left align.
+<h3 class="demoHeading">Text utility classes</h3>
+We include some helpful utility classes if you need to align your text quickly. Use `.text-centre` or  `.text-center` to centre your text. Use `.text-right` to right align. Or use `.text-left` to left align.
 
 As we are British, we decided to include two spellings for our centred text : `.text-centre` and `.text-center` — use whichever one you prefer..
 
@@ -83,7 +84,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 
 <a name="tls"></a>
 
-<h3>Text-level semantics</h3>
+### Text-level semantics
 
 <div class="g-row">
 	<div class="g-span6 g-col">
@@ -122,37 +123,13 @@ As we are British, we decided to include two spellings for our centred text : `.
 
 ---
 
-<a name="bq"></a>
-
-<div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_typography.scss" class="demo-src">_typography.scss</a>
-
-	<div class="demo-visual">
-		<h3>Blockquote</h3>
-		<blockquote>
-			<p>Of all the gin joints in all the towns in all the world, she walks into mine.</p>
-			<small>Rick Blaine</small>
-		</blockquote>
-	</div>
-	<div class="demo-code">
-{% highlight html%}
-<blockquote>
-	<p>Of all the gin joints in all the towns in all the world, she walks into mine.</p>
-	<small>Rick Blaine</small>
-</blockquote>
-{% endhighlight %}
-	</div>
-</div>
-
----
-
 <a name="ol"></a>
+<h3 class="demoHeading">Ordered lists</h3>
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_typography.scss" class="demo-src">_typography.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_lists.scss" class="demo-src">_typography.scss</a>
 
 	<div class="demo-visual">
-		<h3>Ordered lists</h3>
 		<ol>
 			<li>list item 1</li>
 			<li>list item 1
@@ -199,12 +176,12 @@ As we are British, we decided to include two spellings for our centred text : `.
 ---
 
 <a name="ul"></a>
+<h3 class="demoHeading">Unordered lists</h3>
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_typography.scss" class="demo-src">_typography.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_lists.scss" class="demo-src">_typography.scss</a>
 
 	<div class="demo-visual">
-		<h3>Unordered lists</h3>
 		<ul>
 			<li>list item 1</li>
 			<li>list item 2
@@ -252,10 +229,10 @@ As we are British, we decided to include two spellings for our centred text : `.
 
 <a name="usul"></a>
 
-<h3>Unstyled [un]ordered lists</h3>
+<h3 class="demoHeading">Unstyled [un]ordered lists</h3>
 <p>Add an <code>.unstyled</code> class to any <code>&lt;ul></code> or <code>&lt;ol></code> to remove the default bullets, numbering and margins.</p>
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_typography.scss" class="demo-src">_typography.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_lists.scss" class="demo-src">_typography.scss</a>
 
 	<div class="demo-visual">
 		<ul class="unstyled">
@@ -287,42 +264,6 @@ As we are British, we decided to include two spellings for our centred text : `.
 	<li>list item 3</li>
 	<li>list item 4</li>
 </ol>
-{% endhighlight %}
-	</div>
-</div>
-
----
-
-<a name="dl"></a>
-
-<h3>Definition list</h3>
-<div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_typography.scss" class="demo-src">_typography.scss</a>
-
-	<div class="demo-visual">
-		<dl>
-			<dt>Definition name</dt>
-			<dd>Definition value</dd>
-			<dt>Definition name</dt>
-			<dd>Definition value</dd>
-			<dd>Definition value</dd>
-			<dt>Definition name</dt>
-			<dt>Definition name</dt>
-			<dd>Definition value</dd>
-		</dl>
-	</div>
-	<div class="demo-code">
-{% highlight html%}
-<dl>
-	<dt>Definition name</dt>
-	<dd>Definition value</dd>
-	<dt>Definition name</dt>
-	<dd>Definition value</dd>
-	<dd>Definition value</dd>
-	<dt>Definition name</dt>
-	<dt>Definition name</dt>
-	<dd>Definition value</dd>
-</dl>
 {% endhighlight %}
 	</div>
 </div>

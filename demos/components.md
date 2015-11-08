@@ -18,7 +18,7 @@ next:
 ---
 <a name="buttons"></a>
 
-## Buttons
+<h2 class="demoHeading">Buttons</h2>
 Button styles can be applied to anything with the `.btn` class applied. However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
 
 <div class="demo">
@@ -38,7 +38,7 @@ Button styles can be applied to anything with the `.btn` class applied. However,
 
 ---
 
-### Button styles
+<h3 class="demoHeading">Button styles</h3>
 We provide only one button style variant because we think you should define your own. This variant, the *primary* button, uses the `.btn--primary` modifier class. We suggest setting up your own buttons in the same way, [see here](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_buttons.scss#L81-L95).
 
 The colours used by this button are defined in our [colour palette](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_color-palette.scss#L41-L42) file.
@@ -60,7 +60,7 @@ The colours used by this button are defined in our [colour palette](https://gith
 
 ---
 
-### Block-level buttons
+<h3 class="demoHeading">Block-level buttons</h3>
 To make buttons span to 100% width, add the `.btn--block` modifier class. You can also see that we are using the `.btn--primary` modifier class as well as `.btn--block`.
 
 <div class="demo">
@@ -80,7 +80,7 @@ To make buttons span to 100% width, add the `.btn--block` modifier class. You ca
 
 <a name="mediaobject"></a>
 
-## Media Object
+<h2 class="demoHeading">Media Object</h2>
 Place any image and text-like content side-by-side, as per: [media object](http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
 
 <div class="demo">
@@ -133,7 +133,7 @@ Place any image and text-like content side-by-side, as per: [media object](http:
 
 <a name="fluidvideo"></a>
 
-## Fluid video
+<h2 class="demoHeading">Fluid video</h2>
 Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` container. We assume 16:9 ratio so if you need anything else you will have to modify the [source](https://github.com/trykickoff/kickoff/blob/c3d6bbe23aa9fc51c66e11d6e13f40af16651510/scss/partials/components/_fluid-video.scss) or use a script like [fitvid.js](http://fitvidsjs.com/).
 
 <div class="demo">
@@ -157,12 +157,12 @@ Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` cont
 
 <a name="blockgrids"></a>
 
-## Block grids
+<h2 class="demoHeading">Block grids</h2>
 Block grids give you a way to evenly split contents of a list within the grid. If you wanted to create a row of five images or paragraphs that need to stay evenly spaced no matter the screen size, the block grid is for you.
 
 Add the `.l-blockGrid` class to any unordered list, the add the `.l-blockGrid--#up` class to determine how many grid columns appear in a row.
 
-### Narrow block grids
+<h3 class="demoHeading">Narrow block grids</h3>
 There is also a narrow option for the block grid which allows you to choose a different column count on narrower viewports. Add the `.l-blockGrid--#up--narrow` modifier class to make use of this.
 
 <div class="demo">
@@ -216,7 +216,7 @@ There is also a narrow option for the block grid which allows you to choose a di
 
 <a name="lists"></a>
 
-## Lists
+<h2 class="demoHeading">Lists</h2>
 For centred lists, add the `.l-list--centred` class to an [un]ordered list. For floated lists, add the `.l-list--floated` class.
 
 <div class="demo">
@@ -263,10 +263,10 @@ For centred lists, add the `.l-list--centred` class to an [un]ordered list. For 
 
 <a name="tables"></a>
 
-## Tables
+<h2 class="demoHeading">Tables</h2>
 All tables should use the `.table` class name. We have included many options, so see the demos below.
 
-### Default table
+<h3 class="demoHeading">Default table</h3>
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_tables.scss" class="demo-src">_tables.scss</a>
 
@@ -321,7 +321,7 @@ All tables should use the `.table` class name. We have included many options, so
 	</div>
 </div>
 
-### Bordered table
+<h3 class="demoHeading">Bordered table</h3>
 To add a table border, add the `.table--bordered` modifier class
 
 <div class="demo">
@@ -378,7 +378,7 @@ To add a table border, add the `.table--bordered` modifier class
 	</div>
 </div>
 
-### Table with all the styles
+<h3 class="demoHeading">Table with all the styles</h3>
 The table below has many different styles.
 
 * To add rounded corners, add the `.table--rounded` modifier class
@@ -447,7 +447,7 @@ The table below has many different styles.
 ---
 
 <a name="rwdtables"></a>
-## Responsive tables
+<h2 class="demoHeading">Responsive tables</h2>
 We have included a simple way to make your tables responsive, wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies below the `$bp-single-col` scss variable. Everything above that will display normally.
 
 If you need more responsive tables, consider [Tablesaw](https://github.com/filamentgroup/tablesaw) by the Filament Group.

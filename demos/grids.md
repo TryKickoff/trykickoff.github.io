@@ -18,7 +18,7 @@ next:
 ---
 
 <a name="standard"></a>
-<h2>Standard Grid</h2>
+<h2 class="demoHeading">Standard Grid</h2>
 Each `.g-col` element uses percentage widths, set the column size by modifying the width of the `.l-container` wrapper `<div>` in [_global.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_global.scss) and the `$layout-max-width` variables found in [_variables.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_variables.scss).
 
 <div class="demo">
@@ -105,7 +105,7 @@ Each `.g-col` element uses percentage widths, set the column size by modifying t
 
 <a name="offset"></a>
 
-## Offset
+<h2 class="demoHeading">Offsetting columns</h2>
 Move columns to the right using `.g-offset*` classes. Each class increases the left margin of a column by a whole column. For example, `.offset2` moves a `.g-col` element over by two columns.
 
 <div class="demo">
@@ -171,7 +171,7 @@ Move columns to the right using `.g-offset*` classes. Each class increases the l
 
 <a name="sourceordering"></a>
 
-## Source Ordering
+<h2 class="demoHeading">Source Ordering</h2>
 Use `.g-push*` to push a column to the right. Use `.g-pull*` to pull column to the left.
 
 <div class="demo">
@@ -227,7 +227,7 @@ Use `.g-push*` to push a column to the right. Use `.g-pull*` to pull column to t
 
 <a name="centred"></a>
 
-## Centred Columns
+<h2 class="demoHeading">Centred Columns</h2>
 Add a `.g-col--centred` or `.g-col--centered` class to each column. This also means that you can only have one column per g-row.
 
 <div class="demo">
