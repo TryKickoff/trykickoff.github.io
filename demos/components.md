@@ -288,18 +288,20 @@ For centred lists, add the `.l-list--centred` class to an [un]ordered list. For 
 <a name="tables"></a>
 
 ## Tables
-All tables should use the `.table` class name. We have included many options, so see the demos below.
+As tables should mainly be used for content, we have included a default set of styles that can easily be changed.  See the demo below for default styling.
 
 <h3 class="demoHeading">Default table</h3>
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_tables.scss" class="demo-src">_tables.scss</a>
 
 	<div class="demo-visual">
-		<table class="table" cellpadding="0" cellspacing="0">
+		<table cellpadding="0" cellspacing="0">
 			<thead>
-				<th>Table head</th>
-				<th>Table head</th>
-				<th>Table head</th>
+				<tr>
+					<th>Table head</th>
+					<th>Table head</th>
+					<th>Table head</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr>
@@ -314,19 +316,23 @@ All tables should use the `.table` class name. We have included many options, so
 				</tr>
 			</tbody>
 			<tfoot>
-				<td>Table foot</td>
-				<td>Table foot</td>
-				<td>Table foot</td>
+				<tr>
+					<td>Table foot</td>
+					<td>Table foot</td>
+					<td>Table foot</td>
+				</tr>
 			</tfoot>
 		</table>
 	</div>
 	<div class="demo-code">
 {% highlight html%}
-<table class="table" cellpadding="0" cellspacing="0">
+<table cellpadding="0" cellspacing="0">
 	<thead>
-		<th>Table head</th>
-		<th>Table head</th>
-		<th>Table head</th>
+		<tr>
+			<th>Table head</th>
+			<th>Table head</th>
+			<th>Table head</th>
+		</tr>
 	</thead>
 	<tbody>
 		<tr>
@@ -336,88 +342,34 @@ All tables should use the `.table` class name. We have included many options, so
 		</tr>
 	</tbody>
 	<tfoot>
-		<td>Table foot</td>
-		<td>Table foot</td>
-		<td>Table foot</td>
-	</tfoot>
-</table>
-{% endhighlight %}
-	</div>
-</div>
-
-<h3 class="demoHeading">Bordered table</h3>
-To add a table border, add the `.table--bordered` modifier class
-
-<div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_tables.scss" class="demo-src">_tables.scss</a>
-
-	<div class="demo-visual">
-		<table class="table table--bordered" cellpadding="0" cellspacing="0">
-			<thead>
-				<th>Table head</th>
-				<th>Table head</th>
-				<th>Table head</th>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Table cell</td>
-					<td>Table cell</td>
-					<td>Table cell</td>
-				</tr>
-				<tr>
-					<td>Table cell</td>
-					<td>Table cell</td>
-					<td>Table cell</td>
-				</tr>
-			</tbody>
-			<tfoot>
-				<td>Table foot</td>
-				<td>Table foot</td>
-				<td>Table foot</td>
-			</tfoot>
-		</table>
-	</div>
-	<div class="demo-code">
-{% highlight html%}
-<table class="table table--bordered" cellpadding="0" cellspacing="0">
-	<thead>
-		<th>Table head</th>
-		<th>Table head</th>
-		<th>Table head</th>
-	</thead>
-	<tbody>
 		<tr>
-			<td>Table cell</td>
-			<td>Table cell</td>
-			<td>Table cell</td>
+			<td>Table foot</td>
+			<td>Table foot</td>
+			<td>Table foot</td>
 		</tr>
-	</tbody>
-	<tfoot>
-		<td>Table foot</td>
-		<td>Table foot</td>
-		<td>Table foot</td>
 	</tfoot>
 </table>
 {% endhighlight %}
 	</div>
 </div>
 
-<h3 class="demoHeading">Table with all the styles</h3>
-The table below has many different styles.
+<h3 class="demoHeading">Table modifiers</h3>
+A table can be modified in the following ways.
 
-* To add rounded corners, add the `.table--rounded` modifier class
 * To add even/odd stripes, add the `.table--striped` modifier class
-* To add a row hover effect, add the `.table--hover` modifier class
+* To add a hover affect, simply change the `$table-bgColor--hover` variable in `_tables.scss` to the hover colour you would like
 
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_tables.scss" class="demo-src">_tables.scss</a>
 
 	<div class="demo-visual">
-		<table class="table table--bordered table--striped table--hover table--rounded" cellpadding="0" cellspacing="0">
+		<table class="table--striped" cellpadding="0" cellspacing="0">
 			<thead>
-				<th>Table head</th>
-				<th>Table head</th>
-				<th>Table head</th>
+				<tr>
+					<th>Table head</th>
+					<th>Table head</th>
+					<th>Table head</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr>
@@ -437,19 +389,23 @@ The table below has many different styles.
 				</tr>
 			</tbody>
 			<tfoot>
-				<td>Table foot</td>
-				<td>Table foot</td>
-				<td>Table foot</td>
+				<tr>
+					<td>Table foot</td>
+					<td>Table foot</td>
+					<td>Table foot</td>
+				</tr>
 			</tfoot>
 		</table>
 	</div>
 	<div class="demo-code">
 {% highlight html%}
-<table class="table table--bordered table--striped table--hover table--rounded" cellpadding="0" cellspacing="0">
+<table class="table--striped" cellpadding="0" cellspacing="0">
 	<thead>
-		<th>Table head</th>
-		<th>Table head</th>
-		<th>Table head</th>
+		<tr>
+			<th>Table head</th>
+			<th>Table head</th>
+			<th>Table head</th>
+		</tr>
 	</thead>
 	<tbody>
 		<tr>
@@ -459,9 +415,11 @@ The table below has many different styles.
 		</tr>
 	</tbody>
 	<tfoot>
-		<td>Table foot</td>
-		<td>Table foot</td>
-		<td>Table foot</td>
+		<tr>
+			<td>Table foot</td>
+			<td>Table foot</td>
+			<td>Table foot</td>
+		</tr>
 	</tfoot>
 </table>
 {% endhighlight %}
@@ -472,7 +430,7 @@ The table below has many different styles.
 
 <a name="rwdtables"></a>
 <h2 class="demoHeading">Responsive tables</h2>
-We have included a simple way to make your tables responsive, wrap your tables in `.tableResponsive` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies below the `$bp-single-col` scss variable. Everything above that will display normally.
+We have included a simple way to make your tables responsive, wrap your tables in `.responsiveTable` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies below the `$bp-single-col` scss variable. Everything above that will display normally.
 
 If you need more responsive tables, consider [Tablesaw](https://github.com/filamentgroup/tablesaw) by the Filament Group.
 
@@ -480,14 +438,16 @@ If you need more responsive tables, consider [Tablesaw](https://github.com/filam
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_tables.scss" class="demo-src">_tables.scss</a>
 
 	<div class="demo-visual">
-		<div class="tableResponsive">
-			<table class="table" cellpadding="0" cellspacing="0">
+		<div class="responsiveTable">
+			<table cellpadding="0" cellspacing="0">
 				<thead>
-					<th>Table Cell</th>
-					<th>Table Cell</th>
-					<th>Table Cell</th>
-					<th>Table Cell</th>
-					<th>Table Cell</th>
+					<tr>
+						<th>Table Cell</th>
+						<th>Table Cell</th>
+						<th>Table Cell</th>
+						<th>Table Cell</th>
+						<th>Table Cell</th>
+					</tr>
 				</thead>
 				<tbody>
 					<tr>
@@ -513,25 +473,29 @@ If you need more responsive tables, consider [Tablesaw](https://github.com/filam
 					</tr>
 				</tbody>
 				<tfoot>
-					<td>Table Cell</td>
-					<td>Table Cell</td>
-					<td>Table Cell</td>
-					<td>Table Cell</td>
-					<td>Table Cell</td>
+					<tr>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+						<td>Table Cell</td>
+					</tr>
 				</tfoot>
 			</table>
 		</div>
 	</div>
 	<div class="demo-code">
 {% highlight html%}
-<div class="tableResponsive">
-	<table class="table" cellpadding="0" cellspacing="0">
+<div class="responsiveTable">
+	<table cellpadding="0" cellspacing="0">
 		<thead>
-			<th>Table Cell</th>
-			<th>Table Cell</th>
-			<th>Table Cell</th>
-			<th>Table Cell</th>
-			<th>Table Cell</th>
+			<tr>
+				<th>Table Cell</th>
+				<th>Table Cell</th>
+				<th>Table Cell</th>
+				<th>Table Cell</th>
+				<th>Table Cell</th>
+			</tr>
 		</thead>
 		<tbody>
 			<tr>
@@ -543,11 +507,13 @@ If you need more responsive tables, consider [Tablesaw](https://github.com/filam
 			</tr>
 		</tbody>
 		<tfoot>
-			<td>Table Cell</td>
-			<td>Table Cell</td>
-			<td>Table Cell</td>
-			<td>Table Cell</td>
-			<td>Table Cell</td>
+			<tr>
+				<td>Table Cell</td>
+				<td>Table Cell</td>
+				<td>Table Cell</td>
+				<td>Table Cell</td>
+				<td>Table Cell</td>
+			</tr>
 		</tfoot>
 	</table>
 </div>
