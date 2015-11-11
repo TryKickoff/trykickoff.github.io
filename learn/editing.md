@@ -33,7 +33,7 @@ Run `npm install` to install all Grunt's dependencies
 
 #### Please note
 
-The Kickoff site resides at [trykickoff.github.io/](http://trykickoff.github.io/) and Jekyll builds to `/_site/` wherever you run it. Make sure your localhost points to `trykickoff.github.io/_site` then browse to `http://your-localhost.dev/`
+The Kickoff site resides at [trykickoff.com/](http://trykickoff.com/) and Jekyll builds to `/_site/` wherever you run it. Make sure your localhost points to `trykickoff.github.io/_site` then browse to `http://your-localhost.dev/`
 
 ## Editing the content
 Most content is found in the `learn` and `demos` directories, but the home page markup is located at `index.html`. The Javascript and Sass source files are found in the `assets/src/` directory.

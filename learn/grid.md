@@ -18,6 +18,8 @@ next:
 
 Kickoff's Grid is a simple, but fully responsive, grid framework developed by <a href="http://github.com/mrmartineau/">Zander Martineau</a>. The grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.
 
+To see a demo of the grid's features, head over to the [grid demo page](/demos/grids.html)
+
 <hr class="sectionSplitter">
 <a name="gridbasic"></a>
 ### Basic grid HTML

@@ -150,7 +150,7 @@ Grunt config variables allow you to control some of the basic settings of your K
 
 Here we take a look at their structure and what each part controls.
 
----
+<hr class="sectionSplitter">
 
 <a name="config-structure"></a>
 ### Config structure

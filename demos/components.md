@@ -36,7 +36,7 @@ Button styles can be applied to anything with the `.btn` class applied. However,
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <h3 class="demoHeading">Button variant</h3>
 We provide only one button style variant because we think you should define your own. This variant, the *primary* button, uses the `.btn--primary` modifier class. We suggest setting up your own buttons in the same way, [see here](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_buttons.scss#L81-L95).
@@ -58,7 +58,7 @@ The colours used by this button are defined in our [colour palette](https://gith
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <h3 class="demoHeading">Block-level buttons</h3>
 To make buttons span to 100% width, add the `.btn--block` modifier class. You can also see that we are using the `.btn--primary` modifier class as well as `.btn--block`.
@@ -78,7 +78,7 @@ To make buttons span to 100% width, add the `.btn--block` modifier class. You ca
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="mediaobject"></a>
 
@@ -131,7 +131,7 @@ Place any image and text-like content side-by-side, as per: [media object](http:
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="fluidvideo"></a>
 
@@ -155,7 +155,7 @@ Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` cont
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="blockgrids"></a>
 
@@ -195,7 +195,7 @@ Add the `.l-blockGrid` class to any unordered list, then add the `.l-blockGrid--
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <h3 class="demoHeading">Responsive block grids</h3>
 Block grids now have (since v6.0.0) more responsive modifiers. You can add
@@ -236,7 +236,7 @@ There is also a narrow option for the block grid which allows you to choose a di
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="lists"></a>
 
@@ -283,7 +283,7 @@ For centred lists, add the `.l-list--centred` class to an [un]ordered list. For 
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="tables"></a>
 
@@ -426,7 +426,7 @@ A table can be modified in the following ways.
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="rwdtables"></a>
 <h2 class="demoHeading">Responsive tables</h2>
