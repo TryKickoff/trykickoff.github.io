@@ -25,7 +25,9 @@ module.exports.tasks = {
 				progressive : true,
 				svgoPlugins: [
 					{ removeViewBox: false },
-					{ removeUselessStrokeAndFill: false }
+					{ removeUselessStrokeAndFill: false },
+					{ removeTitle: true },
+					{ removeXMLProcInst: false },
 				],
 				use: [
 					mozjpeg(),
@@ -54,13 +56,7 @@ module.exports.tasks = {
 				cwd   : '<%=config.tempDir%>/icons',
 				src   : ['*.{svg,png,jpg,gif}'],
 				dest  : '<%=config.img.distDir%>/icons'
-			}],
-			options: {
-				// https://github.com/filamentgroup/grunticon#optionscustomselectors
-				// customselectors: {
-				// 	"arrow": [".icon-arrow:before"]
-				// }
-			}
+			}]
 		}
 	}
 };
