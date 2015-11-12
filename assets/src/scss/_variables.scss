@@ -49,7 +49,7 @@ $font-family-base             : $font-family-sans;
 $font-family-alt              : "purista-web", $font-family-base;
 
 $font-family-headings         : $font-family-alt; // using inherit will use $font-family-base for all headings
-$font-weight-headings         : bold;    // instead of browser default, bold
+$font-weight-headings         : 600;    // instead of browser default, bold
 $line-height-headings         : 1.1;
 
 
