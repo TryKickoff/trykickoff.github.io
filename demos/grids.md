@@ -16,6 +16,7 @@ next:
    body: See all the included form styles
    link: forms.html
 ---
+Kickoff comes bundled with a simple but powerful CSS grid framework. It has all the features you'd expect & is robust enough for use in any situation. Please head to the ['learn' section for grid documentation](/learn/grid.html).
 
 <a name="standard"></a>
 <h2 class="demoHeading">Standard Grid</h2>
@@ -103,6 +104,7 @@ Each `.g-col` element uses percentage widths, set the column size by modifying t
 	</div>
 </div>
 
+<hr class="sectionSplitter">
 <a name="offset"></a>
 
 <h2 class="demoHeading">Offsetting columns</h2>
@@ -169,6 +171,7 @@ Move columns to the right using `.g-offset*` classes. Each class increases the l
 	</div>
 </div>
 
+<hr class="sectionSplitter">
 <a name="sourceordering"></a>
 
 <h2 class="demoHeading">Source Ordering</h2>
@@ -225,6 +228,7 @@ Use `.g-push*` to push a column to the right. Use `.g-pull*` to pull column to t
 	</div>
 </div>
 
+<hr class="sectionSplitter">
 <a name="centred"></a>
 
 <h2 class="demoHeading">Centred Columns</h2>

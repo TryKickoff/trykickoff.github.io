@@ -16,6 +16,8 @@ next:
    body: See all the included components
    link: components.html
 ---
+Forms and their fields are often a nightmare to style, that is why Kickoff includes a great boilerplate for styling them. All styles can be found in [_forms.scss](https://github.com/tmwagency/kickoff/blob/master/scss/components/_forms.scss).
+
 <a name="singlefield"></a>
 
 <h2 class="demoHeading">Single form input</h2>
@@ -44,7 +46,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 	</div>
 </div>
 
-<hr>
+<hr class="sectionSplitter">
 
 <a name="labelsabove"></a>
 
@@ -109,7 +111,7 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 </div>
 <!-- END EXAMPLE -->
 
-<hr>
+<hr class="sectionSplitter">
 
 <a name="labelsinline"></a>
 
@@ -174,7 +176,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 </div>
 <!-- END EXAMPLE -->
 
-<hr>
+<hr class="sectionSplitter">
 
 <a name="multicolumnform"></a>
 
@@ -249,7 +251,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 </div>
 <!-- END EXAMPLE -->
 
-<hr>
+<hr class="sectionSplitter">
 
 <a name="formfieldstates"></a>
 
@@ -316,12 +318,12 @@ You can easily update field states by adding modifier classes to `.form-controlG
 </div>
 <!-- END EXAMPLE -->
 
-<hr>
+<hr class="sectionSplitter">
 
 <a name="customfields"></a>
 
-<h2>Custom field elements</h2>
-<p>Improved styling for checkboxes, radios &amp; file upload</p>
+## Custom field elements
+Improved styling for checkboxes, radios &amp; file upload.
 
 <h3 class="demoHeading">Custom checkbox inputs</h3>
 <div class="demo">
@@ -358,7 +360,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 </div>
 <!-- END EXAMPLE -->
 
-<hr>
+<hr class="sectionSplitter">
 
 <h3 class="demoHeading">Custom radio inputs</h3>
 <div class="demo">
@@ -397,7 +399,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 </div>
 <!-- END EXAMPLE -->
 
-<hr>
+<hr class="sectionSplitter">
 
 <h3 class="demoHeading">Custom select element</h3>
 <div class="demo">
@@ -432,7 +434,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 </div>
 <!-- END EXAMPLE -->
 
-<hr>
+<hr class="sectionSplitter">
 
 <h3 class="demoHeading">Custom file upload fields</h3>
 <div class="demo">
@@ -485,7 +487,7 @@ fileInput.addEventListener('change', function(e) {
 
 <!-- END EXAMPLE -->
 
-<hr>
+<hr class="sectionSplitter">
 
 <a name="validation"></a>
 <h2 class="demoHeading">Validation With D'accord</h2>

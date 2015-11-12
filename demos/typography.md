@@ -53,7 +53,7 @@ next:
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="tuc"></a>
 
@@ -80,7 +80,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="tls"></a>
 
@@ -121,7 +121,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="ol"></a>
 <h3 class="demoHeading">Ordered lists</h3>
@@ -173,7 +173,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="ul"></a>
 <h3 class="demoHeading">Unordered lists</h3>
@@ -225,7 +225,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 	</div>
 </div>
 
----
+<hr class="sectionSplitter">
 
 <a name="usul"></a>
 
