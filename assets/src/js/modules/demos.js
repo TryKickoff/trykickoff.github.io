@@ -1,5 +1,6 @@
 var $ = require('jquery');
 var Daccord = require('daccord-validation');
+var nextItem = require('nextmatchingelement');
 
 function init() {
 	grid();
@@ -42,21 +43,6 @@ function fileInput() {
 	}
 }
 
-function nextInDOM(el, target, callback) {
-	var nextEl = el.nextElementSibling;
-	target = target;
-	this.callback = callback;
-
-	if ( nextEl.classList.contains(target) ) {
-		if (typeof callback == "function") {
-			return callback(nextEl);
-		}
-
-	} else {
-		return nextInDOM(nextEl, target, callback);
-	}
-}
-
 function toggleCodeSnippet() {
 	var demoHeadings = document.querySelectorAll('.demoHeading');
 
@@ -70,7 +56,7 @@ function toggleCodeSnippet() {
 			ev.preventDefault();
 			var that = this;
 
-			nextInDOM(this.parentNode, 'demo', function (el) {
+			nextItem(this.parentNode, 'demo', function (el) {
 				el.classList.toggle('show-code');
 				that.classList.toggle('is-active');
 			});

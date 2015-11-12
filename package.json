@@ -25,7 +25,8 @@
     "jquery": "^2.1.4",
     "lite-ready": "^1.0.2",
     "swiftclick": "^1.2.0",
-    "trak.js": "^0.5.2"
+    "trak.js": "^0.5.2",
+    "nextmatchingelement": "^1.0.1"
   },
   "devDependencies": {
     "grunt-jekyll": "^0.4.3",
