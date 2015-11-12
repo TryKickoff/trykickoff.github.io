@@ -31,19 +31,7 @@ body {
 	@include font-size($type-base);
 	line-height: $leading-base;
 	color: $color-text;
-
-	// Add ligatures
 	font-feature-settings: "liga","dlig";
-
-	// Two ways to smoothen type, they are disabled by default
-	// Enable only one of them if you need them
-	// 1.
-	// -webkit-font-smoothing: antialiased;
-	//    -moz-font-smoothing: antialiased;
-	// font-smooth:always;
-
-	// 2.
-	// opacity: 0.99;
 }
 
 /**

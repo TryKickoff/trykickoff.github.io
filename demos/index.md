@@ -23,3 +23,4 @@ If you are new to Kickoff, we recommend taking a look at our [Getting Started](/
 - **[Components](components.html)** – details the base components you can use and extend, such as buttons, media objecs and tabs.
 - **[Forms](forms.html)** – this section is a guide to how we handle form styling in Kickoff, as well as the various ways to manipulate forms to whatever style you need using our extension classes.
 - **[Grids](grids.html)** – A look over the various grid options that Kickoff gives you, including demos showing you how it can become a powerful tool in your own development.
+- **[Styleguide](styleguide.html)** – a demo of our styleguide
