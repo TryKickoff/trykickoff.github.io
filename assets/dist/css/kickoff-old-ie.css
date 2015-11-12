@@ -142,12 +142,10 @@
  * Kickoff reset
  */
 html {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 *, *:before, *:after {
-  -moz-box-sizing: inherit;
-       box-sizing: inherit; }
+  box-sizing: inherit; }
 
 /**
  * Normalize - CSS reset
@@ -323,8 +321,7 @@ svg:not(:root) {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
-       box-sizing: content-box;
+  box-sizing: content-box;
   height: 0; }
 
 /**
@@ -430,8 +427,7 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -452,8 +448,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-       box-sizing: content-box;
+  box-sizing: content-box;
   /* 2 */ }
 
 /**
@@ -543,7 +538,6 @@ body {
   line-height: 1.4;
   color: #444;
   -webkit-font-feature-settings: "liga","dlig";
-     -moz-font-feature-settings: "liga","dlig";
           font-feature-settings: "liga","dlig"; }
 
 /**
@@ -562,7 +556,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: "purista-web", "franklin-gothic-urw", "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.1;
   text-rendering: optimizelegibility;
   margin-top: 0;
@@ -834,7 +828,6 @@ samp {
   border-radius: 5px;
   background-clip: padding-box;
   -webkit-transition: border 200ms ease-in-out;
-     -moz-transition: border 200ms ease-in-out;
           transition: border 200ms ease-in-out; }
   .form-input:focus {
     border-color: #181830;
@@ -848,8 +841,7 @@ samp {
     line-height: normal;
     cursor: pointer;
     border-radius: 0;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box; }
+    box-sizing: border-box; }
   .form-input[type="image"] {
     border: 0; }
   .form-input[type="file"] {
@@ -1148,7 +1140,6 @@ input[type="submit"] {
   width: 1em;
   height: 1em;
   -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
           transition: all 100ms ease-in-out;
   border: 0.1em solid #181830;
   background-color: #181830;
@@ -1173,7 +1164,6 @@ input[type="submit"] {
     display: block;
     opacity: 0;
     -webkit-transition: all 250ms ease-in-out;
-       -moz-transition: all 250ms ease-in-out;
             transition: all 250ms ease-in-out; }
 
 .control-indicator--checkbox:before, .control-indicator--checkbox:after {
@@ -1184,20 +1174,17 @@ input[type="submit"] {
 
 .control-indicator--checkbox:before {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
-     -moz-transform: translate(-50%, -50%) rotate(45deg);
       -ms-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg); }
 
 .control-indicator--checkbox:after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-     -moz-transform: translate(-50%, -50%) rotate(-45deg);
       -ms-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg); }
 
 .control-indicator--tickbox:before {
   top: 0;
   -webkit-transform: translateX(-50%) rotate(45deg);
-     -moz-transform: translateX(-50%) rotate(45deg);
       -ms-transform: translateX(-50%) rotate(45deg);
           transform: translateX(-50%) rotate(45deg);
   border: 0.1em solid #fff;
@@ -1341,7 +1328,6 @@ option {
  */
 a {
   -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
           transition: all 100ms ease-in-out; }
   a, a:link {
     color: #3498db;
@@ -1511,8 +1497,7 @@ input[type="button"].btn--block {
   min-height: 1px;
   position: relative;
   clear: none;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   margin-left: 2%; }
   .g-col:first-child {
     margin-left: 0; }
@@ -2255,7 +2240,6 @@ pre {
     z-index: 100;
     background-color: #fff;
     -webkit-transition: all 100ms ease-in-out;
-       -moz-transition: all 100ms ease-in-out;
             transition: all 100ms ease-in-out; }
     .skipToContent a:focus {
       top: 5px; }
@@ -2274,7 +2258,6 @@ body {
 
 a {
   -webkit-transition: all 150ms ease-in-out;
-     -moz-transition: all 150ms ease-in-out;
           transition: all 150ms ease-in-out; }
 
 hr {
@@ -2625,7 +2608,6 @@ figure {
 .demo-visual {
   line-height: 1.5;
   -webkit-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-     -moz-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
           transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
   .demo-visual h3 {
     margin-bottom: 5px; }
@@ -3134,12 +3116,10 @@ textarea[contenteditable] {
   #perfmatters
   */
   -webkit-backface-visibility: hidden;
-     -moz-backface-visibility: hidden;
           backface-visibility: hidden; }
 
 .transition {
   -webkit-transition: all 100ms ease-in-out;
-     -moz-transition: all 100ms ease-in-out;
           transition: all 100ms ease-in-out; }
 
 /* Print styles */
