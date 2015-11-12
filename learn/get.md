@@ -23,14 +23,14 @@ Using our Yeoman Generator is the our recommended, and best, way to get Kickoff 
 
 To find out more about it – or what a Yeoman generator even is – and how it can help you tailor Kickoff to your projects even faster, [visit the generator docs page](yeoman.html).
 
----
+<hr class="sectionSplitter">
 
 ### Download the zip
 
 Just want the files?  No problem – just grab the Zip of Kickoff:<br>
 <a href="https://github.com/trykickoff/kickoff/archive/master.zip" class="btn btn--primary btn--small">Start Zip Download</a>
 
----
+<hr class="sectionSplitter">
 
 ### Git clone
 
@@ -39,8 +39,3 @@ If you use Git, you can clone a version of Kickoff by entering the following int
 ```sh
 git clone https://github.com/trykickoff/kickoff.git your-project-folder
 ```
-
----
-
-
-

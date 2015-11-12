@@ -22,6 +22,8 @@ Yeoman helps you kickstart new projects, prescribing best practices and tools to
 
 We have created a generator that once installed, allows you to create a custom build of Kickoff whenever you need.
 
+<hr class="sectionSplitter">
+
 ## Installation
 
 ### Install Yeoman
@@ -48,6 +50,8 @@ Finally, initiate the generator:
 ```sh
 yo kickoff
 ```
+
+<hr class="sectionSplitter">
 
 ## The Kickoff generator asks for this information:
 1. Project name

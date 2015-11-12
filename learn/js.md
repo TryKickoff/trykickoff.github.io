@@ -28,12 +28,12 @@ While not included in the default Kickoff branch, Kickoff now includes a base se
 
 As mentioned above, Kickoff’s JavaScript is very non prescriptive.  Here we look at how we structure Kickoff’s JavaScript by default as well as how this can be adapted for your own needs.
 
----
+<hr class="sectionSplitter">
 ### script.js
 
 This file can be used to contain or reference your site/app JavaScript code.
 
----
+<hr class="sectionSplitter">
 ### Folder Structure
 
 Kickoff has a very simple folder structure for it’s JavaScript; as a base Kickoff contains `helpers` and `libs` directories.

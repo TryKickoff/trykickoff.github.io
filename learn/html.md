@@ -36,6 +36,7 @@ If you're not supporting IE8, then you only need one stylesheet..
 <link rel="stylesheet" href="/assets/dist/css/kickoff.css">
 ```
 
+<hr class="sectionSplitter">
 <a name="svg"></a>
 
 ## SVG icons
