@@ -839,19 +839,22 @@ figure {
 		margin-bottom: 10px;
 		left: 0;
 		@include font-size($type-small);
-		color: $gray;
+		color: #998;
 	}
 }
 
 .language-html {
-	@include lang('<!-- HTML -->');
+	@include lang('<!-- .html -->');
 }
 .language-css {
-	@include lang('/* CSS */');
+	@include lang('/* .css */');
+}
+.language-scss {
+	@include lang('// .scss');
 }
 .language-js,
 .language-javascript {
-	@include lang('// Javascript');
+	@include lang('// .js');
 }
 
 .highlight {
