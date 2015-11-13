@@ -70,38 +70,35 @@ meta:
 				<p>Find out more in the <a href="/learn/css.html">docs</a></p>
 			</div>
 			<div class="g-col g-span6">
-				<div class="demo-code">
 {% highlight scss%}
-.form {
-	margin: 0 0 $baseline;
-}
+/**
+ * Typography variables
+ */
+$font-size-base           : 20;
+$font-size-base-px        : $font-size-base * 1px;
+$font-size-base-narrow    : $font-size-base - 2;
+$font-size-base-narrow-px : $font-size-base-narrow * 1px;
 
-.form-fieldset {
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
+$leading-base             : 1.4;
+$line-height-base         : round($font-size-base * $leading-base); // 20 * 1.4
+$baseline                 : $line-height-base * 1px;
 
-.form-legend {
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin-bottom: $baseline;
-	@include font-size($type-mid);
-	line-height: $leading-base;
-	color: $label-textColor;
-	border: 0;
-	border-bottom: 1px solid #eee;
-	white-space: normal;
+$type-scale               : 1.25; // Major third
 
-	// Small
-	small {
-		@include font-size($type-small);
-		color: lighten(#000, 70%);
-	}
-}
+/**
+ * Breakpoints
+ * There are no common breakpoints so these are just a suggestions
+ * You'll need to define your own breakpoints to suit your design
+ */
+$bp-narrow                : 400;  // Set in px
+$bp-mid                   : 750;  // Set in px
+$bp-wide                  : 1000;  // Set in px
+$bp-huge                  : 1250; // Set in px
+
+// Special breakpoints
+$bp-single-col            : $bp-mid; // Break to single column (used in the grid)
+$bp-rwd-text              : $bp-mid; // Reduce text size below this width
 {% endhighlight %}
-				</div>
 			</div>
 		</div>
 
@@ -142,7 +139,23 @@ ready(function () {
 				<p>Find out more in the <a href="/learn/grunt.html">docs</a></p>
 			</div>
 			<div class="g-col g-span6">
+{% highlight js%}
+// grunt serve
+grunt.registerTask('serve', [
+	'compile',
+	'browserSync:serve',
+	'watch'
+]);
 
+// grunt compile
+grunt.registerTask('compile', [
+	'shimly',
+	'copy:modernizr',
+	'browserify',
+	'postscss',
+	'images'
+]);
+{% endhighlight %}
 			</div>
 		</div>
 
