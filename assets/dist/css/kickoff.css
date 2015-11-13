@@ -2964,28 +2964,42 @@ figure {
   margin-top: 20px;
   display: block; }
   .language-html:before {
-    content: "<!-- HTML -->";
+    content: "<!-- .html -->";
     position: absolute;
     bottom: 100%;
     margin-bottom: 10px;
     left: 0;
     font-size: 16px;
     font-size: 0.8rem;
-    color: #95a5a6; }
+    color: #998; }
 
 .language-css {
   position: relative;
   margin-top: 20px;
   display: block; }
   .language-css:before {
-    content: "/* CSS */";
+    content: "/* .css */";
     position: absolute;
     bottom: 100%;
     margin-bottom: 10px;
     left: 0;
     font-size: 16px;
     font-size: 0.8rem;
-    color: #95a5a6; }
+    color: #998; }
+
+.language-scss {
+  position: relative;
+  margin-top: 20px;
+  display: block; }
+  .language-scss:before {
+    content: "// .scss";
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 10px;
+    left: 0;
+    font-size: 16px;
+    font-size: 0.8rem;
+    color: #998; }
 
 .language-js,
 .language-javascript {
@@ -2994,14 +3008,14 @@ figure {
   display: block; }
   .language-js:before,
   .language-javascript:before {
-    content: "// Javascript";
+    content: "// .js";
     position: absolute;
     bottom: 100%;
     margin-bottom: 10px;
     left: 0;
     font-size: 16px;
     font-size: 0.8rem;
-    color: #95a5a6; }
+    color: #998; }
 
 .highlight {
   background: #fff; }
