@@ -2,6 +2,14 @@
   img: justeat.jpg
   url: http://www.justeat.es/
 
+- name: Captain Morgan
+  img: captainmorgan.jpg
+  url: https://www.captainmorgan.com/en/
+
+- name: Lynx Bigger Issues
+  img: lynxbiggerissues.jpg
+  url: http://biggerissues.co.uk
+
 - name: Renault Sport
   img: renaultsport.jpg
   url: http://www.renaultsport.co.uk/
@@ -17,10 +25,6 @@
 - name: Renault Jobs
   img: jobsrenault.jpg
   url: http://jobs.renault.co.uk/
-
-- name: Home Cleaning Solutions
-  img: homecleaningsolutions.jpg
-  url: http://homecleaningsolutions.co.uk/
 
 - name: IKEA Family Magazine
   img: ikeafamilymagazine.jpg
@@ -51,10 +55,6 @@
 
 - name: Strepsils Star Moments
   img: strepsilsxfactor.jpg
-
-- name: tech.tmw
-  img: techtmw.jpg
-  url: http://tech.tmw.co.uk
 
 - name: Brother Printers
   img: brotherprinters.jpg

@@ -18,6 +18,7 @@ pre {
 	font-family: $font-family-mono;
 	@include font-size($type-small);
 	color: $code-textColor;
+	tab-size: 2;
 }
 
 // Inline code
