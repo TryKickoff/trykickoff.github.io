@@ -1563,14 +1563,22 @@ input[type="button"].btn--block {
  * These are suited for repeating blocks of content. See below for usage
  *
  * Usage:
- * <ul class="l-blockGrid l-blockGrid--3up">
- *     <li></li>
+ * <ul class="l-blockGrid l-blockGrid--3">
+ *     <li class="l-blockGrid-item"></li>
  * </ul>
  *
- * Responsive Usage:
- * <ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow l-blockGrid--6up--wide">
- *     <li></li>
- * </ul>
+ * <div class="l-blockGrid l-blockGrid--4 l-blockGrid--2--narrow l-blockGrid--6--wide">
+ *     <div class="l-blockGrid-item"></div>
+ * </div>
+ */
+/**
+ * Block grid breakpoints
+ * Add or remove any breakpoints that you may or may not need.
+ * Note: Reorder these if your breakpoints aren't in this order,
+ * should be smallest to largest.
+ */
+/**
+ * Generate block grids based on colum count
  */
 .l-blockGrid {
   display: block;
@@ -1580,352 +1588,305 @@ input[type="button"].btn--block {
     content: "";
     display: table;
     clear: both; }
-  .l-blockGrid > li {
-    display: block;
-    height: auto; }
-  .l-blockGrid.l-blockGrid--1up--narrow > li {
-    float: left;
-    width: 100%; }
-    .l-blockGrid.l-blockGrid--1up--narrow > li:nth-of-type(1n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--1up--narrow > li:not(:nth-of-type(1n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--2up--narrow > li {
-    float: left;
-    width: 50%; }
-    .l-blockGrid.l-blockGrid--2up--narrow > li:nth-of-type(2n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--2up--narrow > li:not(:nth-of-type(2n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--3up--narrow > li {
-    float: left;
-    width: 33.3333333333%; }
-    .l-blockGrid.l-blockGrid--3up--narrow > li:nth-of-type(3n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--3up--narrow > li:not(:nth-of-type(3n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--4up--narrow > li {
-    float: left;
-    width: 25%; }
-    .l-blockGrid.l-blockGrid--4up--narrow > li:nth-of-type(4n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--4up--narrow > li:not(:nth-of-type(4n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--5up--narrow > li {
-    float: left;
-    width: 20%; }
-    .l-blockGrid.l-blockGrid--5up--narrow > li:nth-of-type(5n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--5up--narrow > li:not(:nth-of-type(5n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--6up--narrow > li {
-    float: left;
-    width: 16.6666666667%; }
-    .l-blockGrid.l-blockGrid--6up--narrow > li:nth-of-type(6n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--6up--narrow > li:not(:nth-of-type(6n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--7up--narrow > li {
-    float: left;
-    width: 14.2857142857%; }
-    .l-blockGrid.l-blockGrid--7up--narrow > li:nth-of-type(7n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--7up--narrow > li:not(:nth-of-type(7n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--8up--narrow > li {
-    float: left;
-    width: 12.5%; }
-    .l-blockGrid.l-blockGrid--8up--narrow > li:nth-of-type(8n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--8up--narrow > li:not(:nth-of-type(8n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--9up--narrow > li {
-    float: left;
-    width: 11.1111111111%; }
-    .l-blockGrid.l-blockGrid--9up--narrow > li:nth-of-type(9n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--9up--narrow > li:not(:nth-of-type(9n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--10up--narrow > li {
-    float: left;
-    width: 10%; }
-    .l-blockGrid.l-blockGrid--10up--narrow > li:nth-of-type(10n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--10up--narrow > li:not(:nth-of-type(10n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--11up--narrow > li {
-    float: left;
-    width: 9.0909090909%; }
-    .l-blockGrid.l-blockGrid--11up--narrow > li:nth-of-type(11n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--11up--narrow > li:not(:nth-of-type(11n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--12up--narrow > li {
-    float: left;
-    width: 8.3333333333%; }
-    .l-blockGrid.l-blockGrid--12up--narrow > li:nth-of-type(12n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--12up--narrow > li:not(:nth-of-type(12n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--1up > li {
-    float: left;
-    width: 100%; }
-    .l-blockGrid.l-blockGrid--1up > li:nth-of-type(1n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--1up > li:not(:nth-of-type(1n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--2up > li {
-    float: left;
-    width: 50%; }
-    .l-blockGrid.l-blockGrid--2up > li:nth-of-type(2n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--2up > li:not(:nth-of-type(2n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--3up > li {
-    float: left;
-    width: 33.3333333333%; }
-    .l-blockGrid.l-blockGrid--3up > li:nth-of-type(3n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--3up > li:not(:nth-of-type(3n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--4up > li {
-    float: left;
-    width: 25%; }
-    .l-blockGrid.l-blockGrid--4up > li:nth-of-type(4n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--4up > li:not(:nth-of-type(4n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--5up > li {
-    float: left;
-    width: 20%; }
-    .l-blockGrid.l-blockGrid--5up > li:nth-of-type(5n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--5up > li:not(:nth-of-type(5n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--6up > li {
-    float: left;
-    width: 16.6666666667%; }
-    .l-blockGrid.l-blockGrid--6up > li:nth-of-type(6n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--6up > li:not(:nth-of-type(6n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--7up > li {
-    float: left;
-    width: 14.2857142857%; }
-    .l-blockGrid.l-blockGrid--7up > li:nth-of-type(7n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--7up > li:not(:nth-of-type(7n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--8up > li {
-    float: left;
-    width: 12.5%; }
-    .l-blockGrid.l-blockGrid--8up > li:nth-of-type(8n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--8up > li:not(:nth-of-type(8n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--9up > li {
-    float: left;
-    width: 11.1111111111%; }
-    .l-blockGrid.l-blockGrid--9up > li:nth-of-type(9n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--9up > li:not(:nth-of-type(9n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--10up > li {
-    float: left;
-    width: 10%; }
-    .l-blockGrid.l-blockGrid--10up > li:nth-of-type(10n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--10up > li:not(:nth-of-type(10n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--11up > li {
-    float: left;
-    width: 9.0909090909%; }
-    .l-blockGrid.l-blockGrid--11up > li:nth-of-type(11n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--11up > li:not(:nth-of-type(11n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--12up > li {
-    float: left;
-    width: 8.3333333333%; }
-    .l-blockGrid.l-blockGrid--12up > li:nth-of-type(12n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--12up > li:not(:nth-of-type(12n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--1up--mid > li {
-    float: left;
-    width: 100%; }
-    .l-blockGrid.l-blockGrid--1up--mid > li:nth-of-type(1n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--1up--mid > li:not(:nth-of-type(1n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--2up--mid > li {
-    float: left;
-    width: 50%; }
-    .l-blockGrid.l-blockGrid--2up--mid > li:nth-of-type(2n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--2up--mid > li:not(:nth-of-type(2n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--3up--mid > li {
-    float: left;
-    width: 33.3333333333%; }
-    .l-blockGrid.l-blockGrid--3up--mid > li:nth-of-type(3n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--3up--mid > li:not(:nth-of-type(3n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--4up--mid > li {
-    float: left;
-    width: 25%; }
-    .l-blockGrid.l-blockGrid--4up--mid > li:nth-of-type(4n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--4up--mid > li:not(:nth-of-type(4n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--5up--mid > li {
-    float: left;
-    width: 20%; }
-    .l-blockGrid.l-blockGrid--5up--mid > li:nth-of-type(5n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--5up--mid > li:not(:nth-of-type(5n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--6up--mid > li {
-    float: left;
-    width: 16.6666666667%; }
-    .l-blockGrid.l-blockGrid--6up--mid > li:nth-of-type(6n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--6up--mid > li:not(:nth-of-type(6n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--7up--mid > li {
-    float: left;
-    width: 14.2857142857%; }
-    .l-blockGrid.l-blockGrid--7up--mid > li:nth-of-type(7n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--7up--mid > li:not(:nth-of-type(7n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--8up--mid > li {
-    float: left;
-    width: 12.5%; }
-    .l-blockGrid.l-blockGrid--8up--mid > li:nth-of-type(8n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--8up--mid > li:not(:nth-of-type(8n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--9up--mid > li {
-    float: left;
-    width: 11.1111111111%; }
-    .l-blockGrid.l-blockGrid--9up--mid > li:nth-of-type(9n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--9up--mid > li:not(:nth-of-type(9n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--10up--mid > li {
-    float: left;
-    width: 10%; }
-    .l-blockGrid.l-blockGrid--10up--mid > li:nth-of-type(10n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--10up--mid > li:not(:nth-of-type(10n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--11up--mid > li {
-    float: left;
-    width: 9.0909090909%; }
-    .l-blockGrid.l-blockGrid--11up--mid > li:nth-of-type(11n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--11up--mid > li:not(:nth-of-type(11n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--12up--mid > li {
-    float: left;
-    width: 8.3333333333%; }
-    .l-blockGrid.l-blockGrid--12up--mid > li:nth-of-type(12n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--12up--mid > li:not(:nth-of-type(12n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--1up--wide > li {
-    float: left;
-    width: 100%; }
-    .l-blockGrid.l-blockGrid--1up--wide > li:nth-of-type(1n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--1up--wide > li:not(:nth-of-type(1n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--2up--wide > li {
-    float: left;
-    width: 50%; }
-    .l-blockGrid.l-blockGrid--2up--wide > li:nth-of-type(2n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--2up--wide > li:not(:nth-of-type(2n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--3up--wide > li {
-    float: left;
-    width: 33.3333333333%; }
-    .l-blockGrid.l-blockGrid--3up--wide > li:nth-of-type(3n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--3up--wide > li:not(:nth-of-type(3n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--4up--wide > li {
-    float: left;
-    width: 25%; }
-    .l-blockGrid.l-blockGrid--4up--wide > li:nth-of-type(4n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--4up--wide > li:not(:nth-of-type(4n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--5up--wide > li {
-    float: left;
-    width: 20%; }
-    .l-blockGrid.l-blockGrid--5up--wide > li:nth-of-type(5n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--5up--wide > li:not(:nth-of-type(5n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--6up--wide > li {
-    float: left;
-    width: 16.6666666667%; }
-    .l-blockGrid.l-blockGrid--6up--wide > li:nth-of-type(6n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--6up--wide > li:not(:nth-of-type(6n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--7up--wide > li {
-    float: left;
-    width: 14.2857142857%; }
-    .l-blockGrid.l-blockGrid--7up--wide > li:nth-of-type(7n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--7up--wide > li:not(:nth-of-type(7n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--8up--wide > li {
-    float: left;
-    width: 12.5%; }
-    .l-blockGrid.l-blockGrid--8up--wide > li:nth-of-type(8n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--8up--wide > li:not(:nth-of-type(8n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--9up--wide > li {
-    float: left;
-    width: 11.1111111111%; }
-    .l-blockGrid.l-blockGrid--9up--wide > li:nth-of-type(9n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--9up--wide > li:not(:nth-of-type(9n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--10up--wide > li {
-    float: left;
-    width: 10%; }
-    .l-blockGrid.l-blockGrid--10up--wide > li:nth-of-type(10n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--10up--wide > li:not(:nth-of-type(10n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--11up--wide > li {
-    float: left;
-    width: 9.0909090909%; }
-    .l-blockGrid.l-blockGrid--11up--wide > li:nth-of-type(11n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--11up--wide > li:not(:nth-of-type(11n + 1)) {
-      clear: none; }
-  .l-blockGrid.l-blockGrid--12up--wide > li {
-    float: left;
-    width: 8.3333333333%; }
-    .l-blockGrid.l-blockGrid--12up--wide > li:nth-of-type(12n + 1) {
-      clear: left; }
-    .l-blockGrid.l-blockGrid--12up--wide > li:not(:nth-of-type(12n + 1)) {
-      clear: none; }
+
+.l-blockGrid-item {
+  display: block;
+  height: auto; }
+
+.l-blockGrid--1--narrow .l-blockGrid-item {
+  float: left;
+  width: 100%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--1--narrow .l-blockGrid-item:nth-of-type(1n + 1) {
+    clear: left; }
+  .l-blockGrid--1--narrow .l-blockGrid-item:not(:nth-of-type(1n + 1)) {
+    clear: none; }
+
+.l-blockGrid--2--narrow .l-blockGrid-item {
+  float: left;
+  width: 50%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--2--narrow .l-blockGrid-item:nth-of-type(2n + 1) {
+    clear: left; }
+  .l-blockGrid--2--narrow .l-blockGrid-item:not(:nth-of-type(2n + 1)) {
+    clear: none; }
+
+.l-blockGrid--3--narrow .l-blockGrid-item {
+  float: left;
+  width: 33.3333333333%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--3--narrow .l-blockGrid-item:nth-of-type(3n + 1) {
+    clear: left; }
+  .l-blockGrid--3--narrow .l-blockGrid-item:not(:nth-of-type(3n + 1)) {
+    clear: none; }
+
+.l-blockGrid--4--narrow .l-blockGrid-item {
+  float: left;
+  width: 25%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--4--narrow .l-blockGrid-item:nth-of-type(4n + 1) {
+    clear: left; }
+  .l-blockGrid--4--narrow .l-blockGrid-item:not(:nth-of-type(4n + 1)) {
+    clear: none; }
+
+.l-blockGrid--5--narrow .l-blockGrid-item {
+  float: left;
+  width: 20%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--5--narrow .l-blockGrid-item:nth-of-type(5n + 1) {
+    clear: left; }
+  .l-blockGrid--5--narrow .l-blockGrid-item:not(:nth-of-type(5n + 1)) {
+    clear: none; }
+
+.l-blockGrid--6--narrow .l-blockGrid-item {
+  float: left;
+  width: 16.6666666667%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--6--narrow .l-blockGrid-item:nth-of-type(6n + 1) {
+    clear: left; }
+  .l-blockGrid--6--narrow .l-blockGrid-item:not(:nth-of-type(6n + 1)) {
+    clear: none; }
+
+.l-blockGrid--7--narrow .l-blockGrid-item {
+  float: left;
+  width: 14.2857142857%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--7--narrow .l-blockGrid-item:nth-of-type(7n + 1) {
+    clear: left; }
+  .l-blockGrid--7--narrow .l-blockGrid-item:not(:nth-of-type(7n + 1)) {
+    clear: none; }
+
+.l-blockGrid--8--narrow .l-blockGrid-item {
+  float: left;
+  width: 12.5%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--8--narrow .l-blockGrid-item:nth-of-type(8n + 1) {
+    clear: left; }
+  .l-blockGrid--8--narrow .l-blockGrid-item:not(:nth-of-type(8n + 1)) {
+    clear: none; }
+
+.l-blockGrid--9--narrow .l-blockGrid-item {
+  float: left;
+  width: 11.1111111111%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--9--narrow .l-blockGrid-item:nth-of-type(9n + 1) {
+    clear: left; }
+  .l-blockGrid--9--narrow .l-blockGrid-item:not(:nth-of-type(9n + 1)) {
+    clear: none; }
+
+.l-blockGrid--10--narrow .l-blockGrid-item {
+  float: left;
+  width: 10%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--10--narrow .l-blockGrid-item:nth-of-type(10n + 1) {
+    clear: left; }
+  .l-blockGrid--10--narrow .l-blockGrid-item:not(:nth-of-type(10n + 1)) {
+    clear: none; }
+
+.l-blockGrid--11--narrow .l-blockGrid-item {
+  float: left;
+  width: 9.0909090909%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--11--narrow .l-blockGrid-item:nth-of-type(11n + 1) {
+    clear: left; }
+  .l-blockGrid--11--narrow .l-blockGrid-item:not(:nth-of-type(11n + 1)) {
+    clear: none; }
+
+.l-blockGrid--12--narrow .l-blockGrid-item {
+  float: left;
+  width: 8.3333333333%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--12--narrow .l-blockGrid-item:nth-of-type(12n + 1) {
+    clear: left; }
+  .l-blockGrid--12--narrow .l-blockGrid-item:not(:nth-of-type(12n + 1)) {
+    clear: none; }
+
+.l-blockGrid--1 .l-blockGrid-item {
+  float: left;
+  width: 100%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--1 .l-blockGrid-item:nth-of-type(1n + 1) {
+    clear: left; }
+  .l-blockGrid--1 .l-blockGrid-item:not(:nth-of-type(1n + 1)) {
+    clear: none; }
+
+.l-blockGrid--2 .l-blockGrid-item {
+  float: left;
+  width: 50%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--2 .l-blockGrid-item:nth-of-type(2n + 1) {
+    clear: left; }
+  .l-blockGrid--2 .l-blockGrid-item:not(:nth-of-type(2n + 1)) {
+    clear: none; }
+
+.l-blockGrid--3 .l-blockGrid-item {
+  float: left;
+  width: 33.3333333333%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--3 .l-blockGrid-item:nth-of-type(3n + 1) {
+    clear: left; }
+  .l-blockGrid--3 .l-blockGrid-item:not(:nth-of-type(3n + 1)) {
+    clear: none; }
+
+.l-blockGrid--4 .l-blockGrid-item {
+  float: left;
+  width: 25%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--4 .l-blockGrid-item:nth-of-type(4n + 1) {
+    clear: left; }
+  .l-blockGrid--4 .l-blockGrid-item:not(:nth-of-type(4n + 1)) {
+    clear: none; }
+
+.l-blockGrid--5 .l-blockGrid-item {
+  float: left;
+  width: 20%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--5 .l-blockGrid-item:nth-of-type(5n + 1) {
+    clear: left; }
+  .l-blockGrid--5 .l-blockGrid-item:not(:nth-of-type(5n + 1)) {
+    clear: none; }
+
+.l-blockGrid--6 .l-blockGrid-item {
+  float: left;
+  width: 16.6666666667%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--6 .l-blockGrid-item:nth-of-type(6n + 1) {
+    clear: left; }
+  .l-blockGrid--6 .l-blockGrid-item:not(:nth-of-type(6n + 1)) {
+    clear: none; }
+
+.l-blockGrid--7 .l-blockGrid-item {
+  float: left;
+  width: 14.2857142857%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--7 .l-blockGrid-item:nth-of-type(7n + 1) {
+    clear: left; }
+  .l-blockGrid--7 .l-blockGrid-item:not(:nth-of-type(7n + 1)) {
+    clear: none; }
+
+.l-blockGrid--8 .l-blockGrid-item {
+  float: left;
+  width: 12.5%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--8 .l-blockGrid-item:nth-of-type(8n + 1) {
+    clear: left; }
+  .l-blockGrid--8 .l-blockGrid-item:not(:nth-of-type(8n + 1)) {
+    clear: none; }
+
+.l-blockGrid--9 .l-blockGrid-item {
+  float: left;
+  width: 11.1111111111%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--9 .l-blockGrid-item:nth-of-type(9n + 1) {
+    clear: left; }
+  .l-blockGrid--9 .l-blockGrid-item:not(:nth-of-type(9n + 1)) {
+    clear: none; }
+
+.l-blockGrid--10 .l-blockGrid-item {
+  float: left;
+  width: 10%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--10 .l-blockGrid-item:nth-of-type(10n + 1) {
+    clear: left; }
+  .l-blockGrid--10 .l-blockGrid-item:not(:nth-of-type(10n + 1)) {
+    clear: none; }
+
+.l-blockGrid--11 .l-blockGrid-item {
+  float: left;
+  width: 9.0909090909%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--11 .l-blockGrid-item:nth-of-type(11n + 1) {
+    clear: left; }
+  .l-blockGrid--11 .l-blockGrid-item:not(:nth-of-type(11n + 1)) {
+    clear: none; }
+
+.l-blockGrid--12 .l-blockGrid-item {
+  float: left;
+  width: 8.3333333333%;
+  /**
+				 * Clear incase of height difference of block items.
+				 * Note: Remove these if all your items are the same height.
+				 */ }
+  .l-blockGrid--12 .l-blockGrid-item:nth-of-type(12n + 1) {
+    clear: left; }
+  .l-blockGrid--12 .l-blockGrid-item:not(:nth-of-type(12n + 1)) {
+    clear: none; }
 
 /**
- * Guttered block grid
+ * Guttered block grid mutator
  */
 .l-blockGrid--guttered {
   margin-left: -20px; }
-  .l-blockGrid--guttered > li {
+  .l-blockGrid--guttered .l-blockGrid-item {
     padding-left: 20px;
     padding-bottom: 20px; }
 
@@ -2581,17 +2542,15 @@ figure {
 
 .demo {
   position: relative;
-  border: 1px solid #fff; }
+  border: 1px solid #ddd; }
   .demo + .demo {
     margin-top: 50px; }
-  .demo.show-code {
-    border: 1px solid #ddd; }
-    .demo.show-code .demo-code {
-      display: block; }
-    .demo.show-code .demo-src {
-      display: inline-block; }
-    .demo.show-code .demo-visual {
-      padding: 28px; }
+  .demo.show-code .demo-code {
+    display: block; }
+  .demo.show-code .demo-src {
+    display: inline-block; }
+  .demo.show-code .demo-visual {
+    padding: 28px; }
 
 .demo-src {
   display: none;
@@ -2611,7 +2570,8 @@ figure {
 .demo-visual {
   line-height: 1.5;
   -webkit-transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-          transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+          transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  padding: 14px; }
   .demo-visual h3 {
     margin-bottom: 5px; }
   .demo-visual code {

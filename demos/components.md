@@ -162,35 +162,35 @@ Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` cont
 <h2 class="demoHeading">Block grids</h2>
 Block grids give you a way to evenly split contents of a list within the grid. If you wanted to create a row of five images or paragraphs that need to stay evenly spaced no matter the screen size, the block grid is for you.
 
-Add the `.l-blockGrid` class to any unordered list, then add the `.l-blockGrid--#up` class to determine how many grid columns appear in a row.
+Add the `.l-blockGrid` class to any element, then add the `.l-blockGrid--#` class to determine how many grid columns appear in a row. Then add `.l-blockGrid-item` to each direct descendant.
 
-* `.l-blockGrid--6up` - 6 columns above the `$bp-single-col` breakpoint
+* `.l-blockGrid--6` - 6 columns above the `$bp-single-col` breakpoint
 
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_block-grids.scss" class="demo-src">_block-grids.scss</a>
 
 	<div class="demo-visual">
-		<ul class="l-blockGrid l-blockGrid--6up">
-			<li>Item 1</li>
-			<li>Item 2</li>
-			<li>Item 3</li>
-			<li>Item 4</li>
-			<li>Item 5</li>
-			<li>Item 6</li>
-		</ul>
+		<div class="l-blockGrid l-blockGrid--6">
+			<div class="l-blockGrid-item">Item 1</div>
+			<div class="l-blockGrid-item">Item 2</div>
+			<div class="l-blockGrid-item">Item 3</div>
+			<div class="l-blockGrid-item">Item 4</div>
+			<div class="l-blockGrid-item">Item 5</div>
+			<div class="l-blockGrid-item">Item 6</div>
+		</div>
 	</div>
 
 	<div class="demo-code">
 {% highlight html%}
 <!-- 6 columns on wide screen, then 1 column (stacked) when we are below the $bp-single-col breakpoint -->
-<ul class="l-blockGrid l-blockGrid--6up">
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
-	<li>Item 6</li>
-</ul>
+<div class="l-blockGrid l-blockGrid--6">
+	<div class="l-blockGrid-item">Item 1</div>
+	<div class="l-blockGrid-item">Item 2</div>
+	<div class="l-blockGrid-item">Item 3</div>
+	<div class="l-blockGrid-item">Item 4</div>
+	<div class="l-blockGrid-item">Item 5</div>
+	<div class="l-blockGrid-item">Item 6</div>
+</div>
 {% endhighlight %}
 	</div>
 </div>
@@ -198,40 +198,87 @@ Add the `.l-blockGrid` class to any unordered list, then add the `.l-blockGrid--
 <hr class="sectionSplitter">
 
 <h3 class="demoHeading">Responsive block grids</h3>
-Block grids now have (since v6.0.0) more responsive modifiers. You can add
+Block grids can now (since v6.0.0) have more responsive modifiers and these directly match your existing breakpoint variables. You can see below that 3 lines have been commented-out. If you need block-grids for wider viewports, uncomment these lines [here](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_block-grids.scss#L22-L28)
 
-* `.l-blockGrid--3up` - **the default**. 3 columns above the `$bp-single-col` breakpoint
-* `.l-blockGrid--2up--narrow` - 2 columns above the `$bp-narrow` breakpoint
-* `.l-blockGrid--3up--mid` - 3 columns above the `$bp-mid` breakpoint
-* `.l-blockGrid--4up--wide` - 4 columns above the `$bp-wide` breakpoint
-* `.l-blockGrid--5up--huge` - 5 columns above the `$bp-huge` breakpoint
+{% highlight scss%}
+$block-grid-breakpoints: (
+	narrow: $bp-narrow,
+	default: $bp-single-col,
+	//mid: $bp-mid,
+	//wide: $bp-wide,
+	//huge: $bp-huge
+);
+{% endhighlight %}
 
-There is also a narrow option for the block grid which allows you to choose a different column count on narrower viewports. Add the `.l-blockGrid--#up--narrow` modifier class to make use of this.
+#### Modifier classes that can be added:
+
+* `.l-blockGrid--3` - **the default**. 3 columns above the `$bp-single-col` breakpoint
+* `.l-blockGrid--2--narrow` - 2 columns above the `$bp-narrow` breakpoint
+* `.l-blockGrid--3--mid` - 3 columns above the `$bp-mid` breakpoint
+* `.l-blockGrid--4--wide` - 4 columns above the `$bp-wide` breakpoint
+* `.l-blockGrid--5--huge` - 5 columns above the `$bp-huge` breakpoint
+
 
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_block-grids.scss" class="demo-src">_block-grids.scss</a>
 
 	<div class="demo-visual">
-		<ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow l-blockGrid--3up--mid l-blockGrid--5up--wide l-blockGrid--6up--huge">
-			<li>Item 1</li>
-			<li>Item 2</li>
-			<li>Item 3</li>
-			<li>Item 4</li>
-			<li>Item 5</li>
-			<li>Item 6</li>
-			<li>Item 7</li>
-			<li>Item 8</li>
-		</ul>
+		<div class="l-blockGrid l-blockGrid--4 l-blockGrid--2--narrow l-blockGrid--3--mid l-blockGrid--5--wide l-blockGrid--6--huge">
+			<div class="l-blockGrid-item">Item 1</div>
+			<div class="l-blockGrid-item">Item 2</div>
+			<div class="l-blockGrid-item">Item 3</div>
+			<div class="l-blockGrid-item">Item 4</div>
+			<div class="l-blockGrid-item">Item 5</div>
+			<div class="l-blockGrid-item">Item 6</div>
+			<div class="l-blockGrid-item">Item 7</div>
+			<div class="l-blockGrid-item">Item 8</div>
+		</div>
 	</div>
 	<div class="demo-code">
 {% highlight html%}
 <!-- 4 columns on wide screen, then 2 columns when we are below the $bp-single-col</code> breakpoint but above the $bp-block-grid-narrow breakpoint, then 1 when we are below the $bp-block-grid-narrow breakpoint -->
-<ul class="l-blockGrid l-blockGrid--4up l-blockGrid--2up--narrow">
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-	<li>Item 4</li>
-</ul>
+<div class="l-blockGrid l-blockGrid--4 l-blockGrid--2--narrow">
+	<div class="l-blockGrid-item">Item 1</div>
+	<div class="l-blockGrid-item">Item 2</div>
+	<div class="l-blockGrid-item">Item 3</div>
+	<div class="l-blockGrid-item">Item 4</div>
+</div>
+{% endhighlight %}
+	</div>
+</div>
+
+<hr class="sectionSplitter">
+
+<h3 class="demoHeading">Guttered block grids</h3>
+Block grids can now (since v6.0.0) have added spacing/guttering in between columns. If you add  the `.l-blockGrid--guttered` modifier class
+
+<div class="demo">
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_block-grids.scss" class="demo-src">_block-grids.scss</a>
+
+	<div class="demo-visual">
+		<div class="l-blockGrid l-blockGrid--4 l-blockGrid--guttered">
+			<div class="l-blockGrid-item">Item 1</div>
+			<div class="l-blockGrid-item">Item 2</div>
+			<div class="l-blockGrid-item">Item 3</div>
+			<div class="l-blockGrid-item">Item 4</div>
+			<div class="l-blockGrid-item">Item 5</div>
+			<div class="l-blockGrid-item">Item 6</div>
+			<div class="l-blockGrid-item">Item 7</div>
+			<div class="l-blockGrid-item">Item 8</div>
+		</div>
+	</div>
+	<div class="demo-code">
+{% highlight html%}
+<div class="l-blockGrid l-blockGrid--4 l-blockGrid--guttered">
+	<div class="l-blockGrid-item">Item 1</div>
+	<div class="l-blockGrid-item">Item 2</div>
+	<div class="l-blockGrid-item">Item 3</div>
+	<div class="l-blockGrid-item">Item 4</div>
+	<div class="l-blockGrid-item">Item 5</div>
+	<div class="l-blockGrid-item">Item 6</div>
+	<div class="l-blockGrid-item">Item 7</div>
+	<div class="l-blockGrid-item">Item 8</div>
+</div>
 {% endhighlight %}
 	</div>
 </div>
