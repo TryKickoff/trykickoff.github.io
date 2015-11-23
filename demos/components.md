@@ -211,7 +211,6 @@ $block-grid-breakpoints: (
 {% endhighlight %}
 
 <h4>Modifier classes that can be added:</h4>
-
 * `.l-blockGrid--3` - **the default**. 3 columns above the `$bp-single-col` breakpoint
 * `.l-blockGrid--2--narrow` - 2 columns above the `$bp-narrow` breakpoint
 * `.l-blockGrid--3--mid` - 3 columns above the `$bp-mid` breakpoint
