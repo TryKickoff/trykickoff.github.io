@@ -169,7 +169,7 @@ grunt.registerTask('compile', [
 		<h1 class="wideBoy-title l-mb0">Built with Kickoff</h1>
 		<h2 class="wideBoy-title">Hundreds of amazing sites across the web are being built with Kickoff. See below for a few of them:</h2>
 
-		<ul class="showcaseList l-blockGrid l-blockGrid--4up  l-blockGrid--3up--narrow">
+		<ul class="showcaseList l-blockGrid l-blockGrid--4  l-blockGrid--3--narrow">
 			{% for item in site.data.showcase %}
 				<li>
 					{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
