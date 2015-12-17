@@ -16,7 +16,7 @@ next:
    body: See all the included components
    link: components.html
 ---
-Forms and their fields are often a nightmare to style, that is why Kickoff includes a great boilerplate for styling them. All styles can be found in [_forms.scss](https://github.com/tmwagency/kickoff/blob/master/scss/components/_forms.scss).
+Forms and their fields are often a nightmare to style, that is why Kickoff includes a great boilerplate for styling them. All styles can be found in [_forms.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss).
 
 <a name="singlefield"></a>
 
@@ -24,7 +24,7 @@ Forms and their fields are often a nightmare to style, that is why Kickoff inclu
 For left-aligned labels or standard labels (above the field), we use the same exact markup.
 
 <div class="demo">
-	<a href="https://github.com/tmwagency/kickoff/blob/master/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
 		<div class="form-controlGroup">
