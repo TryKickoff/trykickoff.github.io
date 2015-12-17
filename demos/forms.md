@@ -331,27 +331,27 @@ Improved styling for checkboxes, radios &amp; file upload.
 
 	<div class="demo-visual">
 		<label class="control control--custom">
-			<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
+			<input class="control--custom-input" type="checkbox" name="mycheckboxBtn" value="A value" checked/>
 			<span class="control-indicator control-indicator--checkbox"></span>
 			My checkbox Button Label Text
 		</label>
 
 		<label class="control control--custom">
-			<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
+			<input class="control--custom-input" type="checkbox" name="mycheckboxBtn" value="A value" checked/>
 			<span class="control-indicator control-indicator--tickbox"></span>
 			My tickbox Label Text
 		</label>
 	</div>
 	<div class="demo-code">
 {% highlight html %}
-<label class="control control--custom">
-	<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
+<label class="control control--custom" for="checkbox1">
+	<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" value="A value" checked/>
 	<span class="control-indicator control-indicator--checkbox"></span>
 	My checkbox Button Label Text
 </label>
 
-<label class="control control--custom">
-	<input class="control--custom-input" type="checkbox" id="checkbox1" name="mycheckboxBtn" checked/>
+<label class="control control--custom" for="checkbox2">
+	<input class="control--custom-input" type="checkbox" id="checkbox2" name="mycheckboxBtn" value="A value" checked/>
 	<span class="control-indicator control-indicator--tickbox"></span>
 	My tickbox Label Text
 </label>
@@ -368,14 +368,14 @@ Improved styling for checkboxes, radios &amp; file upload.
 
 	<div class="demo-visual">
 
-		<label class="control control--custom">
-			<input class="control--custom-input" type="radio" id="radio1" name="myRadioBtn" checked/>
+		<label class="control control--custom" for="radio1">
+			<input class="control--custom-input" type="radio" id="radio1" name="myRadioBtn" value="A value" checked/>
 			<span class="control-indicator control-indicator--radio"></span>
 			My Radio Button Label Text
 		</label>
 
-		<label class="control control--custom">
-			<input class="control--custom-input" type="radio" id="radio2" name="myRadioBtn" />
+		<label class="control control--custom" for="radio2">
+			<input class="control--custom-input" type="radio" id="radio2" name="myRadioBtn" value="A value"/>
 			<span class="control-indicator control-indicator--radio"></span>
 			Another Radio Button Label Text
 		</label>
