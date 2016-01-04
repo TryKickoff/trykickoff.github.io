@@ -171,7 +171,7 @@ grunt.registerTask('compile', [
 
 		<ul class="showcaseList l-blockGrid l-blockGrid--4  l-blockGrid--3--narrow">
 			{% for item in site.data.showcase %}
-				<li>
+				<li class="l-blockGrid-item">
 					{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
 						<figure>
 							<img src="/assets/dist/img/showcase/{{ item.img }}" alt="{{ item.name }}">
