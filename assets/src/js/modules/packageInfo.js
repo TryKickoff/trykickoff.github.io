@@ -2,7 +2,7 @@ var $ = require('jquery');
 
 function init() {
 	if ($('.currentVersion').length) {
-		getPackageJSON();w
+		getPackageJSON();
 	}
 }
 
