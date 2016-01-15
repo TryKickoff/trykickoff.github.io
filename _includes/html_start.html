@@ -37,7 +37,9 @@
 		<!-- <script type="text/javascript" src="//use.typekit.net/qdb7ikf.js"></script> --> <!-- TMW shared account -->
 		<script src="//use.typekit.net/alt7ogo.js"></script> <!-- Zander's personal CC account -->
 		<script>try{Typekit.load();}catch(e){}</script>
-
+		{% if page.canonical %}
+		<link rel="canonical" href="{{page.canonical}}" />
+		{% endif %}
 		<meta name="apple-mobile-web-app-title" content="Kickoff">
 		<meta name="application-name" content="Kickoff">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

@@ -59,7 +59,6 @@ hr {
 	color: #fff;
 	min-height: 50px;
 	line-height: 45px;
-	border-bottom: 3px solid #fff;
 
 	// .l-container {
 	// 	padding: 5px;
@@ -100,7 +99,7 @@ hr {
 	&, a:link, a:visited {
 		color: #fff;
 	}
-	font-weight: normal !important;
+	font-weight: 700 !important;
 	letter-spacing: -0.01em;
 
 	span {
@@ -141,15 +140,19 @@ hr {
 		padding: 0 .5em;
 		@include font-size(18);
 		line-height: 50px;
-		height: 50px;
+		height: 53px;
 		color: #fff;
+		vertical-align: top;
+		border-top: 3px solid transparent;
 
 		&:hover {
-			border-color: lighten($color-primary, 30%);
+			border-color: #ddd;
+			color: #ddd;
 		}
 
 		&.is-active {
-			border-bottom: 6px solid #fff;
+			border-top-color: $color-secondary;
+			color: $color-secondary;
 		}
 	}
 }
@@ -233,6 +236,48 @@ hr {
 	}
 }
 
+.slack {
+	@include font-size($type-mid);
+	padding: 1em 2em;
+	text-align: center;
+	display: block;
+	background-color: $color-secondary;
+	line-height: 50px;
+
+	&,
+	&:link,
+	&:visited {
+		color: #fff;
+	}
+
+	&:hover {
+		background-color: darken($color-secondary, 10%);
+	}
+
+	a,
+	&:before {
+		vertical-align: top;
+	}
+
+	&:before {
+		content: '';
+		background: url('#{$img-path}/ui/slack-mark-white.png') center center no-repeat;
+		background-size: contain;
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		margin-right: 1em;
+	}
+}
+
+.slackMini {
+	background: url('#{$img-path}/ui/slack_monochrome_white.png') center center no-repeat;
+	display: inline-block;
+	background-size: contain;
+	width: 80px;
+	height: 50px;
+}
+
 .yo {
 	display: inline-block;
 	width: 50px;
@@ -251,21 +296,10 @@ hr {
 
 
 .bigBoy {
-	.logoStyle {
-		margin-bottom: 0;
-		margin-top: 0;
-		font-weight: bold;
-		margin-bottom: 1em;
-		@include font-size(50);
-	}
-
-	h2 {
-		margin-top: 0;
-	}
 
 	@include respond-min($bp-mid) {
 		h1 {
-			@include font-size(80);
+			@include font-size($type-jumbo);
 			margin-bottom: 0.5em;
 		}
 
@@ -292,6 +326,12 @@ hr {
 	.btn {
 		margin-top: 1em;
 	}
+}
+
+.intro {
+	font-style: italic;
+	// @include font-size($type-large);
+	margin-top: 0;
 }
 
 .currentVersion--tag {
@@ -661,7 +701,8 @@ figure {
 // }
 
 .entry {
-	padding-top: 50px;
+	// padding-top: 50px;
+	margin: ($baseline * 2) 0;
 }
 .entry--title {
 	margin-bottom: 0;
@@ -838,7 +879,7 @@ figure {
 		bottom: 100%;
 		margin-bottom: 10px;
 		left: 0;
-		@include font-size($type-small);
+		font-size: inherit;
 		color: #998;
 	}
 }
@@ -868,7 +909,7 @@ figure {
 		}
 	}
 	code {
-		@include font-size($type-small);
+		@include font-size(15);
 		line-height: 1.2;
 	}
 
@@ -1042,5 +1083,10 @@ figure {
 .highlight {
 	color: #333;
 	background: #fff
+}
+
+.entries {
+	// margin-top: ($baseline * 2);
+	// margin-bottom: ($baseline * 2);
 }
 

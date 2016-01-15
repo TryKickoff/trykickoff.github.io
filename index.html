@@ -10,8 +10,7 @@ meta:
 <section class="wideBoy wideBoy--dark bigBoy primary text-centre">
 	<div class="l-container">
 		<a href="https://github.com/TryKickoff/kickoff/releases/latest" class="currentVersion currentVersion--tag"></a>
-		<h1 class="logoStyle entry--title">Kick<span>off</span></h1>
-		<p>A lightweight front-end framework for creating scalable, responsive&nbsp;sites.</p>
+		<h1 class="intro"><span class="logoStyle">Kick<span>off</span></span> is a lightweight front-end framework for creating scalable, responsive&nbsp;sites.</h1>
 
 		<a href="learn/" class="btn btn--primary" data-trak='{"category":"Home page","action":"Get started","label":"CTA"}'>Get Started</a> <a href="https://github.com/TryKickoff/kickoff/releases/latest" class="btn btn--hollow cta-whatsNew" data-trak='{"category":"Home page","action":"Whats new","label":"CTA"}'>What's new in <span class="currentVersion"></span></a>
 
@@ -30,7 +29,7 @@ meta:
 		<div class="g-row">
 			<div class="g-col g-span6">
 				<code class="code-lrg" data-before="install:">
-					npm install -g generator-kickoff
+					npm install -g generator-kickoff yo
 				</code>
 			</div>
 			<div class="g-col g-span6">
@@ -55,9 +54,13 @@ meta:
 	</div>
 </section>
 
+<a href="https://slackin-trykickoff.herokuapp.com/" title="Join Kickoff on Slack" class="slack text-centre">
+	Need real-time help? Find us on Slack
+</a>
+
 <section class="features wideBoy--bright wideBoy">
 	<div class="l-container">
-		<h1 class="wideBoy-title l-mb0">Feature overview</h1>
+		<h1 class="wideBoy-title l-mb1">Feature overview</h1>
 
 		<!-- section on CSS -->
 		<div class="g-row">
@@ -120,8 +123,8 @@ var ready = require('lite-ready');
 
 // DOM ready code goes in here
 ready(function () {
-	trak.start();
 	var swiftclick = SwiftClick.attach(document.body);
+	trak.start();
 });
 {% endhighlight %}
 			</div>

@@ -15,7 +15,7 @@
  * Set this in pixels (but do not add px),
  * the font-size mixin will convert to REMS
  */
-$font-size-base                : 20;
+$font-size-base                : 23;
 $font-size-base-px             : $font-size-base * 1px;
 $font-size-base-narrow         : $font-size-base - 2;
 $font-size-base-narrow-px      : $font-size-base-narrow * 1px;
@@ -49,7 +49,7 @@ $font-family-base             : $font-family-sans;
 $font-family-alt              : "purista-web", $font-family-base;
 
 $font-family-headings         : $font-family-alt; // using inherit will use $font-family-base for all headings
-$font-weight-headings         : 600;    // instead of browser default, bold
+$font-weight-headings         : 700;    // instead of browser default, bold
 $line-height-headings         : 1.1;
 
 
@@ -84,7 +84,7 @@ $img-path                     : "/assets/dist/img"; // Usage: background: url('#
 
 // Setup grid defaults
 $layout-margin                : 0     !default; // [in pixels] Space outside the grid
-$layout-max-width             : 1000  !default; // [in pixels]
+$layout-max-width             : 1300  !default; // [in pixels]
 $layout-min-width             : 1000  !default; // [in pixels] Minimum width for layout in <IE9
 
 $grid-column-count            : 12    !default; // Total column count
