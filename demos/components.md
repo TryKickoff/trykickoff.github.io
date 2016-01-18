@@ -200,7 +200,7 @@ Add the `.l-blockGrid` class to any element, then add the `.l-blockGrid--#` clas
 <h3 class="demoHeading">Responsive block grids</h3>
 Block grids can now (since v6.0.0) have more responsive modifiers and these directly match your existing breakpoint variables. You can see below that 3 lines have been commented-out. If you need block-grids for wider viewports, uncomment these lines [here](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_block-grids.scss#L22-L28)
 
-{% highlight scss%}
+{% highlight css%}
 $block-grid-breakpoints: (
 	narrow: $bp-narrow,
 	default: $bp-single-col,
@@ -210,7 +210,7 @@ $block-grid-breakpoints: (
 );
 {% endhighlight %}
 
-<h4>Modifier classes that can be added:</h4>
+#### Modifier classes that can be added:
 * `.l-blockGrid--3` - **the default**. 3 columns above the `$bp-single-col` breakpoint
 * `.l-blockGrid--2--narrow` - 2 columns above the `$bp-narrow` breakpoint
 * `.l-blockGrid--3--mid` - 3 columns above the `$bp-mid` breakpoint
