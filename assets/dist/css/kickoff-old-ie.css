@@ -2165,6 +2165,7 @@ pre {
   font-size: 0.8260869565rem;
   color: #444;
   -moz-tab-size: 2;
+    -o-tab-size: 2;
        tab-size: 2; }
 
 code {
