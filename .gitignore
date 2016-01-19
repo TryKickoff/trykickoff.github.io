@@ -7,3 +7,6 @@ _site
 #assets/dist/**/*
 assets/temp/**/*
 **/*.map
+
+*.sublime-project
+*.sublime-workspace
