@@ -4,12 +4,10 @@ navgroup: blog
 ---
 
 {% for post in site.posts %}
-
 	<article class="entry">
 		<h1 class="entry-title">
 			<a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a>
 		</h1>
 		{{ post.content }}
 	</article>
-
 {% endfor %}
