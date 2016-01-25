@@ -7,6 +7,7 @@ navgroup: blog
 	<article class="entry">
 		<h1 class="entry-title">
 			<a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a>
+			<time class="entry-title-date">{{ post.date | date: "%-d %B %Y" }}</time>
 		</h1>
 		{{ post.content }}
 	</article>

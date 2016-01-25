@@ -4,7 +4,9 @@ layout: default
 
 <section class="wideBoy primary wideBoy--dark">
 	<div class="l-container">
-		<h1 class="entry--title">{{ page.title }}</h1>
+		<h1 class="entryTitle">{{ page.title }}
+			<time class="entryTitle-date">{{ page.date | date: "%-d %B %Y" }}</time>
+		</h1>
 	</div>
 </section>
 

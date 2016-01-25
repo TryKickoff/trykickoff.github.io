@@ -687,27 +687,56 @@ figure {
 .grid-test .g-col.g-col--centered {
 	text-align: center;
 }
+
 .class-tag {
 	display: none;
 }
-// .show-grid .class-tag {
-// 	position: absolute;
-// 	top: -6px; right: 0;
-// 	display: block;
-
-// 	code {
-// 		@include font-size(11);
-// 	}
-// }
 
 .entry {
-	// padding-top: 50px;
-	margin: ($baseline * 2) 0;
+	margin: ($baseline * 2) auto;
+	max-width: 700px;
+
+	& + & {
+		margin-top: $baseline * 3;
+		border-top: 2px solid #ddd;
+		padding-top: $baseline;
+	}
 }
-.entry--title {
+
+.entryTitle {
+	max-width: 700px;
 	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.entryTitle,
+.entry-title {
 	font-weight: normal;
 	font-style: italic;
+	position: relative;
+}
+
+.entry-title-date,
+.entryTitle-date {
+	position: absolute;
+	bottom: 100%;
+	font-family: $font-family-mono;
+	@include font-size($type-smallest);
+	font-style: normal;
+	left: 0;
+	opacity: .6;
+}
+
+.entry-title {
+	margin-bottom: $baseline * 2;
+}
+
+.pagination {
+	margin: ($baseline * 2) auto;
+	max-width: 700px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 /**
