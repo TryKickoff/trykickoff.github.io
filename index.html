@@ -167,6 +167,25 @@ grunt.registerTask('compile', [
 
 	</div>
 </section>
+
+<section class="latestNews wideBoy--dark wideBoy">
+	<div class="l-container">
+		<h1 class="wideBoy-title">From the blog&hellip;</h1>
+		<ul class="unstyled">
+			{% for post in site.posts %}
+			<li class="l-mb1">
+				<h4 class="entry-title l-mb0">
+					<a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a>
+					<time class="entry-title-date">{{ post.date | date: "%-d %B %Y" }}</time>
+				</h4>
+			</li>
+{% endfor %}
+		</ul>
+
+	</div>
+
+</section>
+
 <section class="showcase wideBoy--dark wideBoy">
 	<div class="l-container">
 		<h1 class="wideBoy-title l-mb0">Built with Kickoff</h1>
