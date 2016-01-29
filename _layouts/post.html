@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-
-<section class="wideBoy primary wideBoy--dark">
-	<div class="l-container">
-		<h1 class="entryTitle">{{ page.title }}
-			<time class="entryTitle-date">{{ page.date | date: "%-d %B %Y" }}</time>
-		</h1>
-	</div>
+<section class="title wideBoy primary wideBoy--dark">
+	<h1 class="title-item title-primary">
+		{{ page.title }}
+		<time class="title-primary-date">{{ page.date | date: "%-d %B %Y" }}</time>
+	</h1>
+	{% if page.subtitle %}<h2 class="title-item title-secondary">{{ page.subtitle }}</h2>{% endif %}
 </section>
+
 
 <div class="l-container entries">
 	<article class="entry">

@@ -2721,20 +2721,23 @@ figure {
     border-top: 2px solid #ddd;
     padding-top: 32px; }
 
-.entryTitle {
+.title {
+  margin-bottom: 64px; }
+
+.title-item {
   max-width: 700px;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto; }
 
-.entryTitle,
+.title-primary,
 .entry-title {
   font-weight: normal;
   font-style: italic;
   position: relative; }
 
 .entry-title-date,
-.entryTitle-date {
+.title-primary-date {
   position: absolute;
   bottom: 100%;
   font-family: Menlo, Monaco, "Courier New", monospace;

@@ -1,15 +1,13 @@
 ---
 layout: default
 ---
-<section class="wideBoy primary wideBoy--dark">
-	<div class="l-container">
-		<h1 class="entry--title">{{ page.title }}</h1>
-		{% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
-	</div>
+<section class="title wideBoy primary wideBoy--dark">
+	<h1 class="title-item title-primary">{{ page.title }}</h1>
+	{% if page.subtitle %}<h2 class="title-item title-secondary">{{ page.subtitle }}</h2>{% endif %}
 </section>
 
 <div class="l-container">
-	<div class="g-row entry">
+	<div class="g-row">
 		<div class="g-span3 g-col">
 			<ul class="sidebar-nav unstyled">
 				{% include demonav.html %}
