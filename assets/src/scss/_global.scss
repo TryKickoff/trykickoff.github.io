@@ -99,11 +99,16 @@ hr {
 	&, a:link, a:visited {
 		color: #fff;
 	}
+
 	font-weight: 700 !important;
 	letter-spacing: -0.01em;
 
 	span {
 		color: $color-secondary;
+	}
+
+	&:hover {
+		opacity: .6;
 	}
 }
 
@@ -143,20 +148,17 @@ hr {
 		height: 53px;
 		color: #fff;
 		vertical-align: top;
-		border-top: 3px solid transparent;
 
-		&:hover {
-			border-color: #ddd;
-			color: #ddd;
+		&:hover,
+		&.is-active:hover {
+			opacity: .6;
 		}
 
 		&.is-active {
-			border-top-color: $color-secondary;
 			color: $color-secondary;
 		}
 	}
 }
-
 
 .github-link {
 	background-color: darken($color-primary, 20%);
@@ -708,6 +710,7 @@ figure {
 }
 
 .title-item {
+	width: 95%;
 	max-width: 700px;
 	margin-bottom: 0;
 	margin-left: auto;

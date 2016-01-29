@@ -2291,6 +2291,8 @@ hr {
     color: #fff; }
   .logoStyle span {
     color: #FE7C08; }
+  .logoStyle:hover {
+    opacity: .6; }
 
 .nav {
   font-family: "purista-web", "franklin-gothic-urw", "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2322,13 +2324,10 @@ hr {
     line-height: 50px;
     height: 53px;
     color: #fff;
-    vertical-align: top;
-    border-top: 3px solid transparent; }
-    .main-nav a:hover {
-      border-color: #ddd;
-      color: #ddd; }
+    vertical-align: top; }
+    .main-nav a:hover, .main-nav a.is-active:hover {
+      opacity: .6; }
     .main-nav a.is-active {
-      border-top-color: #FE7C08;
       color: #FE7C08; }
 
 .github-link {
@@ -2725,6 +2724,7 @@ figure {
   margin-bottom: 64px; }
 
 .title-item {
+  width: 95%;
   max-width: 700px;
   margin-bottom: 0;
   margin-left: auto;

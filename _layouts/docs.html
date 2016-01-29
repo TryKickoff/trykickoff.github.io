@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="title wideBoy primary wideBoy--dark">
-	<h1 class="title-item title-primary">{{ page.title }}</h1>
+	<h1 class="title-item title-primary text-centre">{{ page.title }}</h1>
 	{% if page.subtitle %}<h2 class="title-item title-secondary">{{ page.subtitle }}</h2>{% endif %}
 </section>
 
@@ -18,9 +18,9 @@ layout: default
 
 			{% if page.next %}
 				<h3 class="nextTitle">Where next?</h3>
-				<ul class="blockLinks l-blockGrid l-blockGrid--2up">
+				<div class="blockLinks l-blockGrid l-blockGrid--2">
 					{% for item in page.next %}
-					<li>
+					<div class="l-blockGrid-item">
 						{% if item.link %}
 							<a href="{{ item.link }}" class="blockLink">
 						{% else %}
@@ -36,9 +36,9 @@ layout: default
 							</div>
 						{% endif %}
 						</a>
-					</li>
+					</div>
 					{% endfor %}
-				</ul>
+				</div>
 			{% endif %}
 
 		</div>
