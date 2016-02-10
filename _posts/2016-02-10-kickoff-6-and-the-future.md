@@ -63,7 +63,7 @@ The Kickoff site has had many improvements made to it. The demos/code view was d
 
 ## Slack
 
-We also now have a dedicated Slack group for discussions surrounding Kickoff. If you need a hand, want to contribute, or want to talk about upcoming features, this is the place to be. Sign up at slackin-trykickoff.herokuapp.com/.
+We also now have a dedicated Slack group for discussions surrounding Kickoff. If you need a hand, want to contribute, or want to talk about upcoming features, this is the place to be. Sign up at [slackin-trykickoff.herokuapp.com](http://slackin-trykickoff.herokuapp.com/).
 
 ## Thanks
 
