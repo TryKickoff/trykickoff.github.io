@@ -85,20 +85,16 @@ We recommend that each site created with Kickoff also include as many social met
 The wildcard items like `{page title}` are supposed to be changed by you.
 
 ```html
-<!-- Twitter - more info at https://dev.twitter.com/cards/overview -->
-<meta name="twitter:site" content="@{twitter-username}"> <!-- e.g. @TryKickoff -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{page title}" />
-<meta name="twitter:description" content="{page description}" />
-<meta name="twitter:image" content="{share image}" />
-<meta name="twitter:url" content="{page url}" />
-
 <!-- Open Graph data - more info at http://ogp.me/ -->
 <meta property="og:title" content="{page title}" />
 <meta property="og:description" content="{page description}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{page url}" />
 <meta property="og:image" content="{share image}" />
+
+<!-- Twitter - more info at https://dev.twitter.com/cards/overview -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@TryKickoff">
 
 <!-- Open Search - include this if you have search on your site
      More info at http://www.opensearch.org/Home
