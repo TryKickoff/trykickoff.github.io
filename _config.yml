@@ -1,8 +1,3 @@
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-highlighter: pygments
-
 relative_permalinks: false
 include: ['.htaccess']
 exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace','bower_components']
