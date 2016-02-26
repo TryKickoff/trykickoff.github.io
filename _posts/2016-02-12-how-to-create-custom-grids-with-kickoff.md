@@ -6,7 +6,7 @@ navgroup: blog
 ---
 Kickoff comes bundled with a a simple, but fully responsive, grid system and a similar, but crucially different, Block Grid system. Why the need for two; What does each grid do; and how can you create you own versions of these grids if you have complex design requirements?
 
-## The difference between the Kickoff’s grid and block grids
+## The difference between the Kickoff grid and block grids
 Kickoff’s Grid uses percentages, instead of pixels, for column widths and allows you to specify a different width on individual columns within a row.
 
 ```html
