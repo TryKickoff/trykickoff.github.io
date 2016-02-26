@@ -939,7 +939,6 @@ figure {
 }
 
 .highlight {
-	background: #fff;
 
 	pre {
 		line-height: 1;
@@ -954,8 +953,10 @@ figure {
 	}
 
 }
-.highlight {
+
+.wideBoy .highlight {
 	background: #fff
+	color: #333;
 }
 
 .highlight .h {
@@ -1118,11 +1119,6 @@ figure {
 .highlight .gc {
     color: #999;
     background-color: #EAF2F5
-}
-
-.highlight {
-	color: #333;
-	background: #fff
 }
 
 .entries {
