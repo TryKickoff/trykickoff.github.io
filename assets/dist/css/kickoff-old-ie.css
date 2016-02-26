@@ -2165,6 +2165,7 @@ pre {
   font-size: 0.8260869565rem;
   color: #444;
   -moz-tab-size: 2;
+    -o-tab-size: 2;
        tab-size: 2; }
 
 code {
@@ -2904,18 +2905,17 @@ figure {
     font-size: inherit;
     color: #998; }
 
-.highlight {
-  background: #fff; }
-  .highlight pre {
-    line-height: 1; }
-    .demo-code .highlight pre {
-      margin-top: 0; }
-  .highlight code {
-    font-size: 15px;
-    font-size: 0.652173913rem;
-    line-height: 1.2; }
+.highlight pre {
+  line-height: 1; }
+  .demo-code .highlight pre {
+    margin-top: 0; }
 
-.highlight {
+.highlight code {
+  font-size: 15px;
+  font-size: 0.652173913rem;
+  line-height: 1.2; }
+
+.wideBoy .highlight {
   background: #fff; }
 
 .highlight .h {
@@ -3042,10 +3042,6 @@ figure {
 .highlight .gc {
   color: #999;
   background-color: #EAF2F5; }
-
-.highlight {
-  color: #333;
-  background: #fff; }
 
 /**
  * Views
