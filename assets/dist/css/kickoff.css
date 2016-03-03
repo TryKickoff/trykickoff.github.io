@@ -2522,13 +2522,18 @@ figure {
     bottom: 0;
     left: 0;
     background-color: rgba(24, 24, 48, 0.8);
-    padding: 0.5em;
+    padding: 0.3em;
     text-align: left;
     color: #fff;
-    font-size: 19px;
-    font-size: 0.8260869565rem;
+    font-size: 15px;
+    font-size: 0.652173913rem;
     font-style: italic;
-    font-family: "purista-web", "franklin-gothic-urw", "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "purista-web", "franklin-gothic-urw", "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1; }
+    @media screen and (min-width: 48em) {
+      .showcaseList figcaption {
+        font-size: 19px;
+        font-size: 0.8260869565rem; } }
   .showcaseList img {
     display: block; }
   .showcaseList a {
@@ -2942,7 +2947,8 @@ figure {
   line-height: 1.2; }
 
 .wideBoy .highlight {
-  background: #fff; }
+  background: #fff;
+  color: #333; }
 
 .highlight .h {
   color: #333;

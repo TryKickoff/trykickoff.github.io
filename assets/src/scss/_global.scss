@@ -434,13 +434,18 @@ figure {
 		bottom: 0;
 		left: 0;
 		background-color: rgba($color-primary, .8);
-		padding: 0.5em;
+		padding: 0.3em;
 		text-align: left;
 		color: #fff;
 		// opacity: 0;
-		@include font-size($type-small);
+		@include font-size($type-smaller);
 		font-style: italic;
 		font-family: $font-family-alt;
+		line-height: 1;
+
+		@include respond-min($bp-mid) {
+			@include font-size($type-small);
+		}
 	}
 
 	img {
@@ -955,7 +960,7 @@ figure {
 }
 
 .wideBoy .highlight {
-	background: #fff
+	background: #fff;
 	color: #333;
 }
 

@@ -1,6 +1,14 @@
+- name: Barilla
+  img: barilla.jpg
+  url: http://www.barilla.com
+
 - name: JUST EAT International
   img: justeat.jpg
   url: http://www.justeat.es/
+
+- name: J&amp;B Scotch
+  img: jandb.jpg
+  url: https://www.jbscotch.com/en/
 
 - name: Captain Morgan
   img: captainmorgan.jpg
