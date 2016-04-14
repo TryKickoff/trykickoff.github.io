@@ -60,7 +60,7 @@ yo kickoff
 1. Features
  1. Does this project support IE8?
  1. Include Kickoff's styleguide?
- 1. Use Kickoff [Statix](/kickoff/statix/) for static templating and rapid prototyping?
+ 1. Use Kickoff [Statix](https://github.com/trykickoff/statix) for static templating and rapid prototyping?
  1. Use Grunticon?
 1. Use Browserify to bundle your Javascript?
 1. Choose your javascript namespace (only seen if above question is false)
