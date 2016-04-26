@@ -7,22 +7,22 @@ layout: default
 </section>
 
 <div class="l-container">
-	<div class="g-row">
-		<div class="g-span3 g-col">
+	<div class="g g--gutter g--stacked">
+		<div class="g-span3--mid g-col">
 			<ul class="sidebar-nav unstyled">
 				{% include demonav.html %}
 			</ul>
 		</div>
-		<div class="g-span9 g-col">
+		<div class="g-span9--mid g-col">
 			<article>
 				{{ content }}
 			</article>
 
 			{% if page.next %}
 				<h3 class="nextTitle">Where next?</h3>
-				<div class="blockLinks l-blockGrid l-blockGrid--2">
+				<div class="blockLinks g g--stacked">
 					{% for item in page.next %}
-					<div class="l-blockGrid-item">
+					<div class="g-col g-span6--mid">
 						{% if item.link %}
 							<a href="{{ item.link }}" class="blockLink">
 						{% else %}

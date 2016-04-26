@@ -214,7 +214,7 @@ hr {
 .wideBoy {
 	padding: 50px 0;
 
-	@include respond-min($bp-mid) {
+	@include respond-min(mid) {
 		h1 {
 			@include font-size(51);
 		}
@@ -299,7 +299,7 @@ hr {
 
 .bigBoy {
 
-	@include respond-min($bp-mid) {
+	@include respond-min(mid) {
 		h1 {
 			@include font-size($type-jumbo);
 			margin-bottom: 0.5em;
@@ -354,7 +354,7 @@ hr {
 }
 
 .cta-whatsNew {
-	@include respond-min($bp-mid) {
+	@include respond-min(mid) {
 		margin-left: $baseline;
 	}
 }
@@ -409,7 +409,7 @@ figure {
 			color: $color-link-default;
 		}
 
-	@include respond-min($bp-mid) {
+	@include respond-min(mid) {
 		li {
 			margin-bottom: 0px;
 		}
@@ -443,7 +443,7 @@ figure {
 		font-family: $font-family-alt;
 		line-height: 1;
 
-		@include respond-min($bp-mid) {
+		@include respond-min(mid) {
 			@include font-size($type-small);
 		}
 	}

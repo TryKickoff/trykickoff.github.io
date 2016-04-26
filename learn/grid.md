@@ -16,7 +16,9 @@ next:
    link: js.html
 ---
 
-Kickoff's Grid is a simple, but fully responsive, grid framework developed by <a href="http://github.com/mrmartineau/">Zander Martineau</a>. The grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.
+Kickoff's Grid is a simple, fully responsive, grid framework. The grid system uses flexbox, but also provides a fallback that can be used in tandem with a feature detection script such as Modernizr.
+
+By utilising flexbox, the grid can make otherwise difficult layout tasks very simple.  Grid column widths are set in percentages rather than pixels, which makes it more flexible for responsive sites.
 
 To see a demo of the grid's features, head over to the [grid demo page](/demos/grids.html)
 

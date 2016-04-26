@@ -26,13 +26,13 @@ meta:
 		<h2 class="wideBoy-title clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
 		<!-- <h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2> -->
 
-		<div class="g-row">
-			<div class="g-col g-span6">
+		<div class="g g--gutter g--stacked">
+			<div class="g-col g-span6--mid">
 				<code class="code-lrg" data-before="install:">
 					npm install -g generator-kickoff yo
 				</code>
 			</div>
-			<div class="g-col g-span6">
+			<div class="g-col g-span6--mid">
 				<code class="code-lrg" data-before="use:">
 					yo kickoff
 				</code>
@@ -63,15 +63,15 @@ meta:
 		<h1 class="wideBoy-title l-mb1">Feature overview</h1>
 
 		<!-- section on CSS -->
-		<div class="g-row">
-			<div class="g-col g-span6">
+		<div class="g g--gutter g--stacked">
+			<div class="g-col g-span6--mid">
 				<h3>Intuitive CSS / Sass</h3>
 				<p>Kickoff comes with a robust CSS framework; it provides many sensible defaults so that you can get your project up and running in the shortest possible time.</p>
 				<p>We make use of the excellent Sass CSS preprocessor which allows us to use many extra features beyond the capabilities of vanilla CSS.</p>
 				<p>Kickoff uses a bespoke naming scheme for classnames, inspired loosely by the BEM naming scheme. See <a href="/learn/css.html#namingscheme">this page</a> for more info on this.</p>
 				<p>Find out more in the <a href="/learn/css.html">docs</a></p>
 			</div>
-			<div class="g-col g-span6">
+			<div class="g-col g-span6--mid">
 {% highlight scss%}
 /**
  * Typography variables
@@ -107,14 +107,14 @@ $bp-rwd-text              : $bp-mid; // Reduce text size below this width
 		<hr class="sectionSplitter">
 
 		<!-- section on JS -->
-		<div class="g-row">
-			<div class="g-col g-span6">
+		<div class="g g--gutter g--stacked">
+			<div class="g-col g-span6--mid">
 				<h3>Unopinionated Javascript</h3>
 				<p>Kickoff uses <a href="http://browserify.org">Browserify</a> to bundle javascript modules but beyond that, it does not prescribe a way for you to write your JS. We believe that writing JS in a modular way is the future.</p>
 				<p>The code on the right is part of our starter Javascript file ;)</p>
 				<p>Find out more in the <a href="/learn/js.html">docs</a></p>
 			</div>
-			<div class="g-col g-span6">
+			<div class="g-col g-span6--mid">
 {% highlight js%}
 // npm modules
 var SwiftClick = require('swiftclick');
@@ -134,13 +134,13 @@ ready(function () {
 
 		<!-- section on Tooling -->
 		<h3>Awesome tooling</h3>
-		<div class="g-row">
-			<div class="g-col g-span6">
+		<div class="g g--gutter g--stacked">
+			<div class="g-col g-span6--mid">
 				<p>Kickoff is powered by the <a href="http://gruntjs.com/">Grunt.js</a> task runner. It is used extensively to ease common development bottlenecks and allow us developers to focus on creating the best work possible.</p>
 				<p>Special attention has been made to ensure Kickoff works well with continuous delivery, if you develop that way.</p>
 				<p>Find out more in the <a href="/learn/grunt.html">docs</a></p>
 			</div>
-			<div class="g-col g-span6">
+			<div class="g-col g-span6--mid">
 {% highlight js%}
 // grunt serve
 grunt.registerTask('serve', [
@@ -191,9 +191,9 @@ grunt.registerTask('compile', [
 		<h1 class="wideBoy-title l-mb0">Built with Kickoff</h1>
 		<h2 class="wideBoy-title">Hundreds of amazing sites across the web are being built with Kickoff. See below for a few of them:</h2>
 
-		<ul class="showcaseList l-blockGrid l-blockGrid--4  l-blockGrid--3--narrow">
+		<ul class="showcaseList g">
 			{% for item in site.data.showcase %}
-				<li class="l-blockGrid-item">
+				<li class="g-col g-span4--narrow g-span3--mid">
 					{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
 						<figure>
 							<img src="/assets/dist/img/showcase/{{ item.img }}" alt="{{ item.name }}">
@@ -208,12 +208,12 @@ grunt.registerTask('compile', [
 </section>
 <div class="used wideBoy wideBoy--dark">
 	<div class="l-container">
-		<div class="g-row">
-			<div class="g-span8 g-col">
+		<div class="g g--gutter g--stacked">
+			<div class="g-span8--mid g-col">
 					<h3 class="wideBoy-title l-mb0">Have you used Kickoff on a&nbsp;project?</h3>
 					<p>Let us know so we can add it here.</p>
 			</div>
-			<div class="g-span4 g-col">
+			<div class="g-span4--mid g-col">
 				<a href="mailto:trykickoff@gmail.com" class="btn btn--secondary" data-trak='{"category":"Home page","action":"Email us","label":"CTA"}'>Email us your story</a>
 			</div>
 		</div>
