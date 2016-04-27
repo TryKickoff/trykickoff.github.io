@@ -27,6 +27,7 @@ Using Grunt has other benefits besides this; it allows any dev to pick up a proj
 <hr class="sectionSplitter">
 
 <a name="setup"></a>
+
 ## Setting up Grunt on your machine
 Setting up Kickoff to use Grunt is extremely simple – just follow these simple steps:
 
@@ -69,7 +70,9 @@ Here is a guide to the tasks that are available and what each of them does.
 ---
 
 <a name="grunt-default"></a><a name="grunt-serve"></a>
+
 #### grunt (the default task) & grunt serve
+
 The default task has been setup as a shortcut for the [**grunt serve**](#grunt-serve) task.
 
 ```sh
@@ -94,6 +97,7 @@ Tasks carried out when `grunt serve` is run:
 ---
 
 <a name="grunt-compile"></a>
+
 #### grunt compile
 
 * Run `grunt compile` to only compile your static assets.
@@ -102,6 +106,7 @@ Tasks carried out when `grunt serve` is run:
 ---
 
 <a name="grunt-watcher"></a>
+
 #### grunt watcher
 
 Run `grunt watcher` to compile everything then watch. This is useful on an integrated site (rather than on a static templates) or for back-end developers.
@@ -109,6 +114,7 @@ Run `grunt watcher` to compile everything then watch. This is useful on an integ
 ---
 
 <a name="grunt-icons"></a>
+
 #### grunt icons
 
 A task to help you create and maintain icons using Grunticon.
@@ -125,6 +131,7 @@ Tasks carried out when `grunt icons` is run:
 ---
 
 <a name="grunt-checks"></a>
+
 #### grunt checks
 
 A task to help you validate your code.
@@ -137,6 +144,7 @@ Tasks carried out when `grunt checks` is run:
 
 
 <a name="grunt-styleguide"></a>
+
 #### grunt styleguide
 
 A task that compiles your project styles into a styleguide.  It also opens up the styleguide in a browser after compilation.
@@ -144,6 +152,7 @@ A task that compiles your project styles into a styleguide.  It also opens up th
 <hr class="sectionSplitter">
 
 <a name="config"></a>
+
 ## Grunt config variables
 
 Grunt config variables allow you to control some of the basic settings of your Kickoff project.
@@ -153,6 +162,7 @@ Here we take a look at their structure and what each part controls.
 <hr class="sectionSplitter">
 
 <a name="config-structure"></a>
+
 ### Config structure
 
 Kickoff’s config variables can be [found in the `_grunt-configs/config.js` file in ](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/config.js) and looks like the following code snippet:
@@ -219,6 +229,7 @@ module.exports = {
 ### Breaking this down
 
 <a name="config-src"></a>
+
 #### config.src
 
 The first line you encounter in the Grunt config is the `config.src` variable.
@@ -231,6 +242,7 @@ This is used to specify the path at which the rest of your Grunt config files li
 
 ---
 <a name="config-assets"></a>
+
 #### config.srcDir, config.distDir, config.tempDir
 
 ```js
@@ -243,6 +255,7 @@ These are use to define the three main assets directories. Most other grunt task
 
 ---
 <a name="config-css"></a>
+
 #### config.css
 
 ```js
@@ -272,6 +285,7 @@ The `config.css` variables relate to the directories and paths of Kickoff’s CS
 
 ---
 <a name="config-js"></a>
+
 #### config.js
 
 ```js
@@ -299,6 +313,7 @@ To find our more about what is included in the default JavaScript for Kickoff, s
 
 ---
 <a name="config-img"></a>
+
 #### config.img
 
 ```js
@@ -312,6 +327,7 @@ img : {
 
 ---
 <a name="config-testing"></a>
+
 #### config.testing
 
 ```js
@@ -326,6 +342,7 @@ The `config.testing` variables are for any testing related variables.
 
 <hr class="sectionSplitter">
 <a name="taskindex"></a>
+
 ## Task Index
 
 This is an exhaustive list of all the Grunt tasks that Kickoff uses and what they do.
@@ -336,6 +353,7 @@ They are ordered in the same way that Kickoff’s tasks are grouped in the [_gru
 ### CSS Tasks ([css.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/css.js))
 
 <a name="task-sass"></a>
+
 #### grunt-postscss
 
 Uses [grunt-postscss](https://github.com/nicbell/grunt-postscss/) to compile, autoprefix and minify Kickoff’s Sass files into native CSS.
@@ -351,11 +369,13 @@ The image tasks included in Kickoff compress images and generate icons using Gru
 Any images that are placed in `assets/src/img/` are automatically minified (when running a watch process like `grunt serve`) and then copied to `assets/dist/img/`.
 
 <a name="task-imagemin"></a>
+
 #### Imagemin
 
 [Imagemin](https://github.com/gruntjs/grunt-contrib-imagemin/) is used to compress all images placed in the `assets/src/img/` & `assets/src/grunticon` directories. Images in `assets/src/img/` are compressed to `assets/dist/img/` & icons in `assets/src/grunticon/` are compressed but they need Grunticon to manipulate them before being added to `assets/dist/img/icons/`.
 
 <a name="task-grunticon"></a>
+
 #### Grunticon
 
 [Grunticon](https://github.com/filamentgroup/grunticon) is a Grunt task that makes it easy to manage icons and background images for all devices.
@@ -368,6 +388,7 @@ Kickoff includes a basic setup of Grunticon that makes it easy to get started. S
 ### JavaScript Tasks ([javascript.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/javascript.js))
 
 <a name="task-browserify"></a>
+
 #### Browserify
 
 Uses [grunt-browserify](https://github.com/jmreidy/grunt-browserify) to bundle your JavaScript files into one file.
@@ -375,6 +396,7 @@ Uses [grunt-browserify](https://github.com/jmreidy/grunt-browserify) to bundle y
 This task also creates a JavaScript source map for use by developer tools, making debugging minified JavaScript code much more straightforward.
 
 <a name="task-shimly"></a>
+
 #### Shimly
 
 Using the [grunt-shimly](https://github.com/nicbell/shimly) plugin, this task allows you to specifiy any JavaScript shims you would like to include in your project.
@@ -389,6 +411,7 @@ Although this is built by default by Kickoff, the associated JS file needs to be
 Kickoff’s server tasks help create a local development environment for your project.
 
 <a name="task-browsersync"></a>
+
 #### BrowserSync
 Browsersync is used in our `grunt serve` task to create a simple server to preview your static site. Not only does it live reload any style changes (without a browser plugin I might add), but it also makes your workflow faster by synchronising URLs, interactions and code changes across multiple devices.
 
@@ -399,12 +422,14 @@ See this video for a demo:
 ### Utility Tasks ([utilities.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/utilities.js))
 
 <a name="task-clean"></a>
+
 #### Clean
 
 The clean task uses [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean) to remove files from the directories specified.  This is useful when copying files from one directory to another, to avoid artifacts from previous compilation tasks; for example, icons would otherwise remain in the target compilation directory when they may have been deleted from the project.
 
 ---
 <a name="task-watch"></a>
+
 ### Watch Task ([watch.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/watch.js))
 
 The `grunt watch` task is incredibly powerful; it watches for changes in files you are working on and acts on any changes you make to them.

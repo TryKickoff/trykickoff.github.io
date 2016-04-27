@@ -79,7 +79,6 @@ To make buttons span to 100% width, add the `.btn--block` modifier class. You ca
 </div>
 
 <hr class="sectionSplitter">
-
 <a name="mediaobject"></a>
 
 <h2 class="demoHeading">Media Object</h2>
@@ -132,7 +131,6 @@ Place any image and text-like content side-by-side, as per: [media object](http:
 </div>
 
 <hr class="sectionSplitter">
-
 <a name="fluidvideo"></a>
 
 <h2 class="demoHeading">Fluid video</h2>
@@ -163,7 +161,6 @@ As of Kickoff v7.0.0, layouts that were previously handled by our block grid cla
 To find out more on the new Kickoff Grid, see our [Grid documentation](/learn/grid.html).
 
 <hr class="sectionSplitter">
-
 <a name="lists"></a>
 
 <h2 class="demoHeading">Lists</h2>
@@ -210,7 +207,6 @@ For centred lists, add the `.l-list--centred` class to an [un]ordered list. For 
 </div>
 
 <hr class="sectionSplitter">
-
 <a name="tables"></a>
 
 ## Tables
@@ -353,8 +349,8 @@ A table can be modified in the following ways.
 </div>
 
 <hr class="sectionSplitter">
-
 <a name="rwdtables"></a>
+
 <h2 class="demoHeading">Responsive tables</h2>
 We have included a simple way to make your tables responsive, wrap your tables in `.responsiveTable` and we'll make them mobile friendly by enabling horizontal scrolling. Only applies below the `$bp-single-col` scss variable. Everything above that will display normally.
 

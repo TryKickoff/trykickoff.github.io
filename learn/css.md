@@ -25,6 +25,7 @@ This section will take you through how Kickoff uses CSS and Sass, and how easy i
 
 <hr class="sectionSplitter">
 <a name="sass"></a>
+
 ## Sass
 Kickoff is made with [Sass](http://sass-lang.com/) at its core.  It makes developing systems-based CSS faster, easier, and more fun.
 
@@ -32,6 +33,7 @@ Sass has two syntaxes. The most commonly used syntax is known as “SCSS” (for
 
 <hr class="sectionSplitter">
 <a name="structure"></a>
+
 ## Sass structure
 Kickoff structures it's Sass files in quite a specific way. The `scss` directory contains the following directories:
 
@@ -137,27 +139,32 @@ All roads lead to here. Both these files are used and compile with Grunt. Inspec
 ```
 
 ---
+
 #### [_dependencies.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_dependencies.scss)
 This file is where all of Kickoff’s Sass dependencies are defined. It imports all of the scss files that will be compiled into your project.
 
 If you need to add or remove a file, do it here. The order of the imported files is the same order that the CSS will be compiled to.
 
 ---
+
 #### [_global.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_global.scss)
 This file contains all styles that do not obviously fit within any other scss partial. For example, we include our body's background styles and the main `.l-container` styles.
 
 **Try not to fill this up with all your styles though.**  Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the `components`, `partials` or `views` directories.
 
 ---
+
 #### [_helper-classes.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_helper-classes.scss)
 This file contains a bunch of helper styles, like `.clearfix` (for clearing floats), `.ir` for using background image replacement, `.is-hidden` etc.
 
 <hr class="sectionSplitter">
 <a name="variables"></a>
+
 ## Sass Variables
 We take full advantage of Sass' variables and there are two key files that should be edited at the start of development on any new Kickoff project. These are `scss/_variables.scss` and `scss/_color-palette.scss`.
 
 ---
+
 #### [_variables.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_variables.scss)
 This is where you define your global Sass variables. Here you can define your:
 
@@ -166,11 +173,13 @@ This is where you define your global Sass variables. Here you can define your:
   Breakpoints included are: `$bp-narrow`, `$bp-mid`, `$bp-wide`, `$bp-huge` and a few *special* vars. These include `$bp-single-col` for when you need your design to break from a single column to multiple columns, `$bp-block-grid-narrow` for use with the block grids and `$bp-rwd-text` for our simple implementation of responsive typography.
 
 ---
+
 #### [_color-palette.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_color-palette.scss)
 Text colour, link colours, background colour, form fields and various component colours can all be set in this file.
 
 <hr class="sectionSplitter">
 <a name="responsive"></a>
+
 ## Responsive
 Kickoff does not enforce a mobile first approach to CSS, but it is encouraged and it takes a fairly unique approach to responsive sites.
 
@@ -237,6 +246,7 @@ a {
 
 <hr class="sectionSplitter">
 <a name="namingscheme"></a>
+
 ## CSS Naming scheme
 Kickoff uses a bespoke naming scheme for classnames, inspired loosely by the [BEM naming scheme](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
 

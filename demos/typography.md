@@ -17,6 +17,7 @@ next:
 ---
 
 <a name="hp"></a>
+
 <h2 class="demoHeading">Headings & paragraphs</h2>
 
 <div class="demo">
@@ -124,6 +125,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 <hr class="sectionSplitter">
 
 <a name="ol"></a>
+
 <h3 class="demoHeading">Ordered lists</h3>
 
 <div class="demo">
@@ -176,6 +178,7 @@ As we are British, we decided to include two spellings for our centred text : `.
 <hr class="sectionSplitter">
 
 <a name="ul"></a>
+
 <h3 class="demoHeading">Unordered lists</h3>
 
 <div class="demo">

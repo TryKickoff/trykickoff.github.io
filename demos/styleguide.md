@@ -42,50 +42,50 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 	<div class="l-container">
 		<h2 class="sg-sectionHeading">Swatches</h2>
 
-		<ul class="l-blockGrid l-blockGrid--3up l-blockGrid--2up--narrow">
-			<li>
+		<ul class="g g--stacked unstyled">
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-primary">
 					<div class="sg-swatch-color"></div>
 					<code>$color-primary</code>
 				</div>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-secondary">
 					<div class="sg-swatch-color"></div>
 					<code>$color-secondary</code>
 				</div>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-highlight">
 					<div class="sg-swatch-color"></div>
 					<code>$color-highlight</code>
 				</div>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-text">
 					<div class="sg-swatch-color"></div>
 					<code>$color-text</code>
 				</div>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-background">
 					<div class="sg-swatch-color"></div>
 					<code>$color-bg</code>
 				</div>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-border">
 					<div class="sg-swatch-color"></div>
 					<code>$color-border</code>
 				</div>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-link">
 					<div class="sg-swatch-color"></div>
 					<code>$color-link-default</code>
 				</div>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-link-hover">
 					<div class="sg-swatch-color"></div>
 					<code>$color-link-hover</code>
@@ -104,12 +104,12 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 
 		<!-- Headings -->
 		<h3 class="sg-interfaceType sg-interfaceType--subtle">Primary typeface</h3>
-		<div class="g-row">
-			<div class="g-span4 g-col sg-typeSpecimen sg-typeSpecimen--primary sg-typeSpecimen--giant">
+		<div class="g g--stacked">
+			<div class="g-span4--mid g-col sg-typeSpecimen sg-typeSpecimen--primary sg-typeSpecimen--giant">
 				ABC
 			</div>
 
-			<div class="g-span8 g-col">
+			<div class="g-span8--mid g-col">
 				<div class="sg-typeSpecimen sg-typeSpecimen--primary">ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>
 					abcdefghijklmnopqrstuvwxyz <br>
 					0123456789 (.,:;?!£$@*&)
@@ -119,12 +119,12 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 
 		<!-- Body -->
 		<h3 class="sg-interfaceType sg-interfaceType--subtle">Secondary typeface</h3>
-		<div class="g-row">
-			<div class="g-span4 g-col sg-typeSpecimen sg-typeSpecimen--secondary sg-typeSpecimen--giant">
+		<div class="g g--stacked">
+			<div class="g-span4--mid g-col sg-typeSpecimen sg-typeSpecimen--secondary sg-typeSpecimen--giant">
 				ABC
 			</div>
 
-			<div class="g-span8 g-col">
+			<div class="g-span8--mid g-col">
 				<div class="sg-typeSpecimen sg-typeSpecimen--secondary">ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>
 					abcdefghijklmnopqrstuvwxyz <br>
 					0123456789 (.,:;?!£$@*&)
@@ -142,8 +142,8 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 <div class="sg-page">
 	<div class="l-container">
 		<h2 class="sg-sectionHeading">Typography examples</h2>
-		<div class="g-row">
-			<div class="g-span6 g-col">
+		<div class="g">
+			<div class="g-span6--mid g-col">
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Headings</h3>
 				<h1>Heading 1</h1>
 				<h2>Heading 2</h2>
@@ -152,7 +152,7 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 				<h5>Heading 5</h5>
 				<h6>Heading 6</h6>
 			</div>
-			<div class="g-span6 g-col">
+			<div class="g-span6--mid g-col">
 				<h3 class="sg-interfaceType sg-interfaceType--subtle">Paragraphs</h3>
 				<p>Donec sed odio dui. Curabitur <a href="">blandit tempus</a> porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur <b>purus sit amet fermentum</b>.</p>
 				<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.</p>
@@ -160,15 +160,15 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 		</div>
 
 		<h3 class="sg-interfaceType sg-interfaceType--subtle">Typeface sizes</h3>
-		<div class="g-row">
-			<div class="g-span6 g-col">
+		<div class="g">
+			<div class="g-span6--mid g-col">
 				<div class="sg-type sg-type-micro"><div class="sg-type-item">Example text</div> <code>$type-micro</code></div>
 				<div class="sg-type sg-type-smallest"><div class="sg-type-item">Example text</div> <code>$type-smallest</code></div>
 				<div class="sg-type sg-type-smaller"><div class="sg-type-item">Example text</div> <code>$type-smaller</code></div>
 				<div class="sg-type sg-type-small"><div class="sg-type-item">Example text</div> <code>$type-small</code></div>
 				<div class="sg-type sg-type-base"><div class="sg-type-item">Example text</div> <code>$type-base</code></div>
 			</div>
-			<div class="g-span6 g-col">
+			<div class="g-span6--mid g-col">
 				<div class="sg-type sg-type-mid"><div class="sg-type-item">Example text</div> <code>$type-mid</code></div>
 				<div class="sg-type sg-type-large"><div class="sg-type-item">Example text</div> <code>$type-large</code></div>
 				<div class="sg-type sg-type-largest"><div class="sg-type-item">Example text</div> <code>$type-largest</code></div>
@@ -230,8 +230,8 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 						</div>
 				</div>
 
-				<div class="g-row">
-					<div class="form-controlGroup g-span6 g-col">
+				<div class="g g--stacked">
+					<div class="form-controlGroup g-span6--mid g-col">
 						<label class="form-label">Checkboxes</label>
 						<div class="form-controlGroup-inputWrapper">
 							<label class="control control--custom">
@@ -247,7 +247,7 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 						</div>
 					</div>
 
-					<div class="form-controlGroup g-span6 g-col">
+					<div class="form-controlGroup g-span6--mid g-col">
 						<label class="form-label">Radio buttons</label>
 						<div class="form-controlGroup-inputWrapper">
 							<label class="control control--custom">
@@ -285,28 +285,28 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 	<div class="l-container">
 		<h2 class="sg-sectionHeading">Icons</h2>
 		<h3 class="sg-interfaceType sg-interfaceType--subtle">Interface icons</h3>
-		<ul class="l-blockGrid l-blockGrid--3up l-blockGrid--2up--narrow">
-			<li>
+		<ul class="g g--stacked">
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="icon-sg icon-social-instagram"></div>
 				<code>.icon-social-instagram</code>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="icon-sg icon-social-twitter"></div>
 				<code>.icon-social-twitter</code>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="icon-sg icon-social-pinterest"></div>
 				<code>.icon-social-pinterest</code>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="icon-sg icon-social-facebook"></div>
 				<code>.icon-social-facebook</code>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="icon-sg icon-social-youtube"></div>
 				<code>.icon-social-youtube</code>
 			</li>
-			<li>
+			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="icon-sg icon-email"></div>
 				<code>.icon-email</code>
 			</li>

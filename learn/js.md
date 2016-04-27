@@ -24,16 +24,19 @@ While not included in the default Kickoff branch, Kickoff now includes a base se
 
 <hr class="sectionSplitter">
 <a name="structure"></a>
+
 ## JavaScript Structure
 
 As mentioned above, Kickoff’s JavaScript is very non prescriptive.  Here we look at how we structure Kickoff’s JavaScript by default as well as how this can be adapted for your own needs.
 
 <hr class="sectionSplitter">
+
 ### script.js
 
 This file can be used to contain or reference your site/app JavaScript code.
 
 <hr class="sectionSplitter">
+
 ### Folder Structure
 
 Kickoff has a very simple folder structure for it’s JavaScript; as a base Kickoff contains `helpers` and `libs` directories.
@@ -48,6 +51,7 @@ For more information on how Kickoff uses 3rd party libraries, [checkout the docu
 
 <hr class="sectionSplitter">
 <a name="browserify"></a>
+
 ## Browserify
 
 [Browserify](http://browserify.org/) lets you `require('modules')` in the browser by bundling up all of your dependencies. It also gives you access to thousands of already created modules via [npm](https://www.npmjs.org/), that can be added by simply requiring them within your JavaScript.
@@ -66,6 +70,7 @@ Increasingly, people are publishing modules to npm which are intentionally desig
 
 <hr class="sectionSplitter">
 <a name="npm"></a>
+
 ## NPM
 
 Kickoff uses NPM to include and manage any 3rd party dependencies that you might need for your site. A few npm packages are included with Kickoff by default, these can be found by viewing the manifest file, [package.json](https://github.com/trykickoff/kickoff/blob/master/package.json), and installed by running:
@@ -107,12 +112,14 @@ If you're not using jQuery, these npm packages are great alternatives for some o
 
 <hr class="sectionSplitter">
 <a name="shims"></a>
+
 ## Shims
 
 To manage JavaScript Shims, we use a Grunt plugin called [Shimly](https://github.com/nicbell/Shimly), created by  Nic Bell.  To find out more about Shimly, [check out our Grunt task documentation](grunt.html#task-shimly).
 
 <hr class="sectionSplitter">
 <a name="libs"></a>
+
 ## Libraries
 
 If you need to add any 3rd party library code, we suggest placing it in the [assets/src/js/libs/](https://github.com/trykickoff/kickoff/tree/master/assets/src/js/libs) folder.

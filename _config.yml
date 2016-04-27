@@ -8,4 +8,8 @@ paginate_path: /page:num
 
 encoding: "utf-8"
 
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 gems: ['jekyll-paginate']

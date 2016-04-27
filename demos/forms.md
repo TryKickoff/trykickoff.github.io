@@ -47,7 +47,6 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 </div>
 
 <hr class="sectionSplitter">
-
 <a name="labelsabove"></a>
 
 <h2 class="demoHeading">Forms <small>with labels above inputs</small></h2>
@@ -112,7 +111,6 @@ For left-aligned labels or standard labels (above the field), we use the same ex
 <!-- END EXAMPLE -->
 
 <hr class="sectionSplitter">
-
 <a name="labelsinline"></a>
 
 <h2 class="demoHeading">Forms <small>with inline labels</small></h2>
@@ -177,7 +175,6 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 <!-- END EXAMPLE -->
 
 <hr class="sectionSplitter">
-
 <a name="multicolumnform"></a>
 
 <h2 class="demoHeading">Multi column forms <small>with labels above inputs</small></h2>
@@ -187,16 +184,16 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
-		<!-- Add a grid row: .g-row -->
-		<div class="g-row">
+		<!-- Apply the grid class : .g -->
+		<div class="g g--stacked g--gutter">
 			<!-- Add .g-col and .g-span# to the .form-controlGroup -->
-			<div class="form-controlGroup g-col g-span6">
+			<div class="form-controlGroup g-col g-span6--mid">
 				<label class="form-label" for="fm-text">Text</label>
 				<div class="form-controlGroup-inputWrapper">
 					<input class="form-input" type="text" id="fm-text" placeholder="Some text" required/>
 				</div>
 			</div>
-			<div class="form-controlGroup g-col g-span6">
+			<div class="form-controlGroup g-col g-span6--mid">
 				<label for="fm-email" class="form-label">Email</label>
 				<div class="form-controlGroup-inputWrapper">
 					<input class="form-input" type="email" id="fm-email" placeholder="tech@tmw.co.uk" required/>
@@ -204,22 +201,22 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 			</div>
 		</div>
 
-		<!-- Add a grid row: .g-row -->
-		<div class="g-row">
+		<!-- Apply the grid  class: .g -->
+		<div class="g g--stacked g--gutter">
 			<!-- Add .g-col and .g-span# to the .form-controlGroup -->
-			<div class="form-controlGroup g-col g-span4">
+			<div class="form-controlGroup g-col g-span4--mid">
 				<label class="form-label" for="fm-label1">Label</label>
 				<div class="form-controlGroup-inputWrapper">
 					<input class="form-input" type="text" id="fm-label1" placeholder="Some text" value="A value" required/>
 				</div>
 			</div>
-			<div class="form-controlGroup g-col g-span4">
+			<div class="form-controlGroup g-col g-span4--mid">
 				<label for="fm-label2" class="form-label">Label</label>
 				<div class="form-controlGroup-inputWrapper">
 					<input class="form-input" type="email" id="fm-label2" placeholder="tech@tmw.co.uk" value="A value" required/>
 				</div>
 			</div>
-			<div class="form-controlGroup g-col g-span4">
+			<div class="form-controlGroup g-col g-span4--mid">
 				<label for="fm-label3" class="form-label">Label</label>
 				<div class="form-controlGroup-inputWrapper">
 					<input class="form-input" type="password" id="fm-label3" placeholder="Your password" value="A value" />
@@ -230,16 +227,16 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 	</div>
 	<div class="demo-code">
 {% highlight html %}
-<!-- Add a grid row: .g-row -->
-<div class="g-row">
+<!-- Apply the grid  class: .g -->
+<div class="g g--stacked g--gutter">
 	<!-- Add .g-col and .g-span# to the .form-controlGroup -->
-	<div class="form-controlGroup g-col g-span6">
+	<div class="form-controlGroup g-col g-span6--mid">
 		<label class="form-label" for="fm-text">Text</label>
 		<div class="form-controlGroup-inputWrapper">
 			<input class="form-input" type="text" id="fm-text" placeholder="Some text" required/>
 		</div>
 	</div>
-	<div class="form-controlGroup g-col g-span6">
+	<div class="form-controlGroup g-col g-span6--mid">
 		<label for="fm-email" class="form-label">Email</label>
 		<div class="form-controlGroup-inputWrapper">
 			<input class="form-input" type="email" id="fm-email" placeholder="tech@tmw.co.uk" required/>
@@ -252,7 +249,6 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 <!-- END EXAMPLE -->
 
 <hr class="sectionSplitter">
-
 <a name="formfieldstates"></a>
 
 <h2 class="demoHeading">Form field states</h2>
@@ -262,9 +258,9 @@ You can easily update field states by adding modifier classes to `.form-controlG
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
-		<div class="g-row">
+		<div class="g g--stacked g--gutter">
 			<!-- Add .has-success modifier class for valid or successful fields -->
-			<div class="form-controlGroup has-success g-col g-span4">
+			<div class="form-controlGroup has-success g-col g-span4--mid">
 				<label class="form-label" for="st-success">Success</label>
 				<div class="form-controlGroup-inputWrapper">
 					<input class="form-input" type="text" id="st-success" placeholder="Some text" value="A value" required/>
@@ -272,7 +268,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 			</div>
 
 			<!-- Add .has-error modifier class for invalid or unsuccessful fields -->
-			<div class="form-controlGroup has-error g-col g-span4">
+			<div class="form-controlGroup has-error g-col g-span4--mid">
 				<label for="st-error" class="form-label">Error</label>
 				<div class="form-controlGroup-inputWrapper">
 					<input class="form-input" type="email" id="st-error" placeholder="tech@tmw.co.uk" value="A value" required/>
@@ -280,7 +276,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 			</div>
 
 			<!-- Add .has-warning modifier class to give warning -->
-			<div class="form-controlGroup has-warning g-col g-span4">
+			<div class="form-controlGroup has-warning g-col g-span4--mid">
 				<label for="st-password" class="form-label">Warning</label>
 				<div class="form-controlGroup-inputWrapper">
 					<input class="form-input" type="password" id="st-password" placeholder="Your password" value="A value" />
@@ -319,7 +315,6 @@ You can easily update field states by adding modifier classes to `.form-controlG
 <!-- END EXAMPLE -->
 
 <hr class="sectionSplitter">
-
 <a name="customfields"></a>
 
 ## Custom field elements
@@ -488,8 +483,8 @@ fileInput.addEventListener('change', function(e) {
 <!-- END EXAMPLE -->
 
 <hr class="sectionSplitter">
-
 <a name="validation"></a>
+
 <h2 class="demoHeading">Validation With D'accord</h2>
 <p>HTML 5 validation for Kickoff. See <a href="https://github.com/nicbell/daccord">D'accord</a> for more details.</p>
 
