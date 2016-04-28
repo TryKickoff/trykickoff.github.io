@@ -185,7 +185,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 
 	<div class="demo-visual">
 		<!-- Apply the grid class : .g -->
-		<div class="g g--stacked g--gutter">
+		<div class="g g--stack g--gutter">
 			<!-- Add .g-col and .g-span# to the .form-controlGroup -->
 			<div class="form-controlGroup g-col g-span6--mid">
 				<label class="form-label" for="fm-text">Text</label>
@@ -202,7 +202,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 		</div>
 
 		<!-- Apply the grid  class: .g -->
-		<div class="g g--stacked g--gutter">
+		<div class="g g--stack g--gutter">
 			<!-- Add .g-col and .g-span# to the .form-controlGroup -->
 			<div class="form-controlGroup g-col g-span4--mid">
 				<label class="form-label" for="fm-label1">Label</label>
@@ -228,7 +228,7 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 	<div class="demo-code">
 {% highlight html %}
 <!-- Apply the grid  class: .g -->
-<div class="g g--stacked g--gutter">
+<div class="g g--stack g--gutter">
 	<!-- Add .g-col and .g-span# to the .form-controlGroup -->
 	<div class="form-controlGroup g-col g-span6--mid">
 		<label class="form-label" for="fm-text">Text</label>
@@ -258,7 +258,7 @@ You can easily update field states by adding modifier classes to `.form-controlG
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
 
 	<div class="demo-visual">
-		<div class="g g--stacked g--gutter">
+		<div class="g g--stack g--gutter">
 			<!-- Add .has-success modifier class for valid or successful fields -->
 			<div class="form-controlGroup has-success g-col g-span4--mid">
 				<label class="form-label" for="st-success">Success</label>

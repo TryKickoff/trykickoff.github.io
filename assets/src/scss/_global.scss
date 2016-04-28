@@ -571,6 +571,18 @@ figure {
 	}
 }
 
+.g--demo {
+	& .g-content {
+		border: 1px solid $blueDark;
+		background-color: $gray;
+		color: #fff;
+	}
+}
+
+.g-content--tall {
+	min-height: 100px;
+}
+
 .demo-visual {
 	line-height: 1.5;
 	transition: all 300ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
@@ -586,7 +598,7 @@ figure {
 }
 
 .demo-code {
-	display: none;
+	// display: none;
 
 	pre {
 		margin-bottom: 0;
@@ -670,7 +682,7 @@ figure {
 // Choreographic Grid Demo
 .show-grid .grid-test .g-col {
 	background-color: rgba($color-primary,0.1);
-	padding: 6px;
+	border: 1px solid black;
 }
 .show-grid .grid-test.g-row {
 	margin-bottom: 20px;
@@ -915,7 +927,7 @@ figure {
 
 @mixin lang($language) {
 	position: relative;
-	margin-top: 20px;
+	margin-top: 30px;
 	display: block;
 
 	&:before {
@@ -929,34 +941,31 @@ figure {
 	}
 }
 
-.language-html {
-	@include lang('<!-- .html -->');
-}
-.language-css {
-	@include lang('/* .css */');
-}
-.language-scss {
-	@include lang('// .scss');
-}
-.language-js,
-.language-javascript {
-	@include lang('// .js');
-}
-
 .highlight {
 
 	pre {
-		line-height: 1;
 
 		.demo-code & {
 			margin-top: 0;
 		}
 	}
-	code {
-		@include font-size(15);
-		line-height: 1.2;
-	}
 
+}
+
+.demo-code {
+	.language-html {
+		@include lang('<!-- .html -->');
+	}
+	.language-css {
+		@include lang('/* .css */');
+	}
+	.language-scss {
+		@include lang('// .scss');
+	}
+	.language-js,
+	.language-javascript {
+		@include lang('// .js');
+	}
 }
 
 .wideBoy .highlight {

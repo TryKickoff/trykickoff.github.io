@@ -155,6 +155,12 @@ ul, ol {
 	}
 }
 
+article {
+	li {
+		margin-bottom: $baseline * 0.25;
+	}
+}
+
 /**
  * Unstyled lists
  */

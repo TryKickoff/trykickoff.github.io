@@ -47,6 +47,8 @@ pre {
 		color: $pre-textColor;
 		background-color: $pre-bgColor;
 		border: 0;
+
+		@include font-size($type-smaller);
 	}
 }
 

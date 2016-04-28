@@ -42,7 +42,7 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 	<div class="l-container">
 		<h2 class="sg-sectionHeading">Swatches</h2>
 
-		<ul class="g g--stacked unstyled">
+		<ul class="g g--stack unstyled">
 			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="sg-swatch sg-color-primary">
 					<div class="sg-swatch-color"></div>
@@ -104,7 +104,7 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 
 		<!-- Headings -->
 		<h3 class="sg-interfaceType sg-interfaceType--subtle">Primary typeface</h3>
-		<div class="g g--stacked">
+		<div class="g g--stack">
 			<div class="g-span4--mid g-col sg-typeSpecimen sg-typeSpecimen--primary sg-typeSpecimen--giant">
 				ABC
 			</div>
@@ -119,7 +119,7 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 
 		<!-- Body -->
 		<h3 class="sg-interfaceType sg-interfaceType--subtle">Secondary typeface</h3>
-		<div class="g g--stacked">
+		<div class="g g--stack">
 			<div class="g-span4--mid g-col sg-typeSpecimen sg-typeSpecimen--secondary sg-typeSpecimen--giant">
 				ABC
 			</div>
@@ -230,7 +230,7 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 						</div>
 				</div>
 
-				<div class="g g--stacked">
+				<div class="g g--stack">
 					<div class="form-controlGroup g-span6--mid g-col">
 						<label class="form-label">Checkboxes</label>
 						<div class="form-controlGroup-inputWrapper">
@@ -285,7 +285,7 @@ The styleguide below looks much nicer when it is the only thing on the page, but
 	<div class="l-container">
 		<h2 class="sg-sectionHeading">Icons</h2>
 		<h3 class="sg-interfaceType sg-interfaceType--subtle">Interface icons</h3>
-		<ul class="g g--stacked">
+		<ul class="g g--stack">
 			<li class="g-col g-span6--narrow g-span4--mid">
 				<div class="icon-sg icon-social-instagram"></div>
 				<code>.icon-social-instagram</code>
