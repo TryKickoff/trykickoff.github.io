@@ -68,7 +68,10 @@ The module system that browserify uses is the same as node, so packages publishe
 
 Increasingly, people are publishing modules to npm which are intentionally designed to work in both node and in the browser using browserify and many packages on npm are intended for use in just the browser. npm is for all javascript, front or backend alike.
 
-### Babel
+<hr class="sectionSplitter">
+<a name="babel"></a>
+
+## Babel
 
 Kickoff uses the Browserify transform **Babelify** to allow you to write ES2015 (previously called ES6) in your projects.  This will automatically compile your ES2015 code back into ES5 syntax so that older browsers can understand it.
 
