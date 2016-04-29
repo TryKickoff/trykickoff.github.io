@@ -43,17 +43,17 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 ├── _dependencies.scss
 ├── _global.scss
 ├── _helper-classes.scss
-├── _print.scss
 ├── _reset.scss
 ├── _typography.scss
 ├── _variables.scss
 ├── components
-│   ├── _block-grids.scss
 │   ├── _buttons.scss
 │   ├── _code.scss
 │   ├── _embedded-content.scss
 │   ├── _fluid-video.scss
-│   ├── _forms-custom-controls.scss
+│   ├── _forms-custom-file.scss
+│   ├── _forms-custom-radiocheckboxes.scss
+│   ├── _forms-custom-custom-select.scss
 │   ├── _forms.scss
 │   ├── _grid.scss
 │   ├── _icons.scss
@@ -66,23 +66,20 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 ├── functions
 │   ├── _functions.scss
 │   ├── _golden-ratio.scss
+│   ├── _get-breakpoint.scss
 │   ├── _modular-scale.scss
 │   ├── _px-to-em.scss
 │   ├── _px-to-rem.scss
 │   ├── _strip-units.scss
 │   └── _tint-shade.scss
-├── kickoff-old-ie.scss
 ├── kickoff.scss
 ├── mixins
-│   ├── _css3.scss
 │   ├── _form-helpers.scss
 │   ├── _grid-helpers.scss
 │   ├── _hidpi.scss
-│   ├── _linear-gradient.scss
 │   ├── _mixins.scss
+│   ├── _module-naming-helpers.scss
 │   ├── _position.scss
-│   ├── _prefixer.scss
-│   ├── _radial-gradient.scss
 │   ├── _responsive.scss
 │   ├── _utility.scss
 │   └── _vertical-center.scss
@@ -110,6 +107,8 @@ Partials are partial parts of a page, like a masthead, sidebar or footer. They c
 
 Used for entire views (or pages). Usually these files consist of small tweaks that only concern a particular view. The [views](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/views/) directory should contain view-specific styles that don't fit into their own module, think `_home.scss` or `_recipe-page.scss` for example.
 
+**N.b.** We recommend that it is better to make reusable components rather than styling based on a view.  Therefore, the styles in this folder _should _ be minimal.
+
 #### Mixins
 
 The [mixins](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/mixins/) directory contains a few mixins that will help you day-to-day. Amongst others, `_responsive.scss` contains our media query mixins ([read below](#responsive) for more info), `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the `@include font-size()` mixin for specifying your font sizes with a `px` value but outputting both `rem` and `px` in your compiled styles.
@@ -122,8 +121,10 @@ The [functions](https://github.com/trykickoff/kickoff/blob/master/assets/src/scs
 
 It’s important to become familiar with **all of these files** so you can make full use of the framework.
 
-#### [kickoff.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff.scss) & [kickoff-old-ie.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff-old-ie.scss)
-All roads lead to here. Both these files are used and compile with Grunt. Inspecting the source of these files reveals only one `@import`, for `_dependencies.scss`. Both files require the exact same dependencies so it made sense to extract all of those into another partial.
+#### [kickoff.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff.scss)
+All roads lead to here. This is the base SCSS file and is the hook by which Grunt compiles the projects CSS. Inspecting the source of the file reveals only one `@import`, for `_dependencies.scss`.
+
+In older versions of Kickoff (and still available in the generator), we compile two versions of of the CSS – this is explained below:
 
 * `kickoff.scss` is compiled to `/assets/dist/css/kickoff.css` and is used on Internet Explorer 9+, Chrome, Safari, Firefox and Opera.
 * `kickoff-old-ie.scss` is compiled to `/assets/dist/css/kickoff-old-ie.css` and is used on Internet Explorer 8 and below only. These browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see below](#responsive) for more details on this.
@@ -212,7 +213,7 @@ Media queries in Kickoff are typically handled with a [set of useful mixins](htt
 /**
  * All the mixins:
  */
-@include respond-min($bp-wide) {
+@include respond-min(wide) {
 	a {
 		color: darkgoldenrod;
 	}
@@ -222,7 +223,7 @@ Media queries in Kickoff are typically handled with a [set of useful mixins](htt
 		color: green;
 	}
 }
-@include respond-min-max($bp-narrow, $bp-mid) {
+@include respond-min-max(narrow, mid) {
 	a {
 		color: purple;
 	}
@@ -293,4 +294,5 @@ a {
 <hr class="sectionSplitter">
 
 ### Modernizr
+
 Kickoff includes a version of Modernizr by default. To find out how to use it, see [their documentation](http://modernizr.com) or see our [Javascript documentation](js.html) to find out where it is included.

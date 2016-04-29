@@ -20,7 +20,6 @@ Kickoff's Grid is a simple, fully responsive, grid framework that can help you b
 
 The grid system uses flexbox while also providing fallbacks that can be used in tandem with a feature detection script such as Modernizr in order to support older browsers.  By utilising flexbox, the grid can make otherwise difficult layout tasks very simple, such as allignment and spacing.  Grid column widths are also set in percentages rather than pixels, which makes the grid more flexible for responsive sites.
 
-<!-- To see a demo of the grid's features, head over to the [grid demo page](/demos/grids.html), or to learn more about it’s features, read on! -->
 
 <hr class="sectionSplitter">
 <a name="gridhow"></a>
@@ -91,6 +90,80 @@ Each grid column can span up to 12 column widths.  Here is what the grid looks l
 		</div>
 	</div>
 </div>
+
+<hr class="sectionSplitter">
+<a name="gridoptions"></a>
+
+### Grid options
+
+<table class="table table--striped">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="u-textCenter">
+          Narrow<br>
+          <small>≥400px</small>
+        </th>
+        <th class="u-textCenter">
+          Mid<br>
+          <small>≥750px</small>
+        </th>
+        <th class="u-textCenter">
+          Wide<br>
+          <small>≥1000px</small>
+        </th>
+        <th class="u-textCenter">
+          Huge<br>
+          <small>≥1250px</small>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text-nowrap" scope="row">Class suffix</th>
+        <td><code>--narrow</code></td>
+        <td><code>--mid</code></td>
+        <td><code>--wide</code></td>
+        <td><code>--huge</code></td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Grid behaviour</th>
+        <td colspan="4">Horizontal by default.</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row"># of columns</th>
+        <td colspan="4">12</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Gutter width</th>
+        <td colspan="4">Either:<br>20px (10px on each side of a column) when using <code>.g--gutter</code>,<br>or calculated as a percentage of the <code>$layout-max-width</code> using <code>.g--gutter--scaled</code>.</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Nestable</th>
+        <td colspan="4">Yes</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Column Alignment</th>
+        <td colspan="4">Yes</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Flexible Stacking</th>
+        <td colspan="4">Yes</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Equal Height Columns</th>
+        <td colspan="4">Yes</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Flexbox Fallback</th>
+        <td colspan="4">Yes, available via feature classes (i.e. <a href="https://modernizr.com/">Modernizr</a>).</td>
+      </tr>
+      <tr>
+        <th class="text-nowrap" scope="row">Offset</th>
+        <td colspan="4">Coming Soon</td>
+      </tr>
+    </tbody>
+  </table>
 
 <hr class="sectionSplitter">
 <a name="gridvariables"></a>

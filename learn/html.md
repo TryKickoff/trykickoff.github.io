@@ -18,9 +18,11 @@ next:
 Here is some pointers regarding Kickoff's HTML usage.
 
 ## Conditional CSS files
-By default, Kickoff compiles two scss files: one for IE9+ & and another for old IE (<8); these browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see the CSS docs](css.html) for more info.
+
+Using the Kickoff Yeomna Generator, you may choose to opt for IE8 support.  If you do, Kickoff will compile two SCSS files: one for IE9+ & and another for old IE (<8); these browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see the CSS docs](css.html) for more info.
 
 #### Add your stylesheets to HTML using the code below
+
 ```html
 <!--[if lte IE 8]>
 	<link rel="stylesheet" href="/assets/dist/css/kickoff-old-ie.css">
@@ -35,32 +37,6 @@ If you're not supporting IE8, then you only need one stylesheet..
 ```html
 <link rel="stylesheet" href="/assets/dist/css/kickoff.css">
 ```
-
-<hr class="sectionSplitter">
-<a name="svg"></a>
-
-## SVG icons
-If you need a reliable way to provide hiDPi icons, we recommend using SVG. The only problem is that SVGs do not have the best browser support. To fix this, we recommend using [Grunticon](https://github.com/filamentgroup/grunticon) by The Filament Group.
-
-#### From Grunticon's readme:
-> grunticon is a Grunt.js task that makes it easy to manage icons and background images for all devices, preferring HD (retina) SVG icons but also provides fallback support for standard definition browsers, and old browsers alike. From a CSS perspective, it's easy to use, as it generates a class referencing each icon, and doesn't use CSS sprites.
-
-We have included a Grunt task to minify SVGs before running the grunticon task on them. These tasks watch the `img/src` folder (where they are minified), and added to the `img/src-min` folder. grunticon watches this folder and generates 3 stylesheets, fallback PNGs and some other related files.
-
-In order for your user's to benefit from this, you will need to add a small inline script to the head of each page.
-
-```html
-<!-- Grunticon SVG detection script. http://github.com/filamentgroup/
-		 Remove if not using Grunticon. -->
-<script>
-	(function(){function e(e,n,t){"use strict";var o=window.document.createElement("link"),r=n||window.document.getElementsByTagName("script")[0],a=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",r.parentNode.insertBefore(o,r),o.onloadcssdefined=function(e){for(var n,t=0;t<a.length;t++)a[t].href&&a[t].href===o.href&&(n=!0);n?e():setTimeout(function(){o.onloadcssdefined(e)})},o.onloadcssdefined(function(){o.media=t||"all"}),o}function n(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}!function(t){var o=function(r,a){"use strict";if(r&&3===r.length){var i=t.navigator,c=t.document,s=t.Image,d=!(!c.createElementNS||!c.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!c.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||t.opera&&-1===i.userAgent.indexOf("Chrome")||-1!==i.userAgent.indexOf("Series40")),l=new s;l.onerror=function(){o.method="png",o.href=r[2],e(r[2])},l.onload=function(){var t=1===l.width&&1===l.height,i=r[t&&d?0:t?1:2];t&&d?o.method="svg":t?o.method="datapng":o.method="png",o.href=i,n(e(i),a)},l.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",c.documentElement.className+=" grunticon"}};o.loadCSS=e,o.onloadCSS=n,t.grunticon=o}(this),function(e,n){"use strict";var t=n.document,o="grunticon:",r=function(e){if(t.attachEvent?"complete"===t.readyState:"loading"!==t.readyState)e();else{var n=!1;t.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},a=function(e){return n.document.querySelector('link[href$="'+e+'"]')},i=function(e){var n,t,r,a,i,c,s={};if(n=e.sheet,!n)return s;t=n.cssRules?n.cssRules:n.rules;for(var d=0;d<t.length;d++)r=t[d].cssText,a=o+t[d].selectorText,i=r.split(");")[0].match(/US\-ASCII\,([^"']+)/),i&&i[1]&&(c=decodeURIComponent(i[1]),s[a]=c);return s},c=function(e){var n,r,a,i;a="data-grunticon-embed";for(var c in e){i=c.slice(o.length);try{n=t.querySelectorAll(i)}catch(s){continue}r=[];for(var d=0;d<n.length;d++)null!==n[d].getAttribute(a)&&r.push(n[d]);if(r.length)for(d=0;d<r.length;d++)r[d].innerHTML=e[c],r[d].style.backgroundImage="none",r[d].removeAttribute(a)}return r},s=function(n){"svg"===e.method&&r(function(){c(i(a(e.href))),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=a,e.getIcons=i,e.ready=r,e.svgLoadedCallback=s,e.embedSVG=s}(grunticon,this)})();
-	grunticon(["/assets/dist/img/icons/icons.data.svg.css", "/assets/dist/img/icons/icons.data.png.css", "/assets/dist/img/icons/icons.fallback.css"], grunticon.svgLoadedCallback);
-</script>
-<noscript><link href="/assets/dist/img/icons/icons.fallback.css" rel="stylesheet"></noscript>
-<!-- /End Grunticon detection & injection script -->
-```
-
-This script detects what SVG support the user's browser has and serves the appropriate CSS file. **NOTE:** If do not have the same folder structure as us, you will need to change the above script, the value of this Grunt variable `<%=config.img.dir%>` defined in our [Gruntfile line ~44](https://github.com/trykickoff/kickoff/blob/master/Gruntfile.js#L44). You will also need to move the `src-min` & `src` folders into your new image directory.
 
 <hr class="sectionSplitter">
 <a name="skip"></a>
@@ -80,7 +56,7 @@ The styling for this is simple, so please modify it; see [/scss/partials/compone
 <a name="socialmeta"></a>
 
 ## Social meta tags
-We recommend that each site created with Kickoff also include as many social meta tags so that whenever users share your content, they are presented with useful share/social content. See the snippet below for the recommended items:
+We recommend that each site created with Kickoff also include social meta tags so that whenever users share your content, they are presented with useful share/social content. See the snippet below for the recommended items:
 
 The wildcard items like `{page title}` are supposed to be changed by you.
 
@@ -160,7 +136,7 @@ The wildcard items like `{page title}` are supposed to be changed by you.
 <a name="jquery"></a>
 
 ## jQuery
-If you use jQuery, we recommend bundling it with all the other javascripts on your site rather than linking to Google's CDN or similar. This has the benefit of not needing another DNS lookup (which is costly on mobile connections) but it also means that should a user have a primed cache for the same version of jQuery hosted externally, that you will miss out on those benefits - we believe that the benefits outweigh the risks.
+If you use jQuery, we recommend bundling it with all the other javascript files on your site rather than linking to Google's CDN or similar. This has the benefit of not needing another DNS lookup (which is costly on mobile connections) but it also means that should a user have a primed cache for the same version of jQuery hosted externally, that you will miss out on those benefits - we believe that the benefits outweigh the risks.
 
 If you prefer to rely on an external source, we suggest adding it using the code below. This assumes that you need support for older versions of Internet Explorer. See this [post](http://martineau.tv/2013/06/two-versions-of-jquery/) for more information about this technique.
 
@@ -174,6 +150,3 @@ If you prefer to rely on an external source, we suggest adding it using the code
 	<script>window.jQuery || document.write('<script src="/js/libs/jquery.2.min.js"><\/script>')</script>
 <!--<![endif]-->
 ```
-
-
-

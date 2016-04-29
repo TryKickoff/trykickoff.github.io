@@ -19,9 +19,11 @@ There are a few easy ways to get started with Kickoff.  Take a look below and fi
 
 ### Use the Yeoman Generator
 
-Using our Yeoman Generator is the our recommended, and best, way to get Kickoff each time you want to start a new project.
+Using our Yeoman Generator is the recommended way to get Kickoff each time you want to start a new project.
 
-To find out more about it – or what a Yeoman generator even is – and how it can help you tailor Kickoff to your projects even faster, [visit the generator docs page](yeoman.html).
+Using the generator let’s you configure many aspects of Kickoff every time you start a new project.
+
+To find out more about it – or what a Yeoman generator is – and how it can help you tailor Kickoff to your projects even faster, [visit the generator docs page](yeoman.html).
 
 <hr class="sectionSplitter">
 

@@ -4,6 +4,11 @@ layout: post
 title: "How to create custom grids with Kickoff"
 navgroup: blog
 ---
+
+**Note that as of v7.0.0 of Kickoff, the Kickoff Grid has been updated and uses updated syntax.  This post relates to Kickoff v6 and below.  Check out the new [grid documentation](/learn/grid.html).**
+
+---
+
 Kickoff comes bundled with a a simple, but fully responsive, grid system and a similar, but crucially different, Block Grid system. Why the need for two; What does each grid do; and how can you create you own versions of these grids if you have complex design requirements?
 
 ## The difference between the Kickoff grid and block grids

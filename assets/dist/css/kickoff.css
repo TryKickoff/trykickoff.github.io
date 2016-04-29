@@ -3287,7 +3287,8 @@ pre {
   font-size: 0.8260869565rem;
   color: #444;
   -moz-tab-size: 2;
-       tab-size: 2; }
+       tab-size: 2;
+  white-space: pre; }
 
 code {
   padding: 2px 4px;
@@ -3299,8 +3300,7 @@ pre {
   padding: 16px;
   margin: 0 0 32px;
   color: #444;
-  background-color: #f7f7f7;
-  white-space: pre; }
+  background-color: #f7f7f7; }
   pre code {
     padding: 0;
     color: #444;
@@ -4211,6 +4211,12 @@ figure {
   text-indent: -999em; }
   .ir br {
     display: none; }
+
+.u-textCenter {
+  text-align: center; }
+
+.text-nowrap {
+  white-space: nowrap; }
 
 .is-hidden {
   display: none !important;

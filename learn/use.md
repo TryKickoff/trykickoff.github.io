@@ -36,7 +36,7 @@ What follows is a general overview of each major part of Kickoff and how to use 
 		Download Kickoff
 	</label>
 	<div class="checklistInfo">
-		Go to <a href="../learn/get.html">this link</a>
+		Go to <a href="../learn/get.html">this link</a> and choose how to get Kickoff.
 	</div>
 
 	<label class="control">
@@ -114,13 +114,12 @@ What follows is a general overview of each major part of Kickoff and how to use 
 	<div class="checklistInfo">
 		<ul>
 			<li>Define your own breakpoints to suit your design; <strong>the defaults here are just a suggestion</strong>.</li>
-			<li><code>$bp-single-col</code> is a convenience breakpoint for use when you want to switch from a single column (on mobile) to a muliple columns (on desktop).</li>
+			<li><code>$bp-single-col</code> is a convenience breakpoint which can be used when you want to switch from a single column (on mobile) to muliple columns (on desktop).</li>
 			<li>An example usage for these might be:
 <pre class="l-mb0"><code>@include respond-min($bp-single-col) {
 // RWD code
 }</code></pre>
 			</li>
-			<li><code>$bp-block-grid-narrow</code> is used for narrow block grids.</li>
 			<li><code>$bp-rwd-text</code> is used to define when text size changes (reduces) for narrower viewports.</li>
 			<li>Please add more if you need them!</li>
 		</ul>
@@ -139,7 +138,7 @@ What follows is a general overview of each major part of Kickoff and how to use 
 		Setup your layout and the grid
 	</label>
 	<div class="checklistInfo">
-		Kickoff comes with a simple grid system, based on the Choreographic Grid. To define your grid column count, gutter widths etc change the vars from lines 88—105.
+		Kickoff comes with a flexible grid system, which uses Flexbox (while providing fallbacks). To define your grid column count, gutter widths etc see how to do so in the <a href="/learn/grid.html">grid documentation</a>.
 	</div>
 
 	<label class="control">
@@ -147,7 +146,7 @@ What follows is a general overview of each major part of Kickoff and how to use 
 		Define some global app-specific variables
 	</label>
 	<div class="checklistInfo">
-		On line 107 there is one example of an app-specific variable, this is for link transitions. Add any others that you may need below there.
+		On line 100 there is one example of an app-specific variable, this is for link transitions. Add any others that you may need below there.
 	</div>
 </div>
 

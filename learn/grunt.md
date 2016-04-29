@@ -113,34 +113,18 @@ Run `grunt watcher` to compile everything then watch. This is useful on an integ
 
 ---
 
-<a name="grunt-icons"></a>
-
-#### grunt icons
-
-A task to help you create and maintain icons using Grunticon.
-
-Running `grunt icons` carries out the [svgmin](#task-svgmin) and [Grunticon](#task-grunticon) tasks,
-generating a set of icons for you to use in the front-end of your project.
-
-Tasks carried out when `grunt icons` is run:
-
-* [clean:icons](#task-clean) – removes any icons already created by Grunticon in our project
-* [imagemin:grunticon](#task-imagemin) – optimises SVG files
-* [grunticon](#task-grunticon) – creates icon set for use in front end
-
----
-
 <a name="grunt-checks"></a>
 
 #### grunt checks
 
 A task to help you validate your code.
 
-Running `grunt checks` will run the [validation](#task-htmlvalidation) task to check the project's HTML for errors and formatting inconsistencies.
+Running `grunt checks` will run the [JS validation](#task-eslint) and [SCSS validation](#task-validatescss) tasks to check the project for errors and formatting inconsistencies.
 
 Tasks carried out when `grunt checks` is run:
 
-* [HTML validation](#task-htmlvalidation) – validates your project's HTML
+* [JS Validation](#task-eslint) – validates your project's JavaScript
+* [SCSS Validation](#task-scss) – validates your project's SCSS
 
 
 <a name="grunt-styleguide"></a>
@@ -211,15 +195,7 @@ module.exports = {
 	// Image-related Grunt vars
 	img : {
 		srcDir       : '<%=config.srcDir%>/img',      // <%=config.img.srcDir%>
-		distDir      : '<%=config.distDir%>/img',     // <%=config.img.distDir%>
-		grunticonDir : '<%=config.srcDir%>/grunticon' // <%=config.img.grunticonDir%>
-	},
-
-
-	// Testing-related Grunt vars
-	// Add any other test vars in here
-	testing: {
-		validationDir  : './testing',  // <%=config.tests.validationDir%>
+		distDir      : '<%=config.distDir%>/img'      // <%=config.img.distDir%>
 	}
 };
 ```
@@ -325,20 +301,6 @@ img : {
 }
 ```
 
----
-<a name="config-testing"></a>
-
-#### config.testing
-
-```js
-// Testing-related Grunt vars
-// Add any other test vars in here
-testing: {
-	validationDir  : './testing',  // <%=config.tests.validationDir%>
-}
-```
-
-The `config.testing` variables are for any testing related variables.
 
 <hr class="sectionSplitter">
 <a name="taskindex"></a>
@@ -350,6 +312,7 @@ This is an exhaustive list of all the Grunt tasks that Kickoff uses and what the
 They are ordered in the same way that Kickoff’s tasks are grouped in the [_grunt-configs](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/) directory.
 
 ---
+
 ### CSS Tasks ([css.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/css.js))
 
 <a name="task-sass"></a>
@@ -358,13 +321,11 @@ They are ordered in the same way that Kickoff’s tasks are grouped in the [_gru
 
 Uses [grunt-postscss](https://github.com/nicbell/grunt-postscss/) to compile, autoprefix and minify Kickoff’s Sass files into native CSS.
 
-We compile Kickoff’s Sass into 2 CSS files.  The first is a straight compilation of the Sass into native CSS.  The second takes a width parameter, as defined in [`scss/kickoff-old-ie.scss`](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff-old-ie.scss), and compiles a CSS file without media queries.  This second file is created so that we can write our Sass code mobile-first, while still being able to serve old versions of Internet Explorer an appropriately sized layout, since they don’t support media queries.  For more information on this approach, see [Jake Archibald’s excellent article on the subject](http://jakearchibald.github.io/sass-ie/).
-
-
 ---
+
 ### Image tasks ([images.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/images.js))
 
-The image tasks included in Kickoff compress images and generate icons using Grunticon.
+The image task included in Kickoff compresses images within the project.
 
 Any images that are placed in `assets/src/img/` are automatically minified (when running a watch process like `grunt serve`) and then copied to `assets/dist/img/`.
 
@@ -374,17 +335,8 @@ Any images that are placed in `assets/src/img/` are automatically minified (when
 
 [Imagemin](https://github.com/gruntjs/grunt-contrib-imagemin/) is used to compress all images placed in the `assets/src/img/` & `assets/src/grunticon` directories. Images in `assets/src/img/` are compressed to `assets/dist/img/` & icons in `assets/src/grunticon/` are compressed but they need Grunticon to manipulate them before being added to `assets/dist/img/icons/`.
 
-<a name="task-grunticon"></a>
-
-#### Grunticon
-
-[Grunticon](https://github.com/filamentgroup/grunticon) is a Grunt task that makes it easy to manage icons and background images for all devices.
-
-If you want to use Grunticon, take a look at [their documenation and examples](https://github.com/filamentgroup/grunticon).
-
-Kickoff includes a basic setup of Grunticon that makes it easy to get started. Simply add your SVG & PNG icons to the `assets/src/grunticon` folder and then run `grunt icons` from the project root directory. This will run the task giving you the icons and code to include in the front–end of your project. The Grunticon src directory is also being watched by `grunt watch` so if that is running then the icons will be generated for you.
-
 ---
+
 ### JavaScript Tasks ([javascript.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/javascript.js))
 
 <a name="task-browserify"></a>
@@ -406,6 +358,7 @@ Including shims in your project means that you can use native JavaScript feature
 Although this is built by default by Kickoff, the associated JS file needs to be [included in the file list to be compiled](#config-js).
 
 ---
+
 ### Server tasks ([server.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/server.js))
 
 Kickoff’s server tasks help create a local development environment for your project.
@@ -419,6 +372,7 @@ See this video for a demo:
 <div class="fluidVideo"><iframe width="640" height="480" src="//www.youtube-nocookie.com/embed/heNWfzc7ufQ" frameborder="0" allowfullscreen></iframe></div>
 
 ---
+
 ### Utility Tasks ([utilities.js](https://github.com/trykickoff/kickoff/blob/master/_grunt-configs/utilities.js))
 
 <a name="task-clean"></a>
@@ -443,3 +397,21 @@ Kickoff is setup by default to watch:
 * Any SVG file that is added to the 'img/src' directory, subsequently running SVGMin & Grunticon tasks.
 
 This task uses the [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) plugin.
+
+---
+<a name="task-eslint"></a>
+
+### JavaScript Validation Task ([grunt-eslint](https://github.com/sindresorhus/grunt-eslint))
+
+This task will validate your JavaScript using the [grunt-eslint](https://github.com/sindresorhus/grunt-eslint) grunt plugin.
+
+If you want to change the default checks this task performs, you can add, remove or modify rules from the `.eslintrc.js` file in the root of Kickoff.
+
+---
+<a name="task-validatescss"></a>
+
+### SCSS Validation Task ([grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint))
+
+This task will validate your SCSS code using the [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint) grunt plugin.
+
+If you want to change the default checks this task performs, you can add, remove or modify rules from the `.scss-lint.yml` file in the root of Kickoff.

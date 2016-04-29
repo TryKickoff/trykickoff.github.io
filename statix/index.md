@@ -7,17 +7,19 @@ navgroup: statix
 
 ## Why do I need Statix in my life?
 
-Have you ever wanted the power of reusing snippets in your HTML but don’t know where to start?
+Have you ever wanted the power of reusing snippets of HTML in your templates but don’t know where to start?
 
-Do you want a good base front-end structure for your project without throwing the whole of Bootstrap it?
+Do you want a good base front-end structure for your project without throwing the whole of Bootstrap at it?
 
-Statix has your back.
+**Statix** can help you out.
 
 ---
 
 ## Download  Statix
 
-[Download the source files here](https://github.com/tmwagency/statix)
+You can use Statix in one of two ways.
+
+You can grab Statix on **[Github](https://github.com/tmwagency/statix)**, or by installing the **[Kickoff Yeoman Generator](/generator-kickoff)**, which includes an option to use Statix.
 
 ---
 
@@ -27,7 +29,7 @@ Here are some of the simple problems that Statix helps you solve:
 
 ### Code snippets
 
- Statix leverages Assemble to give you the ability to write a snippet of HTML once and then include it across multiple HTML files.
+ Statix leverages [Assemble](http://assemble.io/) giving you the ability to write a piece of HTML once and then include it across multiple HTML template files.
 
  Editing a navigation link across 10 static HTML pages?  No problem.  Want to change a piece of footer text across the whole of your site templates?  Easy!
 
@@ -36,15 +38,15 @@ Here are some of the simple problems that Statix helps you solve:
 
 ### Project Structure
 
-Statix uses Kickoff and Grunt to give you a minimal starting point for your front-end projects.  Just enough structure – no extra bloat.
+Statix uses Kickoff and Grunt to give you a minimal starting point for your front-end projects.  Just enough structure; no extra bloat.
 
 ### Write content in Markdown
 
-One of the biggest pains in the ass is having to write content for static sites or templates in HTML.
+One of the biggest pain points for managing content is having to write it in plain HTML.
 
-Statix brings together the power of using a templating language (such as Handlebars), with the flexibility of being able to write content using [Markdown](http://daringfireball.net/projects/markdown/).
+Because Statix uses Assemble, it brings together the power of using a templating language (such as Handlebars), with the flexibility of being able to write content using [Markdown](http://daringfireball.net/projects/markdown/).
 
-This means that for small site builds (ones that don’t need a CMS) content editors can update a much more readable markdown file, rather than dig into HTML syntax.
+This means that content editors can update a much more readable markdown file, rather than dig into HTML syntax.
 
 
 ### Fast starting point
@@ -58,7 +60,7 @@ There’s no complicated config to mess around with before you start.  Once inst
 
 Statix can be extended as much or as little as you like.
 
-The base setup of Statix only utilises a very small amount of Assemble’s features. If you want to use it’s more powerful templating functionality then you can extend this in the usual way, as you would if you were using Assemble on it’s own without the Statix framework.
+The base setup of Statix only utilises a very small amount of Assemble’s features. If you want to use it’s more powerful templating functionality then you can extend this in the usual way, as you would if using Assemble on it’s own without the base Statix setup.
 
 
 ---
@@ -125,7 +127,7 @@ Statix is a combination of three tools; [Assemble](http://assemble.io/), [Kickof
 
 Don't want to use Kickoff?
 
-That’s cool – Statix has been built so the you can do this very easily.
+That’s cool – Statix has been built so the you can use any front-end framework you like.
 
 
 ### To replace the SCSS
@@ -146,7 +148,7 @@ Then, in `/_grunt-configs/javascript.js` either change the references to your ow
 
 Statix uses Grunt to take care of simple tasks like minification and concatenation.
 
-If you know Grunt yourself, you can change pretty much any aspect of the config as you would any other Grunt project.  If you don't like certain default config options of Statix, fork the repo and change them!
+If you know Grunt, you can change pretty much any aspect of the config as you would any other Grunt project.  If you don't like certain default config options of Statix, fork the repo and change them!
 
 
 ---

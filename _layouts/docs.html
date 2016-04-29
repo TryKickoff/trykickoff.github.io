@@ -7,7 +7,7 @@ layout: default
 </section>
 
 <div class="l-container">
-	<div class="g g--gutter g--stacked">
+	<div class="g g--gutter g--stack">
 		<div class="g-span3--mid g-col">
 			{% include docsnav.html %}
 		</div>
@@ -18,7 +18,7 @@ layout: default
 
 			{% if page.next %}
 				<h3 class="nextTitle">Where next?</h3>
-				<div class="blockLinks g g--stacked">
+				<div class="blockLinks g g--stack">
 					{% for item in page.next %}
 					<div class="g-col g-span6--mid">
 						{% if item.link %}

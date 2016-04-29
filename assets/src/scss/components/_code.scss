@@ -19,6 +19,7 @@ pre {
 	@include font-size($type-small);
 	color: $code-textColor;
 	tab-size: 2;
+	white-space: pre;
 }
 
 // Inline code
@@ -36,7 +37,6 @@ pre {
 	// line-height: $leading-base;
 	color: $pre-textColor;
 	background-color: $pre-bgColor;
-	white-space: pre;
 	// white-space: pre-wrap;
 	// word-break: break-all;
 	// word-wrap: break-word;

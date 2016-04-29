@@ -68,8 +68,9 @@ meta:
 				<h3>Intuitive CSS / Sass</h3>
 				<p>Kickoff comes with a robust CSS framework; it provides many sensible defaults so that you can get your project up and running in the shortest possible time.</p>
 				<p>We make use of the excellent Sass CSS preprocessor which allows us to use many extra features beyond the capabilities of vanilla CSS.</p>
-				<p>Kickoff uses a bespoke naming scheme for classnames, inspired loosely by the BEM naming scheme. See <a href="/learn/css.html#namingscheme">this page</a> for more info on this.</p>
-				<p>Find out more in the <a href="/learn/css.html">docs</a></p>
+				<p>Kickoff uses a <a href="/learn/css.html#namingscheme">bespoke naming scheme</a> for classnames, inspired loosely by the BEM naming scheme.</p>
+				<p>We also use the <a href="https://github.com/postcss/autoprefixer">Autoprefixer library</a> to manage and add vendor prefixes where necessary to the CSS.</p>
+				<p>Find out more about Kickoff’s CSS <a href="/learn/css.html">in the docs</a>.</p>
 			</div>
 			<div class="g-col g-span6--mid">
 {% highlight scss%}
@@ -92,14 +93,15 @@ $type-scale               : 1.25; // Major third
  * There are no common breakpoints so these are just a suggestions
  * You'll need to define your own breakpoints to suit your design
  */
-$bp-narrow                : 400;  // Set in px
-$bp-mid                   : 750;  // Set in px
-$bp-wide                  : 1000;  // Set in px
-$bp-huge                  : 1250; // Set in px
+$breakpoints: (
+	narrow: 400px,
+	mid: 768px,
+	wide: 992px,
+	huge: 1600px
+);
 
 // Special breakpoints
-$bp-single-col            : $bp-mid; // Break to single column (used in the grid)
-$bp-rwd-text              : $bp-mid; // Reduce text size below this width
+$bp-rwd-text              : bp(mid); // Reduce text size below this width
 {% endhighlight %}
 			</div>
 		</div>
@@ -111,8 +113,9 @@ $bp-rwd-text              : $bp-mid; // Reduce text size below this width
 			<div class="g-col g-span6--mid">
 				<h3>Unopinionated Javascript</h3>
 				<p>Kickoff uses <a href="http://browserify.org">Browserify</a> to bundle javascript modules but beyond that, it does not prescribe a way for you to write your JS. We believe that writing JS in a modular way is the future.</p>
+				<p>We also use <a href="https://babeljs.io/">Babel</a> to allow developers to write ES2015 JavaScript right now in their projects, while providing support for older browsers.</p>
 				<p>The code on the right is part of our starter Javascript file ;)</p>
-				<p>Find out more in the <a href="/learn/js.html">docs</a></p>
+				<p>Find out more about Kickoff’s JavaScript <a href="/learn/js.html">in the docs</a>.</p>
 			</div>
 			<div class="g-col g-span6--mid">
 {% highlight js%}
@@ -138,7 +141,8 @@ ready(function () {
 			<div class="g-col g-span6--mid">
 				<p>Kickoff is powered by the <a href="http://gruntjs.com/">Grunt.js</a> task runner. It is used extensively to ease common development bottlenecks and allow us developers to focus on creating the best work possible.</p>
 				<p>Special attention has been made to ensure Kickoff works well with continuous delivery, if you develop that way.</p>
-				<p>Find out more in the <a href="/learn/grunt.html">docs</a></p>
+				<p>We are also working on extending Kickoff to use Gulp for those developers that prefer using it.</p>
+				<p>Find out more about Kickoff’s tooling <a href="/learn/grunt.html">in the docs</a>.</p>
 			</div>
 			<div class="g-col g-span6--mid">
 {% highlight js%}
@@ -224,7 +228,7 @@ grunt.registerTask('compile', [
 	<div class="l-container">
 		<h2 class="wideBoy-title">Like Kickoff? Super charge it using</h2>
 		<h1>
-			<a href="https://github.com/trykickoff/statix" class="statixLogo">
+			<a href="/statix" class="statixLogo">
 				<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 viewBox="0 0 209 60" enable-background="new 0 0 209 60" xml:space="preserve">
 					<g>
@@ -251,6 +255,6 @@ grunt.registerTask('compile', [
 			</a>
 		</h1>
 		<p>Makes the process of creating static HTML templates quick and easy</p>
-		<a href="https://github.com/trykickoff/statix" class="btn btn--primary" data-trak='{"category":"Home page","action":"Statix info","label":"CTA"}'>Find out more</a>
+		<a href="/statix" class="btn btn--primary" data-trak='{"category":"Home page","action":"Statix info","label":"CTA"}'>Find out more</a>
 	</div>
 </section>
