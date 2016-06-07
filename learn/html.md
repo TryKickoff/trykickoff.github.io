@@ -55,6 +55,9 @@ The styling for this is simple, so please modify it; see [/scss/partials/compone
 <hr class="sectionSplitter">
 <a name="socialmeta"></a>
 
+## <head> metatags
+For a list of everything that could go in the `<head>` of your document, see [github.com/joshbuchea/HEAD](https://github.com/joshbuchea/HEAD)
+
 ## Social meta tags
 We recommend that each site created with Kickoff also include social meta tags so that whenever users share your content, they are presented with useful share/social content. See the snippet below for the recommended items:
 

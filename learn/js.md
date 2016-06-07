@@ -39,13 +39,16 @@ This file can be used to contain or reference your site/app JavaScript code.
 
 ### Folder Structure
 
-Kickoff has a very simple folder structure for it’s JavaScript; as a base Kickoff contains `helpers` and `libs` directories.
+Kickoff has a very simple folder structure for it’s JavaScript; as a base Kickoff contains `utils`, `standalone` and a `modules` directories.
 
-#### `assets/src/js/libs`
+#### `assets/src/js/modules`
+This directory is where you ought to put all your local, non-npm modules.
 
-This folder contains any 3rd party libraries used in your Kickoff project that are not installed with npm.
+#### `assets/src/js/utils`
+This directory is where you ought to put all your local utility scripts. These are the simple, single-serving scripts that are shared by more than one module.
 
-By default, Kickoff includes [Modernizr](http://modernizr.com/), although removing it is very straightforward.
+#### `assets/src/js/standalone`
+Any script/file in this directory will be copied, without modification, to the `assets/dist/js/standalone` directory. As an example, we added our Modernizr.js file here
 
 For more information on how Kickoff uses 3rd party libraries, [checkout the documentation below](#libs).
 
@@ -93,56 +96,38 @@ npm install
 #### Default NPM dependencies
 
 * [lite-ready](https://www.npmjs.com/package/lite-ready) - Developed by Nic Bell, this is our version of DOMready that is a little bit smarter than the rest
-* [Swiftclick](https://github.com/tmwagency/swiftclick) - Developed by Ivan Hayes, SwiftClick is a library created to eliminate the 300ms click event delay on touch devices.
-* [Trak.js](https://github.com/mrmartineau/trak.js) - Developed by Zander Martineau, trak.js is a universal analytics event tracking API
 * [Console](https://github.com/matthewhudson/console) - Drop-in replacement for console - a cross-environment fix for missing methods
 
 These packages aren’t hard dependencies and can be removed by removing them from the `package.json` before your install your dependencies.
 
 #### Recommended 3rd party npm packages
+If you need to add any 3rd party library code, we suggest that you install it from [npm](https://npmjs.org). [Libraries.io](http://libraries.io) however, has a better search than npm. There are thousands of packages on npm, here are a few that we find particularly useful:
 
-There are thousands of packages on npm, here are a few that we find particularly useful:
-
+* [lodash](https://lodash.com/) - A JavaScript utility library delivering consistency, modularity, performance, & extras `npm i lodash`
+* [lazysizes](https://www.npmjs.com/package/lazysizes) - High performance (jankfree) lazy loader for images (including responsive images), iframes and scripts (widgets) `npm i lazysizes`
 * [attach.js](https://www.npmjs.com/package/attach.js) - Attaches JavaScript to HTML without messy selectors `npm i attach.js`
 * [D'accord validation](https://www.npmjs.com/package/daccord-validation) - Kickoff validation plugin for forms. Uses HTML 5 form attributes to trigger validation tests `npm i daccord-validation`
+* [Dominus](https://www.npmjs.com/package/dominus) - Lean DOM Manipulation and a great alternative to jQuery at a fraction of the size `npm i dominus`
 * [jQuery](https://github.com/jquery/jquery/) - A fast, small, and feature-rich JavaScript library
 * [Cookies](https://github.com/ScottHamper/Cookies/) - Developed by Scott Hamper, Cookies is a great Cookie manipulation library `npm i cookies-js`
 * [Bullet pubsub](https://www.npmjs.com/package/bullet-pubsub) - A lightweight and simple to use pub-sub library. `npm i bullet-pubsub`
 * [utube](https://www.npmjs.com/package/utube) - Youtube video player class `npm i utube`
 * [moment.js](https://www.npmjs.com/package/moment) - Parse, validate, manipulate, and display dates  `npm i moment`
 * [scroll](https://www.npmjs.com/package/scroll) - A function that animates an element’s scrollTop/scrollLeft values `npm i scroll`
-* [lodash](https://lodash.com/) - A JavaScript utility library delivering consistency, modularity, performance, & extras `npm i lodash`
-* [lazysizes](https://www.npmjs.com/package/lazysizes) - High performance (jankfree) lazy loader for images (including responsive images), iframes and scripts (widgets) `npm i lazysizes`
-* [object-assign](https://www.npmjs.com/package/object-assign) - ES6 Object.assign() ponyfill `npm i object-assign`
-
-#### Not using jQuery?
-If you're not using jQuery, these npm packages are great alternatives for some of it's functionality:
-
-* [Dominus](https://www.npmjs.com/package/dominus) - Lean DOM Manipulation `npm i dominus`
-* [Atomic](https://www.npmjs.com/package/atomicjs) - A tiny AJAX module with great browser support `npm i atomicjs`
+* [Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client
+* [Flickity](https://www.npmjs.com/package/flickity) - Flickity carousel - Touch, responsive, flickable galleries
+* [Swiftclick](https://github.com/tmwagency/swiftclick) - Developed by Ivan Hayes, SwiftClick is a library created to eliminate the 300ms click event delay on touch devices.
+* [Trak.js](https://github.com/mrmartineau/trak.js) - Developed by Zander Martineau, trak.js is a universal analytics event tracking API
 
 <hr class="sectionSplitter">
 <a name="shims"></a>
 
-## Shims
+## Shims and polyfills
 
-To manage JavaScript Shims, we use a Grunt plugin called [Shimly](https://github.com/nicbell/Shimly), created by  Nic Bell.  To find out more about Shimly, [check out our Grunt task documentation](grunt.html#task-shimly).
+From version 7, Kickoff now uses the [polyfill.io](http://polyfill.io) service to dynamically add any polyfills that a browser should need.
 
 <hr class="sectionSplitter">
-<a name="libs"></a>
-
-## Libraries
-
-If you need to add any 3rd party library code, we suggest placing it in the [assets/src/js/libs/](https://github.com/trykickoff/kickoff/tree/master/assets/src/js/libs) folder.
-
-By default, Kickoff includes the following libraries:
+<a name="modernizr"></a>
 
 ### Modernizr
-
-The latest version of Modernizr, configured to detect some commonly used CSS features, is included by default. You may wish to create your own [custom Modernizr build](http://www.modernizr.com/download/) and replace the included version.
-
-To remove Modernizr from Kickoff, simply delete the [following line from index.html](https://github.com/trykickoff/kickoff/blob/master/index.html#L26) in the root directory:
-
-```js
-<script src="/assets/dist/js/libs/modernizr.min.js"></script>
-```
+Modernizr is included with Kickoff if you need support for non-flexbox supporting browsers. You may wish to create your own [custom Modernizr build](http://www.modernizr.com/download/) and replace the included version.
