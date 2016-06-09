@@ -11,9 +11,9 @@ next:
  - title: Kickoff's Javascript
    body: Minimal and flexible, we show you how Kickoff structures it’s JS.
    link: js.html
- - title: Understanding Grunt
-   body: We’ll take you through some Grunt basics and explain how Kickoff is configured to use it.
-   link: grunt.html
+ - title: Tooling
+   body: We’ll take you through Kickoff's tooling options and configuration
+   link: tooling.html
 ---
 
 <a name="philosophy"></a>
@@ -39,6 +39,7 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 
 ```
 .
+├── README.md
 ├── _color-palette.scss
 ├── _dependencies.scss
 ├── _global.scss
@@ -46,27 +47,35 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 ├── _reset.scss
 ├── _typography.scss
 ├── _variables.scss
+├── changelog.md
 ├── components
 │   ├── _buttons.scss
 │   ├── _code.scss
 │   ├── _embedded-content.scss
 │   ├── _fluid-video.scss
-│   ├── _forms-custom-file.scss
-│   ├── _forms-custom-radiocheckboxes.scss
-│   ├── _forms-custom-custom-select.scss
-│   ├── _forms.scss
-│   ├── _grid.scss
 │   ├── _icons.scss
 │   ├── _links.scss
 │   ├── _lists.scss
 │   ├── _media-object.scss
 │   ├── _scrollbars.scss
 │   ├── _skip-navigation.scss
-│   └── _tables.scss
+│   ├── _tables.scss
+│   ├── forms
+│   │   ├── README.md
+│   │   ├── _form-helpers.scss
+│   │   ├── _forms-custom-file.scss
+│   │   ├── _forms-custom-radioscheckboxes.scss
+│   │   ├── _forms-custom-select.scss
+│   │   └── _forms.scss
+│   └── grid
+│       ├── README.md
+│       ├── _grid-helpers.scss
+│       └── _grid.scss
 ├── functions
 │   ├── _functions.scss
+│   ├── _get-value.scss
 │   ├── _golden-ratio.scss
-│   ├── _get-breakpoint.scss
+│   ├── _map-deep-get.scss
 │   ├── _modular-scale.scss
 │   ├── _px-to-em.scss
 │   ├── _px-to-rem.scss
@@ -74,16 +83,16 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 │   └── _tint-shade.scss
 ├── kickoff.scss
 ├── mixins
-│   ├── _form-helpers.scss
-│   ├── _grid-helpers.scss
 │   ├── _hidpi.scss
 │   ├── _mixins.scss
 │   ├── _module-naming-helpers.scss
 │   ├── _position.scss
 │   ├── _responsive.scss
+│   ├── _units.scss
 │   ├── _utility.scss
 │   └── _vertical-center.scss
 ├── partials
+│   ├── _browser-upgrade.scss
 │   ├── _footer.scss
 │   └── _masthead.scss
 ├── styleguide.scss
@@ -113,9 +122,60 @@ Used for entire views (or pages). Usually these files consist of small tweaks th
 
 The [mixins](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/mixins/) directory contains a few mixins that will help you day-to-day. Amongst others, `_responsive.scss` contains our media query mixins ([read below](#responsive) for more info), `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the `@include font-size()` mixin for specifying your font sizes with a `px` value but outputting both `rem` and `px` in your compiled styles.
 
+##### Font-size mixin
+This mixin allows input of all kinds. It essentially converts pixel values to REMs.
+
+```scss
+$module-font-size: 30px;
+
+a {
+	@include font-size(small); // uses the $type map. use a keyword to set the size
+	@include font-size(20); // unitless values are seen to be px
+	@include font-size($module-font-size); // vars can be used, these should be set in px
+}
+```
+
 #### Functions
 
 The [functions](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/functions/) directory contains various Sass functions that are used in the framework and that you might find useful.
+
+##### Modular scale function
+This function is used to generate font-sizes with a pleasing vertical rythm. The scale is based on the base font size and a scale factor, see an example of this [here](http://www.modularscale.com/?20&px&1.25&web&text).
+
+Our `$type` sass map uses the `modular-scale` function extensively:
+
+```scss
+$type: (
+	micro : modular-scale($font-size-base, -2, $type-scale),
+	small : modular-scale($font-size-base, -1, $type-scale), // h5, h6
+	base  : modular-scale($font-size-base, 0, $type-scale),  // p, h4
+	mid   : modular-scale($font-size-base, 1, $type-scale),  // h3
+	large : modular-scale($font-size-base, 1, $type-scale),  // h2
+	jumbo : modular-scale($font-size-base, 3, $type-scale)   // h1
+);
+```
+
+If you have a custom element and need to go larger or smaller on the modular scale, try using something like this:
+
+```scss
+.article-title {
+	@include font-size(modular-scale($font-size-base, 4, $type-scale));
+}
+```
+
+#### Breakpoint function
+This can be used to easily get the value from the `$breakpoints` sass map:
+
+```css
+bp(mid) /* 750px */
+```
+
+#### Type size function
+This can be used to easily get the value from the `$type` sass map:
+
+```css
+type(large) /* modular-scale($font-size-base, 2, $type-scale) */
+```
 
 ### Important files
 
@@ -128,16 +188,6 @@ In older versions of Kickoff (and still available in the generator), we compile 
 
 * `kickoff.scss` is compiled to `/assets/dist/css/kickoff.css` and is used on Internet Explorer 9+, Chrome, Safari, Firefox and Opera.
 * `kickoff-old-ie.scss` is compiled to `/assets/dist/css/kickoff-old-ie.css` and is used on Internet Explorer 8 and below only. These browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see below](#responsive) for more details on this.
-
-#### Add your stylesheets to HTML using the code below
-```html
-<!--[if lte IE 8]>
-	<link rel="stylesheet" href="/assets/dist/css/kickoff-old-ie.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-	<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
-<!--<![endif]-->
-```
 
 ---
 
@@ -170,8 +220,7 @@ We take full advantage of Sass' variables and there are two key files that shoul
 This is where you define your global Sass variables. Here you can define your:
 
 * **Global typographic styles** — including font choices and typographic scale.
-* **Responsive breakpoints** — we try not to target specific devices or device types with these variables.  Instead they should be set with the design in mind.
-  Breakpoints included are: `$bp-narrow`, `$bp-mid`, `$bp-wide`, `$bp-huge` and a few *special* vars. These include `$bp-single-col` for when you need your design to break from a single column to multiple columns, `$bp-block-grid-narrow` for use with the block grids and `$bp-rwd-text` for our simple implementation of responsive typography.
+* **Responsive breakpoints** — we try not to target specific devices or device types with these variables.  Instead they should be set with the design in mind. The `$breakpoints` sass map, contains our default breakpoints, these are used by the grid and can be referenced by using the `bp(mid)` sass function. See how to use the breakpoints when using our mixins, [below](#responsive).
 
 ---
 
@@ -255,7 +304,7 @@ This obviously isn’t compulsory to use in your own Kickoff projects, but is do
 
 ```scss
 /* Descriptors use camel-casing if more than one word: e.g. twoWords */
-.skipToContent {
+.form {
 	...
 }
 
@@ -269,10 +318,10 @@ This obviously isn’t compulsory to use in your own Kickoff projects, but is do
 /* ========= */
 
 /* Modifier element use a double hyphen: -- */
-.btn {
+.form {
 	...
 }
-.btn--primary {
+.form--horizontal {
 	...
 }
 
@@ -291,8 +340,57 @@ a {
 }
 ```
 
+#### Module naming helper mixins
+In v7, we included some mixins to help keep consistent CSS output. See below:
+
+```scss
+@include component('foo') {
+	margin: auto;
+
+	@include modifier('bar') {
+		padding: 20px;
+	}
+
+	@include modifier('baz') {
+		padding: 50px;
+
+		@include respond-min(mid) {
+			padding: 20px;
+		}
+	}
+
+	@include state('active') {
+		background-color: green;
+	}
+}
+```
+
+```css
+.foo {
+  margin: auto;
+}
+
+.foo--bar {
+  padding: 20px;
+}
+
+.foo--baz {
+  padding: 50px;
+}
+
+@media screen and (min-width: 46.875em) {
+  .foo--baz {
+    padding: 20px;
+  }
+}
+
+.foo.is-active {
+  background-color: green;
+}
+```
+
 <hr class="sectionSplitter">
 
 ### Modernizr
 
-Kickoff includes a version of Modernizr by default. To find out how to use it, see [their documentation](http://modernizr.com) or see our [Javascript documentation](js.html) to find out where it is included.
+Kickoff includes a version of Modernizr but it is not used by default. If you are using our new grid and are supporting IE8 or below, you will need it to detect flexbox support. To find out how to use it, see [their documentation](http://modernizr.com) or see our [Javascript documentation](js.html) to find out where it is included.

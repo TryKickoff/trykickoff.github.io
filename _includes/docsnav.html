@@ -1,23 +1,16 @@
 <ul class="sidebar-nav unstyled">
 	<li><a href="/learn/index.html"{% if page.navactive == 'docsindex' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Meet Kickoff"}'>Meet Kickoff</a></li>
 	<li><a href="/learn/get.html"{% if page.navactive == 'docsget' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Get Kickoff"}'>Get Kickoff</a></li>
-	<li><a href="/learn/use.html"{% if page.navactive == 'docsuse' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Use Kickoff"}'>Use Kickoff</a>
-		{% if page.navactive == 'docsuse' %}
-		<ul class="sidebar-subnav unstyled">
-			<li><a href="#checklist">Checklist</a></li>
-		</ul>
-		{% endif %}
-	</li>
+	<li><a href="/learn/checklist.html">Post-install checklist</a></li>
 </ul>
 
 <ul class="sidebar-nav unstyled">
-	<li><a href="/learn/grunt.html"{% if page.navactive == 'docsgrunt' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Grunt"}'>Grunt</a>
-		{% if page.navactive == 'docsgrunt' %}
+	<li><a href="/learn/tooling.html"{% if page.navactive == 'docstooling' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Tooling"}'>Tooling</a>
+		{% if page.navactive == 'docstooling' %}
 		<ul class="sidebar-subnav unstyled">
 			<li><a href="#setup">Setup</a></li>
-			<li><a href="#tasks">Kickoff Tasks</a></li>
-			<li><a href="#config">Config</a></li>
-			<li><a href="#taskindex">Task index</a></li>
+			<li><a href="#grunt">Grunt</a></li>
+			<li><a href="#npm-scripts">npm scripts</a></li>
 		</ul>
 		{% endif %}
 	</li>

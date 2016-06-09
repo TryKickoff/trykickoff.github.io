@@ -10,9 +10,8 @@ meta:
 
 ### Before you start
 
-* Install Jekyll, redcarpet and Sass globally - `gem install jekyll redcarpet`
+* Install Jekyll, redcarpet and Sass globally - `gem install jekyll`
 * Install Node from [nodejs.org](http://nodejs.org/)
-* Install Grunt CLI - `npm install -g grunt-cli`
 
 ### Step 1
 
@@ -29,7 +28,7 @@ Run `npm install` to install all Grunt's dependencies
 ### Step 4
 
 * Run `grunt watcher` and a browser window will open with the site
-* Run `jekyll serve` as a separate process to compile the site. It can then be viewed at `http://localhost:4000`
+* Run `jekyll serve --watch` as a separate process to compile the site. It can then be viewed at `http://localhost:4000`
 
 #### Please note
 
