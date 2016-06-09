@@ -857,7 +857,6 @@ figure {
 }
 
 .code-lrg {
-	line-height: 1.5;
 	display: block;
 	text-align: left;
 	padding: 1em 1em 1em 110px;
@@ -867,16 +866,16 @@ figure {
 	color: #fff;
 	background-color: $blueDark;
 	@include font-size(13);
+	white-space: inherit;
 
 	&:before {
 		content: attr(data-before);
 		position: absolute;
 		top: 0; left: 0; bottom: 0;
 		width: 90px;
-		padding: 1em 0;
+		padding: 1em;
 		background-color: $blue;
 		display: block;
-		text-align: center;
 		font-weight: $font-weight-bold;
 	}
 }
