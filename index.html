@@ -10,7 +10,7 @@ meta:
 <section class="wideBoy wideBoy--dark bigBoy primary text-centre">
 	<div class="l-container">
 		<a href="https://github.com/TryKickoff/kickoff/releases/latest" class="currentVersion currentVersion--tag"></a>
-		<h1 class="intro"><span class="logoStyle">Kick<span>off</span></span> is a lightweight front-end framework for creating scalable, responsive&nbsp;sites.</h1>
+		<h1 class="intro"><span class="logoStyle">Kick<span>off</span></span> is a lightweight front-end framework for creating scalable, performant and responsive sites.</h1>
 
 		<a href="learn/" class="btn btn--primary" data-trak='{"category":"Home page","action":"Get started","label":"CTA"}'>Get Started</a> <a href="https://github.com/TryKickoff/kickoff/releases/latest" class="btn btn--hollow cta-whatsNew" data-trak='{"category":"Home page","action":"Whats new","label":"CTA"}'>What's new in <span class="currentVersion"></span></a>
 
@@ -28,14 +28,10 @@ meta:
 
 		<div class="g g--gutter g--stack">
 			<div class="g-col g-span6--mid">
-				<code class="code-lrg" data-before="install:">
-					npm install -g generator-kickoff yo
-				</code>
+				<code class="code-lrg" data-before="install:">npm install -g generator-kickoff yo</code>
 			</div>
 			<div class="g-col g-span6--mid">
-				<code class="code-lrg" data-before="use:">
-					yo kickoff
-				</code>
+				<code class="code-lrg" data-before="use:">yo kickoff</code>
 			</div>
 		</div>
 
@@ -45,7 +41,7 @@ meta:
 			git clone https://github.com/trykickoff/kickoff.git your-project-folder
 		</code>
 
-		<p class="l-mb0 text-right">
+		<p class="l-mb0 text-center">
 			Find other ways to get Kickoff <a href="learn/get.html">in our documentation.</a>
 			<br>
 			Follow <a href="http://twitter.com/trykickoff" data-trak='{"category":"Home page","action":"Follow on Twitter","label":"Social"}'>@trykickoff</a> for updates.
@@ -78,15 +74,18 @@ meta:
  * Typography variables
  */
 $font-size-base           : 20;
-$font-size-base-px        : $font-size-base * 1px;
-$font-size-base-narrow    : $font-size-base - 2;
-$font-size-base-narrow-px : $font-size-base-narrow * 1px;
-
 $leading-base             : 1.4;
 $line-height-base         : round($font-size-base * $leading-base); // 20 * 1.4
-$baseline                 : $line-height-base * 1px;
-
 $type-scale               : 1.25; // Major third
+
+$type: (
+	micro                   : modular-scale($font-size-base, -2, $type-scale),
+	small                   : modular-scale($font-size-base, -1, $type-scale), // h5, h6
+	base                    : modular-scale($font-size-base, 0, $type-scale),  // p, h4
+	mid                     : modular-scale($font-size-base, 1, $type-scale),  // h3
+	large                   : modular-scale($font-size-base, 2, $type-scale),  // h2
+	jumbo                   : modular-scale($font-size-base, 3, $type-scale)   // h1
+);
 
 /**
  * Breakpoints
@@ -99,9 +98,6 @@ $breakpoints: (
 	wide: 992px,
 	huge: 1600px
 );
-
-// Special breakpoints
-$bp-rwd-text              : bp(mid); // Reduce text size below this width
 {% endhighlight %}
 			</div>
 		</div>
@@ -120,14 +116,19 @@ $bp-rwd-text              : bp(mid); // Reduce text size below this width
 			<div class="g-col g-span6--mid">
 {% highlight js%}
 // npm modules
-var SwiftClick = require('swiftclick');
-var trak = require('trak.js');
-var ready = require('lite-ready');
+import ready from 'lite-ready';
+import $$ from 'double-dollar';
+window.$$ = $$;
 
-// DOM ready code goes in here
-ready(function () {
-	var swiftclick = SwiftClick.attach(document.body);
-	trak.start();
+// Bundle global libs that don't return a value
+import 'console';
+
+// Add your project-specific modules here
+import moduleTest from './modules/moduleTest';  // this is a test, uncomment this line to try it
+
+// Your DOM ready code goes in here
+ready(() => {
+	moduleTest();
 });
 {% endhighlight %}
 			</div>
@@ -140,6 +141,7 @@ ready(function () {
 		<div class="g g--gutter g--stack">
 			<div class="g-col g-span6--mid">
 				<p>Kickoff is powered by the <a href="http://gruntjs.com/">Grunt.js</a> task runner. It is used extensively to ease common development bottlenecks and allow us developers to focus on creating the best work possible.</p>
+				<h3>Continous delivery</h3>
 				<p>Special attention has been made to ensure Kickoff works well with continuous delivery, if you develop that way.</p>
 				<p>We are also working on extending Kickoff to use Gulp for those developers that prefer using it.</p>
 				<p>Find out more about Kickoff’s tooling <a href="/learn/grunt.html">in the docs</a>.</p>
@@ -150,16 +152,22 @@ ready(function () {
 grunt.registerTask('serve', [
 	'compile',
 	'browserSync:serve',
-	'watch'
+	'watch',
+]);
+
+
+// grunt watcher
+grunt.registerTask('watcher', [
+	'compile',
+	'watch',
 ]);
 
 // grunt compile
 grunt.registerTask('compile', [
-	'shimly',
-	'copy:modernizr',
 	'browserify',
 	'postscss',
-	'images'
+	'images',
+	'copy:jsStandalone',
 ]);
 {% endhighlight %}
 			</div>
@@ -218,7 +226,7 @@ grunt.registerTask('compile', [
 					<p>Let us know so we can add it here.</p>
 			</div>
 			<div class="g-span4--mid g-col">
-				<a href="mailto:trykickoff@gmail.com" class="btn btn--secondary" data-trak='{"category":"Home page","action":"Email us","label":"CTA"}'>Email us your story</a>
+				<a href="https://twitter.com/intent/tweet?&text=@TryKickoff I use you! 🎉" class="btn btn--secondary" data-trak='{"category":"Home page","action":"Email us","label":"CTA"}'>Tweet us your story</a>
 			</div>
 		</div>
 	</div>
