@@ -3545,10 +3545,15 @@ figure {
   .demo-visual code {
     white-space: pre; }
 
-.demo-code pre {
-  margin-bottom: 0;
-  max-height: 400px;
-  overflow: auto; }
+.demo-code {
+  display: none; }
+  .demo-code pre {
+    margin-bottom: 0;
+    max-height: 400px;
+    overflow: auto; }
+
+.demo-code--simple {
+  display: block !important; }
 
 @font-face {
   font-family: 'icomoon';

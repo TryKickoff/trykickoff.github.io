@@ -57,7 +57,7 @@ Let’s take a look at how all of that works with some examples.
 			<div class="g-col g-span4">Column 3 of 3</div>
 		</div>
 	</div>
-	<div class="demo-code">
+	<div class="demo-code demo-code--simple">
 {% highlight html %}
 <div class="g">
 	<div class="g-col g-span4">Column One</div>
@@ -270,7 +270,7 @@ If you want grid columns to stack by default, you can add the `.g--stack` class 
 			<div class="g-col">Column 3 of 3</div>
 		</div>
 	</div>
-	<div class="demo-code">
+	<div class="demo-code demo-code--simple">
 {% highlight html %}
 <div class="g g--stack">
 	<div class="g-col">Column 1 of 3</div>
@@ -293,7 +293,7 @@ For example, if we want our columns to stack until the `mid` breakpoint and to b
 			<div class="g-col g-span4--mid">Column 3 of 3</div>
 		</div>
 	</div>
-	<div class="demo-code">
+	<div class="demo-code demo-code--simple">
 {% highlight html %}
 <div class="g g--stack">
 	<div class="g-col g-span4--mid">Column 1 of 3</div>
@@ -314,7 +314,7 @@ Alternatively, we can modify the `.g--stack` class slightly to only stack our co
 			<div class="g-col g-span4">Column 3 of 3</div>
 		</div>
 	</div>
-	<div class="demo-code">
+	<div class="demo-code demo-code--simple">
 {% highlight html %}
 <div class="g g--stack--mid">
 	<div class="g-col g-span4">Column 1 of 3</div>
@@ -363,7 +363,7 @@ The example below shows how you can do this.   Here our three grid columns will 
 			<div class="g-col g-span12 g-span4--wide"><div class="g-content">&nbsp;</div></div>
 		</div>
 	</div>
-	<div class="demo-code">
+	<div class="demo-code demo-code--simple">
 {% highlight html %}
 <div class="g g--gutter">
 	<div class="g-col g-span6 g-span4--wide">…</div>
@@ -386,7 +386,7 @@ We can easily combine our stacking classes with column width classes to define f
 			<div class="g-col g-span4--mid g-span2--wide g-span6--huge"><div class="g-content">&nbsp;</div></div>
 		</div>
 	</div>
-	<div class="demo-code">
+	<div class="demo-code demo-code--simple">
 {% highlight html %}
 <div class="g g--stack g--gutter">
 	<div class="g-col g-span9--mid g-span2--wide g-span12--huge">…</div>
@@ -525,7 +525,7 @@ Nesting grids is made very simple.  Just apply the base grid classes to an eleme
 			<div class="g-col g-span6"><div class="g-content">&nbsp;</div></div>
 		</div>
 	</div>
-	<div class="demo-code">
+	<div class="demo-code demo-code--simple">
 {% highlight html %}
 <div class="g g--gutter">
 	<div class="g-col g-span9">…</div>
@@ -579,7 +579,7 @@ N.b.  The held width will be calculated in pixels relative to the `$layout-max-w
 			<div class="g-col g-span6 g-span9--mid g-span6--wide"><div class="g-content">&nbsp;</div></div>
 		</div>
 	</div>
-	<div class="demo-code">
+	<div class="demo-code demo-code--simple">
 {% highlight html %}
 <div class="g g--gutter">
 	<div class="g-col g-span6 g-span3--mid g-span2--wide g-holdWidth--wide">…</div>
