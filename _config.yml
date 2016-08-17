@@ -1,22 +1,6 @@
 ---
 title: Try Kickoff
-relative_permalinks: false
-timezone: UTC
-include: ['.htaccess']
-exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace','bower_components']
 timezone: Europe/London
-
-paginate: 8
-paginate_path: /page:num
-
-encoding: "utf-8"
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-gems: ['jekyll-paginate']
-
 collections:
   posts:
     title: Posts
@@ -36,3 +20,22 @@ defaults:
     type: pages
   values:
     layout: page
+relative_permalinks: false
+include:
+- ".htaccess"
+exclude:
+- node_modules
+- scss
+- Gruntfile.js
+- package.json
+- "*.sublime-project"
+- "*.sublime-workspace"
+- bower_components
+paginate: 8
+paginate_path: "/page:num"
+encoding: utf-8
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+gems:
+- jekyll-paginate
