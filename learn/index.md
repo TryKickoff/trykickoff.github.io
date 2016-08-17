@@ -1,21 +1,20 @@
 ---
-layout: docs
 title: Meet Kickoff
-subtitle:
+layout: docs
+subtitle: 
 navgroup: docs
 navactive: docsindex
-
 meta:
   description: Kickoff framework overview
-
 next:
- - title: Get Kickoff
-   body: Find out how to get your hands on Kickoff here.
-   link: get.html
- - title: Use Kickoff
-   body: Ready to get your hands dirty?<br>We’ll show you where to start.
-   link: use.html
+- title: Get Kickoff
+  body: Find out how to get your hands on Kickoff here.
+  link: get.html
+- title: Use Kickoff
+  body: Ready to get your hands dirty?<br>We’ll show you where to start.
+  link: use.html
 ---
+
 **Kickoff** is a lightweight front-end framework for creating scalable, responsive sites.
 
 As front-end developers, the type of project we work on is becoming more and more diverse. Kickoff aims to help keep a consistent structure and style across all of your projects, without adding the bloat that other frameworks can lead to.

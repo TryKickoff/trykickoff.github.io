@@ -1,20 +1,20 @@
 ---
-layout: docs
 title: Get Kickoff
+layout: docs
 navgroup: docs
 navactive: docsget
-
 meta:
-  description: Want to use git pull, yo kickoff or just download a zip. Find out how to get your hands on Kickoff here
-
+  description: Want to use git pull, yo kickoff or just download a zip. Find out how
+    to get your hands on Kickoff here
 next:
- - title: Do the post-install checklist
-   body: Follow the post-install checklist to get your project setup nice and quickly
-   link: checklist.html
- - title: Tooling
-   body: We’ll take you through Kickoff's tooling options and configuration
-   link: tooling.html
+- title: Do the post-install checklist
+  body: Follow the post-install checklist to get your project setup nice and quickly
+  link: checklist.html
+- title: Tooling
+  body: We’ll take you through Kickoff's tooling options and configuration
+  link: tooling.html
 ---
+
 There are a few easy ways to get started with Kickoff.  Take a look below and find the way that best suits your particular needs.
 
 ### Use the Yeoman Generator

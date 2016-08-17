@@ -1,19 +1,17 @@
 ---
+title: JavaScript
 layout: docs
 navgroup: docs
 navactive: docsjs
-title: JavaScript
-
 meta:
   description: Understand how we use Javascript in Kickoff
-
 next:
- - title: Kickoff's CSS
-   body: Take a look at how Kickoff structures it’s CSS.
-   link: css.html
- - title: The Kickoff Grid
-   body: Find out how to use the default Kickoff grid in your project.
-   link: grid.html
+- title: Kickoff's CSS
+  body: Take a look at how Kickoff structures it’s CSS.
+  link: css.html
+- title: The Kickoff Grid
+  body: Find out how to use the default Kickoff grid in your project.
+  link: grid.html
 ---
 
 Kickoff has a very simple base JavaScript structure.

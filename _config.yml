@@ -1,15 +1,23 @@
-relative_permalinks: false
-include: ['.htaccess']
-exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace','bower_components']
-timezone: Europe/London
-
-paginate: 8
-paginate_path: /page:num
-
-encoding: "utf-8"
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-gems: ['jekyll-paginate']
+---
+title: Try Kickoff
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    permalink: "/posts/:title/"
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+permalink: pretty

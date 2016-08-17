@@ -1,10 +1,12 @@
 ---
+title: Add responsive helper classes to your project
+date: 2016-01-18 00:00:00 Z
 section: blog
 layout: post
-title: "Add responsive helper classes to your project"
 excerpt: "#tipsForKickoff"
 navgroup: blog
 ---
+
 Kickoff doesn't include responsive helper classes by default, but I (Zander) created some for a recent project. Assuming your Sass breakpoint variables (in [_variables.scss](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/_variables.scss#L56-L64)) look something like this:
 
 ```scss

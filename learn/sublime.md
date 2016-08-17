@@ -1,19 +1,19 @@
 ---
+title: Sublime Text snippets for Kickoff
 layout: docs
 navgroup: docs
 navactive: docssublime
-title: Sublime Text snippets for Kickoff
-
 meta:
-  description: Use Sublime? These handy snippets will make life with Kickoff even easier.
-
+  description: Use Sublime? These handy snippets will make life with Kickoff even
+    easier.
 next:
- - title: See some demos
-   body: View demos of all our components and modules.
-   link: ../demos/components.html
- - title: Use Yeoman
-   body: The fastest way to get Kickoff is using our Yeoman generator. Find out about it here.
-   link: yeoman.html
+- title: See some demos
+  body: View demos of all our components and modules.
+  link: "../demos/components.html"
+- title: Use Yeoman
+  body: The fastest way to get Kickoff is using our Yeoman generator. Find out about
+    it here.
+  link: yeoman.html
 ---
 
 If you use Sublime Text, we have created some snippets to use with the framework. They are common pieces of HTML markup, Sass, CSS & Javascript.

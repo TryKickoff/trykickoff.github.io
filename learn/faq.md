@@ -1,8 +1,8 @@
 ---
+title: Frequently asked questions
 layout: docs
 navgroup: docs
 navactive: docsfaq
-title: Frequently asked questions
 ---
 
 ### Who maintains Kickoff

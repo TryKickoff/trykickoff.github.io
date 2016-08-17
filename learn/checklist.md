@@ -1,20 +1,20 @@
 ---
+title: Kickoff setup checklist
 layout: docs
 navgroup: docs
 navactive: docschecklist
-title: Kickoff setup checklist
-
 meta:
   description: Our getting starting guide to help you find your way around the framework.
-
 next:
- - title: Get Kickoff
-   body: Find out how to get your hands on Kickoff here.
-   link: get.html
- - title: Understanding Grunt
-   body: We’ll take you through some Grunt basics and explain how Kickoff is configured to use it.
-   link: grunt.html
+- title: Get Kickoff
+  body: Find out how to get your hands on Kickoff here.
+  link: get.html
+- title: Understanding Grunt
+  body: We’ll take you through some Grunt basics and explain how Kickoff is configured
+    to use it.
+  link: grunt.html
 ---
+
 # Success!
 You installed Kickoff. To quickly get up and running there are a few things you will want to edit before adding any custom code.
 

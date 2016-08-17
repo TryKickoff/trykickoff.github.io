@@ -1,9 +1,8 @@
 ---
+title: Editing this website
 layout: docs
 navgroup: docs
 navactive: docsediting
-title: Editing this website
-
 meta:
   description: How to edit the Kickoff documentation site
 ---

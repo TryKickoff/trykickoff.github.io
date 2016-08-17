@@ -1,19 +1,17 @@
 ---
+title: The Grid
 layout: docs
 navgroup: docs
 navactive: docsgrid
-title: The Grid
-
 meta:
   description: Read Kickoff's Grid documentation
-
 next:
- - title: Kickoff's CSS
-   body: Take a look at how Kickoff structures it’s CSS.
-   link: css.html
- - title: Kickoff's Javascript
-   body: Minimal and flexible, we show you how Kickoff structures it’s JS.
-   link: js.html
+- title: Kickoff's CSS
+  body: Take a look at how Kickoff structures it’s CSS.
+  link: css.html
+- title: Kickoff's Javascript
+  body: Minimal and flexible, we show you how Kickoff structures it’s JS.
+  link: js.html
 ---
 
 Kickoff's Grid is a simple, fully responsive, grid framework that can help you build complex layouts very easily.  It is based on a 12 column grid layout and column widths can be set for each media query you specify.

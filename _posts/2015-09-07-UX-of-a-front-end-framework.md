@@ -1,12 +1,14 @@
 ---
+title: Improving the UX of a front-end framework
+date: 2015-09-07 00:00:00 Z
 comments: true
 section: blog
 type: article
 layout: post
-title: "Improving the UX of a front-end framework"
-excerpt: "How we focused on our users for the latest version of Kickoff"
+excerpt: How we focused on our users for the latest version of Kickoff
 image: 16488545384_d25c2ab1c2_z.jpg
 ---
+
 Back in May we [released v5.0.0 of Kickoff](https://github.com/TryKickoff/kickoff/releases/tag/5.0.0), the focus of this release was to improve the framework's UX. What does that mean? Can you have UX on a framework or a set of files? I believe you can, and here’s how we did it.
 
 Kickoff is predominantly used at my place of work, [TMW](http://tmwunlimited.com), but increasingly it is being used by more and more developers and other agencies. This means that we need to be more considered when changing things but we now have to focus on how it will be used by a wider community. Files should be where you expect; ‘things’ should be named in an intuitive manner; and the all important download/install has to be as easy as possible and we realised we needed to improve various things.

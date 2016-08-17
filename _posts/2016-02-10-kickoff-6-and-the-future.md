@@ -1,9 +1,11 @@
 ---
+title: Kickoff 6 and the future
+date: 2016-02-10 00:00:00 Z
 section: blog
 layout: post
-title: "Kickoff 6 and the future"
 navgroup: blog
 ---
+
 The latest major version of Kickoff was released last November and included many improvements. This post summarises all the important changes that you need to know about.
 
 ## Javascript bundling

@@ -1,16 +1,15 @@
 ---
+title: Demos
 layout: demo
 navgroup: demo
 navactive: demoindex
-title: Demos
-
 next:
- - title: Typography demo
-   body: See the default typography styles included with the framework
-   link: typography.html
- - title: Forms demo
-   body: See all the included form styles
-   link: forms.html
+- title: Typography demo
+  body: See the default typography styles included with the framework
+  link: typography.html
+- title: Forms demo
+  body: See all the included form styles
+  link: forms.html
 ---
 
 This section of the Kickoff docs will take you through the base styles and components that Kickoff includes, with accompanying demos.

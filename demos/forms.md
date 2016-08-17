@@ -1,21 +1,20 @@
 ---
+title: Form styling
 layout: demo
 body-class: show-grid
 navgroup: demo
 navactive: demoforms
-title: Form styling
-
 meta:
   description: See Kickoff's form demo
-
 next:
- - title: Typography demo
-   body: See the default typography styles included with the framework
-   link: typography.html
- - title: Components
-   body: See all the included components
-   link: components.html
+- title: Typography demo
+  body: See the default typography styles included with the framework
+  link: typography.html
+- title: Components
+  body: See all the included components
+  link: components.html
 ---
+
 Forms and their fields are often a nightmare to style, that is why Kickoff includes a great boilerplate for styling them. All styles can be found in [_forms.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss).
 
 <a name="singlefield"></a>

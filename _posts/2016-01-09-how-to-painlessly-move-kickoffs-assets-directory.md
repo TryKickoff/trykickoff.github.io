@@ -1,11 +1,13 @@
 ---
+title: How to painlessly move Kickoff’s assets directory
+date: 2016-01-09 00:00:00 Z
 section: blog
 layout: post
-title: "How to painlessly move Kickoff’s assets directory"
 excerpt: "#tipsForKickoff"
 canonical: http://martineau.tv/2016/01/how-to-painlessly-move-kickoffs-assets-directory/
 navgroup: blog
 ---
+
 Kickoff's assets directory resides in the root of the repo, it contains the framework's source  and compiled files. What if you needed the assets directory, not to be served from there but from another location? For example, a Wordpress theme would ideally serve assets from within the `wp-content/themes/` directory. Wouldn’t trying such a thing be a massive pain in the arse? Normally I’d agree, but in Kickoff’s case its simple because we have a global config that allows developer to changes these kinds of things with extreme ease.
 
 ## Here’s what you do

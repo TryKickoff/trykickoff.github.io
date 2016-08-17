@@ -1,20 +1,19 @@
 ---
+title: HTML
 layout: docs
 navgroup: docs
 navactive: docshtml
-title: HTML
-
 meta:
   description: HTML in Kickoff
-
 next:
- - title: Kickoff's CSS
-   body: Take a look at how Kickoff structures it’s CSS.
-   link: css.html
- - title: Kickoff's Javascript
-   body: Minimal and flexible, we show you how Kickoff structures it’s JS.
-   link: js.html
+- title: Kickoff's CSS
+  body: Take a look at how Kickoff structures it’s CSS.
+  link: css.html
+- title: Kickoff's Javascript
+  body: Minimal and flexible, we show you how Kickoff structures it’s JS.
+  link: js.html
 ---
+
 Here is some pointers regarding Kickoff's HTML usage.
 
 ## Conditional CSS files

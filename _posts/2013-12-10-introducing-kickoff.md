@@ -1,20 +1,23 @@
 ---
+title: Introducing Kickoff
+date: 2013-12-10 00:00:00 Z
+categories:
+- kickoff
 comments: false
 section: blog
 type: article
 layout: post
-title: "Introducing Kickoff"
 original:
-  url: "http://tech.tmw.co.uk/2013/12/introducing-kickoff"
-  text: "tech.tmw.co.uk/2013/12/introducing-kickoff"
-categories:
-- kickoff
-excerpt: "I wrote an overview of Kickoff, the front-end framework I created, for the TMW Labs blog."
+  url: http://tech.tmw.co.uk/2013/12/introducing-kickoff
+  text: tech.tmw.co.uk/2013/12/introducing-kickoff
+excerpt: I wrote an overview of Kickoff, the front-end framework I created, for the
+  TMW Labs blog.
 image: 14424983722_085ce6256c.jpg
 github:
   user: tmwagency
   repo: kickoff
 ---
+
 Within a large team, making sure that everyone is on the same page can be difficult; at TMW we have a team of about 20 web developers (6 are front-enders and creative technologists) and this was an issue that we needed to tackle. We create many different types of sites, from single page apps to large-scale builds like [uk.thebar.com](http://uk.thebar.com) or [BBC Goodfood](http://www.bbcgoodfood.com) and needed a framework that would work for all of them, so [Ash Nolan](http://twitter.com/AshNolan_) and I created [Kickoff](http://tmwagency.github.io/kickoff/).
 
 **Kickoff is a lightweight front-end framework for creating scalable, responsive sites**; that might sound a bit vague but it is the essence of the framework. Due to the nature of agency work, the projects are hugely varied, but as developers, we always try to cut corners to normalise things as much as possible – basically because we're lazy and we don't want to have to repeat things very often! Kickoff aims to mitigate common problems found in web development by providing a strong starting point and a set of helpful defaults for use on almost any project.

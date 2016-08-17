@@ -1,20 +1,18 @@
 ---
+title: The Kickoff Grid
 layout: demo
 body-class: show-grid
 navgroup: demo
 navactive: demogrid
-title: The Kickoff Grid
-
 meta:
   description: See Kickoff's grid demo
-
 next:
- - title: Typography demo
-   body: See the default typography styles included with the framework
-   link: typography.html
- - title: Forms
-   body: See all the included form styles
-   link: forms.html
+- title: Typography demo
+  body: See the default typography styles included with the framework
+  link: typography.html
+- title: Forms
+  body: See all the included form styles
+  link: forms.html
 ---
 
 Kickoff comes bundled with a powerful CSS Grid Framework.  To see a full list of it’s features, check out the [grid documentation](/learn/grid.html).

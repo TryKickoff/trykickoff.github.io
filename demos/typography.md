@@ -1,19 +1,17 @@
 ---
+title: Typography
 layout: demo
 navgroup: demo
 navactive: demotype
-title: Typography
-
 meta:
   description: See Kickoff's typography demo
-
 next:
- - title: Grids demo
-   body: Find out about our grid and how to use it
-   link: grids.html
- - title: Components demo
-   body: See all the included components with the framework
-   link: components.html
+- title: Grids demo
+  body: Find out about our grid and how to use it
+  link: grids.html
+- title: Components demo
+  body: See all the included components with the framework
+  link: components.html
 ---
 
 <a name="hp"></a>

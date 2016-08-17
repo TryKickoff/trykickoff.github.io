@@ -1,7 +1,8 @@
 ---
+title: How to create custom grids with Kickoff
+date: 2016-02-12 00:00:00 Z
 section: blog
 layout: post
-title: "How to create custom grids with Kickoff"
 navgroup: blog
 ---
 

@@ -1,21 +1,20 @@
 ---
+title: Components
 layout: demo
 body-class: show-grid
 navgroup: demo
 navactive: democomponents
-title: Components
-
 meta:
   description: See Kickoff's components demo
-
 next:
- - title: Grids demo
-   body: Find out about our grid and how to use it
-   link: grids.html
- - title: Forms
-   body: See all the included form styles
-   link: forms.html
+- title: Grids demo
+  body: Find out about our grid and how to use it
+  link: grids.html
+- title: Forms
+  body: See all the included form styles
+  link: forms.html
 ---
+
 <a name="buttons"></a>
 
 <h2 class="demoHeading">Button</h2>

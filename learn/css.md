@@ -1,19 +1,17 @@
 ---
+title: CSS
 layout: docs
 navgroup: docs
 navactive: docscss
-title: CSS
-
 meta:
   description: Understand how we use CSS in Kickoff
-
 next:
- - title: Kickoff's Javascript
-   body: Minimal and flexible, we show you how Kickoff structures it’s JS.
-   link: js.html
- - title: Tooling
-   body: We’ll take you through Kickoff's tooling options and configuration
-   link: tooling.html
+- title: Kickoff's Javascript
+  body: Minimal and flexible, we show you how Kickoff structures it’s JS.
+  link: js.html
+- title: Tooling
+  body: We’ll take you through Kickoff's tooling options and configuration
+  link: tooling.html
 ---
 
 <a name="philosophy"></a>
