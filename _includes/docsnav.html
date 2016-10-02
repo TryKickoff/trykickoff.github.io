@@ -68,6 +68,16 @@
 </ul>
 
 <ul class="sidebar-nav unstyled">
-	<li><a href="/learn/yeoman.html"{% if page.navactive == 'docsyo' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Yeoman"}'>Yeoman generator</a></li>
+	<li>
+		<a href="/learn/yeoman.html"{% if page.navactive == 'docsyo' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Yeoman"}'>Yeoman generator</a>
+
+		{% if page.navactive == 'docsyo' %}
+		<ul class="sidebar-subnav unstyled">
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#usage">Usage</a></li>
+			<li><a href="#subcommands">Sub-commands</a></li>
+		</ul>
+		{% endif %}
+	</li>
 	<li><a href="/learn/sublime.html"{% if page.navactive == 'docssublime' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Sublime Text snippets"}'>Sublime Text snippets</a></li>
 </ul>
