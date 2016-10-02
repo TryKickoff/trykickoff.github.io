@@ -33,13 +33,12 @@ Sass has two syntaxes. The most commonly used syntax is known as “SCSS” (for
 <a name="structure"></a>
 
 ## Sass structure
-Kickoff structures it's Sass files in quite a specific way. The `scss` directory contains the following directories:
+Kickoff structures it's Sass files in quite a specific way. The `scss` directory contains the following files and directories:
 
 ```
 .
 ├── README.md
 ├── _color-palette.scss
-├── _dependencies.scss
 ├── _global.scss
 ├── _helper-classes.scss
 ├── _reset.scss
@@ -50,7 +49,6 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 │   ├── _buttons.scss
 │   ├── _code.scss
 │   ├── _embedded-content.scss
-│   ├── _fluid-video.scss
 │   ├── _icons.scss
 │   ├── _links.scss
 │   ├── _lists.scss
@@ -61,6 +59,8 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 │   ├── forms
 │   │   ├── README.md
 │   │   ├── _form-helpers.scss
+│   │   ├── _form-theme-material.scss
+│   │   ├── _form-theme-standard.scss
 │   │   ├── _forms-custom-file.scss
 │   │   ├── _forms-custom-radioscheckboxes.scss
 │   │   ├── _forms-custom-select.scss
@@ -69,35 +69,27 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 │       ├── README.md
 │       ├── _grid-helpers.scss
 │       └── _grid.scss
-├── functions
-│   ├── _functions.scss
-│   ├── _get-value.scss
-│   ├── _golden-ratio.scss
-│   ├── _map-deep-get.scss
-│   ├── _modular-scale.scss
-│   ├── _px-to-em.scss
-│   ├── _px-to-rem.scss
-│   ├── _strip-units.scss
-│   └── _tint-shade.scss
 ├── kickoff.scss
-├── mixins
-│   ├── _hidpi.scss
-│   ├── _mixins.scss
-│   ├── _module-naming-helpers.scss
-│   ├── _position.scss
-│   ├── _responsive.scss
-│   ├── _units.scss
-│   ├── _utility.scss
-│   └── _vertical-center.scss
 ├── partials
 │   ├── _browser-upgrade.scss
 │   ├── _footer.scss
 │   └── _masthead.scss
+├── styleguide
+│   └── _swatch.scss
 ├── styleguide.scss
 └── views
     ├── _home.scss
     └── _print.scss
 ```
+
+### Notice: v8 breaking changes
+Version 8.0.0 of Kickoff changed how various parts of the Sass framework is actually used. In an effort to make the framework more maintainable, certain elements have actually been extracted and made into standalone npm modules. These can then be `@import`-ed in our
+
+### Kickoff's external Sass modules
+* [kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss) - Kickoff's Sass utility functions and mixins
+* [kickoff-grid.css](https://github.com/TryKickoff/kickoff-grid.css) - our Sass grid framework
+* [kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css) - Simple fluid-width videos using only CSS
+
 
 ### Views, partials & components
 Our distinction between views, partials and components:
@@ -116,90 +108,26 @@ Used for entire views (or pages). Usually these files consist of small tweaks th
 
 **N.b.** We recommend that it is better to make reusable components rather than styling based on a view.  Therefore, the styles in this folder _should _ be minimal.
 
-#### Mixins
+<hr class="sectionSplitter">
 
-The [mixins](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/mixins/) directory contains a few mixins that will help you day-to-day. Amongst others, `_responsive.scss` contains our media query mixins ([read below](#responsive) for more info), `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the `@include font-size()` mixin for specifying your font sizes with a `px` value but outputting both `rem` and `px` in your compiled styles.
+### Sass utility functions and mixins
+Kickoff's Sass mixins are hosted in a separate git repo, see the documentation for what's provided at [github.com/TryKickoff/kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss).
 
-##### Font-size mixin
-This mixin allows input of all kinds. It essentially converts pixel values to REMs.
+<hr class="sectionSplitter">
 
-```scss
-$module-font-size: 30px;
-
-a {
-	@include font-size(small); // uses the $type map. use a keyword to set the size
-	@include font-size(20); // unitless values are seen to be px
-	@include font-size($module-font-size); // vars can be used, these should be set in px
-}
-```
-
-#### Functions
-
-The [functions](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/functions/) directory contains various Sass functions that are used in the framework and that you might find useful.
-
-##### Modular scale function
-This function is used to generate font-sizes with a pleasing vertical rythm. The scale is based on the base font size and a scale factor, see an example of this [here](http://www.modularscale.com/?20&px&1.25&web&text).
-
-Our `$type` sass map uses the `modular-scale` function extensively:
-
-```scss
-$type: (
-	micro : modular-scale($font-size-base, -2, $type-scale),
-	small : modular-scale($font-size-base, -1, $type-scale), // h5, h6
-	base  : modular-scale($font-size-base, 0, $type-scale),  // p, h4
-	mid   : modular-scale($font-size-base, 1, $type-scale),  // h3
-	large : modular-scale($font-size-base, 1, $type-scale),  // h2
-	jumbo : modular-scale($font-size-base, 3, $type-scale)   // h1
-);
-```
-
-If you have a custom element and need to go larger or smaller on the modular scale, try using something like this:
-
-```scss
-.article-title {
-	@include font-size(modular-scale($font-size-base, 4, $type-scale));
-}
-```
-
-#### Breakpoint function
-This can be used to easily get the value from the `$breakpoints` sass map:
-
-```css
-bp(mid) /* 750px */
-```
-
-#### Type size function
-This can be used to easily get the value from the `$type` sass map:
-
-```css
-type(large) /* modular-scale($font-size-base, 2, $type-scale) */
-```
-
-### Important files
+### Important Sass files
 
 It’s important to become familiar with **all of these files** so you can make full use of the framework.
 
 #### [kickoff.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff.scss)
-All roads lead to here. This is the base SCSS file and is the hook by which Grunt compiles the projects CSS. Inspecting the source of the file reveals only one `@import`, for `_dependencies.scss`.
-
-In older versions of Kickoff (and still available in the generator), we compile two versions of of the CSS – this is explained below:
-
-* `kickoff.scss` is compiled to `/assets/dist/css/kickoff.css` and is used on Internet Explorer 9+, Chrome, Safari, Firefox and Opera.
-* `kickoff-old-ie.scss` is compiled to `/assets/dist/css/kickoff-old-ie.css` and is used on Internet Explorer 8 and below only. These browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see below](#responsive) for more details on this.
-
----
-
-#### [_dependencies.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_dependencies.scss)
-This file is where all of Kickoff’s Sass dependencies are defined. It imports all of the scss files that will be compiled into your project.
-
-If you need to add or remove a file, do it here. The order of the imported files is the same order that the CSS will be compiled to.
+All roads lead to here. This is the base SCSS file and is the hook by which Grunt compiles the projects CSS. `kickoff.scss` is compiled to `/assets/dist/css/kickoff.css` and is used on Internet Explorer 9+, Chrome, Safari, Firefox and Opera.
 
 ---
 
 #### [_global.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_global.scss)
 This file contains all styles that do not obviously fit within any other scss partial. For example, we include our body's background styles and the main `.l-container` styles.
 
-**Try not to fill this up with all your styles though.**  Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the `components`, `partials` or `views` directories.
+**Try not to fill this up with all your styles though.** Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the `components`, `partials` or `views` directories.
 
 ---
 
