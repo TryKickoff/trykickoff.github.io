@@ -14,33 +14,11 @@ next:
   link: js.html
 ---
 
-Here is some pointers regarding Kickoff's HTML usage.
+## Here are some pointers regarding Kickoff's HTML features and usage
 
-## Conditional CSS files
-
-Using the Kickoff Yeomna Generator, you may choose to opt for IE8 support.  If you do, Kickoff will compile two SCSS files: one for IE9+ & and another for old IE (<8); these browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see the CSS docs](css.html) for more info.
-
-#### Add your stylesheets to HTML using the code below
-
-```html
-<!--[if lte IE 8]>
-	<link rel="stylesheet" href="/assets/dist/css/kickoff-old-ie.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-	<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
-<!--<![endif]-->
-```
-
-If you're not supporting IE8, then you only need one stylesheet..
-
-```html
-<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
-```
-
-<hr class="sectionSplitter">
 <a name="skip"></a>
 
-## Skip to content link
+### Skip to content link
 We recommend that you include a 'skip to content' link so that user's can quickly move past your masthead area if they wish. Include the below HTML as the very first item after your `<body>` tag. You should be able to see that the anchor's href within the `.skipToContent` div points to `#mainContent`, this means that you will need add that id to another div that wraps your main content.
 
 The styling for this is simple, so please modify it; see [/scss/partials/components/_skip-navigation.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/components/_skip-navigation.scss) to edit styles.
@@ -54,10 +32,10 @@ The styling for this is simple, so please modify it; see [/scss/partials/compone
 <hr class="sectionSplitter">
 <a name="socialmeta"></a>
 
-## <head> metatags
+### <head> metatags
 For a list of everything that could go in the `<head>` of your document, see [github.com/joshbuchea/HEAD](https://github.com/joshbuchea/HEAD)
 
-## Social meta tags
+### Social meta tags
 We recommend that each site created with Kickoff also include social meta tags so that whenever users share your content, they are presented with useful share/social content. See the snippet below for the recommended items:
 
 The wildcard items like `{page title}` are supposed to be changed by you.
@@ -88,7 +66,7 @@ The wildcard items like `{page title}` are supposed to be changed by you.
 <hr class="sectionSplitter">
 <a name="iconmeta"></a>
 
-## Icon meta tags
+### Icon meta tags
 Favicons, webclip icons and even MS tile images should all, ideally, be included on each site. If generating all these sizes and the code seem laborious, it is, but there are a few sites that will help ease the pain. Try http://iconifier.net or http://realfavicongenerator.net/. See below for what you need:
 
 The wildcard items like `{page title}` are supposed to be changed by you.
@@ -133,11 +111,33 @@ The wildcard items like `{page title}` are supposed to be changed by you.
 <meta name="msapplication-task" content="name=Ingredients;action-uri={siteurl}ingredients;icon-uri=favicon.ico" />
 ```
 
+<hr class="sectionSplitter">
+
+### Conditional CSS files
+
+Using the Kickoff Yeomna Generator, you may choose to opt for IE8 support.  If you do, Kickoff will compile two SCSS files: one for IE9+ & and another for old IE (<8); these browsers do not support media queries and so rather than having old IE show mobile-first styles (which would suck), we serve them a slightly different CSS file instead. We use some clever Sass mixins to determine what CSS should be served – [see the CSS docs](css.html) for more info.
+
+#### Add your stylesheets to HTML using the code below
+
+```html
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="/assets/dist/css/kickoff-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+	<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
+<!--<![endif]-->
+```
+
+If you're not supporting IE8, then you only need one stylesheet..
+
+```html
+<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
+```
 
 <hr class="sectionSplitter">
 <a name="jquery"></a>
 
-## jQuery
+### jQuery
 If you use jQuery, we recommend bundling it with all the other javascript files on your site rather than linking to Google's CDN or similar. This has the benefit of not needing another DNS lookup (which is costly on mobile connections) but it also means that should a user have a primed cache for the same version of jQuery hosted externally, that you will miss out on those benefits - we believe that the benefits outweigh the risks.
 
 If you prefer to rely on an external source, we suggest adding it using the code below. This assumes that you need support for older versions of Internet Explorer. See this [post](http://martineau.tv/2013/06/two-versions-of-jquery/) for more information about this technique.
@@ -152,3 +152,5 @@ If you prefer to rely on an external source, we suggest adding it using the code
 	<script>window.jQuery || document.write('<script src="/js/libs/jquery.2.min.js"><\/script>')</script>
 <!--<![endif]-->
 ```
+
+
