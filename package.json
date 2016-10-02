@@ -58,10 +58,11 @@
   },
   "keywords": [],
   "scripts": {
-    "prewatch": "npm i grunt-cli -g && npm i",
     "watch": "grunt serve",
-    "prejekyll": "gem install jekyll && gem install jekyll-paginate && gem install redcarpet",
-    "jekyll": "jekyll build --watch",
+    "preinstall": "bundle install",
+    "jekyll:build": "jekyll build",
+    "jekyll:watch": "jekyll build --watch",
+    "jekyll:serve": "jekyll serve --watch",
     "prestart": "npm i -g parallelshell",
     "start": "parallelshell \"npm run watch\" \"npm run jekyll\"",
     "dev": "parallelshell \"grunt serve\" \"npm run jekyll\""
