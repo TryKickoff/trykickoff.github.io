@@ -22,7 +22,7 @@ meta:
 
 <section class="wideBoy wideBoy--bright get-started">
 	<div class="l-container">
-		<h2 class="wideBoy-title clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
+		<h2 class="wideBoy-title wideBoy-title--icon clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
 		<!-- <h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2> -->
 
 		<div class="g g--gutter g--stack">
@@ -34,7 +34,7 @@ meta:
 			</div>
 		</div>
 
-		<p class="l-mb0">or clone the git repo:</p>
+		<p class="l-mb0"><a href="/learn/yeoman.html">Find out more about the generator</a> or clone the git repo:</p>
 
 		<code class="code-lrg" data-before="git:">
 			git clone https://github.com/trykickoff/kickoff.git your-project-folder
@@ -107,7 +107,7 @@ $breakpoints: (
 		<div class="g g--gutter g--stack">
 			<div class="g-col g-span6--mid">
 				<h3>Unopinionated Javascript</h3>
-				<p>Kickoff uses <a href="http://browserify.org">Browserify</a> to bundle javascript modules but beyond that, it does not prescribe a way for you to write your JS. We believe that writing JS in a modular way is the future.</p>
+				<p>Kickoff uses <a href="https://webpack.github.io/">Webpack</a> to bundle javascript modules but beyond that, it does not prescribe a way for you to write your JS. We believe that writing JS in a modular way is the future.</p>
 				<p>We also use <a href="https://babeljs.io/">Babel</a> to allow developers to write ES2015 JavaScript right now in their projects, while providing support for older browsers.</p>
 				<p>The code on the right is part of our starter Javascript file ;)</p>
 				<p>Find out more about Kickoff’s JavaScript <a href="/learn/js.html">in the docs</a>.</p>
@@ -136,44 +136,24 @@ ready(() => {
 		<hr class="sectionSplitter">
 
 		<!-- section on Tooling -->
-		<h3>Awesome tooling</h3>
 		<div class="g g--gutter g--stack">
 			<div class="g-col g-span6--mid">
-				<p>Kickoff is powered by the <a href="http://gruntjs.com/">Grunt.js</a> task runner. It is used extensively to ease common development bottlenecks and allow us developers to focus on creating the best work possible.</p>
-				<h3>Continous delivery</h3>
-				<p>Special attention has been made to ensure Kickoff works well with continuous delivery, if you develop that way.</p>
-				<p>We are also working on extending Kickoff to use Gulp for those developers that prefer using it.</p>
-				<p>Find out more about Kickoff’s tooling <a href="/learn/grunt.html">in the docs</a>.</p>
+				<h3>Awesome tooling</h3>
+				<p>Kickoff is powered by the <a href="http://gulpjs.com/">Gulp</a> task runner. It is used extensively to ease common development bottlenecks and allow us developers to focus on creating the best work possible.</p>
 			</div>
 			<div class="g-col g-span6--mid">
-{% highlight js%}
-// grunt serve
-grunt.registerTask('serve', [
-	'compile',
-	'browserSync:serve',
-	'watch',
-]);
-
-
-// grunt watcher
-grunt.registerTask('watcher', [
-	'compile',
-	'watch',
-]);
-
-// grunt compile
-grunt.registerTask('compile', [
-	'browserify',
-	'postscss',
-	'images',
-	'copy:jsStandalone',
-]);
-{% endhighlight %}
+				<h3>Continous delivery</h3>
+				<p>Special attention has been made to ensure Kickoff works well with continuous delivery, if you develop that way.</p>
+				<p>Find out more about Kickoff’s tooling <a href="/learn/tooling.html">in the docs</a>.</p>
 			</div>
 		</div>
 
+		<hr class="sectionSplitter">
+
 		<div class="text-center">
-			<a href="/learn" class="btn btn--primary">Read our docs</a> <a href="/demos" class="btn">See our demos</a>
+			<h3>Find out more</h3>
+			<a href="/learn" class="">Read our docs</a>
+			or <a href="/demos" class="">see our demos</a>
 		</div>
 
 	</div>

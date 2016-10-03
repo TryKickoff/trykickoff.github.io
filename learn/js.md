@@ -74,7 +74,7 @@ entryPoints: {
 
 ## Babel
 
-Kickoff uses the Browserify transform **Babelify** to allow you to write ES2015 (previously called ES6) in your projects.  This will automatically compile your ES2015 code back into ES5 syntax so that older browsers can understand it.
+Kickoff uses the Webpack Babel loader to allow you to write ES2015 (previously called ES6) in your projects.  This will automatically compile your ES2015 code back into ES5 syntax so that older browsers can understand it.
 
 The main benefit of this is that you can learn to use the latest JavaScript syntax without having to wait for browsers to implement those features.  The compilcation step will take care of this for you.
 
