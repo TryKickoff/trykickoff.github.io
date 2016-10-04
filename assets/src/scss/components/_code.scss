@@ -1,5 +1,6 @@
 /**
  * Preformatted code
+ * =================================
  * Code typography styles for the <code> and <pre> elements
  */
 
@@ -7,19 +8,19 @@
  * Define associated Code variables
  */
 $code-textColor               : #444;
-$code-bgColor                 : #f7f7f7;
-$pre-textColor                : $code-textColor;
-$pre-bgColor                  : $code-bgColor;
+$code-bgColor                 : #ddd;
+$pre-textColor                : #444;
+$pre-bgColor                  : #ddd;
 
 // Inline and block code styles
 code,
 pre {
 	padding: 0 3px 2px;
 	font-family: $font-family-mono;
-	@include font-size($type-small);
+	@include font-size(small);
 	color: $code-textColor;
-	tab-size: 2;
-	white-space: pre;
+	border-radius: 3px;
+	tab-size: 3;
 }
 
 // Inline code
@@ -37,6 +38,8 @@ pre {
 	// line-height: $leading-base;
 	color: $pre-textColor;
 	background-color: $pre-bgColor;
+	border-radius: 4px;
+	white-space: pre;
 	// white-space: pre-wrap;
 	// word-break: break-all;
 	// word-wrap: break-word;
@@ -47,8 +50,6 @@ pre {
 		color: $pre-textColor;
 		background-color: $pre-bgColor;
 		border: 0;
-
-		@include font-size($type-smaller);
 	}
 }
 

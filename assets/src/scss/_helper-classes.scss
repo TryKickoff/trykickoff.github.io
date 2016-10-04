@@ -1,5 +1,6 @@
 /**
- * Utilities
+ * Helper classes
+ * =================================
  * Non-semantic helper classes
  */
 
@@ -8,7 +9,7 @@
  * http://www.cssmojo.com/latest_new_clearfix_so_far/
  * See mixins/_utility.scss for a mixin version of this
  */
-.clearfix:after {
+.clearfix::after {
 	content: "";
 	display: table;
 	clear: both;
@@ -29,14 +30,6 @@
 	br {
 		display: none;
 	}
-}
-
-.u-textCenter {
-	text-align: center;
-}
-
-.text-nowrap {
-	white-space: nowrap;
 }
 
 
@@ -96,12 +89,8 @@
 .l-ml1 { margin-left:   $baseline !important; }
 
 
-/**
- * Responsive Utilities
- */
-
 * {
-	-webkit-tap-highlight-color: $color-primary !important;
+	-webkit-tap-highlight-color: transparent !important;
 }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
@@ -110,18 +99,31 @@ textarea[contenteditable] {
 }
 
 .promote-layer {
-  /*
-  This may promote the layer to a composited
-  layer.
+	/*
+	This may promote the layer to a composited
+	layer.
 
-  Replace with will-change when available
+	Replace with will-change when available
 
-  #perfmatters
-  */
-  backface-visibility: hidden;
+	#perfmatters
+	*/
+	backface-visibility: hidden;
 }
 
 // Add the default transition to any element
 .transition {
 	transition: $default-transition;
+}
+
+// Faster taps on mobile devices
+// See https://adactio.com/journal/10019 for more info
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+	touch-action: manipulation;
 }

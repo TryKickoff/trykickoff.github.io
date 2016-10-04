@@ -1,16 +1,22 @@
 /**
  * Global app/site styles
+ * =================================
  */
 html {
 	overflow-y: scroll;
 }
+
 body {
 	background-color: $color-bg;
 }
 
-
-a {
-	transition: all 150ms ease-in-out;
+/**
+ * Default layout container
+ */
+.l-container {
+	width: 90%;
+	max-width: $layout-max-width;
+	margin: 0 auto;
 }
 
 hr {
@@ -22,31 +28,9 @@ hr {
  * Default layout container
  */
 .l-container {
-	padding-left: #{$layout-margin}px;
-	padding-right: #{$layout-margin}px;
 	width: 90%;
 	max-width: #{$layout-max-width}px;
 	margin: 0 auto;
-	// transform: translateZ(0);
-
-	.lt-ie9 & {
-		min-width: #{$layout-min-width}px;
-	}
-
-	// :first-child {
-	// 	margin-top: 0;
-	// }
-
-// 	p a:link, ul a:link {
-// 		font-weight: $font-weight-bold;
-// 	}
-// 	& .next {
-// 		p a:link, ul a:link {
-// 			font-weight: normal;
-// 		}
-// 	}
-// }
-
 }
 
 /* ==========================================================================
@@ -64,7 +48,7 @@ hr {
 	// 	padding: 5px;
 	// }
 
-	@include respond-min($bp-single-col) {
+	@include respond-min(mid) {
 		// position: fixed;
 		// top: 0;
 		// left: 0;
@@ -85,7 +69,7 @@ hr {
 	text-align: center;
 	line-height: 1.5;
 
-	@include respond-min($bp-single-col) {
+	@include respond-min(mid) {
 		float: left;
 		margin: 0;
 		@include font-size(30);
@@ -117,7 +101,7 @@ hr {
 	font-style: italic;
 	text-align: center;
 
-	@include respond-min($bp-single-col) {
+	@include respond-min(mid) {
 		float: right;
 	}
 }
@@ -247,7 +231,7 @@ hr {
 }
 
 .slack {
-	@include font-size($type-mid);
+	@include font-size(mid);
 	padding: 1em 2em;
 	text-align: center;
 	display: block;
@@ -312,7 +296,7 @@ hr {
 
 	@include respond-min(mid) {
 		h1 {
-			@include font-size($type-jumbo);
+			@include font-size(jumbo);
 			margin-bottom: 0.5em;
 		}
 
@@ -343,7 +327,7 @@ hr {
 
 .intro {
 	font-style: italic;
-	// @include font-size($type-large);
+	// @include font-size(large);
 	margin-top: 0;
 }
 
@@ -449,13 +433,13 @@ figure {
 		text-align: left;
 		color: #fff;
 		// opacity: 0;
-		@include font-size($type-smaller);
+		@include font-size(micro);
 		font-style: italic;
 		font-family: $font-family-alt;
 		line-height: 1;
 
 		@include respond-min(mid) {
-			@include font-size($type-small);
+			@include font-size(small);
 		}
 	}
 
@@ -501,7 +485,7 @@ figure {
 	margin-top: $baseline * 2;
 }
 .blockLinks {
-	background-color: $blueDark;
+	background-color: $color-primary;
 	margin-bottom: $baseline;
 }
 .blockLink {
@@ -566,7 +550,7 @@ figure {
 	position: absolute;
 	top: 0;
 	right: 0;
-	@include font-size($type-smaller);
+	@include font-size(micro);
 	text-align: right;
 	padding: 1px 5px;
 
@@ -584,7 +568,7 @@ figure {
 
 .g--demo {
 	& .g-content {
-		border: 1px solid $blueDark;
+		border: 1px solid $color-primary;
 		background-color: $gray;
 		color: #fff;
 	}
@@ -761,7 +745,7 @@ figure {
 	position: absolute;
 	bottom: 100%;
 	font-family: $font-family-mono;
-	@include font-size($type-smallest);
+	@include font-size(micro);
 	font-style: normal;
 	left: 0;
 	opacity: .6;
@@ -779,7 +763,7 @@ figure {
 }
 
 .latestNews {
-	background-color: $blueDark;
+	background-color: $color-primary;
 }
 
 /**
@@ -865,7 +849,7 @@ figure {
 	}
 }
 
-@include respond-max($bp-single-col) {
+@include respond-max(mid) {
 	.github-logo {
 		display: none;
 	}
@@ -879,7 +863,7 @@ figure {
 	position: relative;
 	word-wrap: break-word;
 	color: #fff;
-	background-color: $blueDark;
+	background-color: $color-primary;
 	@include font-size(13);
 	white-space: inherit;
 
@@ -921,7 +905,7 @@ figure {
 // These all follow the same sizing rules as above; text is 1em, space around it
 // Large
 .btn--large {
-	@include font-size($type-large);
+	@include font-size(large);
 	line-height: 3;
 	height:     3em;
 	padding-right:2em;
@@ -931,226 +915,10 @@ figure {
 
 // Small
 .btn--small {
-	@include font-size($type-small);
+	@include font-size(small);
 	line-height:1.5;
 	height: 1.5em;
 	padding-right:0.75em;
 	padding-left: 0.75em;
 	border-radius: 3px;
 }
-
-@mixin lang($language) {
-	position: relative;
-	margin-top: 30px;
-	display: block;
-
-	&:before {
-		content: $language;
-		position: absolute;
-		bottom: 100%;
-		margin-bottom: 10px;
-		left: 0;
-		font-size: inherit;
-		color: #998;
-	}
-}
-
-.highlight {
-
-	pre {
-
-		.demo-code & {
-			margin-top: 0;
-		}
-	}
-
-}
-
-.demo-code {
-	.language-html {
-		@include lang('<!-- .html -->');
-	}
-	.language-css {
-		@include lang('/* .css */');
-	}
-	.language-scss {
-		@include lang('// .scss');
-	}
-	.language-js,
-	.language-javascript {
-		@include lang('// .js');
-	}
-}
-
-.wideBoy .highlight {
-	background: #fff;
-	color: #333;
-}
-
-.highlight .h {
-    color: #333;
-    font-style: normal;
-    font-weight: normal
-}
-
-.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo,.highlight .il,.highlight .m {
-    color: #945277
-}
-
-.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx,.highlight .s1 {
-    color: #df5000
-}
-
-.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kt,.highlight .k,.highlight .o {
-    font-weight: bold
-}
-
-.highlight .kt {
-    color: #458
-}
-
-.highlight .c,.highlight .cm,.highlight .c1 {
-    color: #998;
-    font-style: italic
-}
-
-.highlight .cp,.highlight .cs {
-    color: #999;
-    font-weight: bold
-}
-
-.highlight .cs {
-    font-style: italic
-}
-
-.highlight .n {
-    color: #333
-}
-
-.highlight .na,.highlight .nv,.highlight .vc,.highlight .vg,.highlight .vi {
-    color: #008080
-}
-
-.highlight .nb {
-    color: #0086B3
-}
-
-.highlight .nc {
-    color: #458;
-    font-weight: bold
-}
-
-.highlight .no {
-    color: #094e99
-}
-
-.highlight .ni {
-    color: #800080
-}
-
-.highlight .ne {
-    color: #990000;
-    font-weight: bold
-}
-
-.highlight .nf {
-    color: #945277;
-    font-weight: bold
-}
-
-.highlight .nn {
-    color: #555
-}
-
-.highlight .nt {
-    color: #000080
-}
-
-.highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2
-}
-
-.highlight .gd {
-    color: #000;
-    background-color: #fdd
-}
-
-.highlight .gd .x {
-    color: #000;
-    background-color: #faa
-}
-
-.highlight .ge {
-    font-style: italic
-}
-
-.highlight .gr {
-    color: #aa0000
-}
-
-.highlight .gh {
-    color: #999
-}
-
-.highlight .gi {
-    color: #000;
-    background-color: #dfd
-}
-
-.highlight .gi .x {
-    color: #000;
-    background-color: #afa
-}
-
-.highlight .go {
-    color: #888
-}
-
-.highlight .gp {
-    color: #555
-}
-
-.highlight .gs {
-    font-weight: bold
-}
-
-.highlight .gu {
-    color: #800080;
-    font-weight: bold
-}
-
-.highlight .gt {
-    color: #aa0000
-}
-
-.highlight .ow {
-    font-weight: bold
-}
-
-.highlight .w {
-    color: #bbb
-}
-
-.highlight .sr {
-    color: #017936
-}
-
-.highlight .ss {
-    color: #8b467f
-}
-
-.highlight .bp {
-    color: #999
-}
-
-.highlight .gc {
-    color: #999;
-    background-color: #EAF2F5
-}
-
-.entries {
-	// margin-top: ($baseline * 2);
-	// margin-bottom: ($baseline * 2);
-}
-
