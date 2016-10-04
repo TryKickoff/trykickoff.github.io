@@ -97,8 +97,6 @@ hr {
 }
 
 .nav {
-	font-family: $font-family-alt;
-	font-style: italic;
 	text-align: center;
 
 	@include respond-min(mid) {
