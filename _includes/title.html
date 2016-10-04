@@ -1,0 +1,13 @@
+<section class="title wideBoy primary wideBoy--dark">
+	<div class="l-container">
+		<h1 class="title-item title-primary">
+			{{ include.title }}
+			{% if include.subtitle %}
+				<time class="title-primary-date">{{ include.date | date: "%-d %B %Y" }}</time>
+			{% endif %}
+		</h1>
+		{% if include.subtitle %}
+			<h2 class="title-item title-secondary">{{ include.subtitle }}</h2>
+		{% endif %}
+	</div>
+</section>
