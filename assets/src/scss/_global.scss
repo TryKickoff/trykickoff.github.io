@@ -208,8 +208,6 @@ hr {
 	}
 }
 .wideBoy-title {
-	font-family: $font-family-base;
-	font-weight: normal;
 
 	@include respond-min(mid) {
 		&--icon {
