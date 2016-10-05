@@ -38,7 +38,9 @@
 	}
 }
 
-.wideBoy .highlight {
+.wideBoy .highlight,
+.wideBoy .highlight pre,
+.wideBoy .highlight code {
 	background: #fff;
 	color: #333;
 }

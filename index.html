@@ -6,10 +6,12 @@ meta:
   title: Kickoff
 ---
 
-<section class="wideBoy wideBoy--dark bigBoy primary text-centre">
+<section class="wideBoy wideBoy--dark primary text-centre">
 	<div class="l-container">
 		<a href="https://github.com/TryKickoff/kickoff/releases/latest" class="currentVersion currentVersion--tag"></a>
-		<h1 class="intro"><span class="logoStyle">Kick<span>off</span></span> is a lightweight front-end framework for creating scalable, performant and responsive sites.</h1>
+		<h1 class="wideBoy-title">
+			<span class="logoStyle">Kick<span>off</span></span> is a lightweight front-end framework for creating scalable, performant and responsive sites.
+		</h1>
 
 		<a href="learn/" class="btn btn--primary" data-trak='{"category":"Home page","action":"Get started","label":"CTA"}'>Get Started</a> <a href="https://github.com/TryKickoff/kickoff/releases/latest" class="btn btn--hollow cta-whatsNew" data-trak='{"category":"Home page","action":"Whats new","label":"CTA"}'>What's new in <span class="currentVersion"></span></a>
 
@@ -22,7 +24,7 @@ meta:
 
 <section class="wideBoy wideBoy--bright get-started">
 	<div class="l-container">
-		<h2 class="wideBoy-title wideBoy-title--icon clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
+		<h2 class="wideBoy-subtitle wideBoy-title--icon clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
 		<!-- <h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2> -->
 
 		<div class="g g--gutter g--stack">
@@ -72,18 +74,18 @@ meta:
 /**
  * Typography variables
  */
-$font-size-base           : 20;
-$leading-base             : 1.4;
-$line-height-base         : round($font-size-base * $leading-base); // 20 * 1.4
-$type-scale               : 1.25; // Major third
+$font-size-base: 20;
+$leading-base: 1.4;
+$line-height-base: round($font-size-base * $leading-base); // 20 * 1.4
+$type-scale: 1.25; // Major third
 
 $type: (
-	micro                   : modular-scale($font-size-base, -2, $type-scale),
-	small                   : modular-scale($font-size-base, -1, $type-scale), // h5, h6
-	base                    : modular-scale($font-size-base, 0, $type-scale),  // p, h4
-	mid                     : modular-scale($font-size-base, 1, $type-scale),  // h3
-	large                   : modular-scale($font-size-base, 2, $type-scale),  // h2
-	jumbo                   : modular-scale($font-size-base, 3, $type-scale)   // h1
+	micro: modular-scale($font-size-base, -2, $type-scale),
+	small: modular-scale($font-size-base, -1, $type-scale), // h5, h6
+	base: modular-scale($font-size-base, 0, $type-scale),  // p, h4
+	mid: modular-scale($font-size-base, 1, $type-scale),  // h3
+	large: modular-scale($font-size-base, 2, $type-scale),  // h2
+	jumbo: modular-scale($font-size-base, 3, $type-scale)   // h1
 );
 
 /**
@@ -116,18 +118,13 @@ $breakpoints: (
 {% highlight js%}
 // npm modules
 import ready from 'lite-ready';
-import $$ from 'double-dollar';
-window.$$ = $$;
-
-// Bundle global libs that don't return a value
-import 'console';
 
 // Add your project-specific modules here
-import moduleTest from './modules/moduleTest';  // this is a test, uncomment this line to try it
+import someModule from './modules/someModule';
 
 // Your DOM ready code goes in here
 ready(() => {
-	moduleTest();
+	someModule();
 });
 {% endhighlight %}
 			</div>

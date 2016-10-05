@@ -151,11 +151,11 @@ hr {
 	padding-top: 20px;
 	padding: 40px 0;
 	background-color: $color-primary;
+	color: #fff;
 
-	&,
 	a:link,
 	a:visited {
-		color: #fff;
+		color: $color-secondary;
 	}
 
 	a:link,
@@ -195,17 +195,14 @@ hr {
    ========================================================================== */
 .wideBoy {
 	padding: 50px 0;
-
-	@include respond-min(mid) {
-		h1 {
-			@include font-size(51);
-		}
-		h2 {
-			@include font-size(28);
-		}
-	}
+	margin-bottom: $baseline;
 }
+
 .wideBoy-title {
+	position: relative;
+	margin: 0;
+	padding-bottom: .5em;
+	@include font-size(mid);
 
 	@include respond-min(mid) {
 		&--icon {
@@ -214,6 +211,27 @@ hr {
 		}
 	}
 
+	@include respond-min(mid) {
+		@include font-size(large);
+	}
+
+	@include respond-min(wide) {
+		@include font-size(jumbo);
+	}
+}
+
+.wideBoy-subtitle {
+	margin-top: 0;
+	margin-bottom: .5em;
+	@include font-size(base);
+
+	@include respond-min(mid) {
+		@include font-size(mid);
+	}
+
+	// @include respond-min(wide) {
+	// 	@include font-size(large);
+	// }
 }
 
 .wideBoy--bright {
@@ -294,7 +312,6 @@ hr {
 
 	@include respond-min(mid) {
 		h1 {
-			@include font-size(jumbo);
 			margin-bottom: 0.5em;
 		}
 
@@ -321,12 +338,6 @@ hr {
 	.btn {
 		margin-top: 1em;
 	}
-}
-
-.intro {
-	font-style: italic;
-	// @include font-size(large);
-	margin-top: 0;
 }
 
 .currentVersion--tag {
@@ -718,13 +729,13 @@ figure {
 	}
 }
 
-.title {
-	margin-bottom: ($baseline * 2);
-}
+// .title {
+// 	margin-bottom: ($baseline * 2);
+// }
 
-.title-item {
-	margin-bottom: 0;
-}
+// .title-item {
+// 	margin-bottom: 0;
+// }
 
 .title-primary,
 .entry-title {
@@ -742,9 +753,9 @@ figure {
 	opacity: .6;
 }
 
-.entry-title {
-	margin-bottom: $baseline * 2;
-}
+// .entry-title {
+// 	margin-bottom: $baseline * 2;
+// }
 
 .pagination {
 	margin: ($baseline * 2) auto;
