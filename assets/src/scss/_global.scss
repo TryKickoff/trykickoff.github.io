@@ -195,7 +195,10 @@ hr {
    ========================================================================== */
 .wideBoy {
 	padding: 50px 0;
-	margin-bottom: $baseline;
+
+	&--hero {
+		margin-bottom: $baseline;
+	}
 }
 
 .wideBoy-title {
