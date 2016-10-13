@@ -13,8 +13,7 @@ next:
   body: Minimal and flexible, we show you how Kickoff structures it’s JS.
   link: js.html
 ---
-
-## Here are some pointers regarding Kickoff's HTML features and usage
+Here are some pointers regarding Kickoff's HTML features and usage
 
 <a name="skip"></a>
 

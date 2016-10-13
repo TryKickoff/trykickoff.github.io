@@ -71,14 +71,13 @@ You installed Kickoff. To quickly get up and running there are a few things you 
 	</label>
 	<div class="checklistInfo">
 		<ul>
-			<li>Define your own breakpoints (by editing the $breakpoints sass map on <a href="https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/_variables.scss#L62-L67">lines 62-67</a>) to suit your design; <strong>the defaults here are just a suggestion</strong>.</li>
+			<li>Define your own breakpoints (by editing the <code>$breakpoints</code> sass map on <a href="https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/_variables.scss#L62-L67">lines 62-67</a>) to suit your design; <strong>the defaults here are just a suggestion</strong>.</li>
 			<li>An example usage for these might be:
-<pre class="l-mb0"><code>@include respond-min(mid) {
+<pre class="l-mb0"><code>@include media('>mid') {
 	// RWD code
 }</code></pre>
 				Read more about their usage <a href="/learn/css.html#responsive">here</a>.
 			</li>
-			<li><code>$bp-rwd-text</code> is used to define when text size changes (reduces) for narrower viewports.</li>
 			<li>Please add more if you need them!</li>
 		</ul>
 	</div>
@@ -116,4 +115,4 @@ You installed Kickoff. To quickly get up and running there are a few things you 
 </div>
 
 <h3 class="interfaceType">All done!</h3>
-<p class="interfaceType">Now <a href="/styleguide.html">view the styleguide</a> again and then run <code>grunt watch</code> or <code>grunt serve</code> to start creating magic!</p>
+<p class="interfaceType">Now <a href="/styleguide.html">view the styleguide</a> again and then run <code>gulp watch</code> or <code>gulp serve</code> to start creating magic!</p>

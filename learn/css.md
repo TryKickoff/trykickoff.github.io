@@ -56,19 +56,15 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 │   ├── _scrollbars.scss
 │   ├── _skip-navigation.scss
 │   ├── _tables.scss
-│   ├── forms
-│   │   ├── README.md
-│   │   ├── _form-helpers.scss
-│   │   ├── _form-theme-material.scss
-│   │   ├── _form-theme-standard.scss
-│   │   ├── _forms-custom-file.scss
-│   │   ├── _forms-custom-radioscheckboxes.scss
-│   │   ├── _forms-custom-select.scss
-│   │   └── _forms.scss
-│   └── grid
+│   └── forms
 │       ├── README.md
-│       ├── _grid-helpers.scss
-│       └── _grid.scss
+│       ├── _form-helpers.scss
+│       ├── _form-theme-material.scss
+│       ├── _form-theme-standard.scss
+│       ├── _forms-custom-file.scss
+│       ├── _forms-custom-radioscheckboxes.scss
+│       ├── _forms-custom-select.scss
+│       └── _forms.scss
 ├── kickoff.scss
 ├── partials
 │   ├── _browser-upgrade.scss
@@ -85,7 +81,7 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 ### Notice: v8 breaking changes
 Version 8.0.0 of Kickoff changed how various parts of the Sass framework is actually used. In an effort to make the framework more maintainable, certain elements have actually been extracted and made into standalone npm modules. These can then be `@import`-ed in our
 
-### Kickoff's external Sass modules
+#### Kickoff's external Sass modules
 * [kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss) - Kickoff's Sass utility functions and mixins
 * [kickoff-grid.css](https://github.com/TryKickoff/kickoff-grid.css) - our Sass grid framework
 * [kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css) - Simple fluid-width videos using only CSS
@@ -96,7 +92,7 @@ Our distinction between views, partials and components:
 
 #### Components
 
-Small, self-contained files that concern one type of thing, that crucially, are reusable. For example, lists, forms etc. We have included quite a few in the [components](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) directory: [buttons](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_buttons.scss), [forms](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss), [fluid video](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_fluid-video.scss) or [grid](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_grid.scss) for example, but you should add your components there too. Please [browse through](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) the included components to see what Kickoff offers, or see some of them in action in our [demo area](../demos/).
+Small, self-contained files that concern one type of thing, that crucially, are reusable. For example, lists, forms etc. We have included quite a few in the [components](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) directory: [buttons](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_buttons.scss) & [forms](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss) for example, but you should add your components there too. Please [browse through](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) the included components to see what Kickoff offers, or see some of them in action in our [demo area](../demos/).
 
 #### Partials
 
@@ -159,13 +155,40 @@ Text colour, link colours, background colour, form fields and various component 
 ## Responsive
 Kickoff does not enforce a mobile first approach to CSS, but it is encouraged and it takes a fairly unique approach to responsive sites.
 
+### Media queries
+#### Media queries v8.0.0 and above
+**Kickoff v8.0.0 introduced a new mixin library to handle media-queries**. This library, [include-media](http://include-media.com/) allows for a more simple syntax and better control of media-queries. There is just one mixin call that takes a few different options:
+
+#### Example
+```scss
+// The keywords below are from the $breakpoints map in _variables.scss
+
+// Equivalent to min-width query
+@include media(">mid") {
+	width: 50%;
+}
+
+// Equivalent to min-width and max-width query
+@include media(">narrow", "<=wide") {
+	width: 50%;
+}
+
+// Equivalent to min-width
+@include media(">200px") {
+	width: 50%;
+}
+```
+
+There are more features to the library so please [read more on it's home page](http://include-media.com/). Both Kickoff and the Kickoff grid make use of this library.
+
+#### Media queries v7.0.0 and below
 Media queries in Kickoff are typically handled with a [set of useful mixins](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/mixins/_responsive.scss). These are used so that we can define separate media-query content for `< IE9` and browsers with support for media queries. These are directly related to the global `$fix-mqs` var defined in `kickoff-old-ie.scss`. `kickoff-old-ie.scss` ignores any content in media-queries with values less than the `$fix-mqs` var value.
 
 * `respond-min` for `min-width` media queries
 * `respond-max` for `max-width` media queries
 * `respond-min-max` for `min-width` & `max-width` media queries
 
-#### Media query example
+#### Example
 
 ```scss
 /**
@@ -214,7 +237,7 @@ This means that all styles related to an element are together, for example:
 a {
 	padding: 1em;
 
-	@include respond-min(800) {
+	@include media('>800') {
 		padding: 2em;
 	}
 }

@@ -133,20 +133,20 @@ Place any image and text-like content side-by-side, as per: [media object](http:
 <a name="fluidvideo"></a>
 
 <h2 class="demoHeading">Fluid video</h2>
-Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` container. We assume 16:9 ratio so if you need anything else you will have to modify the [source](https://github.com/trykickoff/kickoff/blob/c3d6bbe23aa9fc51c66e11d6e13f40af16651510/scss/components/_fluid-video.scss) or use a script like [fitvid.js](http://fitvidsjs.com/).
+This is an external component, hosted at [github.com/TryKickoff/kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css). Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` container. We assume 16:9 ratio so if you need anything else you will have to modify the [source](https://github.com/TryKickoff/kickoff-fluidVideo.css/blob/master/scss/index.scss) or use a script like [fitvid.js](http://fitvidsjs.com/).
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_fluid-video.scss" class="demo-src">_fluid-video.scss</a>
+	<a href="https://github.com/TryKickoff/kickoff-fluidVideo.css/blob/master/scss/index.scss" class="demo-src">_fluid-video.scss</a>
 
 	<div class="demo-visual">
 		<div class="fluidVideo">
-			<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/-5Ae-LhMIG0" frameborder="0" allowfullscreen></iframe>
+			<iframe class="fluidVideo-item" width="560" height="315" src="//www.youtube-nocookie.com/embed/-5Ae-LhMIG0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="demo-code">
 {% highlight html%}
 <div class="fluidVideo">
-	<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/-5Ae-LhMIG0" frameborder="0" allowfullscreen></iframe>
+	<iframe class="fluidVideo-item" width="560" height="315" src="//www.youtube-nocookie.com/embed/-5Ae-LhMIG0" frameborder="0" allowfullscreen></iframe>
 </div>
 {% endhighlight %}
 	</div>
