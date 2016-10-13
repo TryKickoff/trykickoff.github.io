@@ -23,15 +23,17 @@
     "console": "^0.5.2",
     "daccord-validation": "^2.0.1",
     "jquery": "^3.1.1",
-    "lite-ready": "^1.0.4",
     "nextmatchingelement": "^1.0.1",
     "swiftclick": "^1.2.0",
     "trak.js": "^1.0.0",
     "copy-js": "^0.1.1",
     "double-dollar": "^1.0.0",
-    "kickoff-fluidVideo.css": "^1.0.0",
-    "kickoff-utils.scss": "^1.0.0",
+    "include-media": "^1.4.8",
+    "kickoff-fluidVideo.css": "^1.0.1",
+    "kickoff-grid.css": "^0.0.3",
+    "kickoff-utils.scss": "^1.0.3",
     "kickoff-welcome.js": "^1.1.0",
+    "lite-ready": "^1.0.4",
     "normalize.css": "^4.2.0",
     "svg4everybody": "^2.1.0"
   },
@@ -86,13 +88,12 @@
   },
   "keywords": [],
   "scripts": {
-    "watch": "grunt serve",
+    "watch": "gulp serve",
     "preinstall": "bundle install",
     "jekyll:build": "jekyll build",
     "jekyll:watch": "jekyll build --watch",
     "jekyll:serve": "jekyll serve --watch",
     "prestart": "npm i -g parallelshell",
-    "start": "parallelshell \"npm run watch\" \"npm run jekyll\"",
-    "dev": "parallelshell \"grunt serve\" \"npm run jekyll\""
+    "start": "parallelshell \"npm run watch\" \"npm run jekyll:watch\""
   }
 }
