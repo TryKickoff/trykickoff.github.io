@@ -33,7 +33,7 @@ gulp.task('serve', ['watcher'], () => {
 
 	browserSync.init({
 		server: {
-			baseDir: './',
+			baseDir: './_site',
 		},
 
 		middleware: [
@@ -49,7 +49,7 @@ gulp.task('serve', ['watcher'], () => {
 			// `${config.js.distDir}/**/*.js`,
 			`${config.img.distDir}/**/*`,
 			`${config.svg.distDir}/**/*`,
-			'**/*.html',
+			//'**/*.html',
 		],
 
 		notify: {
