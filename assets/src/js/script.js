@@ -12,7 +12,9 @@
 import ready from 'lite-ready'; // https://github.com/nicbell/liteready
 import $$ from 'double-dollar'; // https://github.com/mrmartineau/double-dollar
 import svg4everybody from 'svg4everybody'; // https://github.com/jonathantneal/svg4everybody
-import trak from 'trak';
+import trak from 'trak.js';
+import anchorJS from 'anchor-js';
+import SwiftClick from 'swiftclick';
 
 // Global libs that don't return a value
 import 'console';
@@ -26,7 +28,13 @@ window.$$ = $$; // add double-dollar to global scope
 
 // DOM ready code goes in here
 ready(() => {
-	var swiftclick = SwiftClick.attach(document.body);
+	const swiftclick = SwiftClick.attach(document.body);
+	const anchors = new anchorJS();
+	anchors.options = {
+		icon: '¶'
+	}
+	anchors.add('article h1, article h2, article h3, article h4');
+
 	trak.start();
 	packageInfo();
 	demos();
