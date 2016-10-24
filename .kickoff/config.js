@@ -15,13 +15,13 @@ const ConfigOptions = function () {
 		scssDir: `${config.srcDir}/scss`, // config.css.scssDir
 		distDir: `${config.distDir}/css`, // config.css.distDir
 
-		distFile: 'kickoff', // config.css.distFile
 		// Renaming this changes the name of the generated CSS file
 		// Make sure you update your template file
+		distFile: 'kickoff', // config.css.distFile
 
-		browsers: ['> 5%', 'last 2 versions', 'ie > 8'], // config.css.browsers
 		// We are supporting the last 2 browsers, any browsers with >5% market share,
 		// and ensuring we support IE9+ with prefixes
+		browsers: ['> 5%', 'last 2 versions', 'ie > 8'], // config.css.browsers
 	};
 
 	// Javascript-related vars
@@ -38,9 +38,10 @@ const ConfigOptions = function () {
 		},
 
 		distDir: `${config.distDir}/js`, // config.js.distDir
-		distFile: 'kickoff.js', // config.js.distFile
+
 		// Renaming this changes the name of the generated JS file
 		// Make sure you update your template file
+		distFile: 'kickoff.js', // config.js.distFile
 	};
 
 	// Image-related vars
@@ -75,6 +76,9 @@ const ConfigOptions = function () {
  * ${pkg.repo}
  */
 `,
+
+		// Output file-size and gzip file-size. May slow-down build.
+		showFileSize: true,
 	};
 };
 

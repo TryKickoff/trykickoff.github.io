@@ -5,32 +5,35 @@ const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
+const eyeglass = require('eyeglass');
 const gulpIf = require('gulp-if');
 const banner = require('gulp-banner');
 const filesizegzip = require('filesizegzip');
 const tap = require('gulp-tap');
 
 // PostCSS plugins
-const reporter = require('postcss-reporter');
-const scss = require('postcss-scss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const flexbugsFixes = require('postcss-flexbugs-fixes');
 
 const config = require('../config');
-const pkg = require('../../package.json');
 
 gulp.task('css', () => {
 	return gulp.src([`${config.css.scssDir}/*.scss`])
 
 		// Init sourcemaps
-		.pipe(gulpIf(!process.env.RELEASE, sourcemaps.init()))
+		.pipe(
+			gulpIf(process.env.RELEASE === 'false',
+				sourcemaps.init()
+			)
+		)
+
 
 		// Sass Compilation
 		.pipe(
-			sass({
-				importer: require('npm-sass').importer,
-			}).on('error', sass.logError)
+			sass(
+				eyeglass()
+			).on('error', sass.logError)
 		)
 
 		// PostCSS tasks after Sass compilation
@@ -58,13 +61,19 @@ gulp.task('css', () => {
 		)
 
 		// Write sourcemaps
-		.pipe(gulpIf(!process.env.RELEASE, sourcemaps.write()))
-
-		// Output filesize
 		.pipe(
-			tap((file) => {
-				console.log('>>', file.relative, filesizegzip(file.contents, true));
-			})
+			gulpIf(process.env.RELEASE === 'false',
+				sourcemaps.write()
+			)
+		)
+
+		// Output file-size
+		.pipe(
+			gulpIf(config.misc.showFileSize,
+				tap(file => {
+					console.log(`❯❯ CSS ${file.relative}`, filesizegzip(file.contents, true));
+				})
+			)
 		)
 
 		// Write file
