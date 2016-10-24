@@ -9,10 +9,10 @@ next:
 - title: Get Kickoff
   body: Find out how to get your hands on Kickoff here.
   link: get.html
-- title: Understanding Grunt
+- title: Understanding our tooling setup
   body: We’ll take you through some Grunt basics and explain how Kickoff is configured
     to use it.
-  link: grunt.html
+  link: tooling.html
 ---
 
 # Success!

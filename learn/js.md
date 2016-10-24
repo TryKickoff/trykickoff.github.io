@@ -96,10 +96,10 @@ npm install
 * [lite-ready](https://www.npmjs.com/package/lite-ready) - **[javascript]** Developed by Nic Bell, this is our version of DOMready that is a little bit smarter than the rest
 * [console](https://github.com/matthewhudson/console) - **[javascript]** Drop-in replacement for console - a cross-environment fix for missing methods
 * [svg4everybody](https://github.com/jonathantneal/svg4everybody) - **[javascript]** Use external SVG spritemaps today
-* [double-dollar](https://github.com/mrmartineau/double-dollar) - **[javascript]** forEach over DOM elements more easily
 * [kickoff-welcome.js](https://github.com/TryKickoff/kickoff-welcome.js) - **[javascript]** A JS console welcome message for the Kickoff framework
 * [kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css) - **[sass]** Simple fluid-width videos using only CSS
 * [kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss) - **[sass]** Sass utility functions and mixins for the Kickoff framework
+* [kickoff-grid.css](https://github.com/TryKickoff/kickoff-grid.css) - **[sass]** Kickoff’s Grid System
 * [normalize.css](https://necolas.github.io/normalize.css/) - **[sass]** A modern, HTML5-ready alternative to CSS resets
 * [copy-js](https://github.com/duyetdev/copy.js) - **[javascript, styleguide]** Simple copy to clipboard. **Only used on the styleguide**
 
@@ -109,11 +109,16 @@ These packages aren’t hard dependencies and can be removed by removing them fr
 If you need to add any 3rd party library code, we suggest that you install it from [npm](https://npmjs.org). [Libraries.io](http://libraries.io) or [npms](https://npms.io) however, both have a better search than npm so it might be easier to find them on there. There are thousands of packages on npm, here are a few that we find particularly useful:
 
 * [lodash](https://lodash.com/) - A JavaScript utility library delivering consistency, modularity, performance, & extras `npm i lodash -S`
+* [gator](https://gator.com/) - Event delegation in javascript `npm i gator -S`
+* [double-dollar](https://github.com/mrmartineau/double-dollar) - **[javascript]** forEach over DOM elements more easily
+* [whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch) - A window.fetch polyfill. `npm i whatwg-fetch -S`
 * [lazysizes](https://www.npmjs.com/package/lazysizes) - High performance (jankfree) lazy loader for images (including responsive images), iframes and scripts (widgets) `npm i lazysizes -S`
+* [get-size](https://www.npmjs.com/package/get-size) - measures element size  `npm i get-size -S`
+* [throttle-debounce](https://www.npmjs.com/package/throttle-debounce) - Throttle/debounce your functions `npm i throttle-debounce -S`
+* [responsive-watch](https://www.npmjs.com/package/responsive-watch) - Watch some media queries and react when they change `npm i responsive-watch -S`
 * [attach.js](https://www.npmjs.com/package/attach.js) - Attaches JavaScript to HTML without messy selectors `npm i attach.js -S`
 * [D'accord form validation](https://www.npmjs.com/package/daccord-validation) - Kickoff validation plugin for forms. Uses HTML 5 form attributes to trigger validation tests `npm i daccord-validation -S`
 * [Dominus](https://www.npmjs.com/package/dominus) - Lean DOM Manipulation and a great alternative to jQuery at a fraction of the size `npm i dominus -S`
-* [jQuery](https://github.com/jquery/jquery/) - A fast, small, and feature-rich JavaScript library
 * [Cookies](https://github.com/ScottHamper/Cookies/) - Developed by Scott Hamper, Cookies is a great Cookie manipulation library `npm i cookies-js -S`
 * [Bullet pubsub](https://www.npmjs.com/package/bullet-pubsub) - A lightweight and simple to use pub-sub library. `npm i bullet-pubsub -S`
 * [utube](https://www.npmjs.com/package/utube) - Youtube video player class `npm i utube -S`
@@ -123,9 +128,11 @@ If you need to add any 3rd party library code, we suggest that you install it fr
 * [Flickity](https://www.npmjs.com/package/flickity) - Flickity carousel - Touch, responsive, flickable galleries  `npm i flickity -S`
 * [Swiftclick](https://github.com/tmwagency/swiftclick) - Developed by Ivan Hayes, SwiftClick is a library created to eliminate the 300ms click event delay on touch devices.  `npm i swiftclick -S`
 * [Trak.js](https://github.com/mrmartineau/trak.js) - Developed by Zander Martineau, trak.js is a universal analytics event tracking API  `npm i trak.js -S`
-* [get-size](https://www.npmjs.com/package/get-size) - measures element size  `npm i get-size -S`
-* [responsive-watch](https://www.npmjs.com/package/responsive-watch) - Watch some media queries and react when they change `npm i responsive-watch -S`
-* [throttle-debounce](https://www.npmjs.com/package/throttle-debounce) - Throttle/debounce your functions `npm i throttle-debounce -S`
+* [switch-fn](https://www.npmjs.com/package/switch-fn) - Write a functional switch statement. `npm i switch-fn -S`
+* [eases](https://www.npmjs.com/package/eases) - grab bag of easing equations `npm i eases -S`
+* [mousetrap](https://www.npmjs.com/package/mousetrap) - Simple library for handling keyboard shortcuts `npm i mousetrap -S`
+* [dateformat](https://www.npmjs.com/package/dateformat) - A node.js package for Steven Levithan's excellent dateFormat() function. `npm i dateformat -S`
+* [jQuery](https://github.com/jquery/jquery/) - A fast, small, and feature-rich JavaScript library
 * [uppie](https://www.npmjs.com/package/uppie) - Cross-browser directory and multi-file upload library `npm i uppie -S`
 
 <hr class="sectionSplitter">
