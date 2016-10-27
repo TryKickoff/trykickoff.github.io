@@ -26,7 +26,7 @@ This is where you define your global Sass variables. Here you can define your:
 * Global typographic styles — including font choices and typographic scale.
 * Responsive breakpoints — we try not to target specific devices or device types with these variables. Instead they should be set with the design in mind.
 
-#### _color-palette.scss 
+#### _color-palette.scss
 Text colour, link colours, background colour, form fields and various component colours can all be set in this file.
 
 ---
@@ -51,7 +51,7 @@ N.b. We recommend that it is better to make reusable components rather than styl
 
 ### Mixins
 
-The mixins directory contains a few mixins that will help you day-to-day. Amongst others, _responsive.scss contains our media query mixins , `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the @include `font-size()` mixin for specifying your font sizes with a px value but outputting both rem and px in your compiled styles.
+The mixins directory contains a few mixins that will help you day-to-day. Amongst others, _responsive.scss contains our media query mixins , `_hidpi.scss` contains our mixins for working with hiDPi (retina) styles and `_utility.scss` has a bunch of helpful mixins. For example, the @include `ko-font-size()` mixin for specifying your font sizes with a px value but outputting both rem and px in your compiled styles.
 
 ### Functions
 

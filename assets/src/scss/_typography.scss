@@ -25,7 +25,7 @@ html {
 
 body {
 	font-family: $font-family-base;
-	@include font-size(base);
+	@include ko-font-size(base);
 	line-height: $leading-base;
 	color: $color-text;
 
@@ -49,7 +49,7 @@ body {
  */
 p {
 	font-family: $font-family-base;
-	@include font-size(base);
+	@include ko-font-size(base);
 	margin-top: 0;
 	margin-bottom: $baseline;
 
@@ -73,7 +73,6 @@ h6 {
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 	margin-top: 0;
 	margin-bottom: $baseline;
-	font-style: italic;
 
 	small {
 		font-weight: normal;
@@ -85,26 +84,26 @@ h6 {
 h1,
 .h1,
 .alpha {
-	@include font-size(jumbo);
+	@include ko-font-size(jumbo);
 	margin-bottom: $baseline * 2;
 }
 
 h2,
 .h2,
 .beta {
-	@include font-size(large);
+	@include ko-font-size(large);
 }
 
 h3,
 .h3,
 .gamma {
-	@include font-size(mid);
+	@include ko-font-size(mid);
 }
 
 h4,
 .h4,
 .delta {
-	@include font-size(base);
+	@include ko-font-size(base);
 }
 
 h5,
@@ -113,17 +112,9 @@ h5,
 h6,
 .h6,
 .zeta {
-	@include font-size(base);
+	@include ko-font-size(base);
 	margin-bottom: 0;
 }
-
-// h5,
-.h5,
-.epsilon {}
-
-// h6,
-.h6,
-.zeta {}
 
 // Only give these headings a margin-top if they are after other elements
 * + h1,
@@ -176,7 +167,7 @@ blockquote {
 
 	p {
 		margin-bottom: 0;
-		@include font-size(base);
+		@include ko-font-size(base);
 		font-weight: 300;
 	}
 
@@ -184,7 +175,7 @@ blockquote {
 		display: block;
 		color: lighten(#000, 70%);
 
-		&:before {
+		&::before {
 			content: '\2014 \00A0';
 		}
 	}
@@ -193,8 +184,8 @@ blockquote {
 // Quotes
 q,
 blockquote {
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		content: "";
 	}
 }
@@ -217,19 +208,17 @@ mark {
 
 // Prevents sub and sup affecting line-height in all browsers
 // gist.github.com/413930
-sub, sup {
+sub,
+sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
 
-sup { top: -.5em; }
-sub { bottom: -.25em; }
-
-samp {
-	font-family: $font-family-mono;
-}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+samp { font-family: $font-family-mono; }
 
 
 /**
@@ -248,7 +237,7 @@ samp {
 	text-align: right;
 }
 
-@include text-selection($color-selection, $color-selection-bg);
+@include ko-text-selection($color-selection, $color-selection-bg);
 
 // Horizontal rules
 hr {

@@ -48,7 +48,7 @@ hr {
 	// 	padding: 5px;
 	// }
 
-	@include respond-min(mid) {
+	@include media('>mid') {
 		// position: fixed;
 		// top: 0;
 		// left: 0;
@@ -65,14 +65,14 @@ hr {
 .logo {
 	font-weight: normal;
 	margin: 0;
-	@include font-size(30);
+	@include ko-font-size(30);
 	text-align: center;
 	line-height: 1.5;
 
-	@include respond-min(mid) {
+	@include media('>mid') {
 		float: left;
 		margin: 0;
-		@include font-size(30);
+		@include ko-font-size(30);
 		text-align: left;
 	}
 }
@@ -99,14 +99,14 @@ hr {
 .nav {
 	text-align: center;
 
-	@include respond-min(mid) {
+	@include media('>mid') {
 		float: right;
 	}
 }
 
 .main-nav {
 	@extend .unstyled;
-	@include clearfix;
+	@include ko-clearfix;
 	overflow-x: auto;
 	-ms-overflow-style: none;
 	-webkit-overflow-scrolling: touch;
@@ -125,7 +125,7 @@ hr {
 	a {
 		display: inline-block;
 		padding: 0 .5em;
-		@include font-size(18);
+		@include ko-font-size(18);
 		line-height: 50px;
 		height: 53px;
 		color: #fff;
@@ -205,35 +205,35 @@ hr {
 	position: relative;
 	margin: 0;
 	padding-bottom: .5em;
-	@include font-size(mid);
+	@include ko-font-size(mid);
 
-	@include respond-min(mid) {
+	@include media('>mid') {
 		&--icon {
 			position: relative;
 			padding-left: 60px;
 		}
 	}
 
-	@include respond-min(mid) {
-		@include font-size(large);
+	@include media('>mid') {
+		@include ko-font-size(large);
 	}
 
-	@include respond-min(wide) {
-		@include font-size(jumbo);
+	@include media('>wide') {
+		@include ko-font-size(jumbo);
 	}
 }
 
 .wideBoy-subtitle {
 	margin-top: 0;
 	margin-bottom: .5em;
-	@include font-size(base);
+	@include ko-font-size(base);
 
-	@include respond-min(mid) {
-		@include font-size(mid);
+	@include media('>mid') {
+		@include ko-font-size(mid);
 	}
 
-	// @include respond-min(wide) {
-	// 	@include font-size(large);
+	// @include media('>wide') {
+	// 	@include ko-font-size(large);
 	// }
 }
 
@@ -250,7 +250,7 @@ hr {
 }
 
 .slack {
-	@include font-size(mid);
+	@include ko-font-size(mid);
 	padding: 1em 2em;
 	text-align: center;
 	display: block;
@@ -305,7 +305,7 @@ hr {
 	text-align: left;
 	text-indent: -999em;
 
-	@include respond-max(mid) {
+	@include media('<mid') {
 		display: none;
 	}
 }
@@ -313,13 +313,13 @@ hr {
 
 .bigBoy {
 
-	@include respond-min(mid) {
+	@include media('>mid') {
 		h1 {
 			margin-bottom: 0.5em;
 		}
 
 		h2 {
-			@include font-size(28);
+			@include ko-font-size(28);
 		}
 
 		p {
@@ -348,7 +348,7 @@ hr {
 	display: inline-block;
 	padding: 0.3em 0.5em;
 	border-radius: 5px;
-	@include font-size(12);
+	@include ko-font-size(12);
 	font-family: $font-family-mono;
 
 	&, &:link, &:visited {
@@ -361,7 +361,7 @@ hr {
 }
 
 .cta-whatsNew {
-	@include respond-min(mid) {
+	@include media('>mid') {
 		margin-left: $baseline;
 	}
 }
@@ -416,7 +416,7 @@ figure {
 			color: $color-link-default;
 		}
 
-	@include respond-min(mid) {
+	@include media('>mid') {
 		li {
 			margin-bottom: 0px;
 		}
@@ -445,13 +445,13 @@ figure {
 		text-align: left;
 		color: #fff;
 		// opacity: 0;
-		@include font-size(micro);
+		@include ko-font-size(micro);
 		font-style: italic;
 		font-family: $font-family-alt;
 		line-height: 1;
 
-		@include respond-min(mid) {
-			@include font-size(small);
+		@include media('>mid') {
+			@include ko-font-size(small);
 		}
 	}
 
@@ -529,7 +529,7 @@ figure {
 
 	.asset-font {
 		width: 200px;
-		@include font-size(100);
+		@include ko-font-size(100);
 	}
 }
 
@@ -563,7 +563,7 @@ figure {
 	position: absolute;
 	top: 0;
 	right: 0;
-	@include font-size(micro);
+	@include ko-font-size(micro);
 	text-align: right;
 	padding: 1px 5px;
 
@@ -681,7 +681,7 @@ figure {
 	}
 
 	.asset-font {
-		@include font-size(150);
+		@include ko-font-size(150);
 		line-height: 60px;
 		height: 70px;
 	}
@@ -751,7 +751,7 @@ figure {
 	position: absolute;
 	bottom: 100%;
 	font-family: $font-family-mono;
-	@include font-size(micro);
+	@include ko-font-size(micro);
 	font-style: normal;
 	left: 0;
 	opacity: .6;
@@ -814,7 +814,7 @@ figure {
 
 	code, pre {
 		background-color: #fff;
-		@include font-size(14);
+		@include ko-font-size(14);
 		white-space: pre;
 	}
 }
@@ -856,7 +856,7 @@ figure {
 	}
 }
 
-@include respond-max(mid) {
+@include media('<mid') {
 	.github-logo {
 		display: none;
 	}
@@ -871,7 +871,7 @@ figure {
 	word-wrap: break-word;
 	color: #fff;
 	background-color: $color-primary;
-	@include font-size(13);
+	@include ko-font-size(13);
 	white-space: inherit;
 
 	&:before {
@@ -912,7 +912,7 @@ figure {
 // These all follow the same sizing rules as above; text is 1em, space around it
 // Large
 .btn--large {
-	@include font-size(large);
+	@include ko-font-size(large);
 	line-height: 3;
 	height:     3em;
 	padding-right:2em;
@@ -922,7 +922,7 @@ figure {
 
 // Small
 .btn--small {
-	@include font-size(small);
+	@include ko-font-size(small);
 	line-height:1.5;
 	height: 1.5em;
 	padding-right:0.75em;
