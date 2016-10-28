@@ -73,6 +73,7 @@ h6 {
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 	margin-top: 0;
 	margin-bottom: $baseline;
+	font-style: italic;
 
 	small {
 		font-weight: normal;
