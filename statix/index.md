@@ -1,7 +1,7 @@
 ---
 title: Statix
-layout: statix
-subtitle: 
+layout: simple
+subtitle:
 navgroup: statix
 ---
 
