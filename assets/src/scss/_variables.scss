@@ -27,7 +27,7 @@ $leading-base             : 1.4;
 $line-height-base         : round($font-size-base * $leading-base); // 20 * 1.4
 $baseline                 : $line-height-base * 1px;
 
-$type-scale               : 1.414; // aug. fourth / dim. fifth
+$type-scale               : 1.333; // aug. fourth / dim. fifth
 
 $type: (
 	micro                   : ko-modular-scale($font-size-base, -2, $type-scale),

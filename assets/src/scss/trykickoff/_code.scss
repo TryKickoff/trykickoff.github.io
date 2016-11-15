@@ -38,10 +38,13 @@
 	}
 }
 
+.wideBoy .highlight {
+	margin: $baseline 0;
+}
 .wideBoy .highlight,
 .wideBoy .highlight pre,
 .wideBoy .highlight code {
-	background: #fff;
+	background: #f2f2f2;
 	color: #333;
 }
 

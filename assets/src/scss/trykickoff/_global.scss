@@ -20,65 +20,60 @@ hr {
 	z-index: 100;
 	background-color: $color-primary;
 	color: #fff;
-	min-height: 50px;
-	line-height: 45px;
-
-	// .l-container {
-	// 	padding: 5px;
-	// }
 
 	@include media('>mid') {
-		// position: fixed;
-		// top: 0;
-		// left: 0;
-		// right: 0;
+		line-height: 45px;
+
+		&--home .l-container {
+			justify-content: flex-end !important;
+		}
 
 		.l-container {
 			padding: 0;
 			line-height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			text-align: right;
 		}
 	}
 
+	&--home {
+		padding-top: 20px;
+	}
 }
 
-.logo {
+.masthead-logo {
 	font-weight: normal;
+	padding: 0.3em 0;
 	margin: 0;
 	@include ko-font-size(30);
-	text-align: center;
 	line-height: 1.5;
 
 	@include media('>mid') {
 		float: left;
-		margin: 0;
-		@include ko-font-size(30);
-		text-align: left;
+	}
+
+	&.hide {
+		display: none;
 	}
 }
 
 .logoStyle {
 	font-style: italic;
+	font-weight: 700 !important;
+	letter-spacing: -0.01em;
 
 	&, a:link, a:visited {
 		color: #fff;
 	}
 
-	font-weight: 700 !important;
-	letter-spacing: -0.01em;
-
 	span {
 		color: $color-secondary;
-	}
-
-	&:hover {
-		opacity: .6;
 	}
 }
 
 .nav {
-	text-align: center;
-
-
 	@include media('>mid') {
 		float: right;
 		position: relative;
@@ -97,17 +92,21 @@ hr {
 		display: inline-block;
 		position: relative;
 	}
-
 }
 
 .nav-item {
 	position: relative;
 	display: inline-block;
 	padding: 0 .5em;
-	@include ko-font-size(18);
-	line-height: 50px;
-	height: 53px;
+	@include ko-font-size(13);
 	vertical-align: top;
+	text-transform: uppercase;
+
+	@include media('>mid') {
+		@include ko-font-size(small);
+		line-height: 50px;
+		height: 53px;
+	}
 
 	&,
 	&:link,
@@ -225,7 +224,7 @@ hr {
    Home page
    ========================================================================== */
 .wideBoy {
-	padding: 50px 0;
+	padding: 10% 0;
 
 	&--hero {
 		margin-bottom: $baseline;
@@ -236,7 +235,6 @@ hr {
 	position: relative;
 	margin: 0;
 	padding-bottom: .5em;
-	@include ko-font-size(mid);
 	font-style: italic;
 
 	@include media('>mid') {
@@ -259,6 +257,7 @@ hr {
 	margin-top: 0;
 	margin-bottom: .5em;
 	@include ko-font-size(base);
+	line-height: 1.4;
 
 	@include media('>mid') {
 		@include ko-font-size(mid);
@@ -281,13 +280,16 @@ hr {
 	}
 }
 
-.slack {
-	@include ko-font-size(mid);
-	padding: 1em 2em;
-	text-align: center;
+.bigLink {
+	@include ko-font-size(base);
+	padding: 1.6em 0;
+	background-color: $color-primary;
 	display: block;
-	background-color: $color-secondary;
-	line-height: 50px;
+
+	.l-container {
+		display: flex;
+		align-items: center;
+	}
 
 	&,
 	&:link,
@@ -296,21 +298,21 @@ hr {
 	}
 
 	&:hover {
-		background-color: darken($color-secondary, 10%);
+		background-color: darken($color-primary, 10%);
 	}
 
-	a,
-	&:before {
-		vertical-align: top;
+	&--secondary {
+		background-color: $color-secondary;
+
+		&:hover {
+			background-color: darken($color-secondary, 10%);
+		}
 	}
 
-	&:before {
-		content: '';
-		background: url('#{$img-path}/ui/slack-mark-white.png') center center no-repeat;
+	img {
 		background-size: contain;
 		display: inline-block;
-		width: 50px;
-		height: 50px;
+		max-width: 50px;
 		margin-right: 1em;
 	}
 }
@@ -369,32 +371,37 @@ hr {
 .primary {
 	background-color: $color-primary;
 	color: #fff;
-
-	.btn {
-		margin-top: 1em;
-	}
 }
 
-.currentVersion--tag {
-	background-color: lighten($color-primary, 10%);
-	display: inline-block;
-	padding: 0.3em 0.5em;
-	border-radius: 5px;
-	@include ko-font-size(12);
-	font-family: $font-family-mono;
+.page-home .primary {
+	margin-bottom: 0;
+}
 
-	&, &:link, &:visited {
-		color: #fff;
-	}
+.btn--site {
+	height: auto;
+	padding: 0.5em;
+	line-height: 1;
+	background-color: rgba(#fff, 0);
+	@include ko-font-size(small);
+	text-transform: uppercase;
 
+	&:focus,
 	&:hover {
-		background-color: lighten($color-primary, 15%);
+		background-color: rgba(#fff, 0.3);
 	}
-}
 
-.cta-whatsNew {
-	@include media('>mid') {
-		margin-left: $baseline;
+	&:active {
+		background-color: rgba(#fff, 0.7);
+	}
+
+	&--dark {
+		background-color: rgba($color-primary, 0.8);
+
+		&:focus,
+		&:hover,
+		&:active {
+			background-color: $color-primary;
+		}
 	}
 }
 
@@ -415,14 +422,6 @@ hr {
 .contribute {
 	background-color: $gray;
 	overflow: hidden;
-}
-
-/**
- * Features
- */
-.features {
-	// border-top: 1px solid #000;
-	background-color: #f1f1f1;
 }
 
 figure {
@@ -899,25 +898,14 @@ figure {
 
 .code-lrg {
 	display: block;
-	text-align: left;
-	padding: 1em 1em 1em 110px;
-	margin: 10px 0;
 	position: relative;
-	word-wrap: break-word;
-	color: #fff;
-	background-color: $color-primary;
-	@include ko-font-size(13);
-	white-space: inherit;
 
 	&:before {
 		content: attr(data-before);
 		position: absolute;
-		top: 0; left: 0; bottom: 0;
-		width: 90px;
-		padding: 1em;
-		background-color: $blue;
-		display: block;
-		font-weight: $font-weight-bold;
+		bottom: 100%;
+		left: 0;
+		display: inline-block;
 	}
 }
 

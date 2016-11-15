@@ -1,6 +1,6 @@
-<header class="masthead masthead-all clearfix">
+<header class="masthead{% if page.navgroup == 'home' %} masthead--home{% endif %}">
 	<div class="l-container">
-		<h1 class="logo logoStyle"><a href="/" data-trak='{"category":"Masthead link","action":"Logo"}'>Kick<span>off</span></a></h1>
+		<h1 class="masthead-logo logoStyle{% if page.navgroup == 'home' %} hide{% endif %}"><a href="/" data-trak='{"category":"Masthead link","action":"Logo"}'>Kick<span>off</span></a></h1>
 
 		<nav class="nav">
 			<ul class="main-nav">
@@ -24,15 +24,6 @@
 						href="/blog"
 					>Blog</a>
 				</li>
-				<li>
-					<a
-						class="nav-item"
-						href="https://github.com/trykickoff/kickoff/"
-						target="_blank"
-						data-icon-after="&#59157;"
-						data-trak='{"category":"Masthead link","action":"Repo"}'
-					>Github</a>
-				</li>
 				<li class="has-subNav">
 					<span class="nav-item">Releases</span>
 					<div class="nav-item-dropdown">
@@ -42,6 +33,15 @@
 					</div>
 				</li>
 				<li>
+					<a
+						class="nav-item"
+						href="https://github.com/trykickoff/kickoff/"
+						target="_blank"
+						data-icon-after="&#59157;"
+						data-trak='{"category":"Masthead link","action":"Repo"}'
+					>Github</a>
+				</li>
+				<li class="u-showAboveMid">
 					<a
 						class="nav-item slackMini"
 						href="https://slackin-trykickoff.herokuapp.com/"

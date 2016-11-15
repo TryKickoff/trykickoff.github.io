@@ -6,58 +6,65 @@ meta:
   title: Kickoff
 ---
 
-<section class="wideBoy wideBoy--dark wideBoy--hero primary text-centre">
+<section class="wideBoy wideBoy--dark wideBoy--hero primary">
 	<div class="l-container">
-		<a href="https://github.com/TryKickoff/kickoff/releases/latest" class="currentVersion currentVersion--tag"></a>
 		<h1 class="wideBoy-title">
-			<span class="logoStyle">Kick<span>off</span></span> is a lightweight front-end framework for creating scalable, performant and responsive sites.
+			<span class="logoStyle">Kick<span>off</span></span>
 		</h1>
+		<h2 class="wideBoy-subtitle">
+			The lightweight front-end framework for creating scalable, performant and responsive sites.
+		</h2>
 
-		<a href="learn/" class="btn btn--primary" data-trak='{"category":"Home page","action":"Get started","label":"CTA"}'>Get Started</a> <a href="https://github.com/TryKickoff/kickoff/releases/latest" class="btn btn--hollow cta-whatsNew" data-trak='{"category":"Home page","action":"Whats new","label":"CTA"}'>What's new in <span class="currentVersion"></span></a>
+		<a class="btn btn--site cta-whatsNew" href="learn/"
+			data-trak='{"category":"Home page","action":"Get started","label":"CTA"}'>Get Started</a>
+		&bull;
+		<a class="btn btn--site" href="https://github.com/TryKickoff/kickoff/releases/latest"
+			data-trak='{"category":"Home page","action":"Whats new","label":"CTA"}'>What's new in <span class="currentVersion currentVersion--new"></span></a>
 
 		<div class="l-mt1">
 			<iframe src="http://ghbtns.com/github-btn.html?user=trykickoff&repo=kickoff&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="135" height="30"></iframe>
-			<iframe src="http://ghbtns.com/github-btn.html?user=trykickoff&repo=kickoff&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="30"></iframe>
 		</div>
 	</div>
 </section>
 
 <section class="wideBoy wideBoy--bright get-started">
 	<div class="l-container">
-		<h2 class="wideBoy-subtitle wideBoy-title--icon clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
-		<!-- <h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2> -->
+		<h3 class="wideBoy-title">Quick start</h3>
+		<p>Install our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a>, it is the best way to get Kickoff each time you want to start a new project:</p>
 
-		<div class="g g--gutter g--stack">
-			<div class="g-col g-span6--mid">
-				<code class="code-lrg" data-before="install:">npm install -g generator-kickoff yo</code>
-			</div>
-			<div class="g-col g-span6--mid">
-				<code class="code-lrg" data-before="use:">yo kickoff</code>
-			</div>
-		</div>
+{% highlight sh %}
+# Install Yeoman and the Kickoff generator
+npm install -g generator-kickoff yo
 
-		<p class="l-mb0"><a href="/learn/yeoman.html">Find out more about the generator</a> or clone the git repo:</p>
+# Run the Kickoff Yeoman generator
+yo kickoff
+{% endhighlight %}
 
-		<code class="code-lrg" data-before="git:">
-			git clone https://github.com/trykickoff/kickoff.git your-project-folder
-		</code>
+		<p><a href="/learn/yeoman.html">Find out more about the generator</a> or clone the git repo:</p>
 
-		<p class="l-mb0 text-center">
-			Find other ways to get Kickoff <a href="learn/get.html">in our documentation.</a>
-			<br>
-			Follow <a href="http://twitter.com/trykickoff" data-trak='{"category":"Home page","action":"Follow on Twitter","label":"Social"}'>@trykickoff</a> for updates.
-		</p>
+{% highlight sh %}
+# clone the repo
+git clone https://github.com/trykickoff/kickoff.git your-project-folder
+{% endhighlight %}
+
+		<h3>Find out more</h3>
+		<a href="/learn" class="btn btn--site btn--site--dark">Read our docs</a>
+		&bull;
+		<a href="/demos" class="btn btn--site btn--site--dark">see our demos</a>
 
 	</div>
 </section>
 
-<a href="https://slackin-trykickoff.herokuapp.com/" title="Join Kickoff on Slack" class="slack text-centre">
-	Need real-time help? Find us on Slack
+<a href="https://slackin-trykickoff.herokuapp.com/" title="Join Kickoff on Slack" class="bigLink bigLink--secondary">
+	<div class="l-container">
+		<img src="/assets/dist/img/ui/slack-mark-white.png" alt="Slack logo" />
+		Need real-time help? Find us on Slack
+	</div>
 </a>
 
 <section class="features wideBoy--bright wideBoy">
 	<div class="l-container">
-		<h1 class="wideBoy-title l-mb1">Feature overview</h1>
+		<h1 class="wideBoy-title">Feature overview</h1>
 
 		<!-- section on CSS -->
 		<div class="g g--gutter g--stack">
@@ -147,32 +154,21 @@ ready(() => {
 
 		<hr class="sectionSplitter">
 
-		<div class="text-center">
-			<h3>Find out more</h3>
-			<a href="/learn" class="">Read our docs</a>
-			or <a href="/demos" class="">see our demos</a>
-		</div>
+		<h3>Find out more</h3>
+		<a href="/learn" class="btn btn--site btn--site--dark">Read our docs</a>
+		&bull;
+		<a href="/demos" class="btn btn--site btn--site--dark">see our demos</a>
 
 	</div>
 </section>
 
-<section class="latestNews wideBoy--dark wideBoy">
+
+<a href="https://blog.trykickoff.com" title="Read the blog" class="bigLink bigLink--primary">
 	<div class="l-container">
-		<h1 class="wideBoy-title">From the blog&hellip;</h1>
-		<ul class="unstyled">
-			{% for post in site.posts %}
-			<li class="l-mb1">
-				<h4 class="entry-title l-mb0">
-					<a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a>
-					<time class="entry-title-date">{{ post.date | date: "%-d %B %Y" }}</time>
-				</h4>
-			</li>
-{% endfor %}
-		</ul>
-
+		<img src="/assets/dist/img/ui/medium-m-dark-100px.png" alt="Medium logo" />
+		Read the blog
 	</div>
-
-</section>
+</a>
 
 <section class="showcase wideBoy--dark wideBoy">
 	<div class="l-container">

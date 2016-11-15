@@ -127,3 +127,56 @@ textarea,
 [tabindex] {
 	touch-action: manipulation;
 }
+
+
+/**
+ * Responsive helper classes to show/hide content based on our media-queries
+ */
+.u-showBelowNarrow {
+	@include media('>narrow') {
+		display: none !important;
+	}
+}
+
+.u-showBelowMid {
+	@include media('>mid') {
+		display: none !important;
+	}
+}
+
+.u-showBelowWide {
+	@include media('>wide') {
+		display: none !important;
+	}
+}
+
+.u-showBelowHuge {
+	@include media('>huge') {
+		display: none !important;
+	}
+}
+
+.u-showAboveNarrow {
+	@include media('<narrow') {
+		display: none !important;
+	}
+}
+
+.u-showAboveMid {
+	@include media('<mid') {
+		display: none !important;
+	}
+}
+
+
+.u-showAboveWide {
+	@include media('<wide') {
+		display: none !important;
+	}
+}
+
+.u-showAboveHuge {
+	@include media('<huge') {
+		display: none !important;
+	}
+}
