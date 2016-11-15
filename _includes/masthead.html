@@ -4,12 +4,51 @@
 
 		<nav class="nav">
 			<ul class="main-nav">
-				<li><a href="/learn/"{% if page.navgroup == "docs" %} class="is-active"{% endif %} data-trak='{"category":"Masthead link","action":"Learn"}'>Learn</a></li>
-				<li><a href="/demos/"{% if page.navgroup == "demo" %} class="is-active"{% endif %} data-trak='{"category":"Masthead link","action":"Demos"}'>Demos</a></li>
-				<li><a href="/learn/get.html" data-trak='{"category":"Masthead link","action":"Get Kickoff"}'>Get Kickoff</a></li>
-				<li><a href="/blog"{% if page.navgroup == "blog" %} class="is-active"{% endif %}>Blog</a></li>
-				<li><a href="https://github.com/trykickoff/kickoff/" target="_blank" data-icon-after="&#59157;" data-trak='{"category":"Masthead link","action":"Repo"}'>View on Github</a></li>
-				<li><a class="slackMini" href="https://slackin-trykickoff.herokuapp.com/" target="_blank" data-trak='{"category":"Masthead link","action":"Slack"}' title="Join Kickoff on Slack"></a></li>
+				<li>
+					<a
+						class="nav-item{% if page.navgroup == "docs" %} is-active{% endif %}"
+						href="/learn/"
+						data-trak='{"category":"Masthead link","action":"Learn"}'
+					>Docs</a>
+				</li>
+				<li>
+					<a
+						class="nav-item{% if page.navgroup == "demo" %} is-active{% endif %}"
+						href="/demos/"
+						data-trak='{"category":"Masthead link","action":"Demos"}'
+					>Demos</a>
+				</li>
+				<li>
+					<a
+						class="nav-item{% if page.navgroup == "blog" %} is-active{% endif %}"
+						href="/blog"
+					>Blog</a>
+				</li>
+				<li>
+					<a
+						class="nav-item"
+						href="https://github.com/trykickoff/kickoff/"
+						target="_blank"
+						data-icon-after="&#59157;"
+						data-trak='{"category":"Masthead link","action":"Repo"}'
+					>Github</a>
+				</li>
+				<li class="has-subNav">
+					<span class="nav-item">Releases</span>
+					<div class="nav-item-dropdown">
+						<a class="nav-subItem"
+							href="http://github.com/TryKickoff/kickoff/releases">Kickoff release notes</a>
+						<div class="nav-releases"></div>
+					</div>
+				</li>
+				<li>
+					<a
+						class="nav-item slackMini"
+						href="https://slackin-trykickoff.herokuapp.com/"
+						target="_blank"
+						data-trak='{"category":"Masthead link","action":"Slack"}'
+						title="Join Kickoff on Slack"></a>
+				</li>
 			</ul>
 		</nav>
 	</div>

@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "anchor-js": "3.2.2",
+    "axios": "^0.15.2",
     "console": "0.5.2",
     "copy-js": "0.1.1",
     "daccord-validation": "2.0.1",
