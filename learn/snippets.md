@@ -1,8 +1,9 @@
 ---
-title: Sublime Text snippets for Kickoff
+title: IDE snippets for Kickoff
+subtitle: Snippets for Atom and Sublime Text
 layout: docs
 navgroup: docs
-navactive: docssublime
+navactive: docssnippets
 meta:
   description: Use Sublime? These handy snippets will make life with Kickoff even
     easier.
@@ -31,5 +32,3 @@ If you use Sublime Text, we have created some snippets to use with the framework
 2. Restart ST editor (if required)
 
 If you experience problems or editor crashes please [file an issue](https://github.com/trykickoff/Kickoff-snippets/issues).
-
-
