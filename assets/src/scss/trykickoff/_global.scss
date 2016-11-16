@@ -808,8 +808,17 @@ figure {
 /**
  * Docs/demo sidebar navigation
  */
+.sidebarReveal {
+	margin-bottom: 15px;
+	// border: 0;
+	// background-color: #e4e4e4;
+	// display: block;
+	// width: 100%;
+	// padding: 10px;
+}
 .sidebar-nav {
 	margin-bottom: 1em;
+	@include ko-font-size(small);
 
 	a {
 		// font-family: $font-family-alt;
@@ -817,12 +826,14 @@ figure {
 		padding: .2em .5em .3em;
 		border-left: 3px solid;
 		display: block;
+
+		&.is-active {
+			background-color: $color-primary;
+			border-color: $color-primary;
+			color: #fff;
+		}
 	}
-	.is-active {
-		background-color: $color-primary;
-		border-color: $color-primary;
-		color: #fff;
-	}
+
 }
 .sidebar-subnav {
 	margin-left: 1em;
