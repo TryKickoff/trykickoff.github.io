@@ -1,8 +1,18 @@
 ---
 title: Statix
-layout: simple
-subtitle:
-navgroup: statix
+layout: docs
+subtitle: Rapid-prototyping & HTML templating
+navgroup: docs
+navactive: docsstatix
+meta:
+  description: Understand how we use Javascript in Kickoff
+next:
+- title: Kickoff's CSS
+  body: Take a look at how Kickoff structures it’s CSS.
+  link: css.html
+- title: The Kickoff Grid
+  body: Find out how to use the default Kickoff grid in your project.
+  link: grid.html
 ---
 
 ## Why do I need Statix in my life?
@@ -173,4 +183,3 @@ If you're using Statix we'd love to hear about it; give us a shout on Twitter, o
 
 
 [![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tmwagency/kickoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-
