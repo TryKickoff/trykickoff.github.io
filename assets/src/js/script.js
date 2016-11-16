@@ -39,4 +39,8 @@ ready(() => {
 	packageInfo();
 	demos();
 	svg4everybody();
+
+	document.querySelector('.sidebarReveal').addEventListener('click', ev => {
+		document.querySelector('.sidebar').classList.toggle('u-showAboveMid');
+	}, false);
 });
