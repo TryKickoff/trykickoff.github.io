@@ -8,6 +8,7 @@ const packages = [
 	'kickoff-utils.scss',
 	'kickoff-fluidVideo.css',
 	'kickoff-snippets',
+	'statix'
 ]
 
 let packageEndpoints = [];
@@ -19,7 +20,7 @@ function init() {
 
 	// If you add a package to the array above,
 	// ensure you add its data as an argument here
-	axios.all(packageEndpoints).then(axios.spread((kickoffData, generatorData, gridData, utilsData, fluidVideoData, snippetsData) => {
+	axios.all(packageEndpoints).then(axios.spread((kickoffData, generatorData, gridData, utilsData, fluidVideoData, snippetsData, statixData) => {
 		// console.log(kickoffData, generatorData, gridData, utilsData, fluidVideoData, snippetsData)
 
 		// Manually add the button using the data from 'ajax' :wink:
@@ -30,6 +31,7 @@ function init() {
 			<a class="nav-subItem" href="https://github.com/TryKickoff/${utilsData.data.name}/">${utilsData.data.name}@${utilsData.data.version}</a>
 			<a class="nav-subItem" href="https://github.com/TryKickoff/${fluidVideoData.data.name}/">${fluidVideoData.data.name}@${fluidVideoData.data.version}</a>
 			<a class="nav-subItem" href="https://github.com/TryKickoff/${snippetsData.data.name}/">${snippetsData.data.name}@${snippetsData.data.version}</a>
+			<a class="nav-subItem" href="https://github.com/TryKickoff/${statixData.data.name}/">${statixData.data.name}@${statixData.data.version}</a>
 		`;
 
 		// Add the version to the home page hero area
