@@ -26,6 +26,7 @@
     "copy-js": "0.1.1",
     "daccord-validation": "2.0.1",
     "double-dollar": "1.0.0",
+    "flickity": "^2.0.5",
     "include-media": "1.4.8",
     "jquery": "3.1.1",
     "kickoff-fluidVideo.css": "1.1.0",
