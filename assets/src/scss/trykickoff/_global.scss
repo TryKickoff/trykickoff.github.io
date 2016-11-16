@@ -185,23 +185,22 @@ hr {
 
 	a:link,
 	a:visited {
-		color: $color-secondary;
+		color: #fff;
+		border-bottom: 2px solid $color-secondary;
 	}
 
 	a:link,
 	a:visited {
-		border-bottom: 2px solid rgba(#fff, 0.7);
 		white-space: pre;
 	}
 
 	a:hover {
-		opacity: .5;
+		border-bottom-color: #fff;
 	}
 
 	p {
 		max-width: 700px;
-		margin-left: auto;
-		margin-right: auto;
+		@include ko-font-size(small);
 	}
 }
 
