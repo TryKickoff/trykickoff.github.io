@@ -20,6 +20,7 @@ hr {
 	z-index: 100;
 	background-color: $color-primary;
 	color: #fff;
+	margin-bottom: -1px;
 
 	@include media('>mid') {
 		line-height: 45px;
@@ -50,10 +51,6 @@ hr {
 	@include ko-font-size(30);
 	line-height: 1.5;
 
-	@include media('>mid') {
-		float: left;
-	}
-
 	&.hide {
 		display: none;
 	}
@@ -81,7 +78,13 @@ hr {
 }
 
 .main-nav {
+	display: flex;
 	@extend .unstyled;
+	@include ko-font-size(13);
+
+	@include media('>mid') {
+		@include ko-font-size(small);
+	}
 
 	&::-webkit-scrollbar,
 	&::-webkit-scrollbar-track {
@@ -98,7 +101,6 @@ hr {
 	position: relative;
 	display: inline-block;
 	padding: 0 .5em;
-	@include ko-font-size(13);
 	vertical-align: top;
 	text-transform: uppercase;
 
@@ -317,11 +319,15 @@ hr {
 }
 
 .slackMini {
-	background: url('#{$img-path}/ui/slack_monochrome_white.png') center center no-repeat;
-	display: inline-block;
-	background-size: contain;
-	width: 80px;
-	height: 50px;
+
+	@include media('>narrow') {
+		background: url('#{$img-path}/ui/slack_monochrome_white.png') center center no-repeat;
+		display: inline-block;
+		background-size: contain;
+		width: 80px;
+		height: 50px;
+		color: transparent !important;
+	}
 }
 
 .yo {
