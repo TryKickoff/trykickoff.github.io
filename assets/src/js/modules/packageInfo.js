@@ -31,14 +31,15 @@ function init() {
 						<span class="release-name">${item.data.name}</span>
 						<span class="release-version">${item.data.version}</span>
 				</a>`;
+
+				// Add the version to the home page hero area
+				if (document.querySelector('.currentVersion--new') && item.data.name === 'kickoff') {
+					document.querySelector('.currentVersion--new').textContent = item.data.version;
+				}
 		});
 
 		document.querySelector('.nav-releases').innerHTML = html;
 
-		// Add the version to the home page hero area
-		if (document.querySelector('.currentVersion--new')) {
-			document.querySelector('.currentVersion--new').textContent = kickoffData.data.version;
-		}
 	});
 }
 
