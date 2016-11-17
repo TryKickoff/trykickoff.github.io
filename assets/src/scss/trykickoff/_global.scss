@@ -126,11 +126,16 @@ hr {
 	}
 }
 
-.has-subNav:hover {
-	.nav-item-dropdown {
-		opacity: 1;
-		visibility: visible;
-		transform: translate3d(-50%, 0px, 0);
+.has-subNav {
+	perspective: 1200px;
+	transform-origin: 50% -50px;
+
+	&:hover {
+		.nav-item-dropdown {
+			opacity: 1;
+			visibility: visible;
+			transform: translate3d(-50%, 10px, 0) rotateX(0deg);
+		}
 	}
 
 }
@@ -139,7 +144,8 @@ hr {
 	position: absolute;
 	top: 100%;
 	left: 50%;
-	transform: translate3d(-50%, -5px, 0);
+	transform: translate3d(-50%, 10px, 0) rotateX(-15deg);
+	transform-origin: 50% 0;
 	@include ko-font-size(15);
 	text-align: left;
 	padding: 3px 6px;
@@ -149,6 +155,7 @@ hr {
 	width: 250px;
 	opacity: 0;
 	visibility: hidden;
+	box-shadow: 0 1px 3px rgba(0,0,0,.25);
 
 	&::before {
 		content: '';
@@ -165,18 +172,31 @@ hr {
 }
 
 .nav-subItem {
-	display: block;
+	display: flex;
+	justify-content: space-between;
 	line-height: 1.5;
-	padding: 2px;
+	padding: 4px;
+
+	&:hover {
+		background-color: rgba(#000, 0.08);
+	}
 }
 
 .nav-releases {
 	border-top: 1px solid rgba(#000, 0.3);
+	margin-top: 3px;
+	padding-top: 3px;
 }
+
+.release-version {
+	color: rgba(#000, 0.5);
+}
+
 
 .github-link {
 	background-color: darken($color-primary, 20%);
 }
+
 
 // Footer
 .footer {
@@ -319,14 +339,14 @@ hr {
 }
 
 .slackMini {
-
-	@include media('>narrow') {
+	@include media('>mid') {
 		background: url('#{$img-path}/ui/slack_monochrome_white.png') center center no-repeat;
 		display: inline-block;
 		background-size: contain;
 		width: 80px;
 		height: 50px;
 		color: transparent !important;
+		margin-left: 0.5em;
 	}
 }
 
