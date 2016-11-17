@@ -2,7 +2,7 @@
 
 	<body{% if page.body-class %} class="{{ page.body-class }}"{% endif %}{% if page.prettyprint == true %} onload="prettyPrint()"{% endif %}>
 
-		{% include masthead.html %}
+		{% include masthead.html releases="true" %}
 
 		<main role="main">
 			{{ content }}
