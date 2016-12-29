@@ -85,6 +85,7 @@
     "jekyll:watch": "jekyll build --watch",
     "jekyll:serve": "jekyll serve --watch",
     "prestart": "npm i -g parallelshell",
-    "start": "parallelshell \"npm run watch\" \"npm run jekyll:watch\""
+    "start": "parallelshell \"npm run watch\" \"npm run jekyll:watch\"",
+		"deploy": "now _site -n trykickoff --alias trykickoff.now.sh"
   }
 }
