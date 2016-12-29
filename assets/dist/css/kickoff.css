@@ -3409,7 +3409,8 @@ hr {
   position: relative;
   z-index: 100;
   background-color: #181830;
-  color: #fff; }
+  color: #fff;
+  margin-bottom: -1px; }
   @media (min-width: 769px) {
     .masthead {
       line-height: 45px; }
@@ -3439,9 +3440,6 @@ hr {
   margin: 0;
   font-size: 1.30435rem;
   line-height: 1.5; }
-  @media (min-width: 769px) {
-    .masthead-logo {
-      float: left; } }
   .masthead-logo.hide {
     display: none; }
 
@@ -3459,18 +3457,24 @@ hr {
     float: right;
     position: relative; } }
 
-.main-nav::-webkit-scrollbar, .main-nav::-webkit-scrollbar-track {
-  display: none !important; }
-
-.main-nav > li {
-  display: inline-block;
-  position: relative; }
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.56522rem; }
+  @media (min-width: 769px) {
+    .main-nav {
+      font-size: 0.75019rem; } }
+  .main-nav::-webkit-scrollbar, .main-nav::-webkit-scrollbar-track {
+    display: none !important; }
+  .main-nav > li {
+    display: inline-block;
+    position: relative; }
 
 .nav-item {
   position: relative;
   display: inline-block;
   padding: 0 .5em;
-  font-size: 0.56522rem;
   vertical-align: top;
   text-transform: uppercase; }
   @media (min-width: 769px) {
@@ -3485,18 +3489,27 @@ hr {
   .nav-item.is-active {
     color: #fe7c08; }
 
-.has-subNav:hover .nav-item-dropdown {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translate3d(-50%, 0px, 0);
-          transform: translate3d(-50%, 0px, 0); }
+.has-subNav {
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
+  -webkit-transform-origin: 50% -50px;
+      -ms-transform-origin: 50% -50px;
+          transform-origin: 50% -50px; }
+  .has-subNav:hover .nav-item-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(-50%, 10px, 0) rotateX(0deg);
+            transform: translate3d(-50%, 10px, 0) rotateX(0deg); }
 
 .nav-item-dropdown {
   position: absolute;
   top: 100%;
   left: 50%;
-  -webkit-transform: translate3d(-50%, -5px, 0);
-          transform: translate3d(-50%, -5px, 0);
+  -webkit-transform: translate3d(-50%, 10px, 0) rotateX(-15deg);
+          transform: translate3d(-50%, 10px, 0) rotateX(-15deg);
+  -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
   font-size: 0.65217rem;
   text-align: left;
   padding: 3px 6px;
@@ -3506,7 +3519,8 @@ hr {
   transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
   width: 250px;
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); }
   .nav-item-dropdown::before {
     content: '';
     position: absolute;
@@ -3520,12 +3534,24 @@ hr {
     border-color: transparent transparent #fff transparent; }
 
 .nav-subItem {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   line-height: 1.5;
-  padding: 2px; }
+  padding: 4px; }
+  .nav-subItem:hover {
+    background-color: rgba(0, 0, 0, 0.08); }
 
 .nav-releases {
-  border-top: 1px solid rgba(0, 0, 0, 0.3); }
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 3px;
+  padding-top: 3px; }
+
+.release-version {
+  color: rgba(0, 0, 0, 0.5); }
 
 .github-link {
   background-color: black; }
@@ -3537,17 +3563,16 @@ hr {
   color: #fff; }
   .footer a:link,
   .footer a:visited {
-    color: #fe7c08; }
+    color: #fff;
+    border-bottom: 2px solid #fe7c08; }
   .footer a:link,
   .footer a:visited {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
     white-space: pre; }
   .footer a:hover {
-    opacity: .5; }
+    border-bottom-color: #fff; }
   .footer p {
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto; }
+    font-size: 0.75019rem; }
 
 .footer-nav {
   margin-bottom: 1em; }
@@ -3624,12 +3649,15 @@ hr {
     max-width: 50px;
     margin-right: 1em; }
 
-.slackMini {
-  background: url("/assets/dist/img/ui/slack_monochrome_white.png") center center no-repeat;
-  display: inline-block;
-  background-size: contain;
-  width: 80px;
-  height: 50px; }
+@media (min-width: 769px) {
+  .slackMini {
+    background: url("/assets/dist/img/ui/slack_monochrome_white.png") center center no-repeat;
+    display: inline-block;
+    background-size: contain;
+    width: 80px;
+    height: 50px;
+    color: transparent !important;
+    margin-left: 0.5em; } }
 
 .yo {
   position: absolute;
@@ -3756,8 +3784,8 @@ figure {
 
 .statixLogo {
   max-width: 400px;
-  width: 80%;
-  margin: 0 auto;
+  width: 30%;
+  margin: 32px 0;
   display: block; }
 
 /* ==========================================================================
@@ -3779,16 +3807,11 @@ figure {
 
 .blockLink {
   padding: 1em;
-  display: block;
-  color: #fff; }
-  .blockLink h3 {
-    font-weight: normal;
-    font-style: italic;
-    margin-bottom: 0; }
-  .blockLink p {
-    margin-bottom: 0; }
-  .blockLink code {
-    background-color: #288ad6; }
+  display: block; }
+  .blockLink, .blockLink:link, .blockLink:visited {
+    color: #fff; }
+  .blockLink:hover {
+    color: #fe7c08; }
 
 /* ==========================================================================
    Demos
@@ -3963,16 +3986,20 @@ figure {
 /**
  * Docs/demo sidebar navigation
  */
+.sidebarReveal {
+  margin-bottom: 15px; }
+
 .sidebar-nav {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  font-size: 0.75019rem; }
   .sidebar-nav a {
     padding: .2em .5em .3em;
     border-left: 3px solid;
     display: block; }
-  .sidebar-nav .is-active {
-    background-color: #181830;
-    border-color: #181830;
-    color: #fff; }
+    .sidebar-nav a.is-active {
+      background-color: #181830;
+      border-color: #181830;
+      color: #fff; }
 
 .sidebar-subnav {
   margin-left: 1em; }
@@ -3980,7 +4007,8 @@ figure {
 .docs-footer {
   background-color: #FEFFDA;
   padding: 15px;
-  text-align: center; }
+  text-align: center;
+  font-size: 0.75019rem; }
 
 /**
  * Checklist page
@@ -4408,6 +4436,9 @@ textarea,
 @media (max-width: 1599px) {
   .u-showAboveHuge {
     display: none !important; } }
+
+.u-ml05 {
+  margin-left: -0.5em; }
 
 /**
  * Print styles

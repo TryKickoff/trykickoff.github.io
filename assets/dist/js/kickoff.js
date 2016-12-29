@@ -1023,6 +1023,12 @@ __WEBPACK_IMPORTED_MODULE_0_lite_ready___default()(() => {
 	__WEBPACK_IMPORTED_MODULE_8__modules_packageInfo___default()();
 	__WEBPACK_IMPORTED_MODULE_9__modules_demos___default()();
 	__WEBPACK_IMPORTED_MODULE_2_svg4everybody___default()();
+
+	if (document.querySelector('.sidebarReveal')) {
+		document.querySelector('.sidebarReveal').addEventListener('click', ev => {
+			document.querySelector('.sidebar').classList.toggle('u-showAboveMid');
+		}, false);
+	}
 });
 
 /***/ },
@@ -2292,7 +2298,7 @@ module.exports = init;
 
 
 // List of packages to be included
-const packages = ['kickoff', 'generator-kickoff', 'kickoff-grid.css', 'kickoff-utils.scss', 'kickoff-fluidVideo.css', 'kickoff-snippets'];
+const packages = ['kickoff', 'generator-kickoff', 'kickoff-grid.css', 'kickoff-utils.scss', 'kickoff-fluidVideo.css', 'kickoff-snippets', 'statix'];
 
 let packageEndpoints = [];
 
@@ -2301,26 +2307,28 @@ function init() {
 		packageEndpoints.push(__WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(`https://rawgit.com/TryKickoff/${ pkg }/master/package.json`));
 	});
 
-	// If you add a package to the array above,
-	// ensure you add its data as an argument here
-	__WEBPACK_IMPORTED_MODULE_0_axios___default.a.all(packageEndpoints).then(__WEBPACK_IMPORTED_MODULE_0_axios___default.a.spread((kickoffData, generatorData, gridData, utilsData, fluidVideoData, snippetsData) => {
-		// console.log(kickoffData, generatorData, gridData, utilsData, fluidVideoData, snippetsData)
+	__WEBPACK_IMPORTED_MODULE_0_axios___default.a.all(packageEndpoints).then(response => {
+		console.log(response);
+		let html = ``;
 
-		// Manually add the button using the data from 'ajax' :wink:
-		document.querySelector('.nav-releases').innerHTML = `
-			<a class="nav-subItem" href="https://github.com/TryKickoff/${ kickoffData.data.name }/">${ kickoffData.data.name }@${ kickoffData.data.version }</a>
-			<a class="nav-subItem" href="https://github.com/TryKickoff/${ generatorData.data.name }/">${ generatorData.data.name }@${ generatorData.data.version }</a>
-			<a class="nav-subItem" href="https://github.com/TryKickoff/${ gridData.data.name }/">${ gridData.data.name }@${ gridData.data.version }</a>
-			<a class="nav-subItem" href="https://github.com/TryKickoff/${ utilsData.data.name }/">${ utilsData.data.name }@${ utilsData.data.version }</a>
-			<a class="nav-subItem" href="https://github.com/TryKickoff/${ fluidVideoData.data.name }/">${ fluidVideoData.data.name }@${ fluidVideoData.data.version }</a>
-			<a class="nav-subItem" href="https://github.com/TryKickoff/${ snippetsData.data.name }/">${ snippetsData.data.name }@${ snippetsData.data.version }</a>
-		`;
+		response.forEach(item => {
+			html += `
+				<a class="nav-subItem release"
+					title="Visit the ${ item.data.name } repo"
+					href="https://github.com/TryKickoff/${ item.data.name }/"
+					target="_blank">
+						<span class="release-name">${ item.data.name }</span>
+						<span class="release-version">${ item.data.version }</span>
+				</a>`;
 
-		// Add the version to the home page hero area
-		if (document.querySelector('.currentVersion--new')) {
-			document.querySelector('.currentVersion--new').textContent = kickoffData.data.version;
-		}
-	}));
+			// Add the version to the home page hero area
+			if (document.querySelector('.currentVersion--new') && item.data.name === 'kickoff') {
+				document.querySelector('.currentVersion--new').textContent = item.data.version;
+			}
+		});
+
+		document.querySelector('.nav-releases').innerHTML = html;
+	});
 }
 
 module.exports = init;
