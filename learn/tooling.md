@@ -17,28 +17,19 @@ next:
 
 <a name="setup"></a>
 
-## Setting up node on your machine
-Setting up Kickoff is extremely simple – just follow these simple steps:
+## Setup Kickoff
 
-#### Step 1 - Install Node
-Install Node from [nodejs.org](https://nodejs.org/en/download/) or..
+We assume you have [node](https://nodejs.org/en/download/) and npm already installed. We require node version 6 or higher be installed to run Kickoff effectively.
 
-* for Mac:
-  * Homebrew: `brew install node`
-* for Linux using :
-  * apt-get `apt-get install node npm`
-  * yum `yum install node npm`
-  * dnf `dnf install node npm`
-
-#### Install Yeoman and the Kickoff Yeoman Generator
-If you already have Node installed, the command below will install [Yeoman](http://yeoman.io) and the [Kickoff Yeoman generator](yeoman.html). The Yeoman generator is used to scaffold new projects using Kickoff and to help you while developing by making use of the
+## Install Yeoman and the Kickoff Yeoman Generator
+The command below will install [Yeoman](http://yeoman.io) and the [Kickoff Yeoman generator](yeoman.html). The Yeoman generator is used to scaffold new projects using Kickoff and to help you while developing to make common tasks much more easier to achieve.
 
 ```sh
 npm i -g yo generator-kickoff
 ```
 
 
-#### Once you have got Kickoff, install all the Node dependencies
+### Once you have got Kickoff, install all the Node dependencies
 Kickoff's [package.json](https://github.com/trykickoff/kickoff/blob/master/package.json) contains information for all the project's dependencies
 
 To install them, use your terminal to `cd` into the root of the Kickoff directory, and then run `npm install`. This will install all of the required dependencies to a new folder called `node_modules` inside your project.
