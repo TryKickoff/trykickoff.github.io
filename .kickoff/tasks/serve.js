@@ -21,7 +21,7 @@ gulp.task('serve', ['watch'], () => {
 
 		files: [
 			`${config.css.distDir}/**/*.css`,
-			`${config.js.distDir}/**/*.js`,
+			`_site/assets/dist/js/**/*.js`,
 			`${config.img.distDir}/**/*`,
 			`${config.svg.distDir}/**/*`,
 			'**/*.html',
