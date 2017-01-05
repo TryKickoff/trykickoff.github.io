@@ -174,6 +174,22 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 <!-- END EXAMPLE -->
 
 <hr class="sectionSplitter">
+<a name="labelsinline"></a>
+
+<h2 class="demoHeading">Forms <small>with inline labels</small></h2>
+Assuming you use the same markup as above, simply add a `.form--horizontal` class to the `<form>` element and you'll now have right aligned, inline form labels in an instant.
+
+<div class="demo">
+	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss" class="demo-src">_forms.scss</a>
+
+	<div class="demo-visual">
+    <p data-height="265" data-theme-id="0" data-slug-hash="QGwvdL" data-default-tab="result" data-user="mrmartineau" data-embed-version="2" data-pen-title="Kickoff Material design for theme" class="codepen">See the Pen <a href="https://codepen.io/mrmartineau/pen/QGwvdL/">Kickoff Material design for theme</a> by Zander Martineau (<a href="http://codepen.io/mrmartineau">@mrmartineau</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</div>
+</div>
+<!-- END EXAMPLE -->
+
+<hr class="sectionSplitter">
 <a name="multicolumnform"></a>
 
 <h2 class="demoHeading">Multi column forms <small>with labels above inputs</small></h2>

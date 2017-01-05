@@ -4,7 +4,7 @@ layout: docs
 navgroup: docs
 navactive: docsjs
 meta:
-  description: Understand how we use Javascript in Kickoff
+  description: Understand how we use JavaScript in Kickoff
 next:
 - title: Kickoff's CSS
   body: Take a look at how Kickoff structures it’s CSS.
@@ -14,16 +14,11 @@ next:
   link: grid.html
 ---
 
-Kickoff has a very simple base JavaScript structure.
+Kickoff has a very simple base JavaScript structure. We appreciate that everyone has a preferred way of writing and structuring their JavaScript and so we have made it easy to get up and running, while also making it easy to switch out Kickoff’s JavaScript structure should you want to do something more complex.
 
-We appreciate that everyone has a preferred way of writing and structuring their JavaScript and so we have made it easy to get up and running, while also making it easy to switch out Kickoff’s JavaScript structure should you want to do something more complex.
-
-While not included in the default Kickoff branch, Kickoff now includes a base setup for using Browserify.  This version of Kickoff is maintained in a separate branch, more information on which can be [found in the following documentation](#browserify).
-
-<hr class="sectionSplitter">
 <a name="structure"></a>
 
-## JavaScript Structure
+## JavaScript structure
 
 As mentioned above, Kickoff’s JavaScript is very non prescriptive.  Here we look at how we structure Kickoff’s JavaScript by default as well as how this can be adapted for your own needs.
 
@@ -35,7 +30,7 @@ This file can be used to contain or reference your site/app JavaScript code.
 
 <hr class="sectionSplitter">
 
-### Folder Structure
+### Folder structure
 
 Kickoff has a very simple folder structure for it’s JavaScript; as a base Kickoff contains `utils`, `standalone` and a `modules` directories.
 
@@ -53,19 +48,19 @@ For more information on how Kickoff uses 3rd party libraries, [checkout the docu
 <hr class="sectionSplitter">
 <a name="webpack"></a>
 
-## Webpack
+## webpack
 
-[Webpack](https://webpack.github.io/) lets you `require('modules')` in the browser by bundling up all of your dependencies. It also gives you access to thousands of already created modules via [npm](https://www.npmjs.org/), that can be added by simply requiring them within your JavaScript.
+[webpack](https://webpack.github.io/) lets you `import` (ES2015) or `require('modules')` (ES5) in the browser by bundling up all of your dependencies. It also gives you access to thousands of already created modules via [npm](https://www.npmjs.org/), that can be added by simply requiring them within your JavaScript.
 
-Kickoff uses Webpack to bundle its Javascript. By default, only `script.js` is compiled, but if you need to split your code and provide another entry point, you need to create the new source file in the `/assets/src/js` directory and then edit the `entryPoints` object in [`.kickoff/config.js`](https://github.com/trykickoff/kickoff/blob/master/.kickoff/config.js).
+Kickoff uses webpack to bundle its JavaScript. By default, only `script.js` is compiled, but if you need to split your code and provide another entry point, you need to create the new source file in the `/assets/src/js` directory and then edit the `entryPoints` object in [`.kickoff/config.js`](https://github.com/trykickoff/kickoff/blob/master/.kickoff/config.js).
 
 ```js
 entryPoints: {
-	kickoff: [`${this.srcDir}/js/script.js`],
-	styleguide: [`${this.srcDir}/js/styleguide.js`],
+	kickoff: [`${this.srcDir}/js/script.js`], // generates /assets/dist/kickoff.js
+	styleguide: [`${this.srcDir}/js/styleguide.js`], // generates /assets/dist/styleguide.js
 
 	// Create more entry-points by adding to this array, e.g.
-	foo: [`${this.srcDir}/js/bar.js`],
+	foo: [`${this.srcDir}/js/foo.js`], // generates /assets/dist/foo.js
 },
 ```
 
@@ -74,7 +69,7 @@ entryPoints: {
 
 ## Babel
 
-Kickoff uses the Webpack Babel loader to allow you to write ES2015 (previously called ES6) in your projects.  This will automatically compile your ES2015 code back into ES5 syntax so that older browsers can understand it.
+Kickoff uses the webpack Babel loader to allow you to write ES2015 in your projects.  This will automatically compile your ES2015 code back into ES5 syntax so that older browsers can understand it.
 
 The main benefit of this is that you can learn to use the latest JavaScript syntax without having to wait for browsers to implement those features.  The compilcation step will take care of this for you.
 
@@ -83,15 +78,15 @@ To learn more about Babel, [check out their documentation](https://babeljs.io/).
 <hr class="sectionSplitter">
 <a name="npm"></a>
 
-## NPM
+## npm
 
-Kickoff uses NPM to include and manage any 3rd party dependencies that you might need for your site. A few npm packages are included with Kickoff by default, these can be found by viewing the manifest file, [package.json](https://github.com/trykickoff/kickoff/blob/master/package.json), and installed by running:
+Kickoff uses NPM to include & manage any 3rd party dependencies that you might need for your site. A few npm packages are included with Kickoff by default, these can be found by viewing the manifest file, [package.json](https://github.com/trykickoff/kickoff/blob/master/package.json), and installed by running:
 
 ```sh
 npm install
 ```
 
-#### Default NPM dependencies
+#### Default npm dependencies
 
 * [lite-ready](https://www.npmjs.com/package/lite-ready) - **[javascript]** Developed by Nic Bell, this is our version of DOMready that is a little bit smarter than the rest
 * [console](https://github.com/matthewhudson/console) - **[javascript]** Drop-in replacement for console - a cross-environment fix for missing methods
@@ -100,8 +95,8 @@ npm install
 * [kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css) - **[sass]** Simple fluid-width videos using only CSS
 * [kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss) - **[sass]** Sass utility functions and mixins for the Kickoff framework
 * [kickoff-grid.css](https://github.com/TryKickoff/kickoff-grid.css) - **[sass]** Kickoff’s Grid System
-* [normalize.css](https://necolas.github.io/normalize.css/) - **[sass]** A modern, HTML5-ready alternative to CSS resets
-* [copy-js](https://github.com/duyetdev/copy.js) - **[javascript, styleguide]** Simple copy to clipboard. **Only used on the styleguide**
+* [normalize-scss](https://github.com/JohnAlbin/normalize-scss) - **[sass]** A modern, HTML5-ready alternative to CSS resets based on [normalize.css](https://necolas.github.io/normalize.css/)
+* [copy-js](https://github.com/duyetdev/copy.js) - **[javascript]** Simple copy to clipboard. **Only used on the styleguide**
 
 These packages aren’t hard dependencies and can be removed by removing them from the `package.json` before your install your dependencies. **The sass dependencies are all used in the framework**, be careful when removing them.
 

@@ -102,7 +102,7 @@ Partials are partial parts of a page, like a masthead, sidebar or footer. They c
 
 Used for entire views (or pages). Usually these files consist of small tweaks that only concern a particular view. The [views](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/views/) directory should contain view-specific styles that don't fit into their own module, think `_home.scss` or `_recipe-page.scss` for example.
 
-**N.b.** We recommend that it is better to make reusable components rather than styling based on a view.  Therefore, the styles in this folder _should _ be minimal.
+**N.b.** We recommend that it is better to make reusable components rather than styling based on a view.  Therefore, the styles in this folder *should* be minimal.
 
 <hr class="sectionSplitter">
 
