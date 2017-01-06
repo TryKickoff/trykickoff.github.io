@@ -1,5 +1,6 @@
 ---
 title: Get Kickoff
+subtitle: How to download & install the framework
 layout: docs
 navgroup: docs
 navactive: docsget

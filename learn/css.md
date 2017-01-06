@@ -1,5 +1,6 @@
 ---
 title: CSS
+subtitle: Styling your sites with Kickoff
 layout: docs
 navgroup: docs
 navactive: docscss
@@ -79,7 +80,7 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 ```
 
 ### Notice: v8 breaking changes
-Version 8.0.0 of Kickoff changed how various parts of the Sass framework is actually used. In an effort to make the framework more maintainable, certain elements have actually been extracted and made into standalone npm modules. These can then be `@import`-ed in our
+Version 8.0.0 of Kickoff changed how various parts of the Sass framework is actually used. In an effort to make the framework more maintainable, certain elements have actually been extracted and made into standalone npm modules. These can then be `@import`-ed in our main `kickoff.scss` file.
 
 #### Kickoff's external Sass modules
 * [kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss) - Kickoff's Sass utility functions and mixins

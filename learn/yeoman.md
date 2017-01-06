@@ -10,9 +10,9 @@ next:
 - title: Get Kickoff
   body: Find out the other ways to get your hands on Kickoff here.
   link: get.html
-- title: Sublime Text snippets
-  body: Use Sublime? These handy snippets will make life with Kickoff even easier.
-  link: sublime.html
+- title: IDE snippets
+  body: Use Sublime, Atom or VS Code? We created some handy snippets will make life with Kickoff even easier.
+  link: snippets.html
 ---
 
 Using our Yeoman Generator is the best and fastest way to get Kickoff each time you want to start a new project. It will ask you a few questions and then build a custom version of Kickoff for your needs.
