@@ -8,6 +8,7 @@ const packages = [
 	'kickoff-utils.scss',
 	'kickoff-fluidVideo.css',
 	'kickoff-snippets',
+	'kickoff-welcome.js',
 	'statix'
 ]
 
