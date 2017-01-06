@@ -984,3 +984,14 @@ figure {
 	padding-left: 0.75em;
 	border-radius: 3px;
 }
+
+kbd {
+	font-family: $font-family-mono;
+	@include ko-font-size(small);
+	border-radius: 3px;
+	padding: 2px 4px;
+	color: $code-textColor;
+	background-color: $code-bgColor;
+	border: 1px solid darken($code-bgColor, 15%);
+	border-bottom-width: 2px;
+}
