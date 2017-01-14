@@ -110,20 +110,20 @@ git clone https://github.com/trykickoff/kickoff.git your-project-folder
 			<div class="g-col g-span6--mid">
 {% highlight scss%}
 /**
- * Typography variables
+ * Variables
  */
-$font-size-base: 20;
-$leading-base: 1.4;
-$line-height-base: round($font-size-base * $leading-base); // 20 * 1.4
-$type-scale: 1.25; // Major third
+$font-size-base   : 20;
+$leading-base     : 1.4;
+$line-height-base : round($font-size-base * $leading-base); // 20 * 1.4
+$type-scale       : 1.25; // Major third
 
 $type: (
-	micro: modular-scale($font-size-base, -2, $type-scale),
-	small: modular-scale($font-size-base, -1, $type-scale), // h5, h6
-	base: modular-scale($font-size-base, 0, $type-scale),  // p, h4
-	mid: modular-scale($font-size-base, 1, $type-scale),  // h3
-	large: modular-scale($font-size-base, 2, $type-scale),  // h2
-	jumbo: modular-scale($font-size-base, 3, $type-scale)   // h1
+	micro : ko-ms(-2),
+	small : ko-ms(-1),
+	base  : ko-ms(0),  // p, h4, h5, h6
+	mid   : ko-ms(1),  // h3
+	large : ko-ms(2),  // h2
+	jumbo : ko-ms(3)   // h1
 );
 
 /**
@@ -132,10 +132,10 @@ $type: (
  * You'll need to define your own breakpoints to suit your design
  */
 $breakpoints: (
-	narrow: 400px,
-	mid: 768px,
-	wide: 992px,
-	huge: 1600px
+	narrow : 400px,
+	mid    : 750px,
+	wide   : 1000px,
+	huge   : 1250px
 );
 {% endhighlight %}
 			</div>
@@ -197,21 +197,19 @@ ready(() => {
 	<div class="l-container">
 		<h1 class="wideBoy-title l-mb0">Built with Kickoff</h1>
 		<h2 class="wideBoy-subtitle">Hundreds of amazing sites across the web are being built with Kickoff. See below for a few of them:</h2>
-
-		<ul class="showcaseList g">
-			{% for item in site.data.showcase %}
-				<li class="g-col g-span4--narrow g-span3--mid">
-					{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
-						<figure>
-							<img src="/assets/dist/img/showcase/{{ item.img }}" alt="{{ item.name }}">
-							<figcaption>{{ item.name }}</figcaption>
-						</figure>
-					{% if item.url != null %}</a>{% endif %}
-				</li>
-			{% endfor %}
-		</ul>
-
 	</div>
+
+	<div class="showcaseList">
+		{% for item in site.data.showcase %}
+			{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
+				<figure>
+					<img src="/assets/dist/img/showcase/{{ item.img }}" alt="{{ item.name }}">
+					<figcaption>{{ item.name }}</figcaption>
+				</figure>
+			{% if item.url != null %}</a>{% endif %}
+		{% endfor %}
+	</div>
+
 </section>
 
 <section class="statix wideBoy--bright wideBoy">

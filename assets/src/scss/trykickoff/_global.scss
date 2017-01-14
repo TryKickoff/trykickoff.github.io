@@ -466,24 +466,22 @@ figure {
 }
 
 .showcaseList {
+	margin-top: $baseline * 2;
 	text-align: center;
+	display: flex;
+	overflow-y: hidden;
+	overflow-x: auto;
 
-		&, & a, &:visited {
-			color: $color-link-default;
-		}
-
-	@include media('>mid') {
-		li {
-			margin-bottom: 0px;
-		}
+	&, & a, &:visited {
+		color: $color-link-default;
 	}
 
 	figure {
 		background-color: #fff;
-		max-width: 475px;
-		margin: 0 auto;
+		width: 240px;
 		display: block;
 		position: relative;
+		margin-right: 5px;
 	}
 
 	li {

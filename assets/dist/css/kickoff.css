@@ -3741,18 +3741,21 @@ figure {
     margin-bottom: 0; }
 
 .showcaseList {
-  text-align: center; }
+  margin-top: 64px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto; }
   .showcaseList, .showcaseList a, .showcaseList:visited {
     color: #288ad6; }
-  @media (min-width: 769px) {
-    .showcaseList li {
-      margin-bottom: 0px; } }
   .showcaseList figure {
     background-color: #fff;
-    max-width: 475px;
-    margin: 0 auto;
+    width: 240px;
     display: block;
-    position: relative; }
+    position: relative;
+    margin-right: 5px; }
   .showcaseList li {
     padding: 5px; }
   .showcaseList figcaption {

@@ -16,13 +16,13 @@ next:
 
 <a name="hp"></a>
 
-<h2 class="demoHeading">Headings & paragraphs</h2>
+<h2 class="demoHeading">Headings &amp; paragraphs</h2>
 
 <div class="demo">
 	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_typography.scss" class="demo-src">_typography.scss</a>
 
 	<div class="demo-visual">
-		<h1>Heading 1 <small>small</small></h1>
+		<h1>Heading 1</h1>
 		<h2>Heading 2</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus perspiciatis labore quis, qui, animi hic autem est aut beatae sit!</p>
 		<h3>Heading 3</h3>
