@@ -622,7 +622,7 @@
   .no-flexbox .g-span12 {
     width: 100% !important; }
 
-@media (min-width: 400px) {
+@media (min-width: 550px) {
   .g-span1--narrow {
     -ms-flex-preferred-size: 8.33333% !important;
         flex-basis: 8.33333% !important;
@@ -1494,7 +1494,7 @@
     .no-flexbox .g-span12--huge {
       width: 100% !important; } }
 
-@media (max-width: 399px) {
+@media (max-width: 549px) {
   .g--stack--narrow {
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap; }
@@ -2035,7 +2035,7 @@ code {
         width: 20%;
         display: inline-block; } }
   .sg-var--breakpoints:after {
-    content: "(narrow: 400px, mid: 768px, wide: 992px, huge: 1600px)"; }
+    content: "(narrow: 550px, mid: 768px, wide: 992px, huge: 1600px)"; }
 
 .sg-var--layoutWidth {
   line-height: 2;

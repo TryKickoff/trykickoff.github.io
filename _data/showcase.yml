@@ -30,14 +30,6 @@
   img: pinkandblackmagnum.jpg
   url: http://pinkandblack.mymagnum.com/
 
-- name: Renault Press
-  img: pressrenault.jpg
-  url: http://press.renault.co.uk/
-
-- name: Renault Jobs
-  img: jobsrenault.jpg
-  url: http://jobs.renault.co.uk/
-
 - name: IKEA Family Magazine
   img: ikeafamilymagazine.jpg
   url: http://www.ikeafamilylivemagazine.com/
@@ -64,9 +56,6 @@
 - name: The Bar
   img: thebaruk.jpg
   url: http://uk.thebar.com
-
-- name: Strepsils Star Moments
-  img: strepsilsxfactor.jpg
 
 - name: Brother Printers
   img: brotherprinters.jpg

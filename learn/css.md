@@ -79,6 +79,8 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
     └── _print.scss
 ```
 
+---
+
 ### Notice: v8 breaking changes
 Version 8.0.0 of Kickoff changed how various parts of the Sass framework is actually used. In an effort to make the framework more maintainable, certain elements have actually been extracted and made into standalone npm modules. These can then be `@import`-ed in our main `kickoff.scss` file.
 
@@ -87,6 +89,16 @@ Version 8.0.0 of Kickoff changed how various parts of the Sass framework is actu
 * [kickoff-grid.css](https://github.com/TryKickoff/kickoff-grid.css) - our Sass grid framework
 * [kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css) - Simple fluid-width videos using only CSS
 
+#### 3rd party Sass modules
+* [include-media](https://include-media.com) is used for improved media queries, [see below](#media-queries) for more about this
+* [normalize.css](https://github.com/JohnAlbin/normalize-scss) - Normalize.css is now imported using a Sass port of the library
+
+#### Other changes
+* Kickoff's forms now have basic theme support. Included in the framework is the old 'standard' theme and the new 'Material design' theme. Switching themes is as easy as changing the `import` declaration from within `assets/src/scss/components/forms/forms.scss`. The markup is different between the two themes so make sure you read the docs from within each theme file.
+* We added support for linting with [stylelint](https://github.com/stylelint/stylelint) and use [style-config-standard](https://github.com/stylelint/stylelint-config-standard) as our rules (with some overrides). Settings for this can be found in the `package.json` file. It is recommended that you install a stylelint plugin for your IDE.
+* All mixin and functions included in `kickoff-utils.scss` have been renamed to include the `ko-` prefix. It is a form of namespacing so there are fewer conflicts with 3rd party libraries. For example `@include font-size(base)` is now `@include ko-font-size(base)`
+
+---
 
 ### Views, partials & components
 Our distinction between views, partials and components:
@@ -188,6 +200,8 @@ Media queries in Kickoff are typically handled with a [set of useful mixins](htt
 * `respond-min` for `min-width` media queries
 * `respond-max` for `max-width` media queries
 * `respond-min-max` for `min-width` & `max-width` media queries
+
+> It is worth noting that these mixins still work in version 8+, but along with v8's naming conventions, they include a namespace as well, e.g. `ko-respond-min`.
 
 #### Example
 

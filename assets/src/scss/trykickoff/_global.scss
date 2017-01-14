@@ -38,10 +38,6 @@ hr {
 			text-align: right;
 		}
 	}
-
-	&--home {
-		padding-top: 20px;
-	}
 }
 
 .masthead-logo {
@@ -249,6 +245,9 @@ hr {
 
 	&--hero {
 		margin-bottom: $baseline;
+		@include media('>mid') {
+			margin-bottom: $baseline * 2;
+		}
 	}
 }
 
@@ -349,6 +348,7 @@ hr {
 		margin-left: 0.5em;
 	}
 }
+
 
 .yo {
 	position: absolute;

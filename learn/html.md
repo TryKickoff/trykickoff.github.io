@@ -15,6 +15,13 @@ next:
 ---
 Here are some pointers regarding Kickoff's HTML features and usage
 
+<a name="headmeta"></a>
+
+### <head> metatags
+For a list of everything that could go in the `<head>` of your document, see [github.com/joshbuchea/HEAD](https://github.com/joshbuchea/HEAD)
+
+---
+
 <a name="skip"></a>
 
 ### Skip to content link
@@ -28,11 +35,9 @@ The styling for this is simple, so please modify it; see [/scss/partials/compone
 </div>
 ```
 
-<hr class="sectionSplitter">
-<a name="socialmeta"></a>
+---
 
-### <head> metatags
-For a list of everything that could go in the `<head>` of your document, see [github.com/joshbuchea/HEAD](https://github.com/joshbuchea/HEAD)
+<a name="socialmeta"></a>
 
 ### Social meta tags
 We recommend that each site created with Kickoff also include social meta tags so that whenever users share your content, they are presented with useful share/social content. See the snippet below for the recommended items:
@@ -66,7 +71,7 @@ The wildcard items like `{page title}` are supposed to be changed by you.
 <a name="iconmeta"></a>
 
 ### Icon meta tags
-Favicons, webclip icons and even MS tile images should all, ideally, be included on each site. If generating all these sizes and the code seem laborious, it is, but there are a few sites that will help ease the pain. Try http://iconifier.net or http://realfavicongenerator.net/. See below for what you need:
+Favicons, webclip icons and even MS tile images should all, ideally, be included on each site. If generating all these sizes and the code seem laborious, it is, but there are a few sites that will help ease the pain. Try [realfavicongenerator.net](http://realfavicongenerator.net) or [iconifier.net](http://iconifier.net). See below for what you need:
 
 The wildcard items like `{page title}` are supposed to be changed by you.
 

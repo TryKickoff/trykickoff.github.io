@@ -67,7 +67,7 @@ entryPoints: {
 <hr class="sectionSplitter">
 <a name="babel"></a>
 
-## Babel
+## ES2015 & Babel
 
 Kickoff uses the webpack Babel loader to allow you to write ES2015 in your projects.  This will automatically compile your ES2015 code back into ES5 syntax so that older browsers can understand it.
 
@@ -103,9 +103,10 @@ These packages aren’t hard dependencies and can be removed by removing them fr
 #### Recommended 3rd party npm packages
 If you need to add any 3rd party library code, we suggest that you install it from [npm](https://npmjs.org). [Libraries.io](http://libraries.io) or [npms](https://npms.io) however, both have a better search than npm so it might be easier to find them on there. There are thousands of packages on npm, here are a few that we find particularly useful:
 
+* [Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client `npm i axios -S`. 👍
 * [lodash](https://lodash.com/) - A JavaScript utility library delivering consistency, modularity, performance, & extras `npm i lodash -S`
 * [gator](https://gator.com/) - Event delegation in javascript `npm i gator -S`
-* [double-dollar](https://github.com/mrmartineau/double-dollar) - **[javascript]** forEach over DOM elements more easily
+* [double-dollar](https://github.com/mrmartineau/double-dollar) - `forEach` over DOM elements more easily `npm i double-dollar -S`
 * [whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch) - A window.fetch polyfill. `npm i whatwg-fetch -S`
 * [lazysizes](https://www.npmjs.com/package/lazysizes) - High performance (jankfree) lazy loader for images (including responsive images), iframes and scripts (widgets) `npm i lazysizes -S`
 * [get-size](https://www.npmjs.com/package/get-size) - measures element size  `npm i get-size -S`
@@ -119,7 +120,6 @@ If you need to add any 3rd party library code, we suggest that you install it fr
 * [utube](https://www.npmjs.com/package/utube) - Youtube video player class `npm i utube -S`
 * [moment.js](https://www.npmjs.com/package/moment) - Parse, validate, manipulate, and display dates  `npm i moment -S`
 * [scroll](https://www.npmjs.com/package/scroll) - A function that animates an element’s scrollTop/scrollLeft values `npm i scroll -S`
-* [Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client `npm i axios -S`
 * [Flickity](https://www.npmjs.com/package/flickity) - Flickity carousel - Touch, responsive, flickable galleries  `npm i flickity -S`
 * [Swiftclick](https://github.com/tmwagency/swiftclick) - Developed by Ivan Hayes, SwiftClick is a library created to eliminate the 300ms click event delay on touch devices.  `npm i swiftclick -S`
 * [Trak.js](https://github.com/mrmartineau/trak.js) - Developed by Zander Martineau, trak.js is a universal analytics event tracking API  `npm i trak.js -S`
@@ -133,12 +133,11 @@ If you need to add any 3rd party library code, we suggest that you install it fr
 <hr class="sectionSplitter">
 <a name="shims"></a>
 
-## Shims and polyfills
+## Shims & polyfills
 
-From version 7, Kickoff uses the [polyfill.io](http://polyfill.io) service to dynamically add any polyfills that a browser should need.
+From version 7, Kickoff uses the [polyfill.io](http://polyfill.io) service to dynamically add any polyfills that a browser should need. Read the 'Feature detection' section of [this page](https://qa.polyfill.io/v2/docs/examples) to discover better ways to test for polyfills.
 
 <hr class="sectionSplitter">
-<a name="modernizr"></a>
 
 ### Modernizr
-Modernizr is included with Kickoff if you need support for non-flexbox supporting browsers. You may wish to create your own [custom Modernizr build](http://www.modernizr.com/download/) and replace the included version.
+Modernizr is included with Kickoff if you need support for non-flexbox supporting browsers. You may wish to create your own [custom Modernizr build](http://www.modernizr.com/download/) and replace the included version. The Modernizr file is included in the `standalone` directory, find out more about it [above](#assetssrcjsstandalone).

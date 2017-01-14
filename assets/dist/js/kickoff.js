@@ -2298,7 +2298,7 @@ module.exports = init;
 
 
 // List of packages to be included
-const packages = ['kickoff', 'generator-kickoff', 'kickoff-grid.css', 'kickoff-utils.scss', 'kickoff-fluidVideo.css', 'kickoff-snippets', 'statix'];
+const packages = ['kickoff', 'generator-kickoff', 'kickoff-grid.css', 'kickoff-utils.scss', 'kickoff-fluidVideo.css', 'kickoff-snippets', 'kickoff-welcome.js', 'statix'];
 
 let packageEndpoints = [];
 
