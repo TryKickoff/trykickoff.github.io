@@ -3412,25 +3412,23 @@ hr {
   color: #fff;
   margin-bottom: -1px; }
   @media (min-width: 769px) {
-    .masthead {
-      line-height: 45px; }
-      .masthead--home .l-container {
-        -webkit-box-pack: end !important;
-            -ms-flex-pack: end !important;
-                justify-content: flex-end !important; }
-      .masthead .l-container {
-        padding: 0;
-        line-height: 50px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        text-align: right; } }
+    .masthead--home .l-container {
+      -webkit-box-pack: end !important;
+          -ms-flex-pack: end !important;
+              justify-content: flex-end !important; }
+    .masthead .l-container {
+      padding: 0;
+      line-height: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      text-align: right; } }
 
 .masthead-logo {
   font-weight: normal;
@@ -3438,8 +3436,11 @@ hr {
   margin: 0;
   font-size: 1.30435rem;
   line-height: 1.5; }
-  .masthead-logo.hide {
-    display: none; }
+  @media (min-width: 769px) {
+    .masthead-logo.hide {
+      opacity: 0;
+      visibility: hidden;
+      display: block; } }
 
 .logoStyle {
   font-style: italic;
@@ -3591,7 +3592,10 @@ hr {
     margin-bottom: 32px; }
     @media (min-width: 769px) {
       .wideBoy--hero {
-        margin-bottom: 64px; } }
+        margin-bottom: 64px; }
+        .wideBoy--hero .wideBoy-title,
+        .wideBoy--hero .wideBoy-subtitle {
+          max-width: 70%; } }
 
 .wideBoy-title {
   position: relative;
@@ -3747,7 +3751,8 @@ figure {
   display: -ms-flexbox;
   display: flex;
   overflow-y: hidden;
-  overflow-x: auto; }
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
   .showcaseList, .showcaseList a, .showcaseList:visited {
     color: #288ad6; }
   .showcaseList figure {

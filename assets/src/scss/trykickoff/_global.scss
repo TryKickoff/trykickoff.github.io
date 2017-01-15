@@ -23,7 +23,7 @@ hr {
 	margin-bottom: -1px;
 
 	@include media('>mid') {
-		line-height: 45px;
+		// line-height: 63px;
 
 		&--home .l-container {
 			justify-content: flex-end !important;
@@ -48,7 +48,11 @@ hr {
 	line-height: 1.5;
 
 	&.hide {
-		display: none;
+		@include media('>mid') {
+			opacity: 0;
+			visibility: hidden;
+			display: block;
+		}
 	}
 }
 
@@ -245,9 +249,16 @@ hr {
 
 	&--hero {
 		margin-bottom: $baseline;
+
 		@include media('>mid') {
 			margin-bottom: $baseline * 2;
+
+			.wideBoy-title,
+			.wideBoy-subtitle {
+				max-width: 70%;
+			}
 		}
+
 	}
 }
 
@@ -471,6 +482,7 @@ figure {
 	display: flex;
 	overflow-y: hidden;
 	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
 
 	&, & a, &:visited {
 		color: $color-link-default;
