@@ -1,5 +1,5 @@
 ---
-title: JavaScript
+title: JavaScript in Kickoff
 layout: docs
 navgroup: docs
 navactive: docsjs

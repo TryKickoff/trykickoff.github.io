@@ -16,7 +16,9 @@ next:
 ---
 
 # Success!
-You installed Kickoff. To quickly get up and running there are a few things you will want to edit before adding any custom code.
+You installed Kickoff. At least we hope you did! If you didn't please visit <a href="get.html">here</a> to find out how to install Kickoff.
+
+To quickly get up and running there are a few things you will want to edit before adding any custom code.
 
 <a name="checklist"></a>
 

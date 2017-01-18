@@ -18,11 +18,11 @@ next:
 
 There are a few easy ways to get started with Kickoff.  Take a look below and find the way that best suits your particular needs.
 
-### Use the Yeoman Generator
+### The Yeoman Generator
 
 Using our Yeoman Generator is the recommended way to get Kickoff each time you want to start a new project. Using the generator let’s you configure many aspects of Kickoff every time you start a new project.
 
-To find out more about it – or what a Yeoman generator is – and how it can help you tailor Kickoff to your projects even faster, [visit the generator docs page](yeoman.html).
+To find out more about it – or what a Yeoman generator is – and how it can help you tailor Kickoff to your projects even faster, visit the [generator docs page](yeoman.html).
 
 <hr class="sectionSplitter">
 
@@ -38,5 +38,10 @@ Just want the files?  No problem – just grab the Zip of Kickoff:<br>
 If you use Git, you can clone a version of Kickoff by entering the following into your terminal:
 
 ```sh
-git clone https://github.com/TryKickoff/kickoff.git your-project-folder
+git clone https://github.com/TryKickoff/kickoff.git your-project-name
 ```
+
+<hr class="sectionSplitter">
+
+### Install the project's dependencies
+Once you've cloned or downloaded the repo, `cd` into the project folder and run `npm install`. Then visit [this page](get.html) to see what's next.

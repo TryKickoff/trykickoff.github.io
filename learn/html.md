@@ -1,5 +1,5 @@
 ---
-title: HTML
+title: HTML in Kickoff
 layout: docs
 navgroup: docs
 navactive: docshtml
@@ -19,6 +19,29 @@ Here are some pointers regarding Kickoff's HTML features and usage
 
 ### <head> metatags
 For a list of everything that could go in the `<head>` of your document, see [github.com/joshbuchea/HEAD](https://github.com/joshbuchea/HEAD)
+
+### .no-js / .js??
+
+The code below in the `<head>` section of index.html simply switches the markup on the `<html class="no-js">` to `<html class="js">`. This means we can adjust our CSS based on if the user has Javascript on or off.
+
+```html
+<script>
+	var win = window, doc = win.document, docElem = doc.documentElement;
+
+	// Replace 'no-js'/'js' class on <html>
+	docElem.className = docElem.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+```
+
+```scss
+.no-js .foo {
+	// Styles for users without js
+}
+
+.js .foo {
+	// Styles for users with js
+}
+```
 
 ---
 

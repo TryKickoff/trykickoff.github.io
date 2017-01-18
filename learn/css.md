@@ -1,6 +1,5 @@
 ---
-title: CSS
-subtitle: Styling your sites with Kickoff
+title: CSS in Kickoff
 layout: docs
 navgroup: docs
 navactive: docscss
@@ -16,11 +15,34 @@ next:
 ---
 
 <a name="philosophy"></a>
+
+## Philosophy
 Kickoff comes with a robust CSS framework; it provides many sensible defaults so that you can get your project up and running in the shortest possible time.
 
 We make use of the excellent [Sass](#sass) CSS preprocessor which allows us to use many extra features beyond the capabilities of vanilla CSS.
 
 This section will take you through how Kickoff uses CSS and Sass, and how easy it is to manipulate the code when developing your own projects.
+
+---
+
+<a name="notice"></a>
+
+## Notice: v8 breaking changes
+Version 8.0.0 of Kickoff changed how various parts of the Sass framework is actually used. In an effort to make the framework more maintainable, certain elements have actually been extracted and made into standalone npm modules. These can then be `@import`-ed in our main `kickoff.scss` file.
+
+#### Kickoff's external Sass modules
+* [kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss) - Kickoff's Sass utility functions and mixins
+* [kickoff-grid.css](https://github.com/TryKickoff/kickoff-grid.css) - our Sass grid framework
+* [kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css) - Simple fluid-width videos using only CSS
+
+#### 3rd party Sass modules
+* [include-media](https://include-media.com) is used for improved media queries, [see below](#media-queries) for more about this
+* [normalize.css](https://github.com/JohnAlbin/normalize-scss) - Normalize.css is now imported using a Sass port of the library
+
+#### Other changes
+* Kickoff's forms now have basic theme support. Included in the framework is the old 'standard' theme and the new 'Material design' theme. Switching themes is as easy as changing the `import` declaration from within `assets/src/scss/components/forms/forms.scss`. The markup is different between the two themes so make sure you read the docs from within each theme file.
+* We added support for linting with [stylelint](https://github.com/stylelint/stylelint) and use [style-config-standard](https://github.com/stylelint/stylelint-config-standard) as our rules (with some overrides). Settings for this can be found in the `package.json` file. It is recommended that you install a stylelint plugin for your IDE.
+* All mixin and functions included in `kickoff-utils.scss` have been renamed to include the `ko-` prefix. It is a form of namespacing so there are fewer conflicts with 3rd party libraries. For example `@include font-size(base)` is now `@include ko-font-size(base)`
 
 <hr class="sectionSplitter">
 <a name="sass"></a>
@@ -30,14 +52,13 @@ Kickoff is made with [Sass](http://sass-lang.com/) at its core.  It makes develo
 
 Sass has two syntaxes. The most commonly used syntax is known as “SCSS” (for “Sassy CSS”), and is a superset of CSS3’s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension `.scss`; we use this version for Kickoff.
 
-<hr class="sectionSplitter">
 <a name="structure"></a>
 
-## Sass structure
+### scss folder structure
 Kickoff structures it's Sass files in quite a specific way. The `scss` directory contains the following files and directories:
 
 ```
-.
+scss
 ├── README.md
 ├── _color-palette.scss
 ├── _global.scss
@@ -59,13 +80,13 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
 │   ├── _tables.scss
 │   └── forms
 │       ├── README.md
+│       ├── _forms.scss
 │       ├── _form-helpers.scss
 │       ├── _form-theme-material.scss
 │       ├── _form-theme-standard.scss
 │       ├── _forms-custom-file.scss
 │       ├── _forms-custom-radioscheckboxes.scss
-│       ├── _forms-custom-select.scss
-│       └── _forms.scss
+│       └── _forms-custom-select.scss
 ├── kickoff.scss
 ├── partials
 │   ├── _browser-upgrade.scss
@@ -78,25 +99,6 @@ Kickoff structures it's Sass files in quite a specific way. The `scss` directory
     ├── _home.scss
     └── _print.scss
 ```
-
----
-
-### Notice: v8 breaking changes
-Version 8.0.0 of Kickoff changed how various parts of the Sass framework is actually used. In an effort to make the framework more maintainable, certain elements have actually been extracted and made into standalone npm modules. These can then be `@import`-ed in our main `kickoff.scss` file.
-
-#### Kickoff's external Sass modules
-* [kickoff-utils.scss](https://github.com/TryKickoff/kickoff-utils.scss) - Kickoff's Sass utility functions and mixins
-* [kickoff-grid.css](https://github.com/TryKickoff/kickoff-grid.css) - our Sass grid framework
-* [kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css) - Simple fluid-width videos using only CSS
-
-#### 3rd party Sass modules
-* [include-media](https://include-media.com) is used for improved media queries, [see below](#media-queries) for more about this
-* [normalize.css](https://github.com/JohnAlbin/normalize-scss) - Normalize.css is now imported using a Sass port of the library
-
-#### Other changes
-* Kickoff's forms now have basic theme support. Included in the framework is the old 'standard' theme and the new 'Material design' theme. Switching themes is as easy as changing the `import` declaration from within `assets/src/scss/components/forms/forms.scss`. The markup is different between the two themes so make sure you read the docs from within each theme file.
-* We added support for linting with [stylelint](https://github.com/stylelint/stylelint) and use [style-config-standard](https://github.com/stylelint/stylelint-config-standard) as our rules (with some overrides). Settings for this can be found in the `package.json` file. It is recommended that you install a stylelint plugin for your IDE.
-* All mixin and functions included in `kickoff-utils.scss` have been renamed to include the `ko-` prefix. It is a form of namespacing so there are fewer conflicts with 3rd party libraries. For example `@include font-size(base)` is now `@include ko-font-size(base)`
 
 ---
 
@@ -131,14 +133,8 @@ It’s important to become familiar with **all of these files** so you can make 
 #### [kickoff.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/kickoff.scss)
 All roads lead to here. This is the base SCSS file and is the hook by which Grunt compiles the projects CSS. `kickoff.scss` is compiled to `/assets/dist/css/kickoff.css` and is used on Internet Explorer 9+, Chrome, Safari, Firefox and Opera.
 
----
-
 #### [_global.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_global.scss)
-This file contains all styles that do not obviously fit within any other scss partial. For example, we include our body's background styles and the main `.l-container` styles.
-
-**Try not to fill this up with all your styles though.** Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the `components`, `partials` or `views` directories.
-
----
+This file contains all styles that do not obviously fit within any other scss partial. For example, we include our body's background styles and the main `.l-container` styles. **Try not to fill this up with all your styles though.** Your Sass should be written in a modular way, and so the majority of your Sass should be organised within the `components`, `partials` or `views` directories.
 
 #### [_helper-classes.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_helper-classes.scss)
 This file contains a bunch of helper styles, like `.clearfix` (for clearing floats), `.ir` for using background image replacement, `.is-hidden` etc.
@@ -149,18 +145,26 @@ This file contains a bunch of helper styles, like `.clearfix` (for clearing floa
 ## Sass Variables
 We take full advantage of Sass' variables and there are two key files that should be edited at the start of development on any new Kickoff project. These are `scss/_variables.scss` and `scss/_color-palette.scss`.
 
----
-
 #### [_variables.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_variables.scss)
 This is where you define your global Sass variables. Here you can define your:
 
 * **Global typographic styles** — including font choices and typographic scale.
 * **Responsive breakpoints** — we try not to target specific devices or device types with these variables.  Instead they should be set with the design in mind. The `$breakpoints` sass map, contains our default breakpoints, these are used by the grid and can be referenced by using the `bp(mid)` sass function. See how to use the breakpoints when using our mixins, [below](#responsive).
 
----
-
 #### [_color-palette.scss](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/_color-palette.scss)
 Text colour, link colours, background colour, form fields and various component colours can all be set in this file.
+
+<hr class="sectionSplitter">
+<a name="usefulclasses"></a>
+
+## Useful CSS classes & styles
+
+* `.l-container`: found in `/assets/src/scss/_global.scss`, this class controls the main content 'column' on your site.
+* `.btn`: found in `/assets/src/scss/components/_buttons.scss` for buttons. See the possible modifiers on the [components demo page](/demos/components.html#buttons)
+* Anchor links (`a`) are styled in `/assets/src/scss/components/_links.scss`
+* `.l-mb0` or `.l-mt0`: for zeroing any `margin-bottom/top` values. See also the other helper classes in `/assets/src/scss/_helper-classes.scss`
+* `.clearfix`: for clearing floats. See also the other helper classes in `/assets/src/scss/_helper-classes.scss`
+* `.h1`, `.h2`, `.h3`, `.h4`: font-sizing helper classes for headings
 
 <hr class="sectionSplitter">
 <a name="responsive"></a>

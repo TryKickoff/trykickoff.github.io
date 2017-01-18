@@ -22,9 +22,11 @@
 			{% if page.navactive == 'docscss' %}
 			<ul class="sidebar-subnav unstyled">
 				<li><a href="#how">Philosophy</a></li>
+				<li><a href="#notice">Version 8 breaking changes</a></li>
 				<li><a href="#sass">Sass</a></li>
-				<li><a href="#structure">Structure</a></li>
+				<li><a href="#structure">Folder structure</a></li>
 				<li><a href="#variables">Variables</a></li>
+				<li><a href="#usefulclasses">Useful CSS classes</a></li>
 				<li><a href="#responsive">Responsive</a></li>
 				<li><a href="#namingscheme">CSS Naming scheme</a></li>
 			</ul>
@@ -70,6 +72,7 @@
 			</ul>
 			{% endif %}
 		</li>
+		<li><a href="/learn/svg.html"{% if page.navactive == 'docssvg' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"SVG"}'>SVG workflow</a></li>
 		<li>
 			<a href="/learn/yeoman.html"{% if page.navactive == 'docsyo' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Yeoman"}'>The Yeoman generator</a>
 
