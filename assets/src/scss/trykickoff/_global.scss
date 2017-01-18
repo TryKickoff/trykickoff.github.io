@@ -490,15 +490,14 @@ figure {
 
 	figure {
 		background-color: #fff;
-		width: 240px;
+		width: 170px;
 		display: block;
 		position: relative;
 		margin-right: 5px;
-	}
 
-	li {
-		// margin-bottom: 20px;
-		padding: 5px;
+		@include media('>mid') {
+			width: 240px;
+		}
 	}
 
 	figcaption {
