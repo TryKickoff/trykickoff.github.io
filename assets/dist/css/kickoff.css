@@ -3757,12 +3757,13 @@ figure {
     color: #288ad6; }
   .showcaseList figure {
     background-color: #fff;
-    width: 240px;
+    width: 170px;
     display: block;
     position: relative;
     margin-right: 5px; }
-  .showcaseList li {
-    padding: 5px; }
+    @media (min-width: 769px) {
+      .showcaseList figure {
+        width: 240px; } }
   .showcaseList figcaption {
     position: absolute;
     bottom: 0;

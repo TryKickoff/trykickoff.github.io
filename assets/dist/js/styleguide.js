@@ -58,7 +58,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/Users/mrmartineau/htdocs/trykickoff/trykickoff.github.io/assets/dist/js/";
+/******/ 	__webpack_require__.p = "/Users/zmartineau/htdocs/trykickoff/trykickoff.github.io/assets/dist/js/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 47);
@@ -66,31 +66,13 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 1:
-/***/ function(module, exports) {
-
-/**
- * $$
- * @description Loop over DOM elements more easily
- *
- * @usage $$('.foo').forEach(function(item) { // do something });
- */
-
-module.exports = function $$(selector, context) {
-	context = context || document;
-	var elements = context.querySelectorAll(selector); return Array.prototype.slice.call(elements);
-}
-
-
-/***/ },
-
 /***/ 11:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lite_ready__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lite_ready__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lite_ready___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lite_ready__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_double_dollar__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_double_dollar__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_double_dollar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_double_dollar__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_copy_js_src_copy_js__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_copy_js_src_copy_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_copy_js_src_copy_js__);
@@ -120,6 +102,24 @@ __WEBPACK_IMPORTED_MODULE_0_lite_ready___default()(() => {
 /***/ },
 
 /***/ 2:
+/***/ function(module, exports) {
+
+/**
+ * $$
+ * @description Loop over DOM elements more easily
+ *
+ * @usage $$('.foo').forEach(function(item) { // do something });
+ */
+
+module.exports = function $$(selector, context) {
+	context = context || document;
+	var elements = context.querySelectorAll(selector); return Array.prototype.slice.call(elements);
+}
+
+
+/***/ },
+
+/***/ 3:
 /***/ function(module, exports) {
 
 module.exports = function (callback) {

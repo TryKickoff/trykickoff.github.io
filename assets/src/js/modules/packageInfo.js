@@ -10,7 +10,7 @@ const packages = [
 	'kickoff-snippets',
 	'kickoff-welcome.js',
 	'statix'
-]
+];
 
 let packageEndpoints = [];
 
