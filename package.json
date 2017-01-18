@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "anchor-js": "3.2.2",
-    "axios": "^0.15.2",
+    "axios": "^0.15.3",
     "console": "0.5.2",
     "copy-js": "0.1.1",
     "daccord-validation": "2.0.1",
@@ -83,8 +83,7 @@
     "preinstall": "bundle install",
     "jekyll:build": "jekyll build",
     "jekyll:watch": "jekyll build --watch",
-    "jekyll:serve": "jekyll serve --watch",
-    "start": "parallelshell \"npm run watch\" \"npm run jekyll:watch\"",
-		"deploy": "now _site -n trykickoff --alias trykickoff.now.sh"
+    "jekyll:serve": "jekyll serve --serve",
+    "deploy": "now _site -n trykickoff --alias trykickoff.now.sh"
   }
 }
