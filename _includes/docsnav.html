@@ -73,6 +73,14 @@
 			{% endif %}
 		</li>
 		<li><a href="/learn/svg.html"{% if page.navactive == 'docssvg' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"SVG"}'>SVG workflow</a></li>
+		<li><a href="/learn/linting.html"{% if page.navactive == 'docslinting' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Linting"}'>Code linting</a>
+			{% if page.navactive == 'docslinting' %}
+			<ul class="sidebar-subnav unstyled">
+				<li><a href="#css-linting">CSS linting</a></li>
+				<li><a href="#javascript-linting">Javascript linting</a></li>
+			</ul>
+			{% endif %}
+		</li>
 		<li>
 			<a href="/learn/yeoman.html"{% if page.navactive == 'docsyo' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Yeoman"}'>The Yeoman generator</a>
 
