@@ -102,22 +102,20 @@ scss
 
 ---
 
-### Views, partials & components
-Our distinction between views, partials and components:
+### Elements, components, partials & views
+We use a similar philosophy to [Atomic Design]() but instead of atoms, molecules, organisms & templates we use elements, components, partials & views; below is out distinction.
+
+#### Elements
+Elements are single elements.
 
 #### Components
-
-Small, self-contained files that concern one type of thing, that crucially, are reusable. For example, lists, forms etc. We have included quite a few in the [components](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) directory: [buttons](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_buttons.scss) & [forms](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss) for example, but you should add your components there too. Please [browse through](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) the included components to see what Kickoff offers, or see some of them in action in our [demo area](../demos/).
+Components are small, self-contained files that concern one type of thing, that crucially, are reusable. For example, lists, forms etc. We have included quite a few in the [components](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) directory: [buttons](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_buttons.scss) & [forms](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_forms.scss) for example, but you should add your components there too. Please [browse through](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/) the included components to see what Kickoff offers, or see some of them in action in our [demo area](../demos/).
 
 #### Partials
-
-Partials are partial parts of a page, like a masthead, sidebar or footer. They can have components inside them and can also be reusable. The [partials](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/) directory should contain style partials, like `_footer.scss` or `_masthead.scss`.
+Partials are partial parts of a page, like a masthead, sidebar or footer. They typically have multiple 'components' inside them and can also be reusable. The [partials](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/partials/) directory should contain style partials, like `_footer.scss` or `_masthead.scss`.
 
 #### Views
-
-Used for entire views (or pages). Usually these files consist of small tweaks that only concern a particular view. The [views](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/views/) directory should contain view-specific styles that don't fit into their own module, think `_home.scss` or `_recipe-page.scss` for example.
-
-**N.b.** We recommend that it is better to make reusable components rather than styling based on a view.  Therefore, the styles in this folder *should* be minimal.
+Used for entire views (or pages). Usually these files consist of small tweaks that only concern a particular view. The [views](https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/views/) directory should contain view-specific styles that don't fit into their own module, think `_home.scss` or `_recipe-page.scss` for example. **N.b.** We recommend that it is better to make reusable components rather than styling based on a view.  Therefore, the styles in this folder *should* be minimal.
 
 <hr class="sectionSplitter">
 
