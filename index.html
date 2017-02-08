@@ -70,16 +70,16 @@ meta:
  * media-query library
  */
 $breakpoints: (
-	narrow : 400px,
-	mid    : 750px,
-	wide   : 1000px,
-	huge   : 1250px
+  narrow : 400px,
+  mid    : 750px,
+  wide   : 1000px,
+  huge   : 1250px
 );
 
 .foo {
-	@include media(">mid") {
-		width: 50%;
-	}
+  @include media(">mid") {
+    width: 50%;
+  }
 }
 {% endhighlight %}
 			</div>
