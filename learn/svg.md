@@ -21,7 +21,7 @@ The name of the svg file will be its `id` that you use to reference it, see belo
 ```html
 <!-- source file: `logo-twitter.svg` -->
 <svg role="img" title="Twitter" class="icon icon--large icon--twitter">
-	<use xlink:href="/assets/dist/img/svg.svg#logo-twitter"/>
+	<use xlink:href="/assets/dist/svg/svg.svg#logo-twitter"/>
 </svg>
 ```
 

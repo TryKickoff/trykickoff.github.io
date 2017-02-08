@@ -32,7 +32,6 @@ meta:
 <section class="features wideBoy--bright wideBoy">
 	<div class="l-container">
 		<h1 class="wideBoy-title">Features</h1>
-
 		<div class="frameworkHighlights g g--stack--narrow g--gutter l-mt2">
 			<div class="g-col g-span6">
 				<p><b>Unopinionated &amp; extendable</b><br>
@@ -58,16 +57,17 @@ meta:
 		<div class="g g--gutter g--stack">
 			<div class="g-col g-span6--mid">
 				<h3>Intuitive CSS / Sass</h3>
-				<p>Kickoff comes with a robust Sass-powered CSS framework; it provides many sensible defaults so that you can get your project up and running in the shortest possible time.</p>
+				<p>Kickoff comes with a robust Sass-powered CSS framework; it provides many sensible defaults so that you can get your project up and running in the shortest possible time, and also includes  components </p>
 				<p>Kickoff uses a <a href="/learn/css.html#namingscheme">bespoke naming scheme</a> for classnames, inspired loosely by the BEM naming scheme.</p>
 				<p><a href="/learn/css.html" class="btn btn--site btn--site--dark">Our CSS approach</a></p>
 			</div>
 			<div class="g-col g-span6--mid">
 {% highlight scss%}
 /**
- * Breakpoints
- * There are no common breakpoints so these are just a suggestions
- * You'll need to define your own breakpoints to suit your design
+ * Below we have setup the breakpoints
+ * that our app/site will use and
+ * shown an example with our 3rd-party
+ * media-query library
  */
 $breakpoints: (
 	narrow : 400px,
@@ -93,17 +93,17 @@ $breakpoints: (
 				<h3>Unopinionated Javascript</h3>
 				<p>Kickoff uses <a href="https://webpack.github.io/">Webpack</a> to bundle javascript modules but beyond that, it does not prescribe a way for you to write your JS. We believe that writing JS in a modular way is the future.</p>
 				<p>We also use <a href="https://babeljs.io/">Babel</a> to allow developers to write ES2015 JavaScript right now in their projects, while providing support for older browsers.</p>
-				<p><a href="/learn/css.html" class="btn btn--site btn--site--dark">Our Javascript approach</a></p>
+				<p><a href="/learn/js.html" class="btn btn--site btn--site--dark">Our Javascript approach</a></p>
 			</div>
 			<div class="g-col g-span6--mid">
 {% highlight js%}
-// npm modules
+// This is our starter js file
 import ready from 'lite-ready';
 
-// Add your project-specific modules here
+// Project-specific/non-npm modules here
 import someModule from './modules/someModule';
 
-// Your DOM ready code goes in here
+// DOM ready
 ready(() => {
 	someModule();
 });
