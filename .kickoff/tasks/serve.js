@@ -20,11 +20,9 @@ gulp.task('serve', ['watch'], () => {
 		},
 
 		files: [
-			`${config.css.distDir}/**/*.css`,
+			`_site/assets/dist/css/**/*.css`,
 			`_site/assets/dist/js/**/*.js`,
-			`${config.img.distDir}/**/*`,
-			`${config.svg.distDir}/**/*`,
-			'**/*.html',
+			`_site/assets/dist/img/**/*`,
 		],
 
 		notify: {

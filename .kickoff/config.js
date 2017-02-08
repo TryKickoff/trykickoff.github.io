@@ -2,10 +2,13 @@
  * Global build task vars
  * Both Webpack and Gulp use these vars. Change as much as you like :)
  */
+const gutil = require('gulp-util');
 const pkg = require('../package');
 
 const ConfigOptions = function () {
 	const config = this;
+
+	config.isRelease = (gutil.env.release ? true : false);
 
 	config.srcDir = './assets/src'; // config.srcDir
 	config.distDir = './assets/dist'; // config.distDir
@@ -31,7 +34,7 @@ const ConfigOptions = function () {
 
 		entryPoints: {
 			kickoff: [`${this.srcDir}/js/script.js`],
-			styleguide: [`${this.srcDir}/js/styleguide.js`],
+			// styleguide: [`${this.srcDir}/js/styleguide.js`],
 
 			// Create more entry-points by adding to this array, e.g.
 			// foo: [`${this.srcDir}/js/bar.js`],
@@ -60,6 +63,13 @@ const ConfigOptions = function () {
 	config.fonts = {
 		srcDir: `${config.srcDir}/fonts`, // config.fonts.srcDir
 		distDir: `${config.distDir}/fonts`, // config.fonts.distDir
+	};
+
+	config.gulp = {
+		// Reports which file was changed
+		onChange : function(evt) {
+			gutil.log( gutil.colors.cyan.bold('❯❯ File: ' + evt.path.replace(new RegExp('/.*(?=/' + config.srcDir.substr(2) + ')/'), '')), 'was', gutil.colors.magenta(evt.type) );
+		}
 	};
 
 	// Banners and info

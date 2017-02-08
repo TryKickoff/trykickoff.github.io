@@ -37,27 +37,18 @@ const webpackConfig = {
 		// a plugin that prints an error when you attempt to do this.
 		// See https://github.com/facebookincubator/create-react-app/issues/240
 		new CaseSensitivePathsPlugin(),
+		// Minify the code using Uglify
+		new webpack.optimize.UglifyJsPlugin(),
 	],
 };
 
 /**
- * The below plugins are used when `RELEASE=true ...` is used
+ * The below plugins are used when the `--release` flag is used
  * - minification using uglify
  * - add a banner using the banner plugin
  */
-if (process.env.RELEASE) {
+if (config.isRelease) {
 	webpackConfig.plugins.push(
-		new webpack.optimize.DedupePlugin(),
-
-		// Minify the code using Uglify
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false,
-			},
-			output: {
-				comments: false,
-			},
-		}),
 
 		new webpack.BannerPlugin({
 			banner: config.misc.banner,
