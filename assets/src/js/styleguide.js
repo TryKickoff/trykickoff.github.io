@@ -3,7 +3,6 @@ import $$ from 'double-dollar';
 import copy from 'copy-js/src/copy.js';
 
 ready(() => {
-
 	$$('.sg-swatch').forEach(function(item){
 		item.addEventListener('click', function(e) {
 			var swatchVar = e.currentTarget.querySelector('.sg-swatch-var').innerText;

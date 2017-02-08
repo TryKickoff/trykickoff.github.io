@@ -1,3 +1,15 @@
+/**
+ * ██╗  ██╗██╗ ██████╗██╗  ██╗ ██████╗ ███████╗███████╗
+ * ██║ ██╔╝██║██╔════╝██║ ██╔╝██╔═══██╗██╔════╝██╔════╝
+ * █████╔╝ ██║██║     █████╔╝ ██║   ██║█████╗  █████╗
+ * ██╔═██╗ ██║██║     ██╔═██╗ ██║   ██║██╔══╝  ██╔══╝
+ * ██║  ██╗██║╚██████╗██║  ██╗╚██████╔╝██║     ██║
+ * ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
+ * Kickoff Docs v0.5.2
+ * https://github.com/trykickoff/trykickoff.github.io
+ * undefined
+ */
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -81,7 +93,6 @@
 
 
 __WEBPACK_IMPORTED_MODULE_0_lite_ready___default()(() => {
-
 	__WEBPACK_IMPORTED_MODULE_1_double_dollar___default()('.sg-swatch').forEach(function (item) {
 		item.addEventListener('click', function (e) {
 			var swatchVar = e.currentTarget.querySelector('.sg-swatch-var').innerText;
