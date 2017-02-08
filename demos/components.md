@@ -81,72 +81,29 @@ To make buttons span to 100% width, add the `.btn--block` modifier class. You ca
 <a name="mediaobject"></a>
 
 <h2 class="demoHeading">Media Object</h2>
-Place any image and text-like content side-by-side, as per: [media object](http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code)
+Place any image and text-like content side-by-side, as per: [media object](http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code). We now use our grid to create media objects because of greater flexibility.
 
-<div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_media-object.scss" class="demo-src">_media-object.scss</a>
-
-	<div class="demo-visual">
-		<div class="media">
-			<div class="media-img">
-				<img src="http://placehold.it/250x150">
-			</div>
-			<div class="media-body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		</div>
-		<div class="media media--rev">
-			<div class="media-body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div class="media-img">
-				<img src="http://placehold.it/250x150">
-			</div>
-		</div>
-	</div>
-	<div class="demo-code">
-{% highlight html%}
-<!-- Media element with left aligned image -->
-<div class="media">
-	<div class="media-img">
-		<img src="http://placehold.it/250x150">
-	</div>
-	<div class="media-body">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-</div>
-
-<!-- Media element with right aligned image -->
-<div class="media media--rev">
-	<div class="media-body">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-	<div class="media-img">
-		<img src="http://placehold.it/250x150">
-	</div>
-</div>
-{% endhighlight %}
-	</div>
-</div>
+<p data-height="500" data-theme-id="0" data-slug-hash="NRVaoB" data-default-tab="result" data-user="mrmartineau" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/mrmartineau/pen/NRVaoB/">kickoff flexbox media element</a> by Zander Martineau (<a href="http://codepen.io/mrmartineau">@mrmartineau</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <hr class="sectionSplitter">
 <a name="fluidvideo"></a>
 
 <h2 class="demoHeading">Fluid video</h2>
-Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` container. We assume 16:9 ratio so if you need anything else you will have to modify the [source](https://github.com/trykickoff/kickoff/blob/c3d6bbe23aa9fc51c66e11d6e13f40af16651510/scss/components/_fluid-video.scss) or use a script like [fitvid.js](http://fitvidsjs.com/).
+This is an external component, hosted at [github.com/TryKickoff/kickoff-fluidVideo.css](https://github.com/TryKickoff/kickoff-fluidVideo.css). Wrap any iframed video embed (from Youtube or Vimeo etc) in a `.fluidVideo` container. We assume 16:9 ratio so if you need anything else you will have to modify the [source](https://github.com/TryKickoff/kickoff-fluidVideo.css/blob/master/scss/index.scss) or use a script like [fitvid.js](http://fitvidsjs.com/).
 
 <div class="demo">
-	<a href="https://github.com/trykickoff/kickoff/blob/master/assets/src/scss/components/_fluid-video.scss" class="demo-src">_fluid-video.scss</a>
+	<a href="https://github.com/TryKickoff/kickoff-fluidVideo.css/blob/master/scss/index.scss" class="demo-src">_fluid-video.scss</a>
 
 	<div class="demo-visual">
 		<div class="fluidVideo">
-			<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/-5Ae-LhMIG0" frameborder="0" allowfullscreen></iframe>
+			<iframe class="fluidVideo-item" width="560" height="315" src="//www.youtube-nocookie.com/embed/-5Ae-LhMIG0" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="demo-code">
 {% highlight html%}
 <div class="fluidVideo">
-	<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/-5Ae-LhMIG0" frameborder="0" allowfullscreen></iframe>
+	<iframe class="fluidVideo-item" width="560" height="315" src="//www.youtube-nocookie.com/embed/-5Ae-LhMIG0" frameborder="0" allowfullscreen></iframe>
 </div>
 {% endhighlight %}
 	</div>

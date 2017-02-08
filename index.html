@@ -1,102 +1,86 @@
 ---
-layout: home
+layout: default
 navgroup: home
 body-class: page-home
 meta:
   title: Kickoff
 ---
 
-<section class="wideBoy wideBoy--dark bigBoy primary text-centre">
+<section class="wideBoy wideBoy--dark wideBoy--hero primary">
 	<div class="l-container">
-		<a href="https://github.com/TryKickoff/kickoff/releases/latest" class="currentVersion currentVersion--tag"></a>
-		<h1 class="intro"><span class="logoStyle">Kick<span>off</span></span> is a lightweight front-end framework for creating scalable, performant and responsive sites.</h1>
+		<h1 class="wideBoy-title">
+			<span class="logoStyle">Kick<span>off</span></span>
+		</h1>
+		<h2 class="wideBoy-subtitle">
+			The lightweight front-end framework for creating scalable, performant and responsive sites.
+		</h2>
 
-		<a href="learn/" class="btn btn--primary" data-trak='{"category":"Home page","action":"Get started","label":"CTA"}'>Get Started</a> <a href="https://github.com/TryKickoff/kickoff/releases/latest" class="btn btn--hollow cta-whatsNew" data-trak='{"category":"Home page","action":"Whats new","label":"CTA"}'>What's new in <span class="currentVersion"></span></a>
+		<a class="btn btn--site cta-whatsNew u-ml05" href="learn/"
+			data-trak='{"category":"Home page","action":"Get started","label":"CTA"}'>Get Started</a>
+		&bull;
+		<a class="btn btn--site" href="https://github.com/TryKickoff/kickoff/releases/latest"
+			data-trak='{"category":"Home page","action":"Whats new","label":"CTA"}'>What's new in <span class="currentVersion currentVersion--new"></span></a>
 
 		<div class="l-mt1">
-			<iframe src="http://ghbtns.com/github-btn.html?user=trykickoff&repo=kickoff&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="135" height="30"></iframe>
-			<iframe src="http://ghbtns.com/github-btn.html?user=trykickoff&repo=kickoff&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="30"></iframe>
+			<iframe src="https://ghbtns.com/github-btn.html?user=trykickoff&repo=kickoff&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="135" height="30"></iframe>
 		</div>
-	</div>
-</section>
-
-<section class="wideBoy wideBoy--bright get-started">
-	<div class="l-container">
-		<h2 class="wideBoy-title clearfix"><a href="http://yeoman.io" class="yo">Yeoman</a> Our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a> is the best way to get Kickoff each time you want to start a new project:</h2>
-		<!-- <h2 class="wideBoy-title">To get started, simply clone the framework using&nbsp;Git:</h2> -->
-
-		<div class="g g--gutter g--stack">
-			<div class="g-col g-span6--mid">
-				<code class="code-lrg" data-before="install:">npm install -g generator-kickoff yo</code>
-			</div>
-			<div class="g-col g-span6--mid">
-				<code class="code-lrg" data-before="use:">yo kickoff</code>
-			</div>
-		</div>
-
-		<p class="l-mb0">or clone the git repo:</p>
-
-		<code class="code-lrg" data-before="git:">
-			git clone https://github.com/trykickoff/kickoff.git your-project-folder
-		</code>
-
-		<p class="l-mb0 text-center">
-			Find other ways to get Kickoff <a href="learn/get.html">in our documentation.</a>
-			<br>
-			Follow <a href="http://twitter.com/trykickoff" data-trak='{"category":"Home page","action":"Follow on Twitter","label":"Social"}'>@trykickoff</a> for updates.
-		</p>
 
 	</div>
 </section>
 
-<a href="https://slackin-trykickoff.herokuapp.com/" title="Join Kickoff on Slack" class="slack text-centre">
-	Need real-time help? Find us on Slack
-</a>
 
 <section class="features wideBoy--bright wideBoy">
 	<div class="l-container">
-		<h1 class="wideBoy-title l-mb1">Feature overview</h1>
+		<h1 class="wideBoy-title">Features</h1>
+		<div class="frameworkHighlights g g--stack--narrow g--gutter l-mt2">
+			<div class="g-col g-span6">
+				<p><b>Unopinionated &amp; extendable</b><br>
+					A few common UI elements, a grid &amp; some other base styles. The rest is up to you.</p>
+			</div>
+			<div class="g-col g-span6">
+				<p><b>Rock-solid build tasks</b><br>
+					We use gulp &amp; webpack to deliver the best task runner &amp; developer experience for your project.</p>
+			</div>
+			<div class="g-col g-span6">
+			<p><b>Future proof</b><br>
+				Build complex layouts with flexbox &amp; use ES2015 (ES6) for your javascript.</p>
+			</div>
+			<div  class="g-col g-span6">
+				<p><b>Lean</b><br>
+					CSS: 8.68 kB gzipped. JS: 2 kB gzipped. It is a boilerplate after all 😉</p>
+			</div>
+		</div>
+
+		<hr class="sectionSplitter">
 
 		<!-- section on CSS -->
 		<div class="g g--gutter g--stack">
 			<div class="g-col g-span6--mid">
 				<h3>Intuitive CSS / Sass</h3>
-				<p>Kickoff comes with a robust CSS framework; it provides many sensible defaults so that you can get your project up and running in the shortest possible time.</p>
-				<p>We make use of the excellent Sass CSS preprocessor which allows us to use many extra features beyond the capabilities of vanilla CSS.</p>
+				<p>Kickoff comes with a robust Sass-powered CSS framework; it provides many sensible defaults so that you can get your project up and running in the shortest possible time, and also includes  components </p>
 				<p>Kickoff uses a <a href="/learn/css.html#namingscheme">bespoke naming scheme</a> for classnames, inspired loosely by the BEM naming scheme.</p>
-				<p>We also use the <a href="https://github.com/postcss/autoprefixer">Autoprefixer library</a> to manage and add vendor prefixes where necessary to the CSS.</p>
-				<p>Find out more about Kickoff’s CSS <a href="/learn/css.html">in the docs</a>.</p>
+				<p><a href="/learn/css.html" class="btn btn--site btn--site--dark">Our CSS approach</a></p>
 			</div>
 			<div class="g-col g-span6--mid">
 {% highlight scss%}
 /**
- * Typography variables
- */
-$font-size-base           : 20;
-$leading-base             : 1.4;
-$line-height-base         : round($font-size-base * $leading-base); // 20 * 1.4
-$type-scale               : 1.25; // Major third
-
-$type: (
-	micro                   : modular-scale($font-size-base, -2, $type-scale),
-	small                   : modular-scale($font-size-base, -1, $type-scale), // h5, h6
-	base                    : modular-scale($font-size-base, 0, $type-scale),  // p, h4
-	mid                     : modular-scale($font-size-base, 1, $type-scale),  // h3
-	large                   : modular-scale($font-size-base, 2, $type-scale),  // h2
-	jumbo                   : modular-scale($font-size-base, 3, $type-scale)   // h1
-);
-
-/**
- * Breakpoints
- * There are no common breakpoints so these are just a suggestions
- * You'll need to define your own breakpoints to suit your design
+ * Below we have setup the breakpoints
+ * that our app/site will use and
+ * shown an example with our 3rd-party
+ * media-query library
  */
 $breakpoints: (
-	narrow: 400px,
-	mid: 768px,
-	wide: 992px,
-	huge: 1600px
+	narrow : 400px,
+	mid    : 750px,
+	wide   : 1000px,
+	huge   : 1250px
 );
+
+.foo {
+	@include media(">mid") {
+		width: 50%;
+	}
+}
 {% endhighlight %}
 			</div>
 		</div>
@@ -107,135 +91,119 @@ $breakpoints: (
 		<div class="g g--gutter g--stack">
 			<div class="g-col g-span6--mid">
 				<h3>Unopinionated Javascript</h3>
-				<p>Kickoff uses <a href="http://browserify.org">Browserify</a> to bundle javascript modules but beyond that, it does not prescribe a way for you to write your JS. We believe that writing JS in a modular way is the future.</p>
+				<p>Kickoff uses <a href="https://webpack.github.io/">Webpack</a> to bundle javascript modules but beyond that, it does not prescribe a way for you to write your JS. We believe that writing JS in a modular way is the future.</p>
 				<p>We also use <a href="https://babeljs.io/">Babel</a> to allow developers to write ES2015 JavaScript right now in their projects, while providing support for older browsers.</p>
-				<p>The code on the right is part of our starter Javascript file ;)</p>
-				<p>Find out more about Kickoff’s JavaScript <a href="/learn/js.html">in the docs</a>.</p>
+				<p><a href="/learn/js.html" class="btn btn--site btn--site--dark">Our Javascript approach</a></p>
 			</div>
 			<div class="g-col g-span6--mid">
 {% highlight js%}
-// npm modules
+// This is our starter js file
 import ready from 'lite-ready';
-import $$ from 'double-dollar';
-window.$$ = $$;
 
-// Bundle global libs that don't return a value
-import 'console';
+// Project-specific/non-npm modules here
+import someModule from './modules/someModule';
 
-// Add your project-specific modules here
-import moduleTest from './modules/moduleTest';  // this is a test, uncomment this line to try it
-
-// Your DOM ready code goes in here
+// DOM ready
 ready(() => {
-	moduleTest();
+	someModule();
 });
 {% endhighlight %}
+				<small>The code above is part of our starter Javascript file ;)</small>
 			</div>
 		</div>
 
 		<hr class="sectionSplitter">
 
 		<!-- section on Tooling -->
-		<h3>Awesome tooling</h3>
 		<div class="g g--gutter g--stack">
 			<div class="g-col g-span6--mid">
-				<p>Kickoff is powered by the <a href="http://gruntjs.com/">Grunt.js</a> task runner. It is used extensively to ease common development bottlenecks and allow us developers to focus on creating the best work possible.</p>
-				<h3>Continous delivery</h3>
-				<p>Special attention has been made to ensure Kickoff works well with continuous delivery, if you develop that way.</p>
-				<p>We are also working on extending Kickoff to use Gulp for those developers that prefer using it.</p>
-				<p>Find out more about Kickoff’s tooling <a href="/learn/grunt.html">in the docs</a>.</p>
+				<h3>Awesome tooling</h3>
+				<p>Kickoff is powered by the <a href="http://gulpjs.com/">Gulp</a> task runner. It is used extensively to ease common development bottlenecks and allow us developers to focus on creating the best work possible.</p>
 			</div>
 			<div class="g-col g-span6--mid">
-{% highlight js%}
-// grunt serve
-grunt.registerTask('serve', [
-	'compile',
-	'browserSync:serve',
-	'watch',
-]);
-
-
-// grunt watcher
-grunt.registerTask('watcher', [
-	'compile',
-	'watch',
-]);
-
-// grunt compile
-grunt.registerTask('compile', [
-	'browserify',
-	'postscss',
-	'images',
-	'copy:jsStandalone',
-]);
-{% endhighlight %}
+				<h3>Continous delivery</h3>
+				<p>Special attention has been made to ensure Kickoff works well with continuous delivery, if you develop that way. Find out more about Kickoff’s tooling <a href="/learn/tooling.html">in the docs</a>.</p>
 			</div>
 		</div>
 
-		<div class="text-center">
-			<a href="/learn" class="btn btn--primary">Read our docs</a> <a href="/demos" class="btn">See our demos</a>
-		</div>
+		<hr class="sectionSplitter">
+
+		<h3>Find out more</h3>
+		<a href="/learn" class="btn btn--site btn--site--dark">Read our docs</a>
+		&bull;
+		<a href="/demos" class="btn btn--site btn--site--dark">see our demos</a>
 
 	</div>
 </section>
 
-<section class="latestNews wideBoy--dark wideBoy">
+<div class="g g--stack--narrow">
+	<a href="https://slackin-trykickoff.herokuapp.com/" title="Join Kickoff on Slack" class="g-col bigLink bigLink--secondary">
+		<div class="l-container">
+			<img src="/assets/dist/img/ui/slack-mark-white.png" alt="Slack logo" />
+			Need real-time help? Find us on Slack
+		</div>
+	</a>
+	<a href="https://blog.trykickoff.com" title="Read the blog" class="g-col bigLink bigLink--primary">
+		<div class="l-container">
+			<img src="/assets/dist/img/ui/medium-m-dark-100px.png" alt="Medium logo" />
+			Read the blog
+		</div>
+	</a>
+</div>
+
+<section class="wideBoy wideBoy--bright get-started">
 	<div class="l-container">
-		<h1 class="wideBoy-title">From the blog&hellip;</h1>
-		<ul class="unstyled">
-			{% for post in site.posts %}
-			<li class="l-mb1">
-				<h4 class="entry-title l-mb0">
-					<a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a>
-					<time class="entry-title-date">{{ post.date | date: "%-d %B %Y" }}</time>
-				</h4>
-			</li>
-{% endfor %}
-		</ul>
+		<h3 class="wideBoy-title">Quick start</h3>
+		<p>Install our <a href="https://github.com/trykickoff/generator-kickoff">Yeoman Generator</a>, it is the best way to get Kickoff each time you want to start a new project:</p>
+
+{% highlight sh %}
+# Install Yeoman and the Kickoff generator
+npm install -g generator-kickoff yo
+
+# Run the Kickoff Yeoman generator
+yo kickoff
+{% endhighlight %}
+
+		<p>If you don't want to use the generator, clone the git repo:</p>
+
+{% highlight sh %}
+# clone the repo
+git clone https://github.com/trykickoff/kickoff.git your-project-folder
+{% endhighlight %}
+
+		<h3>Find out more</h3>
+		<a href="/learn" class="btn btn--site btn--site--dark">Read our docs</a>
+		&bull;
+		<a href="/demos" class="btn btn--site btn--site--dark">see our demos</a>
 
 	</div>
-
 </section>
 
 <section class="showcase wideBoy--dark wideBoy">
 	<div class="l-container">
 		<h1 class="wideBoy-title l-mb0">Built with Kickoff</h1>
-		<h2 class="wideBoy-title">Hundreds of amazing sites across the web are being built with Kickoff. See below for a few of them:</h2>
-
-		<ul class="showcaseList g">
-			{% for item in site.data.showcase %}
-				<li class="g-col g-span4--narrow g-span3--mid">
-					{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
-						<figure>
-							<img src="/assets/dist/img/showcase/{{ item.img }}" alt="{{ item.name }}">
-							<figcaption>{{ item.name }}</figcaption>
-						</figure>
-					{% if item.url != null %}</a>{% endif %}
-				</li>
-			{% endfor %}
-		</ul>
-
+		<h2 class="wideBoy-subtitle">Hundreds of amazing sites across the web are being built with Kickoff. See below for a few of them:</h2>
 	</div>
+
+	<div class="showcaseList">
+		{% for item in site.data.showcase %}
+			{% if item.url != null %}<a href="{{ item.url }}" target="_blank" data-trak='{"category":"Home page","action":"Showcase item click","label":"{{ item.name }}"}'>{% endif %}
+				<figure>
+					<img src="/assets/dist/img/showcase/{{ item.img }}" alt="{{ item.name }}">
+					<figcaption>{{ item.name }}</figcaption>
+				</figure>
+			{% if item.url != null %}</a>{% endif %}
+		{% endfor %}
+	</div>
+
 </section>
-<div class="used wideBoy wideBoy--dark">
-	<div class="l-container">
-		<div class="g g--gutter g--stack">
-			<div class="g-span8--mid g-col">
-					<h3 class="wideBoy-title l-mb0">Have you used Kickoff on a&nbsp;project?</h3>
-					<p>Let us know so we can add it here.</p>
-			</div>
-			<div class="g-span4--mid g-col">
-				<a href="https://twitter.com/intent/tweet?&text=@TryKickoff I use you! 🎉" class="btn btn--secondary" data-trak='{"category":"Home page","action":"Email us","label":"CTA"}'>Tweet us your story</a>
-			</div>
-		</div>
-	</div>
-</div>
 
-<section class="statix wideBoy--bright wideBoy text-centre">
+<section class="statix wideBoy--bright wideBoy">
 	<div class="l-container">
-		<h2 class="wideBoy-title">Like Kickoff? Super charge it using</h2>
-		<h1>
-			<a href="/statix" class="statixLogo">
+		<h3 class="wideBoy-title">Super-charge Kickoff using Statix</h3>
+		<p>Statix is our static templating/rapid-prototyping tool, it makes the process of creating static HTML templates quick and easy.</p>
+
+		<a href="/learn/statix.html" class="statixLogo">
 				<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 viewBox="0 0 209 60" enable-background="new 0 0 209 60" xml:space="preserve">
 					<g>
@@ -260,8 +228,9 @@ grunt.registerTask('compile', [
 					</g>
 				</svg>
 			</a>
-		</h1>
-		<p>Makes the process of creating static HTML templates quick and easy</p>
-		<a href="/statix" class="btn btn--primary" data-trak='{"category":"Home page","action":"Statix info","label":"CTA"}'>Find out more</a>
+		<br>
+		<a href="/learn/statix.html" class="btn btn--site btn--site--dark" data-trak='{"category":"Home page","action":"Statix info","label":"CTA"}'>Read docs</a>
+		&bull;
+		<a href="https://github.com/TryKickoff/statix" class="btn btn--site btn--site--dark" data-trak='{"category":"Home page","action":"Statix info","label":"CTA"}'>Git repo</a>
 	</div>
 </section>

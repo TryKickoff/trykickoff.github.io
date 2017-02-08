@@ -1,72 +1,99 @@
-<ul class="sidebar-nav unstyled">
-	<li><a href="/learn/index.html"{% if page.navactive == 'docsindex' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Meet Kickoff"}'>Meet Kickoff</a></li>
-	<li><a href="/learn/get.html"{% if page.navactive == 'docsget' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Get Kickoff"}'>Get Kickoff</a></li>
-	<li><a href="/learn/checklist.html">Post-install checklist</a></li>
-</ul>
+<button class="sidebarReveal u-showBelowMid btn btn--site btn--site--dark">Reveal Docs nav</button>
 
-<ul class="sidebar-nav unstyled">
-	<li><a href="/learn/tooling.html"{% if page.navactive == 'docstooling' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Tooling"}'>Tooling</a>
-		{% if page.navactive == 'docstooling' %}
-		<ul class="sidebar-subnav unstyled">
-			<li><a href="#setup">Setup</a></li>
-			<li><a href="#grunt">Grunt</a></li>
-			<li><a href="#npm-scripts">npm scripts</a></li>
-		</ul>
-		{% endif %}
-	</li>
-	<li><a href="/learn/css.html"{% if page.navactive == 'docscss' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"CSS"}'>CSS</a>
-		{% if page.navactive == 'docscss' %}
-		<ul class="sidebar-subnav unstyled">
-			<li><a href="#how">Philosophy</a></li>
-			<li><a href="#sass">Sass</a></li>
-			<li><a href="#structure">Structure</a></li>
-			<li><a href="#variables">Variables</a></li>
-			<li><a href="#responsive">Responsive</a></li>
-			<li><a href="#namingscheme">CSS Naming scheme</a></li>
-		</ul>
-		{% endif %}
-	</li>
-	<li><a href="/learn/js.html"{% if page.navactive == 'docsjs' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Javascript"}'>Javascript</a>
-		{% if page.navactive == 'docsjs' %}
-		<ul class="sidebar-subnav unstyled">
-			<li><a href="#structure">Structure</a></li>
-			<li><a href="#browserify">Browserify</a></li>
-			<li><a href="#babel">Babel</a></li>
-			<li><a href="#npm">npm</a></li>
-			<li><a href="#shims">Shims</a></li>
-			<li><a href="#libs">Libraries</a></li>
-		</ul>
-		{% endif %}
-	</li>
-	<li><a href="/learn/html.html"{% if page.navactive == 'docshtml' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"HTML"}'>HTML</a>
-		{% if page.navactive == 'docshtml' %}
-		<ul class="sidebar-subnav unstyled">
-			<li><a href="#skip">Skip content link</a></li>
-			<li><a href="#socialmeta">Social meta tags</a></li>
-			<li><a href="#iconmeta">Icon meta tags</a></li>
-			<li><a href="#jquery">jQuery</a></li>
-		</ul>
-		{% endif %}
-	</li>
-	<li><a href="/learn/grid.html"{% if page.navactive == 'docsgrid' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Grid"}'>The Grid</a>
-		{% if page.navactive == 'docsgrid' %}
-		<ul class="sidebar-subnav unstyled">
-			<li><a href="#gridhow">How it works</a></li>
-			<li><a href="#gridbasic">Setting up a grid</a></li>
-			<li><a href="#gridoptions">Grid options</a></li>
-			<li><a href="#gridgutters">Guttering</a></li>
-			<li><a href="#gridstacking">Column Stacking</a></li>
-			<li><a href="#gridcolumns">Column Span Classes</a></li>
-			<li><a href="#gridalignment">Alignment</a></li>
-			<li><a href="#gridnesting">Nesting</a></li>
-			<li><a href="#gridequalheight">Equal Height Columns</a></li>
-			<li><a href="#gridholdWidth">Holding a Column Width</a></li>
-		</ul>
-		{% endif %}
-	</li>
-</ul>
+<div class="sidebar u-showAboveMid">
+	<ul class="sidebar-nav unstyled">
+		<li><a href="/learn/index.html"{% if page.navactive == 'docsindex' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Meet Kickoff"}'>Overview</a></li>
+		<li><a href="/learn/get.html"{% if page.navactive == 'docsget' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Get Kickoff"}'>Get Kickoff</a></li>
+		<li><a href="/learn/checklist.html"{% if page.navactive == 'docschecklist' %} class="is-active"{% endif %}>Post-install checklist</a></li>
+	</ul>
 
-<ul class="sidebar-nav unstyled">
-	<li><a href="/learn/yeoman.html"{% if page.navactive == 'docsyo' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Yeoman"}'>Yeoman generator</a></li>
-	<li><a href="/learn/sublime.html"{% if page.navactive == 'docssublime' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Sublime Text snippets"}'>Sublime Text snippets</a></li>
-</ul>
+	<ul class="sidebar-nav unstyled">
+		<li><a href="/learn/tooling.html"{% if page.navactive == 'docstooling' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Tooling"}'>Tooling</a>
+			{% if page.navactive == 'docstooling' %}
+			<ul class="sidebar-subnav unstyled">
+				<li><a href="#setup">Setup</a></li>
+				<li><a href="#tasks">Gulp</a></li>
+				<li><a href="#npm-run-scripts">npm scripts</a></li>
+				<li><a href="#tooling-config">Tooling config</a></li>
+			</ul>
+			{% endif %}
+		</li>
+		<li><a href="/learn/css.html"{% if page.navactive == 'docscss' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"CSS"}'>CSS</a>
+			{% if page.navactive == 'docscss' %}
+			<ul class="sidebar-subnav unstyled">
+				<li><a href="#how">Philosophy</a></li>
+				<li><a href="#notice">Version 8 breaking changes</a></li>
+				<li><a href="#sass">Sass</a></li>
+				<li><a href="#structure">Folder structure</a></li>
+				<li><a href="#variables">Variables</a></li>
+				<li><a href="#usefulclasses">Useful CSS classes</a></li>
+				<li><a href="#responsive">Responsive</a></li>
+				<li><a href="#namingscheme">CSS Naming scheme</a></li>
+			</ul>
+			{% endif %}
+		</li>
+		<li><a href="/learn/js.html"{% if page.navactive == 'docsjs' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Javascript"}'>Javascript</a>
+			{% if page.navactive == 'docsjs' %}
+			<ul class="sidebar-subnav unstyled">
+				<li><a href="#structure">Structure</a></li>
+				<li><a href="#webpack">Webpack</a></li>
+				<li><a href="#babel">ES2015 &amp; Babel</a></li>
+				<li><a href="#npm">npm</a></li>
+				<li><a href="#recommended-3rd-party-npm-packages">Recommended 3rd party npm packages</a></li>
+				<li><a href="#shims">Shims &amp; polyfills</a></li>
+				<li><a href="#modernizr">Modernizr</a></li>
+			</ul>
+			{% endif %}
+		</li>
+		<li><a href="/learn/html.html"{% if page.navactive == 'docshtml' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"HTML"}'>HTML</a>
+			{% if page.navactive == 'docshtml' %}
+			<ul class="sidebar-subnav unstyled">
+				<li><a href="#headmeta">&lt;head> metatags</a></li>
+				<li><a href="#skip">Skip content link</a></li>
+				<li><a href="#socialmeta">Social meta tags</a></li>
+				<li><a href="#iconmeta">Icon meta tags</a></li>
+				<li><a href="#jquery">jQuery</a></li>
+			</ul>
+			{% endif %}
+		</li>
+		<li><a href="/learn/grid.html"{% if page.navactive == 'docsgrid' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Grid"}'>The Grid</a>
+			{% if page.navactive == 'docsgrid' %}
+			<ul class="sidebar-subnav unstyled">
+				<li><a href="#gridhow">How it works</a></li>
+				<li><a href="#gridbasic">Setting up a grid</a></li>
+				<li><a href="#gridoptions">Grid options</a></li>
+				<li><a href="#gridgutters">Guttering</a></li>
+				<li><a href="#gridstacking">Column Stacking</a></li>
+				<li><a href="#gridcolumns">Column Span Classes</a></li>
+				<li><a href="#gridalignment">Alignment</a></li>
+				<li><a href="#gridnesting">Nesting</a></li>
+				<li><a href="#gridequalheight">Equal Height Columns</a></li>
+				<li><a href="#gridholdWidth">Holding a Column Width</a></li>
+			</ul>
+			{% endif %}
+		</li>
+		<li><a href="/learn/svg.html"{% if page.navactive == 'docssvg' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"SVG"}'>SVG workflow</a></li>
+		<li><a href="/learn/linting.html"{% if page.navactive == 'docslinting' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Linting"}'>Code linting</a>
+			{% if page.navactive == 'docslinting' %}
+			<ul class="sidebar-subnav unstyled">
+				<li><a href="#css-linting">CSS linting</a></li>
+				<li><a href="#javascript-linting">Javascript linting</a></li>
+			</ul>
+			{% endif %}
+		</li>
+		<li>
+			<a href="/learn/yeoman.html"{% if page.navactive == 'docsyo' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Yeoman"}'>The Yeoman generator</a>
+
+			{% if page.navactive == 'docsyo' %}
+			<ul class="sidebar-subnav unstyled">
+				<li><a href="#installation">Installation</a></li>
+				<li><a href="#usage">Usage</a></li>
+				<li><a href="#subcommands">Sub-commands</a></li>
+			</ul>
+			{% endif %}
+		</li>
+		<li><a href="/learn/statix.html"{% if page.navactive == 'docsstatix' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"Statix"}'>Statix</a></li>
+		<li><a href="/learn/snippets.html"{% if page.navactive == 'docssnippets' %} class="is-active"{% endif %} data-trak='{"category":"Docs nav","action":"IDE snippets"}'>IDE snippets</a></li>
+	</ul>
+
+</div>

@@ -174,6 +174,50 @@ Assuming you use the same markup as above, simply add a `.form--horizontal` clas
 <!-- END EXAMPLE -->
 
 <hr class="sectionSplitter">
+<a name="labelsinline"></a>
+
+## Form themes
+Version 8 of Kickoff introduced basic theming support for forms. What you have seen up until this point is the 'standard' theme that we have had for quite some time. What you see below is the experimental 'Material design' theme.
+
+<p data-height="550" data-theme-id="0" data-slug-hash="QGwvdL" data-default-tab="result" data-user="mrmartineau" data-embed-version="2" data-pen-title="Kickoff Material design for theme" class="codepen">See the Pen <a href="https://codepen.io/mrmartineau/pen/QGwvdL/">Kickoff Material design for theme</a> by Zander Martineau (<a href="http://codepen.io/mrmartineau">@mrmartineau</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<!-- END EXAMPLE -->
+
+### How to switch themes
+Switching themes is fairly trivial. Find the `scss/components/forms/forms.scss` file and change the `@import` value to the one specified in the comments below:
+
+```scss
+/**
+ * Form themes
+ * This file contains the base form styles and each theme file contains
+ * overrides and additions.
+ *
+ * Choose from:
+ * - `standard`: the original Kickoff form theme
+ * - `material`: basic version of Google's Material design forms
+ *
+ * Usage: (choose from)
+ * @import "form-theme-standard";
+ * @import "form-theme-material";
+ */
+@import "form-theme-standard";
+```
+
+### Creating your own theme
+If you need to create your own theme, we recommend amending one of the existing themes ('standard' or 'material').
+
+### Material theme markup
+The markup for the material design theme is slightly different, please see the source of the Codepen demo above, or the snippet beneath that for an example.
+
+```html
+<div class="form-controlGroup">
+	<input class="form-input" type="text" name="" id="firstname" required/>
+	<label class="form-label" for="firstname">First name</label>
+	<i class="form-inputBar"></i>
+</div>
+```
+
+<hr class="sectionSplitter">
 <a name="multicolumnform"></a>
 
 <h2 class="demoHeading">Multi column forms <small>with labels above inputs</small></h2>

@@ -1,7 +1,7 @@
 ---
 title: Meet Kickoff
 layout: docs
-subtitle: 
+subtitle:
 navgroup: docs
 navactive: docsindex
 meta:
@@ -11,8 +11,8 @@ next:
   body: Find out how to get your hands on Kickoff here.
   link: get.html
 - title: Use Kickoff
-  body: Ready to get your hands dirty?<br>We’ll show you where to start.
-  link: use.html
+  body: Ready to get your hands dirty?<br>Follow the post-install checklist to get started.
+  link: checklist.html
 ---
 
 **Kickoff** is a lightweight front-end framework for creating scalable, responsive sites.

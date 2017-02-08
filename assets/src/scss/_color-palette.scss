@@ -1,5 +1,6 @@
 /**
- * Global Color palette
+ * Global color palette
+ * =================================
  * - Generic colors
  * - Color scheme
  * - Common colors
@@ -10,19 +11,21 @@
  */
 
 // Generic colors
-$blue                         : #3498db;
-$blueDark                     : #181830;
-$green                        : #2ecc71;
-$red                          : #e74c3c;
-$yellow                       : #f1c40f;
-$orange                       : #FE7C08;
-$pink                         : #c3325f;
-$purple                       : #351330;
+$blue                         : #288ad6;
+$green                        : #16c98d;
+$red                          : #fa5e5b;
+$yellow                       : #feef6d;
+$orange                       : #fe7c08;
+$pink                         : #ff708e;
+$purple                       : #8e44ad;
 $gray                         : #95a5a6;
 
+$color-kickoff-blue           : #181830;
+$color-kickoff-orange         : #fe7c08;
+
 // Color Scheme
-$color-primary                : $blueDark;
-$color-secondary              : $orange;
+$color-primary                : $color-kickoff-blue;
+$color-secondary              : $color-kickoff-orange;
 $color-highlight              : #ff9600;
 
 // Common colors
@@ -33,9 +36,9 @@ $color-border                 : #ddd;
 
 // Links
 $color-link-default           : $blue;
-$color-link-visited           : $blue;
-$color-link-hover             : darken($blue, 20%);
-$color-link-active            : darken($blue, 20%);
+$color-link-visited           : $color-link-default;
+$color-link-hover             : darken($color-link-default, 20%);
+$color-link-active            : darken($color-link-default, 20%);
 
 // Text Selection
 $color-selection              : #fff;
@@ -43,4 +46,12 @@ $color-selection-bg           : $color-secondary;
 
 
 // <hr> border color
-$hr-border                    : lighten(#000, 70%);
+$hr-color                     : lighten(#000, 70%);
+
+// 3rd party brand colors - find more at brandcolors.net
+$color-twitter                : #55acee;
+$color-facebook               : #3b5998;
+$color-youtube                : #cd201f;
+$color-pinterest              : #bd081c;
+$color-instagram              : #e4405f;
+$color-whatsapp               : #25d366;

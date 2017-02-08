@@ -1,5 +1,6 @@
 /**
- * Utilities
+ * Helper classes
+ * =================================
  * Non-semantic helper classes
  */
 
@@ -8,7 +9,7 @@
  * http://www.cssmojo.com/latest_new_clearfix_so_far/
  * See mixins/_utility.scss for a mixin version of this
  */
-.clearfix:after {
+.clearfix::after {
 	content: "";
 	display: table;
 	clear: both;
@@ -29,14 +30,6 @@
 	br {
 		display: none;
 	}
-}
-
-.u-textCenter {
-	text-align: center;
-}
-
-.text-nowrap {
-	white-space: nowrap;
 }
 
 
@@ -90,18 +83,15 @@
 .l-mb0 { margin-bottom: 0 !important; }
 .l-mt0 { margin-top:    0 !important; }
 
+.l-mt2 { margin-top:    $baseline * 2 !important; }
 .l-mt1 { margin-top:    $baseline !important; }
 .l-mr1 { margin-right:  $baseline !important; }
 .l-mb1 { margin-bottom: $baseline !important; }
 .l-ml1 { margin-left:   $baseline !important; }
 
 
-/**
- * Responsive Utilities
- */
-
 * {
-	-webkit-tap-highlight-color: $color-primary !important;
+	-webkit-tap-highlight-color: transparent !important;
 }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
@@ -110,18 +100,88 @@ textarea[contenteditable] {
 }
 
 .promote-layer {
-  /*
-  This may promote the layer to a composited
-  layer.
+	/*
+	This may promote the layer to a composited
+	layer.
 
-  Replace with will-change when available
+	Replace with will-change when available
 
-  #perfmatters
-  */
-  backface-visibility: hidden;
+	#perfmatters
+	*/
+	backface-visibility: hidden;
 }
 
 // Add the default transition to any element
 .transition {
 	transition: $default-transition;
+}
+
+// Faster taps on mobile devices
+// See https://adactio.com/journal/10019 for more info
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+	touch-action: manipulation;
+}
+
+
+/**
+ * Responsive helper classes to show/hide content based on our media-queries
+ */
+.u-showBelowNarrow {
+	@include media('>narrow') {
+		display: none !important;
+	}
+}
+
+.u-showBelowMid {
+	@include media('>mid') {
+		display: none !important;
+	}
+}
+
+.u-showBelowWide {
+	@include media('>wide') {
+		display: none !important;
+	}
+}
+
+.u-showBelowHuge {
+	@include media('>huge') {
+		display: none !important;
+	}
+}
+
+.u-showAboveNarrow {
+	@include media('<narrow') {
+		display: none !important;
+	}
+}
+
+.u-showAboveMid {
+	@include media('<mid') {
+		display: none !important;
+	}
+}
+
+
+.u-showAboveWide {
+	@include media('<wide') {
+		display: none !important;
+	}
+}
+
+.u-showAboveHuge {
+	@include media('<huge') {
+		display: none !important;
+	}
+}
+
+.u-ml05 {
+	margin-left: -0.5em;
 }

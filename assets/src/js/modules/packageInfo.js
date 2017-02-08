@@ -1,41 +1,46 @@
-var $ = require('jquery');
+import axios from 'axios';
+
+// List of packages to be included
+const packages = [
+	'kickoff',
+	'generator-kickoff',
+	'kickoff-grid.css',
+	'kickoff-utils.scss',
+	'kickoff-fluidVideo.css',
+	'kickoff-snippets',
+	'kickoff-welcome.js',
+	'statix'
+];
+
+let packageEndpoints = [];
 
 function init() {
-	if ($('.currentVersion').length) {
-		getPackageJSON();
-	}
-}
-
-function getPackageJSON() {
-	$.ajax({
-		url: 'https://rawgit.com/tmwagency/kickoff/master/package.json',
-		type: 'GET',
-		dataType: 'json',
-	})
-	.done(function(data) {
-		// console.log("success", data);
-
-		setVersion(data.version);
+	packages.forEach(pkg => {
+		packageEndpoints.push(axios.get(`https://rawgit.com/TryKickoff/${pkg}/master/package.json`));
 	});
-}
 
-function setVersion(version) {
-	$('.currentVersion').text(version);
-}
+	axios.all(packageEndpoints).then((response) => {
+		console.log(response);
+		let html = ``;
 
-function getLatestCommit() {
-	$.ajax({
-		url: 'https://api.github.com/repos/tmwagency/kickoff/commits',
-		type: 'GET',
-		dataType: 'json',
-	})
-	.done(function(data) {
-		console.log("success", data[0].commit);
-		var commitText = 'Latest commit: "' + data[0].commit.message + '" by ' + data[0].commit.author.name;
-		var commitUrl = data[0].commit.url.replace('api.', '').replace('repos/', '').replace('git/', '').replace('commits', 'commit');
+		response.forEach(item => {
+			html += `
+				<a class="nav-subItem release"
+					title="Visit the ${item.data.name} repo"
+					href="https://github.com/TryKickoff/${item.data.name}/"
+					target="_blank">
+						<span class="release-name">${item.data.name}</span>
+						<span class="release-version">${item.data.version}</span>
+				</a>`;
 
-		$('.latestCommit span').text(commitText);
-		$('.latestCommit a').attr('href', commitUrl);
+				// Add the version to the home page hero area
+				if (document.querySelector('.currentVersion--new') && item.data.name === 'kickoff') {
+					document.querySelector('.currentVersion--new').textContent = item.data.version;
+				}
+		});
+
+		document.querySelector('.nav-releases').innerHTML = html;
+
 	});
 }
 

@@ -1,18 +1,12 @@
 ---
 layout: default
 ---
-
-<section class="title wideBoy primary wideBoy--dark">
-	<h1 class="title-item title-primary text-centre">{{ page.title }}</h1>
-	{% if page.subtitle %}<h2 class="title-item title-secondary">{{ page.subtitle }}</h2>{% endif %}
-</section>
+{% include title.html title=page.title subtitle=page.subtitle %}
 
 <div class="l-container">
 	<div class="g g--gutter g--stack">
 		<div class="g-span3--mid g-col">
-			<ul class="sidebar-nav unstyled">
-				{% include demonav.html %}
-			</ul>
+			{% include demonav.html %}
 		</div>
 		<div class="g-span9--mid g-col">
 			<article>
@@ -31,7 +25,6 @@ layout: default
 						{% endif %}
 
 							<h3>{{ item.title }}</h3>
-							{{ item.body | markdownify }}
 
 						{% if item.link %}
 							</a>

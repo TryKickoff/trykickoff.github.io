@@ -92,11 +92,11 @@ Each `.g-col` element uses percentage widths, which are relative to it’s paren
 <hr class="sectionSplitter">
 <a name="gutter"></a>
 
-<h2 class="demoHeading">Grid Gutters</h2>
+<h2>Grid Gutters</h2>
 
 The grid can have several gutter states; No gutter (default), fixed width gutters or scaled gutters.
 
-### Default grid – No gutters
+<h3 class="demoHeading">Default grid – No gutters</h3>
 
 <div class="demo">
 	<div class="demo-visual">
@@ -115,9 +115,27 @@ The grid can have several gutter states; No gutter (default), fixed width gutter
 			<div class="g-col g-span1"><div class="g-content">&nbsp;</div></div>
 		</div>
 	</div>
+	<div class="demo-code">
+{% highlight html %}
+<div class="g">
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+</div>
+{% endhighlight %}
+	</div>
 </div>
 
-### Grid with fixed width gutters
+<h3 class="demoHeading">Grid with fixed width gutters</h3>
 
 <div class="demo">
 	<div class="demo-visual">
@@ -136,9 +154,27 @@ The grid can have several gutter states; No gutter (default), fixed width gutter
 			<div class="g-col g-span1"><div class="g-content">&nbsp;</div></div>
 		</div>
 	</div>
+	<div class="demo-code">
+{% highlight html %}
+<div class="g g--gutter">
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+</div>
+{% endhighlight %}
+	</div>
 </div>
 
-### Grid with scaled width gutters
+<h3 class="demoHeading">Grid with scaled width gutters</h3>
 <div class="demo">
 	<div class="demo-visual">
 		<div class="g g--gutter--scaled g--demo">
@@ -156,6 +192,25 @@ The grid can have several gutter states; No gutter (default), fixed width gutter
 			<div class="g-col g-span1"><div class="g-content">&nbsp;</div></div>
 		</div>
 	</div>
+	<div class="demo-code">
+{% highlight html %}
+<div class="g g--gutter--scaled">
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+	<div class="g-col g-span1"></div>
+</div>
+{% endhighlight %}
+	</div>
+
 </div>
 
 
@@ -280,11 +335,11 @@ Add a `.g-alignCenter` or `.g-col--centered` class to each column. This also mea
 <hr class="sectionSplitter">
 <a name="columnspans"></a>
 
-<h2 class="demoHeading">Example Grid Layouts</h2>
+<h2>Example Grid Layouts</h2>
 
 Here are some examples of the type of grids you can create using the Kickoff Grid.
 
-### 9 / 3 column split above `mid` breakpoint, stacked at lower widths
+<h3 class="demoHeading">9 / 3 column split above `mid` breakpoint, stacked at lower widths</h3>
 
 <div class="demo l-mb1">
 	<div class="demo-visual">
@@ -305,7 +360,7 @@ Here are some examples of the type of grids you can create using the Kickoff Gri
 
 
 
-### 4 / 4 / 4 split above `mid` breakpoint, 6 / 6 / 12 at lower widths (with gutters)
+<h3 class="demoHeading">4 / 4 / 4 split above `mid` breakpoint, 6 / 6 / 12 at lower widths (with gutters)</h3>
 
 <div class="demo l-mb1">
 	<div class="demo-visual">

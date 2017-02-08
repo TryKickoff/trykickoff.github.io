@@ -1,14 +1,17 @@
 /**
- * Setup styleguide imports
+ * Kickoff Styleguide
+ * =================================
  */
-@import "functions/functions";
-@import "mixins/mixins";
-
+@import "kickoff-utils"; // https://github.com/mrmartineau/kickoff-utils.scss
+@import "include-media"; // http://include-media.com
 @import "color-palette";
 @import "variables";
+@import "kickoff-grid";  // https://github.com/mrmartineau/kickoff-grid.css
 
 $styleguide-color-primary: $color-primary;
 $styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@import "styleguide/swatch";
 
 /**
  * Styleguide styles
@@ -50,7 +53,7 @@ body {
 
 .sg-page--start {
 	background-color: $styleguide-color-primary;
-	padding: 15% 0;
+	padding: 70px 0 60px;
 	color: #fff;
 }
 
@@ -63,6 +66,8 @@ body {
 	color: #fff;
 	padding: 30px;
 	margin-top: 30px;
+	font-family: $font-family-mono;
+	@include ko-font-size(12);
 
 	h1 {
 		margin-bottom: .2em;
@@ -82,70 +87,25 @@ body {
 	}
 }
 
-
-
-/**
- * Colour swatches
- */
-.sg-swatch {
-	text-align: center;
-	line-height: 30px;
-	margin: 10px 10px 0;
-}
-
-.sg-swatch-color {
+.sg-kickoffLogo {
+	width: 200px;
 	height: 60px;
-	padding: 15px;
-	@include font-size(13);
-	font-family: $font-family-mono;
+	color: #fff;
 }
 
-@mixin swatch($color) {
-	color: $color;
+.sg-logo {
+	padding: 1em;
+	text-align: center;
+	color: $color-primary;
 
-	.sg-swatch-color {
-		background-color: $color;
-
-		@if lightness($color) < 60 {
-			color: #fff;
-		} @else {
-			color: #444;
-		}
-
-		@if lightness($color) > 90 {
-			border: #f1f1f1 solid 1px;
-		}
-
-		&:before {
-			content: '#{$color}';
-			display: block;
-		}
+	&--dark {
+		background-color: #000;
+		color: #fff;
 	}
-}
 
-.sg-color-link-hover {
-	@include swatch($color-link-hover);
-}
-.sg-color-primary {
-	@include swatch($color-primary);
-}
-.sg-color-secondary {
-	@include swatch($color-secondary);
-}
-.sg-color-highlight {
-	@include swatch($color-highlight);
-}
-.sg-color-text {
-	@include swatch($color-text);
-}
-.sg-color-background {
-	@include swatch($color-bg);
-}
-.sg-color-border {
-	@include swatch($color-border);
-}
-.sg-color-link {
-	@include swatch($color-link-default);
+	svg {
+		max-width: 100%;
+	}
 }
 
 
@@ -154,50 +114,60 @@ body {
  */
 .sg-type {
 	margin-bottom: 1em;
+	overflow-x: auto;
 }
+
 code {
-	border: 1px solid #ddd;
-	background-color: #F9F8F8;
-	@include font-size(11);
+	border: 0;
+	background-color: transparent;
+	@include ko-font-size(12);
 }
 
 @mixin sgTypeTest($size) {
 	.sg-type-item {
-		@include font-size($size);
+		@include ko-font-size($size);
+
+		&:after {
+			content: '@include ko-font-size(#{$size}) / #{type($size)}px';
+			@include ko-font-size(micro);
+			display: block;
+			font-weight: normal;
+			font-family: $font-family-mono;
+			opacity: .6;
+		}
 	}
 
 	code {
-			&:after { content: ' :: #{$size}px'; }
 	}
 }
 
 
 .sg-type-micro {
-	@include sgTypeTest($type-micro);
+	@include sgTypeTest(micro);
 }
 .sg-type-smallest {
-	@include sgTypeTest($type-smallest);
+	@include sgTypeTest(smallest);
 }
 .sg-type-smaller {
-	@include sgTypeTest($type-smaller);
+	@include sgTypeTest(smaller);
 }
 .sg-type-small {
-	@include sgTypeTest($type-small);
+	@include sgTypeTest(small);
 }
 .sg-type-base {
-	@include sgTypeTest($type-base);
+	@include sgTypeTest(base);
 }
 .sg-type-mid {
-	@include sgTypeTest($type-mid);
+	@include sgTypeTest(mid);
 }
 .sg-type-large {
-	@include sgTypeTest($type-large);
+	@include sgTypeTest(large);
 }
 .sg-type-largest {
-	@include sgTypeTest($type-largest);
+	@include sgTypeTest(largest);
 }
 .sg-type-jumbo {
-	@include sgTypeTest($type-jumbo);
+	@include sgTypeTest(jumbo);
 }
 
 .sg-typeSpecimen {
@@ -210,7 +180,7 @@ code {
 		display: block;
 		@extend .sg-interfaceType;
 		@extend .sg-interfaceType--subtle;
-		@include font-size(16);
+		@include ko-font-size(16);
 		margin-top: 5px;
 		border-top: 1px solid #ddd;
 		font-weight: normal;
@@ -221,19 +191,17 @@ code {
 // p.typeSpecimen:after  { content: "Font stack: #{$font-family-base}"; }
 
 .sg-typeSpecimen--primary {
-	@include font-size(30);
-	font-family: $font-family-headings;
-	font-weight: $font-weight-headings;
-
-}
-
-.sg-typeSpecimen--secondary {
-	@include font-size(30);
+	@include ko-font-size(30);
 	font-family: $font-family-base;
 }
 
+.sg-typeSpecimen--secondary {
+	@include ko-font-size(30);
+	font-family: $font-family-alt;
+}
+
 .sg-typeSpecimen--giant {
-	@include font-size(120);
+	@include ko-font-size(120);
 	line-height: 1;
 }
 
@@ -257,4 +225,83 @@ code {
 		vertical-align: middle;
 		margin-right: 15px;
 	}
+}
+
+.sg-hr {
+	height: 3px;
+	margin: ($baseline * 2) 0;
+}
+
+.sg-hr--subtle {
+	height: 3px;
+	background-color: fade-out($hr-color, .6)
+}
+
+@mixin sgVar($var) {
+	line-height: 2;
+	font-family: $font-family-mono;
+	border-bottom: 1px solid rgba(#000, .1);
+	@include ko-font-size(12);
+
+	strong {
+		opacity: .6;
+		text-transform: uppercase;
+		display: block;
+		user-select: none;
+
+		@include media('>mid') {
+			width: 20%;
+			display: inline-block;
+		}
+	}
+
+	&:after {
+		content: '#{$var}';
+	}
+}
+
+.sg-var-item {
+	color: $color-secondary;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.sg-var--baseFontSize {
+	@include sgVar($font-size-base);
+}
+
+.sg-var--leadingBase {
+	@include sgVar($leading-base);
+}
+
+.sg-var--typeScale {
+	@include sgVar($type-scale);
+}
+
+.sg-var--fontFamilyMono {
+	@include sgVar($font-family-mono);
+}
+
+.sg-var--fontFamilySans {
+	@include sgVar($font-family-sans);
+}
+
+.sg-var--fontFamilySerif {
+	@include sgVar($font-family-serif);
+}
+
+.sg-var--breakpoints {
+	@include sgVar($breakpoints);
+}
+
+.sg-var--layoutWidth {
+	@include sgVar($layout-max-width);
+}
+
+.sg-var--gridColumns {
+	@include sgVar($grid-column-count);
+}
+
+.sg-var--gridGutter {
+	@include sgVar($grid-gutter-width);
 }
